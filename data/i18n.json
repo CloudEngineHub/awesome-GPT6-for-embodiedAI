@@ -281,6 +281,11 @@
       "title": "GPT-6 Astra Real2Sim Workflow · Editable Rooms and Simulation Review",
       "summary": "Astra observes room photos, makes modelling decisions, and reviews previews while Blender and Python produce editable scenes, geometry audits, and an optional MuJoCo replay.",
       "detail": "Furniture specifications and reference assets assist reconstruction, so the published object-level surface scores are not an independent held-out room benchmark."
+    },
+    "P43": {
+      "title": "AgenticGenTAMP · Coding Agents for Generalized Task and Motion Planning",
+      "summary": "Codex with GPT-6 Astra probes 28 KinDER/PDDLStream simulation environments, writes and debugs Python, and freezes one reusable programmatic policy per environment; held-out evaluation makes no further model calls.",
+      "detail": "The study uses fully observed, object-centric simulation and excludes perception and language understanding; its results are not physical-robot success rates."
     }
   }
 }

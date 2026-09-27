@@ -1921,6 +1921,62 @@
     "independently_reproduced": false
   },
   {
+    "id": "P43",
+    "title": "AgenticGenTAMP · 编码智能体合成通用任务与运动规划策略",
+    "section": "core",
+    "category": "coding_evaluation",
+    "environment": "simulation",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "AgenticGenTAMP 让 Codex（GPT-6 Astra）在 28 个 KinDER/PDDLStream 仿真环境中通过交互探测、编写并调试 Python，最终为每个环境冻结一个可复用策略程序；评测阶段不再调用模型。",
+    "authors": "Matteo Merler, Bowen Li, Josh Roy et al.",
+    "event_date": "2026-09-24",
+    "event_date_basis": "arXiv:2609.30233 v1 submitted 2026-09-24T17:53:35Z; the authors announced the public preprint and project site on 2026-09-25.",
+    "window_status": "in_window",
+    "url": "https://agenticgentamp.github.io/",
+    "code_url": "https://github.com/tomsilver/robocode",
+    "license_status": "RoboCode 采用 MIT；论文、项目页视频、KinDER/PDDLStream 子模块与第三方仿真资产适用各自许可。",
+    "control_interface": "任务与状态/动作空间描述 + 隔离仿真器 reset/step/render → Astra 编写、运行并调试 Python → 每个环境冻结一个策略程序 → 100 个留出实例离线评测",
+    "metrics": [
+      {
+        "name": "GPT-6 Astra main-setting mean success",
+        "value": 86,
+        "unit": "%",
+        "denominator": "28 simulated environments × 5 synthesis runs × 100 held-out instances",
+        "protocol": "strict black box; no environment source, injected robotics primitives, network, or host filesystem; $20 synthesis budget per run"
+      },
+      {
+        "name": "GPT-6 Astra + source mean success",
+        "value": 95,
+        "unit": "%",
+        "denominator": "28 simulated environments × 5 synthesis runs × 100 held-out instances",
+        "protocol": "environment source and helper functions available during synthesis; frozen-program evaluation still makes no LLM calls"
+      }
+    ],
+    "limitations": [
+      "全部结果来自全状态、对象中心的仿真环境；论文明确将感知与语言理解排除在研究范围外，不能外推到真实机器人成功率。",
+      "Astra 在合成阶段生成策略代码，而不是在评测阶段逐步在线控制机器人；冻结程序执行时没有模型调用。",
+      "论文种子需向作者索取；新种子可复现协议但不保证逐实例复现论文评测集。",
+      "结果由作者发布，本站未承担模型调用费用、构建完整仿真依赖或独立复跑 98,000 个评测 episode。"
+    ],
+    "source_ids": [
+      "S096",
+      "S097",
+      "S098"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.30233",
+      "project": "https://agenticgentamp.github.io/",
+      "code": "https://github.com/tomsilver/robocode",
+      "video": "https://agenticgentamp.github.io/assets/project-video.mp4?v=069578f63710"
+    },
+    "last_checked": "2026-09-27",
+    "independently_reproduced": false
+  },
+  {
     "id": "X01",
     "title": "真实机器人键盘打字",
     "section": "watchlist",

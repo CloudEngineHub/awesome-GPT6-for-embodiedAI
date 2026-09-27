@@ -853,5 +853,32 @@
     "access": "page_text",
     "checked_at": "2026-09-26",
     "notes": "MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, and result limitations. Its authorized 45-second V5 overview is retained as the card video with an exact first-frame poster; the media itself is outside the software MIT license."
+  },
+  {
+    "id": "S096",
+    "title": "Coding Agents for Generalized Task and Motion Planning Problems preprint",
+    "url": "https://arxiv.org/abs/2609.30233",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-27",
+    "notes": "arXiv v1 submitted 2026-09-24T17:53:35Z. The paper identifies Codex with GPT-6 Astra as an evaluated backend, separates strict-black-box and source-access settings, reports five synthesis runs per environment and 100 held-out instances per frozen program, and states that evaluation makes no further LLM calls."
+  },
+  {
+    "id": "S097",
+    "title": "AgenticGenTAMP official project page",
+    "url": "https://agenticgentamp.github.io/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-27",
+    "notes": "Official author project page publishes the 28-environment setup, Astra main/source results, full environment table, gallery, benchmark CSV, project video, and a dedicated official video poster used by the catalogue card."
+  },
+  {
+    "id": "S098",
+    "title": "RoboCode official repository",
+    "url": "https://github.com/tomsilver/robocode",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-27",
+    "notes": "MIT repository publishes the AgenticGenPlan experiment code, pinned Codex/Astra backend configuration, strict-black-box container setup, environment mappings, reproduction commands, protocol boundaries, and saved-artifact documentation. The catalogue did not run the paid synthesis campaigns."
   }
 ]

@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-26 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-27 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -860,3 +860,30 @@ Official 2026-09-25 report entry is linked from the repository and cited by its 
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
 
 MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, and result limitations. Its authorized 45-second V5 overview is retained as the card video with an exact first-frame poster; the media itself is outside the software MIT license.
+
+<a id="s096"></a>
+## S096 · Coding Agents for Generalized Task and Motion Planning Problems preprint
+
+[https://arxiv.org/abs/2609.30233](https://arxiv.org/abs/2609.30233)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+
+arXiv v1 submitted 2026-09-24T17:53:35Z. The paper identifies Codex with GPT-6 Astra as an evaluated backend, separates strict-black-box and source-access settings, reports five synthesis runs per environment and 100 held-out instances per frozen program, and states that evaluation makes no further LLM calls.
+
+<a id="s097"></a>
+## S097 · AgenticGenTAMP official project page
+
+[https://agenticgentamp.github.io/](https://agenticgentamp.github.io/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+
+Official author project page publishes the 28-environment setup, Astra main/source results, full environment table, gallery, benchmark CSV, project video, and a dedicated official video poster used by the catalogue card.
+
+<a id="s098"></a>
+## S098 · RoboCode official repository
+
+[https://github.com/tomsilver/robocode](https://github.com/tomsilver/robocode)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+
+MIT repository publishes the AgenticGenPlan experiment code, pinned Codex/Astra backend configuration, strict-black-box container setup, environment mappings, reproduction commands, protocol boundaries, and saved-artifact documentation. The catalogue did not run the paid synthesis campaigns.

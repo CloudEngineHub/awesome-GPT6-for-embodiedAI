@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-09-26。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-09-27。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 33
+## 核心项目与评测 · 34
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -887,6 +887,37 @@ accuracy：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main
 replay：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/example/REPLAY.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/example/REPLAY.md)  
 
 **来源：** [S095 · GPT-6 Astra Real2Sim workflow release](SOURCES.md#s095)
+
+---
+
+<a id="p43"></a>
+### P43 · AgenticGenTAMP · 编码智能体合成通用任务与运动规划策略
+
+AgenticGenTAMP 让 Codex（GPT-6 Astra）在 28 个 KinDER/PDDLStream 仿真环境中通过交互探测、编写并调试 Python，最终为每个环境冻结一个可复用策略程序；评测阶段不再调用模型。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Matteo Merler, Bowen Li, Josh Roy et al.  
+**事件日期：** 2026-09-24（窗口内）  
+**日期依据：** arXiv:2609.30233 v1 submitted 2026-09-24T17:53:35Z; the authors announced the public preprint and project site on 2026-09-25.  
+**入口：** [https://agenticgentamp.github.io/](https://agenticgentamp.github.io/)  
+**代码入口：** [https://github.com/tomsilver/robocode](https://github.com/tomsilver/robocode)  
+**许可状态：** RoboCode 采用 MIT；论文、项目页视频、KinDER/PDDLStream 子模块与第三方仿真资产适用各自许可。  
+**控制接口 / 作用：** 任务与状态/动作空间描述 + 隔离仿真器 reset/step/render → Astra 编写、运行并调试 Python → 每个环境冻结一个策略程序 → 100 个留出实例离线评测
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| GPT-6 Astra main-setting mean success | 86 % | 28 simulated environments × 5 synthesis runs × 100 held-out instances | strict black box; no environment source, injected robotics primitives, network, or host filesystem; $20 synthesis budget per run |
+| GPT-6 Astra + source mean success | 95 % | 28 simulated environments × 5 synthesis runs × 100 held-out instances | environment source and helper functions available during synthesis; frozen-program evaluation still makes no LLM calls |
+
+**限制与未决项：** 全部结果来自全状态、对象中心的仿真环境；论文明确将感知与语言理解排除在研究范围外，不能外推到真实机器人成功率。 Astra 在合成阶段生成策略代码，而不是在评测阶段逐步在线控制机器人；冻结程序执行时没有模型调用。 论文种子需向作者索取；新种子可复现协议但不保证逐实例复现论文评测集。 结果由作者发布，本站未承担模型调用费用、构建完整仿真依赖或独立复跑 98,000 个评测 episode。
+
+paper：[https://arxiv.org/abs/2609.30233](https://arxiv.org/abs/2609.30233)  
+project：[https://agenticgentamp.github.io/](https://agenticgentamp.github.io/)  
+code：[https://github.com/tomsilver/robocode](https://github.com/tomsilver/robocode)  
+video：[https://agenticgentamp.github.io/assets/project-video.mp4?v=069578f63710](https://agenticgentamp.github.io/assets/project-video.mp4?v=069578f63710)  
+
+**来源：** [S096 · Coding Agents for Generalized Task and Motion Planning Problems preprint](SOURCES.md#s096) · [S097 · AgenticGenTAMP official project page](SOURCES.md#s097) · [S098 · RoboCode official repository](SOURCES.md#s098)
 
 ---
 

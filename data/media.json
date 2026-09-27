@@ -975,6 +975,23 @@
         "en": "Official 45-second V5 overview; poster is the first decoded frame.",
         "zh": "官方 45 秒 V5 总览；封面取自首个解码帧。"
       }
+    },
+    "P43": {
+      "kind": "image",
+      "url": "https://agenticgentamp.github.io/assets/posters/project-video.jpg?v=069578f63710",
+      "source_url": "https://agenticgentamp.github.io/assets/project-video.mp4?v=069578f63710",
+      "source_page_url": "https://agenticgentamp.github.io/",
+      "source_path": "Official project-video poster published by the authors on the AgenticGenTAMP project page; the matching project video is linked directly from the same page.",
+      "classification": "Author-provided poster for the official project video; not generated decoration or an independently reproduced result.",
+      "source_id": "S097",
+      "alt": {
+        "en": "Official AgenticGenTAMP project-video poster showing simulated task-and-motion planning environments.",
+        "zh": "AgenticGenTAMP 官方项目视频封面，展示仿真任务与运动规划环境。"
+      },
+      "caption": {
+        "en": "Official project-video poster; the full author-hosted video remains linked.",
+        "zh": "官方项目视频封面；完整视频保留作者托管链接。"
+      }
     }
   },
   "missing_policy": {

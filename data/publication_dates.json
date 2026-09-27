@@ -498,5 +498,12 @@
     "basis": "GitHub repository creation timestamp is 2026-09-24T09:58:36Z.",
     "rule": null,
     "uncertainty": "Repository creation date; the reviewed release commit followed on 2026-09-25."
+  },
+  "P43": {
+    "date": "2026-09-24",
+    "status": "verified",
+    "basis": "arXiv:2609.30233 v1 was submitted 2026-09-24T17:53:35Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; the authors announced the public preprint and project page on 2026-09-25."
   }
 }

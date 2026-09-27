@@ -46,6 +46,7 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P40 | 2026-0924 | verified | 2026-09-24 | arXiv:2609.29389 v1 was submitted 2026-09-24T11:16:18Z. | — | Paper submission date; no public code link was present on the abstract page. | [S090](SOURCES.md#s090) |
 | P41 | 2026-0925 | verified | 2026-09-25 | Official repository commit 69af84d was authored 2026-09-25T18:07:13Z and the cited report is dated 2026-09-25. | — | Public release date; individual benchmark runs may predate the release. | [S093](SOURCES.md#s093) · [S094](SOURCES.md#s094) |
 | P42 | 2026-0924 | verified | 2026-09-24 | GitHub repository creation timestamp is 2026-09-24T09:58:36Z. | — | Repository creation date; the reviewed release commit followed on 2026-09-25. | [S095](SOURCES.md#s095) |
+| P43 | 2026-0924 | verified | 2026-09-24 | arXiv:2609.30233 v1 was submitted 2026-09-24T17:53:35Z. | — | Paper submission date; the authors announced the public preprint and project page on 2026-09-25. | [S096](SOURCES.md#s096) · [S097](SOURCES.md#s097) · [S098](SOURCES.md#s098) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |
