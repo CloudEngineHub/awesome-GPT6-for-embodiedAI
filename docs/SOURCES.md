@@ -200,9 +200,9 @@ Primary README explicitly describes approximate geometric replay, not recovered 
 
 [https://cskrren.github.io/real2gym-site/](https://cskrren.github.io/real2gym-site/)
 
-类型：`primary` · 读取：`search_text` · 检查日期：2026-09-18
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
 
-Project text and canonical code link found; code repository not separately readable.
+Official project page and repository were inspected. Commit b705ee9, published 2026-09-25T22:08:47Z, releases Real2Sim Prompt v5.3 with efficient execution, compact state, batched deterministic checks, and scoped subagents; it is a workflow update rather than a new robot benchmark. GitHub declares no repository license.
 
 <a id="s023"></a>
 ## S023 · dexgpt repository
@@ -839,27 +839,18 @@ Official website repository created 2026-09-24 contains the updated report, loca
 
 [https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
 
-Apache-2.0 repository publishes the robot-code interface, paired cell lists, frozen dependency sets, prompts, evaluation protocol, analysis scripts, and four benchmark summaries. The catalogue did not rerun the GPU evaluations.
-
-<a id="s094"></a>
-## S094 · Fewer Tokens, Better Action technical blog
-
-[https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/](https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/)
-
-类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-26
-
-Official 2026-09-25 report entry is linked from the repository and cited by its README. Direct page retrieval failed in this environment, so quantitative fields were checked against the repository README and protocol rather than copied from an inaccessible page.
+Apache-2.0 repository publishes the robot-code interface, package, CLI, prompts, guides, tests, and four benchmark summaries. Its history was replaced; commit 0f88f1c dated 2026-09-26T15:29:24Z is the current canonical public tree, while the reported benchmark values remain unchanged. The catalogue did not rerun the GPU evaluations.
 
 <a id="s095"></a>
 ## S095 · GPT-6 Astra Real2Sim workflow release
 
 [https://github.com/Roboparty/gpt-6-astra-real2sim-workflow](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
 
-MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, and result limitations. Its authorized 45-second V5 overview is retained as the card video with an exact first-frame poster; the media itself is outside the software MIT license.
+MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, and result limitations. The retained overview remains the card video. Commits through 2026-09-27 add a separate independent whole-scene candidate whose visual and static gates do not pass.
 
 <a id="s096"></a>
 ## S096 · Coding Agents for Generalized Task and Motion Planning Problems preprint
@@ -887,3 +878,39 @@ Official author project page publishes the 28-environment setup, Astra main/sour
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
 
 MIT repository publishes the AgenticGenPlan experiment code, pinned Codex/Astra backend configuration, strict-black-box container setup, environment mappings, reproduction commands, protocol boundaries, and saved-artifact documentation. The catalogue did not run the paid synthesis campaigns.
+
+<a id="s099"></a>
+## S099 · HomeBody official project page
+
+[https://tml.stanford.edu/homebody/](https://tml.stanford.edu/homebody/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+
+Official Stanford TML project page names GPT Astra, documents the G1/Isaac Sim memory and skill architecture, publishes kitchen-cleanup and remembered-object demonstrations, lists system limitations, and hosts the retained teaser poster and video. No success-rate denominator or paper is published.
+
+<a id="s100"></a>
+## S100 · HomeBody official repository
+
+[https://github.com/Stanford-TML/homebody](https://github.com/Stanford-TML/homebody)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+
+Official repository was created 2026-09-26T02:17:09Z and links the project page, but currently says code is coming soon and declares no license.
+
+<a id="s101"></a>
+## S101 · Gio Huh HomeBody announcement
+
+[https://x.com/giohuh_/status/2103671433679224912](https://x.com/giohuh_/status/2103671433679224912)
+
+类型：`primary` · 读取：`search_text` · 检查日期：2026-09-27
+
+The author account and exact status target were corroborated through Yahoo realtime search; the indexed post text identifies HomeBody and GPT Astra. The X page exposed the author title but not the post body in this environment. Snowflake time is 2026-09-26T02:22:08.771Z. A Yahoo btid is not a tweet ID and was not used as the target.
+
+<a id="s102"></a>
+## S102 · Astra Real2Sim independent whole-scene audit
+
+[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/tree/main/examples/independent_whole_scene_20260926](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/tree/main/examples/independent_whole_scene_20260926)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+
+Repository evidence preserves the unchanged independent candidate, a changes-requested visual review, a failed static-engine check, and 2026-09-27 ArtVIP surface measurements. The cabinet metrics are reference-assisted object scores, not independent whole-room accuracy.

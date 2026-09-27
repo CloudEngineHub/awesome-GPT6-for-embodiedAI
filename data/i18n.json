@@ -47,8 +47,8 @@
     },
     "P10": {
       "title": "Real2Gym",
-      "summary": "A workflow from human or robot video to executable robot simulation using Blender and MuJoCo.",
-      "detail": "The project page and code route are retained; individual implementation files were not audited here."
+      "summary": "A workflow from human or robot video to executable robot simulation using Blender and MuJoCo; Prompt v5.3 adds compact state, batched deterministic checks, and scoped subagent execution.",
+      "detail": "The September 26 Beijing-time change is an orchestration update, not a new robot success-rate experiment; the repository declares no license."
     },
     "P11": {
       "title": "dexgpt · Hand Video to Simulation",
@@ -275,17 +275,22 @@
     "P41": {
       "title": "PyRUA-Lean · Robot Agents That Act in Code",
       "summary": "GPT-6 Astra writes Python against a persistent robot object, combining perception, motion, VLA skills, and checks inside each call; the release compares this interface with RPent tool calling on four simulation suites.",
-      "detail": "The paired author results use the same model, primitives, cells, judges, and response budgets, but intentionally change the interaction form; no physical-robot result is claimed."
+      "detail": "The repository history was replaced by a canonical September 26 tree with package, CLI, docs, and tests; the reported benchmark values are unchanged and no physical-robot result is claimed."
     },
     "P42": {
       "title": "GPT-6 Astra Real2Sim Workflow · Editable Rooms and Simulation Review",
-      "summary": "Astra observes room photos, makes modelling decisions, and reviews previews while Blender and Python produce editable scenes, geometry audits, and an optional MuJoCo replay.",
-      "detail": "Furniture specifications and reference assets assist reconstruction, so the published object-level surface scores are not an independent held-out room benchmark."
+      "summary": "Astra observes room photos, makes modelling decisions, and reviews previews while Blender and Python produce editable scenes; a new independent candidate preserves failed visual/static gates and reference-assisted cabinet metrics.",
+      "detail": "The candidate is not simulation-ready, and its cabinet scores cannot be treated as independent whole-room accuracy or as a controlled comparison with the revised showcase."
     },
     "P43": {
       "title": "AgenticGenTAMP · Coding Agents for Generalized Task and Motion Planning",
       "summary": "Codex with GPT-6 Astra probes 28 KinDER/PDDLStream simulation environments, writes and debugs Python, and freezes one reusable programmatic policy per environment; held-out evaluation makes no further model calls.",
       "detail": "The study uses fully observed, object-centric simulation and excludes perception and language understanding; its results are not physical-robot success rates."
+    },
+    "P44": {
+      "title": "HomeBody · A G1 That Explores, Remembers, and Acts",
+      "summary": "GPT-6 Astra builds and consults a spatial memory, then composes navigation, picking, placing, and drawer skills for long-horizon Unitree G1 tasks in an unseen kitchen.",
+      "detail": "Astra performs high-level reasoning and tool selection rather than direct joint control; the official demos have no trial denominator, and the repository says code is coming soon."
     }
   }
 }

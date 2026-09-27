@@ -942,11 +942,11 @@
     },
     "P41": {
       "kind": "image",
-      "url": "https://raw.githubusercontent.com/DAGroup-PKU/PyRUA-Lean/69af84d69154799357871299ac88c74445393e87/docs/assets/results-overview.png",
+      "url": "https://raw.githubusercontent.com/DAGroup-PKU/PyRUA-Lean/0f88f1cc5e3ebacd15869b0697a4739704cdd56c/docs/assets/results-overview.png",
       "fit": "contain",
-      "source_url": "https://github.com/DAGroup-PKU/PyRUA-Lean/blob/69af84d69154799357871299ac88c74445393e87/docs/assets/results-overview.png",
+      "source_url": "https://github.com/DAGroup-PKU/PyRUA-Lean/blob/0f88f1cc5e3ebacd15869b0697a4739704cdd56c/docs/assets/results-overview.png",
       "source_page_url": "https://github.com/DAGroup-PKU/PyRUA-Lean",
-      "source_path": "Official repository results overview at release commit 69af84d69154799357871299ac88c74445393e87; served from the pinned repository without local copying.",
+      "source_path": "Official repository results overview at current canonical commit 0f88f1cc5e3ebacd15869b0697a4739704cdd56c; served from the pinned repository without local copying.",
       "classification": "Author-provided four-benchmark comparison of code and tool-calling interfaces; not an independently reproduced chart.",
       "source_id": "S093",
       "alt": {
@@ -991,6 +991,24 @@
       "caption": {
         "en": "Official project-video poster; the full author-hosted video remains linked.",
         "zh": "官方项目视频封面；完整视频保留作者托管链接。"
+      }
+    },
+    "P44": {
+      "kind": "image",
+      "url": "https://tml.stanford.edu/homebody/videos/teaser-poster.webp",
+      "fit": "cover",
+      "source_url": "https://tml.stanford.edu/homebody/videos/teaser.mp4",
+      "source_page_url": "https://tml.stanford.edu/homebody/",
+      "source_path": "Official teaser poster published with the author-hosted HomeBody project video; the matching 25.2 MB MP4 is linked directly from the same page.",
+      "classification": "Author-provided poster for the official HomeBody G1 demonstration video; not generated decoration or an independently reproduced result.",
+      "source_id": "S099",
+      "alt": {
+        "en": "HomeBody teaser poster showing a Unitree G1 operating in a kitchen.",
+        "zh": "HomeBody 预告片封面，展示 Unitree G1 在厨房中执行任务。"
+      },
+      "caption": {
+        "en": "Official HomeBody teaser poster; the full author-hosted video remains linked.",
+        "zh": "HomeBody 官方预告片封面；完整视频保留作者托管链接。"
       }
     }
   },

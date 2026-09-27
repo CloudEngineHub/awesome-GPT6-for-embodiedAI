@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 34
+## 核心项目与评测 · 35
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -253,20 +253,21 @@ x_profile：[https://x.com/TongheZhang01](https://x.com/TongheZhang01)
 <a id="p10"></a>
 ### P10 · Real2Gym
 
-项目页展示真人/机器人视频到可执行机器人仿真的工作流，结合 Blender 与 MuJoCo。
+项目页展示真人/机器人视频到可执行机器人仿真的工作流，结合 Blender 与 MuJoCo；9 月 26 日（北京时间）发布的 Real2Sim Prompt v5.3 又加入批量确定性检查、紧凑状态和限定范围的子智能体执行。
 
-**来源等级：B** · 仿真 · 一手资料明确涉及 GPT-6
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
 
 **作者 / 团队：** Real2Gym contributors  
-**事件日期：** 2026-09（仅确认到月份）  
-**日期依据：** 本月项目快照；首发日未确认  
+**事件日期：** 2026-09-26（本月更新，基础项目更早）  
+**日期依据：** Repository created 2026-09-08T17:52:53Z; v5.3 update commit b705ee9 was published 2026-09-25T22:08:47Z (2026-09-26 06:08 Beijing time).  
 **入口：** [https://cskrren.github.io/real2gym-site/](https://cskrren.github.io/real2gym-site/)  
 **代码入口：** [https://github.com/cskrren/Real2Gym](https://github.com/cskrren/Real2Gym)  
-**许可状态：** 未核实  
+**许可状态：** GitHub 未声明仓库许可证；项目依赖与资产仍适用各自许可。  
 **控制接口 / 作用：** 真实演示 → 场景重建/动作重定向 → 仿真执行与场景变化
 
-**限制与未决项：** 项目页明确链接代码；本次未读到完整仓库，环境安装和资源完备性待核。 不能把视觉匹配自动等同于新场景闭环泛化。
+**限制与未决项：** v5.3 是提示词与执行编排更新，不是新的机器人成功率实验；环境安装、资产完备性和完整端到端复现仍待核。 不能把视觉匹配自动等同于新场景闭环泛化。
 
+v5.3_update：[https://github.com/cskrren/Real2Gym/commit/b705ee9427af748fabdb3877d7678ce05b28de77](https://github.com/cskrren/Real2Gym/commit/b705ee9427af748fabdb3877d7678ce05b28de77)  
 
 **来源：** [S022 · Real2Gym project](SOURCES.md#s022)
 
@@ -837,8 +838,8 @@ PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对
 **来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
 
 **作者 / 团队：** Ruiyang Si, Jianxin Bi, Wenbo Huang et al. / DAGroup-PKU  
-**事件日期：** 2026-09-25（窗口内）  
-**日期依据：** Official repository and cited technical blog were published 2026-09-25; repository commit 69af84d is dated 2026-09-25T18:07:13Z.  
+**事件日期：** 2026-09-25（本月更新，基础项目更早）  
+**日期依据：** Repository created 2026-09-25T08:04:11Z; its current canonical public tree is commit 0f88f1c dated 2026-09-26T15:29:24Z after history replacement.  
 **入口：** [https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)  
 **代码入口：** [https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)  
 **许可状态：** PyRUA-Lean 采用 Apache-2.0；依赖的 RPent、仿真器、VLA 与模型资产适用各自许可。  
@@ -853,23 +854,23 @@ PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对
 
 **限制与未决项：** 结果由作者提供并附协议与分析脚本，本站未下载模型权重、运行 GPU 仿真或独立复现。 代码臂与工具调用臂的交互形式有意不同：代码臂把多步操作放进 Python cell，工具臂在动作后持续接收图像；结果不能归因为单一低层技能。 成本与 token 降幅仅在两种方式都成功的实例上计算，并依赖发布时的模型价格与网关行为。 四组结果均为仿真；不代表真实机器人成功率。
 
-report：[https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/](https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/)  
-protocol：[https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/evaluation/PROTOCOL.md](https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/evaluation/PROTOCOL.md)  
+guide：[https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/docs/guide.md](https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/docs/guide.md)  
+canonical_commit：[https://github.com/DAGroup-PKU/PyRUA-Lean/commit/0f88f1cc5e3ebacd15869b0697a4739704cdd56c](https://github.com/DAGroup-PKU/PyRUA-Lean/commit/0f88f1cc5e3ebacd15869b0697a4739704cdd56c)  
 
-**来源：** [S093 · PyRUA-Lean official repository](SOURCES.md#s093) · [S094 · Fewer Tokens, Better Action technical blog](SOURCES.md#s094)
+**来源：** [S093 · PyRUA-Lean official repository](SOURCES.md#s093)
 
 ---
 
 <a id="p42"></a>
 ### P42 · GPT-6 Astra Real2Sim Workflow · 可编辑房间重建与仿真复核
 
-该工作流用 GPT-6 Astra 观察房间照片、决定建模步骤并复查预览，Blender/Python 生成可编辑场景；公开仓库提供三个展示场景、一个可复跑 MuJoCo 案例、几何审计与输入来源台账。
+该工作流用 GPT-6 Astra 观察房间照片、决定建模步骤并复查预览，Blender/Python 生成可编辑场景；9 月 26–27 日新增的独立整场景候选保留了失败的视觉/静态验收，并公开两件柜体的参考辅助表面误差。
 
 **来源等级：A** · 视觉动画重放 · 一手资料明确涉及 GPT-6
 
 **作者 / 团队：** Roboparty  
-**事件日期：** 2026-09-24（窗口内）  
-**日期依据：** GitHub repository created 2026-09-24T09:58:36Z; reviewed release commit 783445b was published 2026-09-25T15:32:15Z.  
+**事件日期：** 2026-09-27（本月更新，基础项目更早）  
+**日期依据：** Repository first published 2026-09-24; independent whole-scene audit commit 0ddd2aa followed 2026-09-26T09:22:34Z and surface-metric commit 5fb8464 on 2026-09-27T02:07:26Z.  
 **入口：** [https://github.com/Roboparty/gpt-6-astra-real2sim-workflow](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow)  
 **代码入口：** [https://github.com/Roboparty/gpt-6-astra-real2sim-workflow](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow)  
 **许可状态：** 代码采用 MIT；照片、视频、ArtVIP 参考资产与其他第三方材料按仓库 MEDIA_NOTICE/THIRD_PARTY_NOTICES 分别处理。  
@@ -879,14 +880,18 @@ protocol：[https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/evaluation/PROTO
 | --- | --- | --- | --- |
 | VITBERGET cabinet F-score @10 mm | 59.15 % | 60,000 surface samples per direction against the ArtVIP reference | single reconstructed object; original scale retained; specification/reference assisted |
 | BRUKSVARA wardrobe F-score @10 mm | 60.13 % | 60,000 surface samples per direction against the ArtVIP reference | single reconstructed object; original scale retained; specification/reference assisted |
+| Independent candidate VITBERGET mean bidirectional surface distance | 25.84 mm | 60,000 samples per direction against the ArtVIP reference | retained 2026-09-26 candidate; rigid alignment only; no scale fit, ICP, or post-measurement revision |
+| Independent candidate BRUKSVARA F-score @10 mm | 80.53 % | 60,000 samples per direction against the ArtVIP reference | reference-assisted cabinet metric on the unchanged candidate; not a whole-room score |
 
-**限制与未决项：** 家具规格和 ArtVIP 参考参与制作，评测不是独立留出测试；两个物体的表面指标不能代表整间房间准确率。 三个 V5 展示场景的大型模型未随 Git 仓库分发；仓库内可复跑案例与展示场景需分开理解。 流程依赖 Astra 进行建模决策，但冻结配方复跑不再调用模型；这不是在线机器人策略。 作者报告 663 个去重几何对象中仍有 77 个开放曲线管件和 2,546 个零面积面。
+**限制与未决项：** 家具规格和 ArtVIP 参考参与制作，评测不是独立留出测试；两个物体的表面指标不能代表整间房间准确率。 新增独立候选的视觉复核要求修改，静态引擎检查因后墙碰撞体偏移 25 mm（容差 6 mm）失败；不能称为仿真就绪。 新旧柜体数值来自不同修订条件；仓库明确说明不能把差异当作控制充分的算法版本比较。 三个 V5 展示场景的大型模型未随 Git 仓库分发；仓库内可复跑案例与展示场景需分开理解。 流程依赖 Astra 进行建模决策，但冻结配方复跑不再调用模型；这不是在线机器人策略。 作者报告 663 个去重几何对象中仍有 77 个开放曲线管件和 2,546 个零面积面。
 
 video：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/media/overview.mp4](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/media/overview.mp4)  
 accuracy：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/ACCURACY.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/ACCURACY.md)  
 replay：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/example/REPLAY.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/example/REPLAY.md)  
+independent_test：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/README.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/README.md)  
+independent_accuracy：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/ACCURACY.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/ACCURACY.md)  
 
-**来源：** [S095 · GPT-6 Astra Real2Sim workflow release](SOURCES.md#s095)
+**来源：** [S095 · GPT-6 Astra Real2Sim workflow release](SOURCES.md#s095) · [S102 · Astra Real2Sim independent whole-scene audit](SOURCES.md#s102)
 
 ---
 
@@ -918,6 +923,32 @@ code：[https://github.com/tomsilver/robocode](https://github.com/tomsilver/robo
 video：[https://agenticgentamp.github.io/assets/project-video.mp4?v=069578f63710](https://agenticgentamp.github.io/assets/project-video.mp4?v=069578f63710)  
 
 **来源：** [S096 · Coding Agents for Generalized Task and Motion Planning Problems preprint](SOURCES.md#s096) · [S097 · AgenticGenTAMP official project page](SOURCES.md#s097) · [S098 · RoboCode official repository](SOURCES.md#s098)
+
+---
+
+<a id="p44"></a>
+### P44 · HomeBody · 探索、记忆并执行长程任务的 G1 人形机器人
+
+HomeBody 让 GPT-6 Astra 为 Unitree G1 建立带对象记忆的 Isaac Sim 数字孪生，并通过结构化工具调用编排导航、抓取、放置和开抽屉技能；官网展示它在未见厨房跨房间整理物品，并从含糊请求中取回先前记住的物体。
+
+**来源等级：A** · 真机 + 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Gio Huh, Cayden Gu, Takara E. Truong, C. Karen Liu, Guy Tevet  
+**事件日期：** 2026-09-26（窗口内）  
+**日期依据：** Official repository created 2026-09-26T02:17:09Z (10:17 Beijing); author X post 2103671433679224912 was published 2026-09-26T02:22:08.771Z (10:22 Beijing).  
+**入口：** [https://tml.stanford.edu/homebody/](https://tml.stanford.edu/homebody/)  
+**代码入口：** [https://github.com/Stanford-TML/homebody](https://github.com/Stanford-TML/homebody)  
+**许可状态：** 仓库尚未声明许可证，README 标注代码即将发布；官网媒体与第三方模型/资产适用各自条款。  
+**控制接口 / 作用：** 探索图像、SLAM/关节状态与对象记忆 → Astra 选择目标和结构化技能调用 → 导航、抓取、放置、开抽屉等技能及全身控制器执行 → 结果返回模型
+
+**限制与未决项：** Astra 是高层 VLM/Real2Sim 智能体，并不直接输出高频关节控制；低层运动由导航、操作技能和 AMO 等控制器承担。 官网展示选定的长程任务，但未给出试验次数、成功率分母或完整失败分布，本站未在真实 G1 上独立复现。 项目尚无论文链接，公开仓库标注代码即将发布且未声明许可证；实现与复现实验暂不可完整审计。 作者说明 Astra 推理会在技能之间造成停顿，本地栈需要 RTX 4090 笔记本 GPU，并存在 API 成本和手指过热等部署限制。
+
+project：[https://tml.stanford.edu/homebody/](https://tml.stanford.edu/homebody/)  
+code：[https://github.com/Stanford-TML/homebody](https://github.com/Stanford-TML/homebody)  
+post：[https://x.com/giohuh_/status/2103671433679224912](https://x.com/giohuh_/status/2103671433679224912)  
+teaser：[https://tml.stanford.edu/homebody/videos/teaser.mp4](https://tml.stanford.edu/homebody/videos/teaser.mp4)  
+
+**来源：** [S099 · HomeBody official project page](SOURCES.md#s099) · [S100 · HomeBody official repository](SOURCES.md#s100) · [S101 · Gio Huh HomeBody announcement](SOURCES.md#s101)
 
 ---
 
