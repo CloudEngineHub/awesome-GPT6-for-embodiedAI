@@ -42,7 +42,7 @@ class CatalogueTests(unittest.TestCase):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
         self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),43)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),30)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),27)
         self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),9)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
@@ -63,11 +63,11 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),64)
+        self.assertEqual(len(retained),61)
         self.assertEqual(sum(item['kind']=='image' for item in retained),39)
-        self.assertEqual(sum(item['kind']=='video' for item in retained),25)
+        self.assertEqual(sum(item['kind']=='video' for item in retained),22)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
-        self.assertEqual(len(videos),25)
+        self.assertEqual(len(videos),22)
         self.assertTrue(all(item.get('poster','').startswith('assets/') for item in videos.values()))
         self.assertTrue(all((ROOT/'site'/item['poster']).is_file() for item in videos.values()))
         self.assertTrue(all('first decoded frame at 00:00:00' in item.get('source_path','') for item in videos.values()))
@@ -99,9 +99,6 @@ class CatalogueTests(unittest.TestCase):
             'X13':'Dual-ALOHA Spatial-Constraint Demo.mp4',
             'X14':'Office Scene to Newton  G1.mp4',
             'X15':'savetwt.com_2100754714971287557_640x360.mp4',
-            'X16':'ARX Washing-Machine Knob.mp4',
-            'X17':'Vitrus Unseen Robot Adaptation.mp4',
-            'X18':'Physical ICL First-Pass.mp4',
         }
         social_video_ids=set(social_video_names)
         self.assertTrue(all(self.media['media'][pid]['url'].startswith('assets/social/') for pid in social_video_ids))
@@ -155,7 +152,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':36,'supporting':10,'watchlist':18})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':36,'supporting':10,'watchlist':15})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}
@@ -169,10 +166,10 @@ class CatalogueTests(unittest.TestCase):
         # independent content verification.
         self.assertEqual(urlsplit(self.by_id['X01']['url']).netloc,'x.com')
         self.assertNotEqual(self.by_id['X01']['url'],self.by_id['X02']['url'])
-        social=[self.by_id[f'X{n:02d}'] for n in range(1,19)]
+        social=[self.by_id[f'X{n:02d}'] for n in (*range(1,7),*range(8,16))]
         verified=[p for p in social if '/status/' in p['url']]
-        self.assertEqual(len(verified),18)
-        self.assertEqual(len({p['url'] for p in verified}),18)
+        self.assertEqual(len(verified),14)
+        self.assertEqual(len({p['url'] for p in verified}),14)
         self.assertEqual(self.by_id['X13']['links'],{})
         self.assertEqual(self.by_id['X13']['url'],'https://x.com/qineng_wang/status/2099893504658866561')
         self.assertIn('S052',self.by_id['X13']['source_ids'])

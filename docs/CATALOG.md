@@ -1227,7 +1227,7 @@ adapter_guide：[https://github.com/RoboticsCenter/dexbench/blob/main/docs/add_a
 
 ---
 
-## X / Twitter 演示线索 · 18
+## X / Twitter 演示线索 · 15
 
 <a id="x01"></a>
 ### X01 · 真实机器人键盘打字
@@ -1572,74 +1572,5 @@ post：[https://x.com/frankzydou/status/2100754714971287557](https://x.com/frank
 project：[https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/](https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/)  
 
 **来源：** [S057 · Wuji2 hand self-righting author post and supplied video](SOURCES.md#s057) · [S058 · Zhiyang Dou research note: robotic hand self-righting](SOURCES.md#s058)
-
----
-
-<a id="x16"></a>
-### X16 · 洗衣机旋钮零样本真机操作
-
-ARX 在新房间将 GPT-6 Astra 接入机器人，仅要求它转动旋钮启动洗衣机；作者后续明确称未使用 VLA 或采集数据，但存在未公开的中间接口层。
-
-**来源等级：B** · 真机 · GPT-6 明确，但正文证据不完整
-
-**作者 / 团队：** ARX (@ARXrobotics)  
-**事件日期：** 2026-09-05（窗口内）  
-**日期依据：** 原帖 status ID 2096328304794210604 的 X Snowflake 时间为 2026-09-05T20:03:10Z  
-**入口：** [https://x.com/ARXrobotics/status/2096328304794210604](https://x.com/ARXrobotics/status/2096328304794210604)  
-**代码入口：** 未定位公开代码；不等于确认代码不存在  
-**许可状态：** 原帖公开视频用于本站展示；未取得代码、模型输出或更广泛再许可  
-**控制接口 / 作用：** 房间视觉与机器人状态 → GPT-6 Astra → 未公开中间层 → 机器人转动洗衣机旋钮
-
-**限制与未决项：** 仅保留一段 15.3 秒选择性视频；未披露试验次数、加速方式或端到端延迟。 作者称只使用 GPT、无 VLA、无数据采集，但提示、低层接口、控制日志和代码均未公开。 未独立复现。
-
-post：[https://x.com/ARXrobotics/status/2096328304794210604](https://x.com/ARXrobotics/status/2096328304794210604)  
-
-**来源：** [S106 · ARX washing-machine knob original X post and author replies](SOURCES.md#s106)
-
----
-
-<a id="x17"></a>
-### X17 · Vitrus 未见机器人自主适配
-
-作者称将新机器人硬件与 Vitrus OS 完整交给 GPT-6 Astra，并让其在物理仿真中自学后操作真机；同时明确说明没有人类第一视角数据或 VLA。
-
-**来源等级：B** · 真机 · GPT-6 明确，但正文证据不完整
-
-**作者 / 团队：** Lucas Cassiano (@lucascassiano)  
-**事件日期：** 2026-09-09（窗口内）  
-**日期依据：** 原帖 status ID 2097830777438486557 的 X Snowflake 时间为 2026-09-09T23:33:27Z  
-**入口：** [https://x.com/lucascassiano/status/2097830777438486557](https://x.com/lucascassiano/status/2097830777438486557)  
-**代码入口：** 未定位公开代码；不等于确认代码不存在  
-**许可状态：** 原帖公开视频用于本站展示；未取得代码、模型输出或更广泛再许可  
-**控制接口 / 作用：** GPT-6 Astra → Vitrus OS 与物理仿真自适配 → 未见过的机器人硬件
-
-**限制与未决项：** 原帖未定义具体任务、成功判据、训练预算或重复试验次数。 视频展示真机运动，但仿真到真机的控制栈、低层安全层、提示、日志与代码未公开。 模型参与和无 VLA/人类数据均为作者声明；未独立复现。
-
-post：[https://x.com/lucascassiano/status/2097830777438486557](https://x.com/lucascassiano/status/2097830777438486557)  
-
-**来源：** [S107 · Lucas Cassiano Vitrus unseen-robot original X post](SOURCES.md#s107)
-
----
-
-<a id="x18"></a>
-### X18 · 人类示范视频 → 真机物理 ICL
-
-作者将人类完成新任务的录像放入 Codex，再提示 GPT-6 Astra 以同样方式驱动机械臂；原帖称首次尝试即可工作，视频展示双臂桌面真机执行。
-
-**来源等级：B** · 真机 · GPT-6 明确，但正文证据不完整
-
-**作者 / 团队：** Wenli Xiao (@_wenlixiao)  
-**事件日期：** 2026-09-09（窗口内）  
-**日期依据：** 原帖 status ID 2097801944119349455 的 X Snowflake 时间为 2026-09-09T21:38:53Z  
-**入口：** [https://x.com/_wenlixiao/status/2097801944119349455](https://x.com/_wenlixiao/status/2097801944119349455)  
-**代码入口：** 未定位公开代码；不等于确认代码不存在  
-**许可状态：** 原帖公开视频用于本站展示；未取得代码、模型输出或更广泛再许可  
-**控制接口 / 作用：** 人类任务录像 + Codex 提示 → GPT-6 Astra → 双臂真机控制接口
-
-**限制与未决项：** 仅保留一段 11.2 秒选择性视频；“首次尝试成功”是作者声明，没有重复试验或失败样本。 具体任务、硬件、动作接口、提示、日志和安全层均未披露。 未独立复现。
-
-post：[https://x.com/_wenlixiao/status/2097801944119349455](https://x.com/_wenlixiao/status/2097801944119349455)  
-
-**来源：** [S108 · Wenli Xiao physical in-context-learning original X post](SOURCES.md#s108)
 
 ---

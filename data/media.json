@@ -576,60 +576,6 @@
         "zh": "用户提供的 Wuji2 原帖视频；保留加速与正常速度片段。"
       }
     },
-    "X16": {
-      "kind": "video",
-      "url": "assets/social/ARX%20Washing-Machine%20Knob.mp4",
-      "poster": "assets/social/X16.jpg",
-      "source_url": "https://x.com/ARXrobotics/status/2096328304794210604",
-      "source_page_url": "https://x.com/ARXrobotics/status/2096328304794210604",
-      "source_id": "S106",
-      "source_path": "Original-post MP4 recovered through public X embed metadata; SHA-256 59bb089324c0af4e39b0d403831a52be150baa068848abd836ad71f666932230; 15.333333 s; poster SHA-256 82dfb5d29f2d08aeba824b9fac64e705f08df108fe97fb5ede1b8cf28dfb45af; first decoded frame at 00:00:00",
-      "classification": "Original-post video mirrored locally for stable gallery playback; poster extracted without content alteration.",
-      "alt": {
-        "en": "Robot turning a washing-machine control knob in the ARX GPT-6 Astra demonstration.",
-        "zh": "ARX 的 GPT-6 Astra 演示中，机器人转动洗衣机控制旋钮。"
-      },
-      "caption": {
-        "en": "Original ARX post video; one selected run, not a measured success-rate result.",
-        "zh": "ARX 原帖视频；单次选择性展示，不代表已测成功率。"
-      }
-    },
-    "X17": {
-      "kind": "video",
-      "url": "assets/social/Vitrus%20Unseen%20Robot%20Adaptation.mp4",
-      "poster": "assets/social/X17.jpg",
-      "source_url": "https://x.com/lucascassiano/status/2097830777438486557",
-      "source_page_url": "https://x.com/lucascassiano/status/2097830777438486557",
-      "source_id": "S107",
-      "source_path": "Original-post MP4 recovered through public X embed metadata; SHA-256 d3b87ac44d05b112f227204810ebdab151649a005237d2affa251815cbc37373; 70.442667 s; poster SHA-256 cc338bc3ebba44387458c5dd960a829297b24490af4f70de6824016039af0c71; first decoded frame at 00:00:00",
-      "classification": "Original-post video mirrored locally for stable gallery playback; poster extracted without content alteration.",
-      "alt": {
-        "en": "Vitrus demonstration of GPT-6 Astra adapting to and moving an unseen physical robot.",
-        "zh": "Vitrus 演示 GPT-6 Astra 适配并驱动未见过的真机。"
-      },
-      "caption": {
-        "en": "Original Vitrus post video; the task and success protocol are not disclosed.",
-        "zh": "Vitrus 原帖视频；任务与成功判据未披露。"
-      }
-    },
-    "X18": {
-      "kind": "video",
-      "url": "assets/social/Physical%20ICL%20First-Pass.mp4",
-      "poster": "assets/social/X18.jpg",
-      "source_url": "https://x.com/_wenlixiao/status/2097801944119349455",
-      "source_page_url": "https://x.com/_wenlixiao/status/2097801944119349455",
-      "source_id": "S108",
-      "source_path": "Original-post MP4 recovered through public X embed metadata; SHA-256 8f67b8037a76eb4078dfb5d5fa08864317196cf60f2d6644e55249d083fe2e4f; 11.200000 s; poster SHA-256 9a020f27dd08214ff6ce0796c4d4e170da38f10c8b080fad1850f201fe8fccb9; first decoded frame at 00:00:00",
-      "classification": "Original-post video mirrored locally for stable gallery playback; poster extracted without content alteration.",
-      "alt": {
-        "en": "Dual-arm physical robot executing a task after a human demonstration-video prompt.",
-        "zh": "双臂真机根据人类示范视频提示执行任务。"
-      },
-      "caption": {
-        "en": "Original physical-ICL post video; the first-pass claim is not a repeated-trial metric.",
-        "zh": "物理 ICL 原帖视频；首次尝试成功的说法不是重复试验指标。"
-      }
-    },
     "P20": {
       "kind": "image",
       "url": "assets/posters/P20-embodiedswe-overview.jpg",

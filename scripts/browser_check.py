@@ -45,7 +45,7 @@ def main() -> int:
         tag_labels = manifest['tag_labels']
         assert set(topic_tags) == set(by_id)
         assert set(tag_labels) >= {'sim', 'real', 'control', 'real-to-sim', 'replay'}
-        assert sum(item['status'] == 'verified' for item in publication_dates.values()) == 61
+        assert sum(item['status'] == 'verified' for item in publication_dates.values()) == 58
         assert sum(item['status'] == 'estimated' for item in publication_dates.values()) == 3
 
         def group_for(project: dict) -> str:
@@ -66,7 +66,7 @@ def main() -> int:
             )]
             for name in ('projects', 'social')
         }
-        assert len(expected['projects']) == 46 and len(expected['social']) == 18
+        assert len(expected['projects']) == 46 and len(expected['social']) == 15
         assert set(expected['projects']).isdisjoint(expected['social'])
 
         def activate(name: str):
@@ -99,7 +99,7 @@ def main() -> int:
 
         retained = {pid: item for pid, item in manifest['media'].items() if item['kind'] in {'image', 'video'}}
         videos = {pid: item for pid, item in retained.items() if item['kind'] == 'video'}
-        assert len(retained) == 64 and len(videos) == 25
+        assert len(retained) == 61 and len(videos) == 22
         statuses = page.evaluate("""async (posters) => Promise.all(posters.map(async (poster) => {
             const response = await fetch(new URL(poster, location.href));
             return response.ok && (response.headers.get('content-type') || '').startsWith('image/');
@@ -192,7 +192,7 @@ def main() -> int:
         assert page.locator('dialog, #detail-dialog').count() == 0
         assert not errors, errors
         browser.close()
-    print('PASS: no detail UI/keyboard/click hooks; all 64 sourced verified-or-explicitly-estimated publication displays, 25 first-frame video posters plus retained image covers, video controls, search, groups, language, mobile, and Pages subpath work.')
+    print('PASS: no detail UI/keyboard/click hooks; all 61 sourced verified-or-explicitly-estimated publication displays, 22 first-frame video posters plus retained image covers, video controls, search, groups, language, mobile, and Pages subpath work.')
     return 0
 
 
