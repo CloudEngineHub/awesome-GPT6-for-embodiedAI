@@ -85,3 +85,6 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | X13 | sim | replay, control |
 | X14 | sim | environment-building, rl-training |
 | X15 | real | control |
+| X16 | real | control |
+| X17 | real | code-generation, control |
+| X18 | real | policy, control |

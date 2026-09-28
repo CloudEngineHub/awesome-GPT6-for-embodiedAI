@@ -932,3 +932,39 @@ MIT repository documents fixed and GPT-6 Astra agentic real-to-sim pipelines, ro
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-28
 
 Apache-2.0 repository created 2026-09-28 publishes dexterous-hand task specifications, event scoring, adapters, official task media, and a bounded GPT-6 Astra example policy. Its published command uses a mock adapter and no Astra hardware result is claimed.
+
+<a id="s105"></a>
+## S105 · ZeYanjie Rubik's Cube original X post
+
+[https://x.com/ZeYanjie/status/2098118164626501669](https://x.com/ZeYanjie/status/2098118164626501669)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-28
+
+Exact author status retained. Public embed metadata exposes the text `GPT6 Astra solved Rubik's Cube with robot hands`, author identity, and 2026-09-10T18:35:26Z timestamp; the direct X page is access-limited in this environment. The linked personal demo identifies the related bimanual MuJoCo project.
+
+<a id="s106"></a>
+## S106 · ARX washing-machine knob original X post and author replies
+
+[https://x.com/ARXrobotics/status/2096328304794210604](https://x.com/ARXrobotics/status/2096328304794210604)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-28
+
+Exact author status and original media were checked through public embed metadata because direct X pages are access-limited. The post says GPT-6 Astra was connected to a robot in a new room and completed the request to turn a knob and start a washing machine. Author replies 2096449872782348475 and 2096450979562713179 say only GPT was used, with an intermediate layer, no VLA, and no collected data.
+
+<a id="s107"></a>
+## S107 · Lucas Cassiano Vitrus unseen-robot original X post
+
+[https://x.com/lucascassiano/status/2097830777438486557](https://x.com/lucascassiano/status/2097830777438486557)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-28
+
+Exact author status and original media were checked through public embed metadata because direct X pages are access-limited. The post states GPT-6 Astra received full hardware and Vitrus OS access, had never seen the robot, used no human egocentric data or VLA, and taught itself in a physics simulation; no formal protocol or repository was found.
+
+<a id="s108"></a>
+## S108 · Wenli Xiao physical in-context-learning original X post
+
+[https://x.com/_wenlixiao/status/2097801944119349455](https://x.com/_wenlixiao/status/2097801944119349455)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-28
+
+Exact author status and original media were checked through public embed metadata because direct X pages are access-limited. The post says a human novel-task recording was placed in Codex and GPT-6 Astra was prompted to drive a robot arm the same way; `first pass and it just works` is an author claim, not a repeated-trial metric.

@@ -117,8 +117,8 @@
     },
     "X07": {
       "title": "Dexterous Hand Rubik's Cube",
-      "summary": "An author claims an Astra cube-solving demo; a personal page confirms a related MuJoCo bimanual project.",
-      "detail": "The original post and implementation details remain to be verified."
+      "summary": "The original author post says GPT-6 Astra solved a Rubik's Cube with robot hands; the linked personal page confirms the related bimanual MuJoCo project.",
+      "detail": "The exact post is now retained, but prompts, control protocol, logs, and code remain unavailable."
     },
     "X08": {
       "title": "Sharpa Dexterous-Hand Pen Spinning PPO",
@@ -169,6 +169,21 @@
       "title": "Wuji2 Hand Visual Self-Righting",
       "summary": "An author demo shows GPT-6 Astra Ultra using third-person RGB feedback to make a fallen Wuji2 hand push itself upright with its fingers.",
       "detail": "The supplied clip contains accelerated and normal-speed segments; prompts, tool interfaces, logs, and repeated-trial evidence are not public."
+    },
+    "X16": {
+      "title": "Zero-Shot Washing-Machine Knob Operation",
+      "summary": "ARX connected GPT-6 Astra to a robot in a new room and asked it to turn the knob and start a washing machine; author replies say no VLA or collected data was used.",
+      "detail": "A single 15.3-second clip is retained. The prompt, intermediate interface layer, low-level control, logs, timing, and repeatability are not public."
+    },
+    "X17": {
+      "title": "Vitrus Adaptation to an Unseen Robot",
+      "summary": "The author says GPT-6 Astra received full access to new hardware and Vitrus OS, taught itself in physics simulation, and then operated the physical robot without human egocentric data or a VLA.",
+      "detail": "The post does not define a task, success criterion, training budget, repeated trials, or the simulation-to-hardware control stack."
+    },
+    "X18": {
+      "title": "Human Demonstration Video to Physical ICL",
+      "summary": "The author put a recording of a human performing a new task into Codex and prompted GPT-6 Astra to drive a dual-arm robot the same way; the post says the first pass worked.",
+      "detail": "The 11.2-second selected clip provides no repeat trials, failures, exact task definition, hardware details, prompts, action interface, or logs."
     },
     "P20": {
       "title": "EmbodiedSWE · Coding Agents for Long-Horizon Dexterous Robotics",

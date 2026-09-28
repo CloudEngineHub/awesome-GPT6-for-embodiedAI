@@ -222,9 +222,15 @@
   "X07": {
     "date": "2026-09-10",
     "status": "verified",
-    "basis": "保留项目来源记录给出精确日。",
+    "basis": "原帖 status ID `2098118164626501669` 依 X Snowflake epoch 解码为 `2026-09-10T18:35:26.254Z`。",
     "rule": null,
-    "uncertainty": "无；资料记录为精确日。"
+    "uncertainty": "日期精确到 UTC 日；原帖正文和媒体元数据通过公开嵌入接口核对，直接 X 页面在本环境受限。",
+    "meaning": "灵巧手解魔方原帖创建日。",
+    "evidence_url": "https://x.com/ZeYanjie/status/2098118164626501669",
+    "checked_endpoints": [
+      "https://x.com/ZeYanjie/status/2098118164626501669",
+      "https://dex-rubik-cube.yanjieze.com/"
+    ]
   },
   "X08": {
     "date": "2026-09-16",
@@ -526,5 +532,43 @@
     "basis": "GitHub repository creation timestamp is 2026-09-28T00:42:19Z.",
     "rule": null,
     "uncertainty": "Infrastructure release date; no GPT-6 Astra physical-robot evaluation result was published."
+  },
+  "X16": {
+    "date": "2026-09-05",
+    "status": "verified",
+    "basis": "原帖 status ID `2096328304794210604` 依 X Snowflake epoch 解码为 `2026-09-05T20:03:10.416Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；正文、作者回复和原始媒体通过公开嵌入接口核对，直接 X 页面在本环境受限。",
+    "meaning": "ARX 洗衣机旋钮演示原帖创建日。",
+    "evidence_url": "https://x.com/ARXrobotics/status/2096328304794210604",
+    "checked_endpoints": [
+      "https://x.com/ARXrobotics/status/2096328304794210604",
+      "https://x.com/ARXrobotics/status/2096449872782348475",
+      "https://x.com/ARXrobotics/status/2096450979562713179"
+    ]
+  },
+  "X17": {
+    "date": "2026-09-09",
+    "status": "verified",
+    "basis": "原帖 status ID `2097830777438486557` 依 X Snowflake epoch 解码为 `2026-09-09T23:33:27.809Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；正文和原始媒体通过公开嵌入接口核对，直接 X 页面在本环境受限。",
+    "meaning": "Vitrus 未见机器人适配演示原帖创建日。",
+    "evidence_url": "https://x.com/lucascassiano/status/2097830777438486557",
+    "checked_endpoints": [
+      "https://x.com/lucascassiano/status/2097830777438486557"
+    ]
+  },
+  "X18": {
+    "date": "2026-09-09",
+    "status": "verified",
+    "basis": "原帖 status ID `2097801944119349455` 依 X Snowflake epoch 解码为 `2026-09-09T21:38:53.410Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；正文和原始媒体通过公开嵌入接口核对，直接 X 页面在本环境受限。",
+    "meaning": "人类示范视频到真机物理 ICL 演示原帖创建日。",
+    "evidence_url": "https://x.com/_wenlixiao/status/2097801944119349455",
+    "checked_endpoints": [
+      "https://x.com/_wenlixiao/status/2097801944119349455"
+    ]
   }
 }

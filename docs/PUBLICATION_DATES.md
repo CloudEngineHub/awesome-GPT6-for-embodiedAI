@@ -56,7 +56,7 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | X04 | 2026-0911 | verified | 2026-09-11 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S038](SOURCES.md#s038) |
 | X05 | 2026-0913 | verified | 2026-09-13 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S039](SOURCES.md#s039) |
 | X06 | 2026-0911 | verified | 2026-09-11 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S038](SOURCES.md#s038) |
-| X07 | 2026-0910 | verified | 2026-09-10 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S040](SOURCES.md#s040) · [S041](SOURCES.md#s041) |
+| X07 | 2026-0910 | verified | 2026-09-10 | 原帖 status ID `2098118164626501669` 依 X Snowflake epoch 解码为 `2026-09-10T18:35:26.254Z`。 | — | 日期精确到 UTC 日；原帖正文和媒体元数据通过公开嵌入接口核对，直接 X 页面在本环境受限。 | [S040](SOURCES.md#s040) · [S041](SOURCES.md#s041) · [S105](SOURCES.md#s105) |
 | X08 | 2026-0916 | verified | 2026-09-16 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S039](SOURCES.md#s039) |
 | X09 | 2026-0908 | verified | pending confirmation | 原帖 status ID `2097349207795335424` 依 X Snowflake epoch 解码为 `2026-09-08T15:39:52.659Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导。 | [S024](SOURCES.md#s024) |
 | X10 | 2026-0908 | verified | pending confirmation | 原帖 status ID `2097329417760440461` 依 X Snowflake epoch 解码为 `2026-09-08T14:21:14.347Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导。 | [S042](SOURCES.md#s042) |
@@ -65,6 +65,9 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | X13 | 2026-0915 | verified | 2026-09-15 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) · [S052](SOURCES.md#s052) |
 | X14 | 2026-0911 | verified | 2026-09-11 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) |
 | X15 | 2026-0918 | verified | 2026-09-18 | 原帖 status ID `2100754714971287557` 依 X Snowflake epoch 解码为 `2026-09-18T01:12:08.841Z`。 | — | 日期精确到 UTC 日；原帖页面受限，但具体 status ID、作者研究笔记与用户提供视频内容相互匹配。 | [S057](SOURCES.md#s057) · [S058](SOURCES.md#s058) |
+| X16 | 2026-0905 | verified | 2026-09-05 | 原帖 status ID `2096328304794210604` 依 X Snowflake epoch 解码为 `2026-09-05T20:03:10.416Z`。 | — | 日期精确到 UTC 日；正文、作者回复和原始媒体通过公开嵌入接口核对，直接 X 页面在本环境受限。 | [S106](SOURCES.md#s106) |
+| X17 | 2026-0909 | verified | 2026-09-09 | 原帖 status ID `2097830777438486557` 依 X Snowflake epoch 解码为 `2026-09-09T23:33:27.809Z`。 | — | 日期精确到 UTC 日；正文和原始媒体通过公开嵌入接口核对，直接 X 页面在本环境受限。 | [S107](SOURCES.md#s107) |
+| X18 | 2026-0909 | verified | 2026-09-09 | 原帖 status ID `2097801944119349455` 依 X Snowflake epoch 解码为 `2026-09-09T21:38:53.410Z`。 | — | 日期精确到 UTC 日；正文和原始媒体通过公开嵌入接口核对，直接 X 页面在本环境受限。 | [S108](SOURCES.md#s108) |
 
 ## Date-research replacement audit
 
