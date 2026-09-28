@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-27 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-28 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -914,3 +914,21 @@ The author account and exact status target were corroborated through Yahoo realt
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
 
 Repository evidence preserves the unchanged independent candidate, a changes-requested visual review, a failed static-engine check, and 2026-09-27 ArtVIP surface measurements. The cabinet metrics are reference-assisted object scores, not independent whole-room accuracy.
+
+<a id="s103"></a>
+## S103 · R2S2R official repository
+
+[https://github.com/weiqianwang123/R2S2R](https://github.com/weiqianwang123/R2S2R)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-28
+
+MIT repository documents fixed and GPT-6 Astra agentic real-to-sim pipelines, robot/camera inputs, checked tool stages, Isaac Lab replay, synthetic ground-truth evaluation, and official GIF media. The September 27 README reports a single wrist-only PhysCoder agentic run; the catalogue did not rerun its GPU/model stack.
+
+<a id="s104"></a>
+## S104 · RC DexBench official repository
+
+[https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-28
+
+Apache-2.0 repository created 2026-09-28 publishes dexterous-hand task specifications, event scoring, adapters, official task media, and a bounded GPT-6 Astra example policy. Its published command uses a mock adapter and no Astra hardware result is claimed.

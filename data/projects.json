@@ -2039,6 +2039,104 @@
     "independently_reproduced": false
   },
   {
+    "id": "P45",
+    "title": "R2S2R · Astra 驱动的机器人视角真转仿流程",
+    "section": "core",
+    "category": "real2sim",
+    "environment": "simulation",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "R2S2R 从机器人外部/腕部相机与关节状态构建 Isaac Lab 场景；其 agentic 路线让 GPT-6 Astra 分阶段选择视图、生成并拟合物体、设定物理参数，再依据仿真重放修正几何。",
+    "authors": "Qian Wang",
+    "event_date": "2026-09-25",
+    "event_date_basis": "GitHub repository created 2026-09-25T00:17:51Z; quantitative wrist-only PhysCoder results were published in commit 66a5417 on 2026-09-27T21:13:42Z.",
+    "window_status": "updated_in_window",
+    "url": "https://github.com/weiqianwang123/R2S2R",
+    "code_url": "https://github.com/weiqianwang123/R2S2R",
+    "license_status": "仓库采用 MIT；SimFoundry、SAM3、Hunyuan3D、FoundationStereo、MuJoCo/Isaac Lab 资产与 DROID 数据适用各自许可。",
+    "control_interface": "标定 RGB-D/关节轨迹 → Astra 通过受检工具选择帧、分割、生成/拟合网格并组装场景 → Isaac Lab settle/replay → Astra 根据重放复核修正几何",
+    "metrics": [
+      {
+        "name": "Agentic wrist-only object centre error",
+        "value": 0.1,
+        "unit": "cm or less",
+        "denominator": "one synthetic PhysCoder box-block scene",
+        "protocol": "MuJoCo ground-truth capture reconstructed into Isaac Lab; wrist camera only"
+      },
+      {
+        "name": "Agentic wrist-only object size error",
+        "value": 0.1,
+        "unit": "cm or less",
+        "denominator": "one synthetic PhysCoder box-block scene",
+        "protocol": "same author-reported run; compared against simulation ground truth"
+      },
+      {
+        "name": "Agentic wrist-only replay depth residual",
+        "value": 1,
+        "unit": "mm or less",
+        "denominator": "camera frames from the same synthetic run",
+        "protocol": "median absolute depth difference between Isaac Lab replay and recording"
+      }
+    ],
+    "limitations": [
+      "Astra 的量化 agentic 结果来自一个 MuJoCo 合成场景，不是真实 DROID 场景，也不是多任务基准成功率。",
+      "仓库同时包含不等同于 Astra 路线的 fixed/SimFoundry 结果；本站未将两条管线的数值合并比较。",
+      "流程依赖多套外部模型、GPU 环境、Isaac Lab 与本地 Codex 会话；本站未独立复跑。",
+      "重建用于场景生成与重放，不代表 Astra 在线控制真实机器人。"
+    ],
+    "source_ids": [
+      "S103"
+    ],
+    "links": {
+      "code": "https://github.com/weiqianwang123/R2S2R",
+      "agentic_pipeline": "https://github.com/weiqianwang123/R2S2R/tree/main/src/r2s2r/pipeline/agentic",
+      "demo": "https://github.com/weiqianwang123/R2S2R/blob/main/docs/demo/ur5e_wrist.gif"
+    },
+    "last_checked": "2026-09-28",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P46",
+    "title": "RC DexBench · GPT-6 Astra 灵巧手评测接口",
+    "section": "supporting",
+    "category": "harness",
+    "environment": "simulation",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "infrastructure",
+    "evidence_level": "A",
+    "summary": "RC DexBench 为按键、钢琴序列和固定场景抓放定义事件级评分与统一适配器；示例策略通过 GPT-6 Astra 每轮选择一个受限手指动作，但公开快速示例只连接 mock adapter。",
+    "authors": "Robotics Center",
+    "event_date": "2026-09-28",
+    "event_date_basis": "GitHub repository created 2026-09-28T00:42:19Z; public README/media/Astra example were completed in commit 89599c3 at 2026-09-28T00:58:24Z.",
+    "window_status": "in_window",
+    "url": "https://github.com/RoboticsCenter/dexbench",
+    "code_url": "https://github.com/RoboticsCenter/dexbench",
+    "license_status": "仓库采用 Apache-2.0；连接的机器人、数据记录、模型服务与第三方资产适用各自许可。",
+    "control_interface": "任务/观测 → Astra 从 index/middle/ring/stop 中选择单个受限动作 → adapter 映射到手指运动 → 键盘、MIDI、触觉与时钟事件记录和评分",
+    "metrics": [],
+    "limitations": [
+      "公开 README 的 Astra 命令使用 mock adapter；没有发布 GPT-6 Astra 真机成功率、结果文件或 MCAP 试验集。",
+      "任务 GIF 与真实夹爪照片用于说明基准硬件和协议，不证明模型已在这些设备上完成评测。",
+      "替换为真实机器人 adapter 需要维护者自行实现硬件映射、校准与安全边界。",
+      "这是新发布的评测基础设施，不是独立的 GPT-6 机器人能力结果；本站未调用模型或硬件。"
+    ],
+    "source_ids": [
+      "S104"
+    ],
+    "links": {
+      "code": "https://github.com/RoboticsCenter/dexbench",
+      "spec": "https://github.com/RoboticsCenter/dexbench/blob/main/SPEC.md",
+      "adapter_guide": "https://github.com/RoboticsCenter/dexbench/blob/main/docs/add_an_adapter.md"
+    },
+    "last_checked": "2026-09-28",
+    "independently_reproduced": false
+  },
+  {
     "id": "X01",
     "title": "真实机器人键盘打字",
     "section": "watchlist",

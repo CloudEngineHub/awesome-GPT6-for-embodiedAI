@@ -907,5 +907,23 @@
     "access": "page_text",
     "checked_at": "2026-09-27",
     "notes": "Repository evidence preserves the unchanged independent candidate, a changes-requested visual review, a failed static-engine check, and 2026-09-27 ArtVIP surface measurements. The cabinet metrics are reference-assisted object scores, not independent whole-room accuracy."
+  },
+  {
+    "id": "S103",
+    "title": "R2S2R official repository",
+    "url": "https://github.com/weiqianwang123/R2S2R",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-28",
+    "notes": "MIT repository documents fixed and GPT-6 Astra agentic real-to-sim pipelines, robot/camera inputs, checked tool stages, Isaac Lab replay, synthetic ground-truth evaluation, and official GIF media. The September 27 README reports a single wrist-only PhysCoder agentic run; the catalogue did not rerun its GPU/model stack."
+  },
+  {
+    "id": "S104",
+    "title": "RC DexBench official repository",
+    "url": "https://github.com/RoboticsCenter/dexbench",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-28",
+    "notes": "Apache-2.0 repository created 2026-09-28 publishes dexterous-hand task specifications, event scoring, adapters, official task media, and a bounded GPT-6 Astra example policy. Its published command uses a mock adapter and no Astra hardware result is claimed."
   }
 ]

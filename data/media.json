@@ -1010,6 +1010,42 @@
         "en": "Official HomeBody teaser poster; the full author-hosted video remains linked.",
         "zh": "HomeBody 官方预告片封面；完整视频保留作者托管链接。"
       }
+    },
+    "P45": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/weiqianwang123/R2S2R/1eb6256d6a08119f6f240e7b08eb02b373ead190/docs/demo/ur5e_wrist.gif",
+      "fit": "contain",
+      "source_url": "https://github.com/weiqianwang123/R2S2R/blob/1eb6256d6a08119f6f240e7b08eb02b373ead190/docs/demo/ur5e_wrist.gif",
+      "source_page_url": "https://github.com/weiqianwang123/R2S2R",
+      "source_path": "Official repository GIF at reviewed commit 1eb6256d6a08119f6f240e7b08eb02b373ead190, showing the wrist-only PhysCoder input/reconstruction replay used for the agentic result summary.",
+      "classification": "Author-provided synthetic-scene reconstruction/replay media; not a real-robot Astra control video or an independently reproduced result.",
+      "source_id": "S103",
+      "alt": {
+        "en": "R2S2R wrist-only PhysCoder reconstruction and simulation replay.",
+        "zh": "R2S2R 仅腕部相机的 PhysCoder 重建与仿真重放。"
+      },
+      "caption": {
+        "en": "Official wrist-only synthetic reconstruction/replay GIF.",
+        "zh": "官方仅腕部相机合成场景重建/重放 GIF。"
+      }
+    },
+    "P46": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/RoboticsCenter/dexbench/f9bf6fa673b88a82a579a8f25807ddfd77c7ba6e/assets/pick-place-ab-rig.jpg",
+      "fit": "cover",
+      "source_url": "https://github.com/RoboticsCenter/dexbench/blob/f9bf6fa673b88a82a579a8f25807ddfd77c7ba6e/assets/pick-place-ab-rig.jpg",
+      "source_page_url": "https://github.com/RoboticsCenter/dexbench",
+      "source_path": "Official repository rig photograph at reviewed commit f9bf6fa673b88a82a579a8f25807ddfd77c7ba6e, published with the benchmark task descriptions.",
+      "classification": "Author-provided benchmark rig photograph; it illustrates target hardware and does not claim that Astra completed a physical run.",
+      "source_id": "S104",
+      "alt": {
+        "en": "DexBench Wuji dexterous hand and robot-arm pick-and-place rig.",
+        "zh": "DexBench Wuji 灵巧手与机械臂抓放测试台。"
+      },
+      "caption": {
+        "en": "Official DexBench pick-and-place rig photograph; no Astra hardware result is implied.",
+        "zh": "DexBench 官方抓放测试台照片；不代表已取得 Astra 真机结果。"
+      }
     }
   },
   "missing_policy": {

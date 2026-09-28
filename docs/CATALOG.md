@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-09-27。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-09-28。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 35
+## 核心项目与评测 · 36
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -952,7 +952,38 @@ teaser：[https://tml.stanford.edu/homebody/videos/teaser.mp4](https://tml.stanf
 
 ---
 
-## 配套资源与对照 · 9
+<a id="p45"></a>
+### P45 · R2S2R · Astra 驱动的机器人视角真转仿流程
+
+R2S2R 从机器人外部/腕部相机与关节状态构建 Isaac Lab 场景；其 agentic 路线让 GPT-6 Astra 分阶段选择视图、生成并拟合物体、设定物理参数，再依据仿真重放修正几何。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Qian Wang  
+**事件日期：** 2026-09-25（本月更新，基础项目更早）  
+**日期依据：** GitHub repository created 2026-09-25T00:17:51Z; quantitative wrist-only PhysCoder results were published in commit 66a5417 on 2026-09-27T21:13:42Z.  
+**入口：** [https://github.com/weiqianwang123/R2S2R](https://github.com/weiqianwang123/R2S2R)  
+**代码入口：** [https://github.com/weiqianwang123/R2S2R](https://github.com/weiqianwang123/R2S2R)  
+**许可状态：** 仓库采用 MIT；SimFoundry、SAM3、Hunyuan3D、FoundationStereo、MuJoCo/Isaac Lab 资产与 DROID 数据适用各自许可。  
+**控制接口 / 作用：** 标定 RGB-D/关节轨迹 → Astra 通过受检工具选择帧、分割、生成/拟合网格并组装场景 → Isaac Lab settle/replay → Astra 根据重放复核修正几何
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Agentic wrist-only object centre error | 0.1 cm or less | one synthetic PhysCoder box-block scene | MuJoCo ground-truth capture reconstructed into Isaac Lab; wrist camera only |
+| Agentic wrist-only object size error | 0.1 cm or less | one synthetic PhysCoder box-block scene | same author-reported run; compared against simulation ground truth |
+| Agentic wrist-only replay depth residual | 1 mm or less | camera frames from the same synthetic run | median absolute depth difference between Isaac Lab replay and recording |
+
+**限制与未决项：** Astra 的量化 agentic 结果来自一个 MuJoCo 合成场景，不是真实 DROID 场景，也不是多任务基准成功率。 仓库同时包含不等同于 Astra 路线的 fixed/SimFoundry 结果；本站未将两条管线的数值合并比较。 流程依赖多套外部模型、GPU 环境、Isaac Lab 与本地 Codex 会话；本站未独立复跑。 重建用于场景生成与重放，不代表 Astra 在线控制真实机器人。
+
+code：[https://github.com/weiqianwang123/R2S2R](https://github.com/weiqianwang123/R2S2R)  
+agentic_pipeline：[https://github.com/weiqianwang123/R2S2R/tree/main/src/r2s2r/pipeline/agentic](https://github.com/weiqianwang123/R2S2R/tree/main/src/r2s2r/pipeline/agentic)  
+demo：[https://github.com/weiqianwang123/R2S2R/blob/main/docs/demo/ur5e_wrist.gif](https://github.com/weiqianwang123/R2S2R/blob/main/docs/demo/ur5e_wrist.gif)  
+
+**来源：** [S103 · R2S2R official repository](SOURCES.md#s103)
+
+---
+
+## 配套资源与对照 · 10
 
 <a id="p13"></a>
 ### P13 · Inspect Robots
@@ -1168,6 +1199,31 @@ runs：[https://huggingface.co/datasets/andlyu/Public-YAM-runs](https://huggingf
 api：[https://github.com/andlyu/blupe-remote-yam/blob/main/API.md](https://github.com/andlyu/blupe-remote-yam/blob/main/API.md)  
 
 **来源：** [S089 · BluPe Remote YAM runner](SOURCES.md#s089)
+
+---
+
+<a id="p46"></a>
+### P46 · RC DexBench · GPT-6 Astra 灵巧手评测接口
+
+RC DexBench 为按键、钢琴序列和固定场景抓放定义事件级评分与统一适配器；示例策略通过 GPT-6 Astra 每轮选择一个受限手指动作，但公开快速示例只连接 mock adapter。
+
+**来源等级：A** · 仿真 · 基础设施，不是单独的 GPT-6 成果
+
+**作者 / 团队：** Robotics Center  
+**事件日期：** 2026-09-28（窗口内）  
+**日期依据：** GitHub repository created 2026-09-28T00:42:19Z; public README/media/Astra example were completed in commit 89599c3 at 2026-09-28T00:58:24Z.  
+**入口：** [https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)  
+**代码入口：** [https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)  
+**许可状态：** 仓库采用 Apache-2.0；连接的机器人、数据记录、模型服务与第三方资产适用各自许可。  
+**控制接口 / 作用：** 任务/观测 → Astra 从 index/middle/ring/stop 中选择单个受限动作 → adapter 映射到手指运动 → 键盘、MIDI、触觉与时钟事件记录和评分
+
+**限制与未决项：** 公开 README 的 Astra 命令使用 mock adapter；没有发布 GPT-6 Astra 真机成功率、结果文件或 MCAP 试验集。 任务 GIF 与真实夹爪照片用于说明基准硬件和协议，不证明模型已在这些设备上完成评测。 替换为真实机器人 adapter 需要维护者自行实现硬件映射、校准与安全边界。 这是新发布的评测基础设施，不是独立的 GPT-6 机器人能力结果；本站未调用模型或硬件。
+
+code：[https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)  
+spec：[https://github.com/RoboticsCenter/dexbench/blob/main/SPEC.md](https://github.com/RoboticsCenter/dexbench/blob/main/SPEC.md)  
+adapter_guide：[https://github.com/RoboticsCenter/dexbench/blob/main/docs/add_an_adapter.md](https://github.com/RoboticsCenter/dexbench/blob/main/docs/add_an_adapter.md)  
+
+**来源：** [S104 · RC DexBench official repository](SOURCES.md#s104)
 
 ---
 

@@ -291,6 +291,16 @@
       "title": "HomeBody · A G1 That Explores, Remembers, and Acts",
       "summary": "GPT-6 Astra builds and consults a spatial memory, then composes navigation, picking, placing, and drawer skills for long-horizon Unitree G1 tasks in an unseen kitchen.",
       "detail": "Astra performs high-level reasoning and tool selection rather than direct joint control; the official demos have no trial denominator, and the repository says code is coming soon."
+    },
+    "P45": {
+      "title": "R2S2R · Robot-View Real-to-Sim with Astra",
+      "summary": "R2S2R turns calibrated external/wrist camera recordings and robot states into Isaac Lab scenes; its agentic path has GPT-6 Astra choose views, generate and fit objects, assign physical properties, and revise geometry after replay.",
+      "detail": "The reported Astra numbers come from one synthetic wrist-only PhysCoder scene, not the real DROID capture or a multi-task benchmark; this catalogue did not rerun the GPU/model stack."
+    },
+    "P46": {
+      "title": "RC DexBench · A GPT-6 Astra Interface for Dexterous-Hand Evaluation",
+      "summary": "RC DexBench defines event-based scoring and common adapters for keypress, piano-sequence, and fixed-scene pick-and-place tasks; its example Astra policy chooses one bounded finger action per turn.",
+      "detail": "The published Astra command uses a mock adapter and provides no physical-robot model result; the hardware media illustrates the benchmark rather than proving a completed Astra run."
     }
   }
 }
