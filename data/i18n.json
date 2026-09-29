@@ -301,6 +301,11 @@
       "title": "RC DexBench · A GPT-6 Astra Interface for Dexterous-Hand Evaluation",
       "summary": "RC DexBench defines event-based scoring and common adapters for keypress, piano-sequence, and fixed-scene pick-and-place tasks; its example Astra policy chooses one bounded finger action per turn.",
       "detail": "The published Astra command uses a mock adapter and provides no physical-robot model result; the hardware media illustrates the benchmark rather than proving a completed Astra run."
+    },
+    "P47": {
+      "title": "Astra Manipulation · Direct Simulation Control from Images and Proprioception",
+      "summary": "GPT-6 Astra directly emits bounded arm or dexterous-hand actions from camera images, robot proprioception, and actuator documentation; the repository publishes traces, evaluator records, and annotated videos across MuJoCo, PyBullet, and DexArt/SAPIEN.",
+      "detail": "The small pilots use different tasks and interfaces and cannot be pooled into one success rate; all results are simulation-only, and this catalogue did not rerun the model calls."
     }
   }
 }

@@ -2137,6 +2137,74 @@
     "independently_reproduced": false
   },
   {
+    "id": "P47",
+    "title": "Astra Manipulation · 图像与本体状态驱动的直接仿真控制",
+    "section": "core",
+    "category": "closed_loop",
+    "environment": "simulation",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "Astra Manipulation 让 GPT-6 Astra 根据相机图像、本体状态和动作说明直接输出机械臂或灵巧手的受限数值动作；作者公开了 MuJoCo、PyBullet 与 DexArt/SAPIEN 的逐步轨迹、评测结果和带动作叠层的视频。",
+    "authors": "TheShiningVampire",
+    "event_date": "2026-09-28",
+    "event_date_basis": "GitHub repository created 2026-09-28T20:39:56Z; reviewed result commit 2792a664 was authored 2026-09-28T22:35:36Z.",
+    "window_status": "in_window",
+    "url": "https://github.com/TheShiningVampire/astra-manipulation",
+    "code_url": "https://github.com/TheShiningVampire/astra-manipulation",
+    "license_status": "仓库在本轮检查时未声明许可证；robomimic、Adroit、DexArt/SAPIEN、MuJoCo/PyBullet 数据与依赖适用各自条款。",
+    "control_interface": "外部/腕部 RGB + 机器人关节、末端或夹爪状态 + 静态执行器说明 → Astra 输出受限姿态增量或原生关节控制及重复步数 → 低层控制器/仿真器执行 → 新观测进入下一轮",
+    "metrics": [
+      {
+        "name": "MuJoCo ten-task pilot completions",
+        "value": 0,
+        "unit": "successes",
+        "denominator": 10,
+        "protocol": "one recorded seed-0 trial per task; 40-decision and 800-control-step ceilings"
+      },
+      {
+        "name": "PyBullet reach completions",
+        "value": 3,
+        "unit": "successes",
+        "denominator": 3,
+        "protocol": "three recorded seeds on the simpler Cartesian reach task; different simulator and controller from the MuJoCo suite"
+      },
+      {
+        "name": "PyBullet elevated pick-and-place completions",
+        "value": 1,
+        "unit": "successes",
+        "denominator": 1,
+        "protocol": "one recorded trial; selected exploratory evidence, not a success-rate estimate"
+      },
+      {
+        "name": "DexArt native-task completions",
+        "value": 0,
+        "unit": "successes",
+        "denominator": 4,
+        "protocol": "one predetermined seen instance each for faucet, laptop, bucket, and toilet under native success checks"
+      }
+    ],
+    "limitations": [
+      "MuJoCo、PyBullet 与 DexArt 的任务、初始状态、控制器和时限不同，不能把结果合并为统一成功率或作受控仿真器比较。",
+      "每项只有少量或单次试验；PyBullet 的 3/3 与 1/1 是探索性记录，不能外推为稳定性能。",
+      "模型标识记录的是请求的 gpt-6-astra；Codex CLI 事件未暴露服务端解析后的模型标识，本站未重新调用模型核验。",
+      "全部结果来自仿真，不代表真机部署；仓库未声明许可证，复用代码或媒体前需取得许可。"
+    ],
+    "source_ids": [
+      "S106"
+    ],
+    "links": {
+      "code": "https://github.com/TheShiningVampire/astra-manipulation",
+      "ten_task_report": "https://github.com/TheShiningVampire/astra-manipulation/tree/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/ten-task-pilot",
+      "dexart_report": "https://github.com/TheShiningVampire/astra-manipulation/tree/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/dexart-pilot",
+      "video": "https://raw.githubusercontent.com/TheShiningVampire/astra-manipulation/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/bullet-pilot/bullet_pick_place/annotated.mp4"
+    },
+    "last_checked": "2026-09-29",
+    "independently_reproduced": false
+  },
+  {
     "id": "X01",
     "title": "真实机器人键盘打字",
     "section": "watchlist",

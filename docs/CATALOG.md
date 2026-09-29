@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-09-28。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-09-29。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 36
+## 核心项目与评测 · 37
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -980,6 +980,39 @@ agentic_pipeline：[https://github.com/weiqianwang123/R2S2R/tree/main/src/r2s2r/
 demo：[https://github.com/weiqianwang123/R2S2R/blob/main/docs/demo/ur5e_wrist.gif](https://github.com/weiqianwang123/R2S2R/blob/main/docs/demo/ur5e_wrist.gif)  
 
 **来源：** [S103 · R2S2R official repository](SOURCES.md#s103)
+
+---
+
+<a id="p47"></a>
+### P47 · Astra Manipulation · 图像与本体状态驱动的直接仿真控制
+
+Astra Manipulation 让 GPT-6 Astra 根据相机图像、本体状态和动作说明直接输出机械臂或灵巧手的受限数值动作；作者公开了 MuJoCo、PyBullet 与 DexArt/SAPIEN 的逐步轨迹、评测结果和带动作叠层的视频。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** TheShiningVampire  
+**事件日期：** 2026-09-28（窗口内）  
+**日期依据：** GitHub repository created 2026-09-28T20:39:56Z; reviewed result commit 2792a664 was authored 2026-09-28T22:35:36Z.  
+**入口：** [https://github.com/TheShiningVampire/astra-manipulation](https://github.com/TheShiningVampire/astra-manipulation)  
+**代码入口：** [https://github.com/TheShiningVampire/astra-manipulation](https://github.com/TheShiningVampire/astra-manipulation)  
+**许可状态：** 仓库在本轮检查时未声明许可证；robomimic、Adroit、DexArt/SAPIEN、MuJoCo/PyBullet 数据与依赖适用各自条款。  
+**控制接口 / 作用：** 外部/腕部 RGB + 机器人关节、末端或夹爪状态 + 静态执行器说明 → Astra 输出受限姿态增量或原生关节控制及重复步数 → 低层控制器/仿真器执行 → 新观测进入下一轮
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| MuJoCo ten-task pilot completions | 0 successes | 10 | one recorded seed-0 trial per task; 40-decision and 800-control-step ceilings |
+| PyBullet reach completions | 3 successes | 3 | three recorded seeds on the simpler Cartesian reach task; different simulator and controller from the MuJoCo suite |
+| PyBullet elevated pick-and-place completions | 1 successes | 1 | one recorded trial; selected exploratory evidence, not a success-rate estimate |
+| DexArt native-task completions | 0 successes | 4 | one predetermined seen instance each for faucet, laptop, bucket, and toilet under native success checks |
+
+**限制与未决项：** MuJoCo、PyBullet 与 DexArt 的任务、初始状态、控制器和时限不同，不能把结果合并为统一成功率或作受控仿真器比较。 每项只有少量或单次试验；PyBullet 的 3/3 与 1/1 是探索性记录，不能外推为稳定性能。 模型标识记录的是请求的 gpt-6-astra；Codex CLI 事件未暴露服务端解析后的模型标识，本站未重新调用模型核验。 全部结果来自仿真，不代表真机部署；仓库未声明许可证，复用代码或媒体前需取得许可。
+
+code：[https://github.com/TheShiningVampire/astra-manipulation](https://github.com/TheShiningVampire/astra-manipulation)  
+ten_task_report：[https://github.com/TheShiningVampire/astra-manipulation/tree/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/ten-task-pilot](https://github.com/TheShiningVampire/astra-manipulation/tree/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/ten-task-pilot)  
+dexart_report：[https://github.com/TheShiningVampire/astra-manipulation/tree/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/dexart-pilot](https://github.com/TheShiningVampire/astra-manipulation/tree/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/dexart-pilot)  
+video：[https://raw.githubusercontent.com/TheShiningVampire/astra-manipulation/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/bullet-pilot/bullet_pick_place/annotated.mp4](https://raw.githubusercontent.com/TheShiningVampire/astra-manipulation/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/bullet-pilot/bullet_pick_place/annotated.mp4)  
+
+**来源：** [S106 · Astra Manipulation official repository and recorded reports](SOURCES.md#s106)
 
 ---
 

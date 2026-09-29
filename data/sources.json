@@ -934,5 +934,14 @@
     "access": "linked_only",
     "checked_at": "2026-09-28",
     "notes": "Exact author status retained. Public embed metadata exposes the text `GPT6 Astra solved Rubik's Cube with robot hands`, author identity, and 2026-09-10T18:35:26Z timestamp; the direct X page is access-limited in this environment. The linked personal demo identifies the related bimanual MuJoCo project."
+  },
+  {
+    "id": "S106",
+    "title": "Astra Manipulation official repository and recorded reports",
+    "url": "https://github.com/TheShiningVampire/astra-manipulation",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-29",
+    "notes": "Repository created 2026-09-28 publishes the GPT-6 Astra observation/action boundary, source code, per-call traces, evaluator records, and annotated media. Reviewed commit 2792a664 reports 0/10 MuJoCo goals, 3/3 PyBullet reaches, 1/1 PyBullet elevated pick-and-place, and 0/4 native DexArt successes. These small pilots use different tasks and interfaces; the catalogue did not rerun model or simulator dependencies."
   }
 ]

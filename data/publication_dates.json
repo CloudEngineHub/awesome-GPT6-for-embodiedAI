@@ -532,5 +532,12 @@
     "basis": "GitHub repository creation timestamp is 2026-09-28T00:42:19Z.",
     "rule": null,
     "uncertainty": "Infrastructure release date; no GPT-6 Astra physical-robot evaluation result was published."
+  },
+  "P47": {
+    "date": "2026-09-28",
+    "status": "verified",
+    "basis": "GitHub repository creation timestamp is 2026-09-28T20:39:56Z.",
+    "rule": null,
+    "uncertainty": "Repository release date; the reviewed multi-simulator result commit followed at 2026-09-28T22:35:36Z."
   }
 }

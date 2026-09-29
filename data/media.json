@@ -1046,6 +1046,24 @@
         "en": "Official DexBench pick-and-place rig photograph; no Astra hardware result is implied.",
         "zh": "DexBench 官方抓放测试台照片；不代表已取得 Astra 真机结果。"
       }
+    },
+    "P47": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/TheShiningVampire/astra-manipulation/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/bullet-pilot/bullet_pick_place/preview.gif",
+      "fit": "contain",
+      "source_url": "https://github.com/TheShiningVampire/astra-manipulation/blob/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/bullet-pilot/bullet_pick_place/preview.gif",
+      "source_page_url": "https://github.com/TheShiningVampire/astra-manipulation",
+      "source_path": "Official 379,822-byte experiment preview at reviewed commit 2792a6644c5542ff0db0018320b33a9545e32ef7, paired with the published action trace, evaluator result, configuration, and annotated MP4.",
+      "classification": "Author-provided PyBullet pick-and-place result preview; one recorded simulation trial, not a physical-robot result or a reliable success-rate estimate.",
+      "source_id": "S106",
+      "alt": {
+        "en": "Astra Manipulation PyBullet elevated pick-and-place simulation preview.",
+        "zh": "Astra Manipulation 的 PyBullet 抬升抓放仿真预览。"
+      },
+      "caption": {
+        "en": "Official preview of the single recorded PyBullet pick-and-place success.",
+        "zh": "官方 PyBullet 单次抓放成功记录预览。"
+      }
     }
   },
   "missing_policy": {

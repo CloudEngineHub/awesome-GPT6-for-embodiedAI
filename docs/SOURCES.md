@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-28 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-29 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -941,3 +941,12 @@ Apache-2.0 repository created 2026-09-28 publishes dexterous-hand task specifica
 类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-28
 
 Exact author status retained. Public embed metadata exposes the text `GPT6 Astra solved Rubik's Cube with robot hands`, author identity, and 2026-09-10T18:35:26Z timestamp; the direct X page is access-limited in this environment. The linked personal demo identifies the related bimanual MuJoCo project.
+
+<a id="s106"></a>
+## S106 · Astra Manipulation official repository and recorded reports
+
+[https://github.com/TheShiningVampire/astra-manipulation](https://github.com/TheShiningVampire/astra-manipulation)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-29
+
+Repository created 2026-09-28 publishes the GPT-6 Astra observation/action boundary, source code, per-call traces, evaluator records, and annotated media. Reviewed commit 2792a664 reports 0/10 MuJoCo goals, 3/3 PyBullet reaches, 1/1 PyBullet elevated pick-and-place, and 0/4 native DexArt successes. These small pilots use different tasks and interfaces; the catalogue did not rerun model or simulator dependencies.
