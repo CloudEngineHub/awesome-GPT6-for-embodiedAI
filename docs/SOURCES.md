@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-29 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-30 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -950,3 +950,30 @@ Exact author status retained. Public embed metadata exposes the text `GPT6 Astra
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-29
 
 Repository created 2026-09-28 publishes the GPT-6 Astra observation/action boundary, source code, per-call traces, evaluator records, and annotated media. Reviewed commit 2792a664 reports 0/10 MuJoCo goals, 3/3 PyBullet reaches, 1/1 PyBullet elevated pick-and-place, and 0/4 native DexArt successes. These small pilots use different tasks and interfaces; the catalogue did not rerun model or simulator dependencies.
+
+<a id="s107"></a>
+## S107 · RoboICL arXiv paper and official repository
+
+[https://arxiv.org/abs/2609.34261](https://arxiv.org/abs/2609.34261)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-30
+
+arXiv v1 submitted 2026-09-28 documents the observation-action-receipt-observation context format, 30-task RoboDojo evaluation, three real-robot tasks, and optional Jev-gated action reuse. The linked official MIT repository provides code and pinned benchmark dependencies; this catalogue did not rerun them.
+
+<a id="s108"></a>
+## S108 · NavHarness arXiv paper
+
+[https://arxiv.org/abs/2609.34276](https://arxiv.org/abs/2609.34276)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-30
+
+arXiv v1 submitted 2026-09-28 describes a training-free cross-session navigation harness and reports GPT-6 Astra results on GOAT-Bench and IR2R-CE with SLAM-estimated poses. The abstract page provides no public code link; results were not independently reproduced.
+
+<a id="s109"></a>
+## S109 · CodeActionBench paper and project
+
+[https://arxiv.org/abs/2609.33807](https://arxiv.org/abs/2609.33807)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-30
+
+CC BY 4.0 arXiv v1 submitted 2026-09-27 defines 25 fixed RoboTwin 2.0 tasks, three attempts per task, shared robot APIs, and hidden physical-state verification. GPT-6 Astra with Codex CLI records 55/75 successes (73.3%) and 22/25 task coverage; the catalogue did not rerun the 675-attempt study.

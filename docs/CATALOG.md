@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-09-29。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-09-30。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 37
+## 核心项目与评测 · 39
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -573,27 +573,29 @@ weights：[https://huggingface.co/bingaochen/Astra-on-RoboMME-Monitor](https://h
 <a id="p30"></a>
 ### P30 · RoboICL · 具身上下文学习
 
-以同构 TRAIN/LIVE 观测—动作—反馈上下文让 Astra 在线输出双臂末端增量，在九项任务、45 次 rollout 上比较 0/1/3-shot 设置。
+RoboICL 以统一的观测—动作—回执—观测语法组织示范与交互记忆，让冻结的 GPT-6 Astra 在 RoboDojo 与三项真机任务中从上下文适应；新发布论文扩展了早期九任务结果。
 
 **来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
 
-**作者 / 团队：** Mosi-AI  
+**作者 / 团队：** Fangcheng Liu, Yeqing Shen, Anda Cheng et al. / Mosi-AI  
 **事件日期：** 2026-09-19（窗口内）  
 **日期依据：** GitHub repository created 2026-09-19 UTC.  
 **入口：** [https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/](https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/)  
 **代码入口：** [https://github.com/Mosi-AI/RoboICL](https://github.com/Mosi-AI/RoboICL)  
-**许可状态：** 项目页和仓库媒体公开可访问；未见统一媒体再许可声明。  
-**控制接口 / 作用：** TRAIN/LIVE 图像与动作反馈 → Astra → 15×14 双臂末端增量
+**许可状态：** 项目代码以 MIT 许可发布；第三方子模块和基准资产适用各自许可，项目媒体未见统一再许可声明。  
+**控制接口 / 作用：** 示范上下文 + 锚定交互记忆 + 当前视觉/状态 → GPT-6 Astra → 受限双臂末端动作 → 执行回执与新观测
 
 | 指标 | 结果 | 分母 | 协议 / 注意事项 |
 | --- | --- | --- | --- |
-| 3-shot mean score | 57.33 score | 45 rollouts | 9 tasks × 5 layouts/settings |
+| RoboDojo 30-task overall score | 50.64 score | 30 tasks | zero-shot for Open tasks and one demonstration elsewhere; strongest reported baseline 33.68 |
+| Three-shot real-robot mean progress | 78.89 score | 3 real-robot tasks | author-reported mean; zero-shot 14.45 and one-shot 63.33 |
 
-**限制与未决项：** 作者项目页自报，未独立复现。 3-shot 57.33 与 Direct 36.11 是跨协议上下文，不是严格因果对照。 九任务各 5 个设置，样本量仍有限。
+**限制与未决项：** 论文和代码均为作者发布，本目录未独立复现模型调用、仿真或真机实验。 30-task 汇总混合 Open 零样本与其余类别一示范设置，不是统一 shot 数的单一协议。 真机结果只有三项任务；不同 shot 数的提升不能外推为跨机器人稳定收益。
 
+paper：[https://arxiv.org/abs/2609.34261](https://arxiv.org/abs/2609.34261)  
 code：[https://github.com/Mosi-AI/RoboICL](https://github.com/Mosi-AI/RoboICL)  
 
-**来源：** [S072 · RoboICL repository](SOURCES.md#s072)
+**来源：** [S072 · RoboICL repository](SOURCES.md#s072) · [S107 · RoboICL arXiv paper and official repository](SOURCES.md#s107)
 
 ---
 
@@ -1013,6 +1015,64 @@ dexart_report：[https://github.com/TheShiningVampire/astra-manipulation/tree/27
 video：[https://raw.githubusercontent.com/TheShiningVampire/astra-manipulation/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/bullet-pilot/bullet_pick_place/annotated.mp4](https://raw.githubusercontent.com/TheShiningVampire/astra-manipulation/2792a6644c5542ff0db0018320b33a9545e32ef7/reports/bullet-pilot/bullet_pick_place/annotated.mp4)  
 
 **来源：** [S106 · Astra Manipulation official repository and recorded reports](SOURCES.md#s106)
+
+---
+
+<a id="p48"></a>
+### P48 · NavHarness · 跨会话终身具身导航
+
+NavHarness 让 GPT-6 Astra 在连续导航任务间保存地图、任务记录、房屋知识和恢复交接，并在 GOAT-Bench 与 IR2R-CE 中评估跨会话经验复用。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Xunyi Zhao, Jian Zhou, Sihao Lin et al.  
+**事件日期：** 2026-09-28（窗口内）  
+**日期依据：** arXiv:2609.34276 v1 was submitted 2026-09-28T04:24:47Z.  
+**入口：** [https://arxiv.org/abs/2609.34276](https://arxiv.org/abs/2609.34276)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** arXiv v1 以 CC BY 4.0 发布；摘要页未提供公开代码入口。  
+**控制接口 / 作用：** RGB 观测 + SLAM 位姿/地图 + 跨任务记录与房屋知识 → GPT-6 Astra 多轮推理与工具调用 → 导航动作、核验与运行总结
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| GOAT-Bench task success | 83.7 % s-SR | GOAT-Bench evaluation | NavHarness with GPT-6 Astra and SLAM-estimated poses; e-SR 36.9% |
+| IR2R-CE task success | 85.9 % s-SR | IR2R-CE evaluation | NavHarness with GPT-6 Astra and SLAM-estimated poses |
+
+**限制与未决项：** 结果来自作者论文，本目录未独立复现导航栈或模型调用。 指标依赖 SLAM 估计位姿、基准协议和跨会话记忆设计，不代表无地图真机部署。 摘要页未披露公开代码入口，实验分母与逐场景轨迹需结合论文附录解释。
+
+paper：[https://arxiv.org/abs/2609.34276](https://arxiv.org/abs/2609.34276)  
+
+**来源：** [S108 · NavHarness arXiv paper](SOURCES.md#s108)
+
+---
+
+<a id="p49"></a>
+### P49 · CodeActionBench · 具身 Code-as-Policy 评测
+
+CodeActionBench 在 25 项 RoboTwin 2.0 操作任务上要求多模态模型从 RGB 自主估计空间关系、编写并修正机器人程序；GPT-6 Astra 与 Codex CLI 的组合在固定协议下取得最高结果。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Yiheng Lyu, Xueying Jiang, Wenhao Li, Shijian Lu, Gongjie Zhang  
+**事件日期：** 2026-09-27（窗口内）  
+**日期依据：** arXiv:2609.33807 v1 was submitted 2026-09-27T17:59:31Z.  
+**入口：** [https://codeactionbench.org/](https://codeactionbench.org/)  
+**代码入口：** [https://github.com/lyhkk/CodeActionBench](https://github.com/lyhkk/CodeActionBench)  
+**许可状态：** 论文以 CC BY 4.0 发布；代码仓库许可应在复用前单独核对。  
+**控制接口 / 作用：** 多视角 RGB + 标定几何/机器人反馈 API → GPT-6 Astra（Codex CLI）生成并执行 Python 策略 → 受限运动工具与隐藏物理结果核验
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Attempt success rate | 73.3 % | 75 attempts | 25 fixed tasks × 3 attempts; GPT-6 Astra with Codex CLI |
+| Task coverage | 22 tasks | 25 | solved at least once in three attempts |
+
+**限制与未决项：** 结果评估的是 GPT-6 Astra 与 Codex CLI 的完整配置，不能只归因于底层模型。 每项任务固定一个场景种子且全部在 SAPIEN/RoboTwin 2.0 仿真中，不代表跨场景泛化或真机成功率。 模型仍使用相机标定、几何计算、运动规划和低层控制 API；并非直接输出关节力矩。
+
+paper：[https://arxiv.org/abs/2609.33807](https://arxiv.org/abs/2609.33807)  
+code：[https://github.com/lyhkk/CodeActionBench](https://github.com/lyhkk/CodeActionBench)  
+project：[https://codeactionbench.org/](https://codeactionbench.org/)  
+
+**来源：** [S109 · CodeActionBench paper and project](SOURCES.md#s109)
 
 ---
 

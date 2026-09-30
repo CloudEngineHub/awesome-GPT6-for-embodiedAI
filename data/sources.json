@@ -943,5 +943,32 @@
     "access": "page_text",
     "checked_at": "2026-09-29",
     "notes": "Repository created 2026-09-28 publishes the GPT-6 Astra observation/action boundary, source code, per-call traces, evaluator records, and annotated media. Reviewed commit 2792a664 reports 0/10 MuJoCo goals, 3/3 PyBullet reaches, 1/1 PyBullet elevated pick-and-place, and 0/4 native DexArt successes. These small pilots use different tasks and interfaces; the catalogue did not rerun model or simulator dependencies."
+  },
+  {
+    "id": "S107",
+    "title": "RoboICL arXiv paper and official repository",
+    "url": "https://arxiv.org/abs/2609.34261",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-30",
+    "notes": "arXiv v1 submitted 2026-09-28 documents the observation-action-receipt-observation context format, 30-task RoboDojo evaluation, three real-robot tasks, and optional Jev-gated action reuse. The linked official MIT repository provides code and pinned benchmark dependencies; this catalogue did not rerun them."
+  },
+  {
+    "id": "S108",
+    "title": "NavHarness arXiv paper",
+    "url": "https://arxiv.org/abs/2609.34276",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-30",
+    "notes": "arXiv v1 submitted 2026-09-28 describes a training-free cross-session navigation harness and reports GPT-6 Astra results on GOAT-Bench and IR2R-CE with SLAM-estimated poses. The abstract page provides no public code link; results were not independently reproduced."
+  },
+  {
+    "id": "S109",
+    "title": "CodeActionBench paper and project",
+    "url": "https://arxiv.org/abs/2609.33807",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-30",
+    "notes": "CC BY 4.0 arXiv v1 submitted 2026-09-27 defines 25 fixed RoboTwin 2.0 tasks, three attempts per task, shared robot APIs, and hidden physical-state verification. GPT-6 Astra with Codex CLI records 55/75 successes (73.3%) and 22/25 task coverage; the catalogue did not rerun the 675-attempt study."
   }
 ]

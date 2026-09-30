@@ -539,5 +539,19 @@
     "basis": "GitHub repository creation timestamp is 2026-09-28T20:39:56Z.",
     "rule": null,
     "uncertainty": "Repository release date; the reviewed multi-simulator result commit followed at 2026-09-28T22:35:36Z."
+  },
+  "P48": {
+    "date": "2026-09-28",
+    "status": "verified",
+    "basis": "arXiv:2609.34276 v1 was submitted 2026-09-28T04:24:47Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; no public code release date was available on the abstract page."
+  },
+  "P49": {
+    "date": "2026-09-27",
+    "status": "verified",
+    "basis": "arXiv:2609.33807 v1 was submitted 2026-09-27T17:59:31Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; experiments and project preparation predate public submission."
   }
 }

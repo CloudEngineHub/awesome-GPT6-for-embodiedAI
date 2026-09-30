@@ -1064,6 +1064,42 @@
         "en": "Official preview of the single recorded PyBullet pick-and-place success.",
         "zh": "官方 PyBullet 单次抓放成功记录预览。"
       }
+    },
+    "P48": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2609.34276v1/figures/navharness-architecture.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2609.34276v1/figures/navharness-architecture.png",
+      "source_page_url": "https://arxiv.org/html/2609.34276",
+      "source_path": "Official arXiv v1 paper architecture figure served from the paper HTML page.",
+      "classification": "Paper architecture figure showing the NavHarness cross-session navigation workflow; not an independently reproduced result.",
+      "source_id": "S108",
+      "alt": {
+        "en": "NavHarness architecture for retaining navigation experience across sessions.",
+        "zh": "NavHarness 跨会话保留导航经验的架构图。"
+      },
+      "caption": {
+        "en": "Official paper architecture figure for the cross-session navigation harness.",
+        "zh": "论文官方跨会话导航框架图。"
+      }
+    },
+    "P49": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2609.33807v1/figure2-trust-boundary-crop.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2609.33807v1/figure2-trust-boundary-crop.png",
+      "source_page_url": "https://arxiv.org/html/2609.33807",
+      "source_path": "Official arXiv v1 Figure 2 served from the CC BY 4.0 paper HTML page.",
+      "classification": "Paper system-boundary figure showing the benchmark agent, robot API, budgets, and hidden verifier; not an independently reproduced result.",
+      "source_id": "S109",
+      "alt": {
+        "en": "CodeActionBench system and information boundaries.",
+        "zh": "CodeActionBench 系统与信息边界图。"
+      },
+      "caption": {
+        "en": "Official paper figure for the fixed robot API and hidden-verifier protocol.",
+        "zh": "论文官方固定机器人 API 与隐藏核验器协议图。"
+      }
     }
   },
   "missing_policy": {

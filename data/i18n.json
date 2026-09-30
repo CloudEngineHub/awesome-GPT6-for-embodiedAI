@@ -219,8 +219,8 @@
     },
     "P30": {
       "title": "RoboICL · Embodied In-Context Learning",
-      "summary": "Astra receives homologous TRAIN/LIVE visual-action-feedback context and produces bimanual end-effector deltas online.",
-      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+      "summary": "RoboICL organizes demonstrations and interaction memory in a shared observation-action-receipt-observation format, adapting frozen GPT-6 Astra across RoboDojo and three real-robot tasks.",
+      "detail": "The 30-task aggregate mixes zero-shot Open tasks with one-shot settings elsewhere, and the three-task physical-robot result is not independently reproduced."
     },
     "P31": {
       "title": "GPT-6 LIBERO Manipulation Probe",
@@ -306,6 +306,16 @@
       "title": "Astra Manipulation · Direct Simulation Control from Images and Proprioception",
       "summary": "GPT-6 Astra directly emits bounded arm or dexterous-hand actions from camera images, robot proprioception, and actuator documentation; the repository publishes traces, evaluator records, and annotated videos across MuJoCo, PyBullet, and DexArt/SAPIEN.",
       "detail": "The small pilots use different tasks and interfaces and cannot be pooled into one success rate; all results are simulation-only, and this catalogue did not rerun the model calls."
+    },
+    "P48": {
+      "title": "NavHarness · Cross-Session Lifelong Embodied Navigation",
+      "summary": "NavHarness lets GPT-6 Astra preserve maps, task records, house knowledge, and recovery handovers across navigation sessions, with evaluation on GOAT-Bench and IR2R-CE.",
+      "detail": "The reported results use SLAM-estimated poses and benchmark simulation; they do not establish map-free physical-robot deployment."
+    },
+    "P49": {
+      "title": "CodeActionBench · Agentic Code-as-Policy for Embodied Manipulation",
+      "summary": "Across 25 fixed RoboTwin 2.0 tasks, GPT-6 Astra with Codex CLI interprets RGB observations, constructs spatial targets, and writes and revises robot programs under a shared API and hidden verifier.",
+      "detail": "The 73.3% result belongs to the complete Astra-plus-Codex configuration on fixed simulation seeds, not to direct joint control or a physical-robot benchmark."
     }
   }
 }

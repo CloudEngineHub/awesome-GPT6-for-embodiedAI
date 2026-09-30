@@ -33,7 +33,7 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P27 | 2026-0917 | verified | 2026-09-17 | Repository and v0.1.0 release published 2026-09-17. | — | Release date is directly verifiable. | [S069](SOURCES.md#s069) |
 | P28 | 2026-0917 | verified | 2026-09-17 | GitHub repository created 2026-09-17. | — | Repository creation date; not every rollout timestamp. | [S070](SOURCES.md#s070) |
 | P29 | 2026-0921 | verified | 2026-09-21 | Initial public repository release committed 2026-09-21 UTC. | — | Public release date; not every experiment timestamp. | [S071](SOURCES.md#s071) |
-| P30 | 2026-0919 | verified | 2026-09-19 | GitHub repository created 2026-09-19 UTC. | — | Repository creation date. | [S072](SOURCES.md#s072) |
+| P30 | 2026-0919 | verified | 2026-09-19 | GitHub repository created 2026-09-19 UTC. | — | Repository creation date. | [S072](SOURCES.md#s072) · [S107](SOURCES.md#s107) |
 | P31 | 2026-0923 | verified | 2026-09-23 | GitHub repository created 2026-09-23 UTC. | — | Repository creation date. | [S073](SOURCES.md#s073) |
 | P32 | 2026-0923 | verified | 2026-09-23 | GitHub repository created 2026-09-23 UTC. | — | Repository creation date. | [S074](SOURCES.md#s074) |
 | P33 | 2026-0915 | verified | 2026-09-15 | Repository created and v0.5.0 released 2026-09-15 UTC. | — | Release date is directly verifiable. | [S075](SOURCES.md#s075) |
@@ -51,6 +51,8 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P45 | 2026-0925 | verified | 2026-09-25 | GitHub repository creation timestamp is 2026-09-25T00:17:51Z. | — | Repository creation date; the reviewed quantitative wrist-only result was added on 2026-09-27. | [S103](SOURCES.md#s103) |
 | P46 | 2026-0928 | verified | 2026-09-28 | GitHub repository creation timestamp is 2026-09-28T00:42:19Z. | — | Infrastructure release date; no GPT-6 Astra physical-robot evaluation result was published. | [S104](SOURCES.md#s104) |
 | P47 | 2026-0928 | verified | 2026-09-28 | GitHub repository creation timestamp is 2026-09-28T20:39:56Z. | — | Repository release date; the reviewed multi-simulator result commit followed at 2026-09-28T22:35:36Z. | [S106](SOURCES.md#s106) |
+| P48 | 2026-0928 | verified | 2026-09-28 | arXiv:2609.34276 v1 was submitted 2026-09-28T04:24:47Z. | — | Paper submission date; no public code release date was available on the abstract page. | [S108](SOURCES.md#s108) |
+| P49 | 2026-0927 | verified | 2026-09-27 | arXiv:2609.33807 v1 was submitted 2026-09-27T17:59:31Z. | — | Paper submission date; experiments and project preparation predate public submission. | [S109](SOURCES.md#s109) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |
