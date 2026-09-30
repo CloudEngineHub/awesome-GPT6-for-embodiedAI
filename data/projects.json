@@ -1233,9 +1233,10 @@
     "title": "RoboICL · 具身上下文学习",
     "section": "core",
     "category": "closed_loop",
-    "environment": "simulation",
+    "environment": "real_and_sim",
     "scene_tags": [
-      "sim"
+      "sim",
+      "real"
     ],
     "gpt6_relation": "explicit_primary",
     "evidence_level": "A",
@@ -2310,7 +2311,8 @@
     "links": {
       "paper": "https://arxiv.org/abs/2609.33807",
       "code": "https://github.com/lyhkk/CodeActionBench",
-      "project": "https://codeactionbench.org/"
+      "project": "https://codeactionbench.org/",
+      "video": "https://codeactionbench.org/release-traces/codex-astra/lift_pot/review.mp4"
     },
     "last_checked": "2026-09-30",
     "independently_reproduced": false

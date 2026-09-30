@@ -976,4 +976,4 @@ arXiv v1 submitted 2026-09-28 describes a training-free cross-session navigation
 
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-30
 
-CC BY 4.0 arXiv v1 submitted 2026-09-27 defines 25 fixed RoboTwin 2.0 tasks, three attempts per task, shared robot APIs, and hidden physical-state verification. GPT-6 Astra with Codex CLI records 55/75 successes (73.3%) and 22/25 task coverage; the catalogue did not rerun the 675-attempt study.
+CC BY 4.0 arXiv v1 submitted 2026-09-27 defines 25 fixed RoboTwin 2.0 tasks, three attempts per task, shared robot APIs, and hidden physical-state verification. GPT-6 Astra with Codex CLI records 55/75 successes (73.3%) and 22/25 task coverage. The official project page exposes per-configuration review videos, including the retained Astra + Codex lift_pot clip; the catalogue did not rerun the 675-attempt study.

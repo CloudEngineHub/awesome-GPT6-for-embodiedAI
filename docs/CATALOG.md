@@ -575,7 +575,7 @@ weights：[https://huggingface.co/bingaochen/Astra-on-RoboMME-Monitor](https://h
 
 RoboICL 以统一的观测—动作—回执—观测语法组织示范与交互记忆，让冻结的 GPT-6 Astra 在 RoboDojo 与三项真机任务中从上下文适应；新发布论文扩展了早期九任务结果。
 
-**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+**来源等级：A** · 真机 + 仿真 · 一手资料明确涉及 GPT-6
 
 **作者 / 团队：** Fangcheng Liu, Yeqing Shen, Anda Cheng et al. / Mosi-AI  
 **事件日期：** 2026-09-19（窗口内）  
@@ -1071,6 +1071,7 @@ CodeActionBench 在 25 项 RoboTwin 2.0 操作任务上要求多模态模型从 
 paper：[https://arxiv.org/abs/2609.33807](https://arxiv.org/abs/2609.33807)  
 code：[https://github.com/lyhkk/CodeActionBench](https://github.com/lyhkk/CodeActionBench)  
 project：[https://codeactionbench.org/](https://codeactionbench.org/)  
+video：[https://codeactionbench.org/release-traces/codex-astra/lift_pot/review.mp4](https://codeactionbench.org/release-traces/codex-astra/lift_pot/review.mp4)  
 
 **来源：** [S109 · CodeActionBench paper and project](SOURCES.md#s109)
 

@@ -1084,21 +1084,22 @@
       }
     },
     "P49": {
-      "kind": "image",
-      "url": "https://arxiv.org/html/2609.33807v1/figure2-trust-boundary-crop.png",
+      "kind": "video",
+      "url": "https://codeactionbench.org/release-traces/codex-astra/lift_pot/review.mp4",
+      "poster": "assets/posters/P49-codeactionbench-first-frame.jpg",
       "fit": "contain",
-      "source_url": "https://arxiv.org/html/2609.33807v1/figure2-trust-boundary-crop.png",
-      "source_page_url": "https://arxiv.org/html/2609.33807",
-      "source_path": "Official arXiv v1 Figure 2 served from the CC BY 4.0 paper HTML page.",
-      "classification": "Paper system-boundary figure showing the benchmark agent, robot API, budgets, and hidden verifier; not an independently reproduced result.",
+      "source_url": "https://codeactionbench.org/release-traces/codex-astra/lift_pot/review.mp4",
+      "source_page_url": "https://codeactionbench.org/",
+      "source_path": "Official 13.720-second GPT-6 Astra + Codex lift_pot review video (640x480 H.264, SHA-256 8b40674c874e1d3dc469db5ea6394e66a839286de18479171fb769bd7ee96314); local poster SHA-256 b483c444f5bc23ba3986072b11f86c574b413ed0cc46577b4b45d86ca4be98a7, first decoded frame at 00:00:00.",
+      "classification": "Official project-page Astra trajectory video and exact first-frame poster for one recorded lift-pot attempt; not an independently reproduced result or a task-wide success-rate estimate.",
       "source_id": "S109",
       "alt": {
-        "en": "CodeActionBench system and information boundaries.",
-        "zh": "CodeActionBench 系统与信息边界图。"
+        "en": "CodeActionBench GPT-6 Astra and Codex lift-pot trajectory video.",
+        "zh": "CodeActionBench 的 GPT-6 Astra + Codex 抬锅轨迹视频。"
       },
       "caption": {
-        "en": "Official paper figure for the fixed robot API and hidden-verifier protocol.",
-        "zh": "论文官方固定机器人 API 与隐藏核验器协议图。"
+        "en": "Official 13.72-second Astra + Codex lift-pot review; poster is the first decoded frame.",
+        "zh": "官方 13.72 秒 Astra + Codex 抬锅回放；封面取自首个解码帧。"
       }
     }
   },

@@ -42,8 +42,8 @@ class CatalogueTests(unittest.TestCase):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
         self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),46)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),27)
-        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),9)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),28)
+        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),10)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
         ledger=(ROOT/'docs/SCENE_TAGS.md').read_text(encoding='utf-8')
@@ -64,10 +64,10 @@ class CatalogueTests(unittest.TestCase):
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
         self.assertEqual(len(retained),64)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),42)
-        self.assertEqual(sum(item['kind']=='video' for item in retained),22)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),41)
+        self.assertEqual(sum(item['kind']=='video' for item in retained),23)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
-        self.assertEqual(len(videos),22)
+        self.assertEqual(len(videos),23)
         self.assertTrue(all(item.get('poster','').startswith('assets/') for item in videos.values()))
         self.assertTrue(all((ROOT/'site'/item['poster']).is_file() for item in videos.values()))
         self.assertTrue(all('first decoded frame at 00:00:00' in item.get('source_path','') for item in videos.values()))
@@ -146,7 +146,8 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.by_id['P48']['links']['paper'],'https://arxiv.org/abs/2609.34276')
         self.assertIn('architecture figure',self.media['media']['P48']['classification'])
         self.assertEqual(self.by_id['P49']['code_url'],'https://github.com/lyhkk/CodeActionBench')
-        self.assertIn('system-boundary figure',self.media['media']['P49']['classification'])
+        self.assertEqual(self.media['media']['P49']['kind'],'video')
+        self.assertIn('Official project-page Astra trajectory video',self.media['media']['P49']['classification'])
 
     def test_initial_snapshot_counts(self):
         if self.meta['version']!='0.1.0':

@@ -53,7 +53,7 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | P27 | sim | code-generation, control |
 | P28 | sim | code-generation, control |
 | P29 | sim | control |
-| P30 | sim | control |
+| P30 | sim, real | control |
 | P31 | sim | control |
 | P32 | sim | environment-building, rl-training |
 | P33 | sim | control, policy |
