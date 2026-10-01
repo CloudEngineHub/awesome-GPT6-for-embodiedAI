@@ -64,10 +64,10 @@ class CatalogueTests(unittest.TestCase):
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
         self.assertEqual(len(retained),67)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),44)
-        self.assertEqual(sum(item['kind']=='video' for item in retained),23)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),43)
+        self.assertEqual(sum(item['kind']=='video' for item in retained),24)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
-        self.assertEqual(len(videos),23)
+        self.assertEqual(len(videos),24)
         self.assertTrue(all(item.get('poster','').startswith('assets/') for item in videos.values()))
         self.assertTrue(all((ROOT/'site'/item['poster']).is_file() for item in videos.values()))
         self.assertTrue(all('first decoded frame at 00:00:00' in item.get('source_path','') for item in videos.values()))
@@ -149,7 +149,9 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['P49']['kind'],'video')
         self.assertIn('Official project-page Astra trajectory video',self.media['media']['P49']['classification'])
         self.assertEqual(self.by_id['P50']['code_url'],'https://github.com/RedAmancy918/astra-robotwin2')
-        self.assertIn('final simulation observation',self.media['media']['P50']['classification'])
+        self.assertEqual(self.media['media']['P50']['kind'],'video')
+        self.assertEqual(self.media['media']['P50']['poster'],'assets/posters/P50-astra-robotwin2-first-frame.jpg')
+        self.assertIn('not an independent episode or success-rate estimate',self.media['media']['P50']['classification'])
         self.assertEqual(self.by_id['P51']['links']['paper'],'https://arxiv.org/abs/2609.37583')
         self.assertIn('hierarchical physical-knowledge',self.media['media']['P51']['classification'])
         self.assertEqual(self.by_id['P52']['gpt6_relation'],'comparison_only')
