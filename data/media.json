@@ -1101,6 +1101,42 @@
         "en": "Official 13.72-second Astra + Codex lift-pot review; poster is the first decoded frame.",
         "zh": "官方 13.72 秒 Astra + Codex 抬锅回放；封面取自首个解码帧。"
       }
+    },
+    "P50": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/RedAmancy918/astra-robotwin2/d3ca09de421e09e1fe3bb1a232c2fc4eeb7bc192/runs/20260928-isolated-four-view-resume01/final/oblique.jpg",
+      "fit": "contain",
+      "source_url": "https://github.com/RedAmancy918/astra-robotwin2/blob/d3ca09de421e09e1fe3bb1a232c2fc4eeb7bc192/runs/20260928-isolated-four-view-resume01/final/oblique.jpg",
+      "source_page_url": "https://github.com/RedAmancy918/astra-robotwin2/blob/d3ca09de421e09e1fe3bb1a232c2fc4eeb7bc192/runs/20260928-isolated-four-view-resume01/RESULT_REPORT.md",
+      "source_path": "Official final oblique-camera frame from the archived successful continuation at commit d3ca09de.",
+      "classification": "Author-provided final simulation observation for one continued scene; not an independent run or success-rate estimate.",
+      "source_id": "S110",
+      "alt": {"en": "Final oblique view of the RoboTwin block-stacking continuation.", "zh": "RoboTwin 方块堆叠续跑成功后的斜侧视角。"},
+      "caption": {"en": "Official final observation from the archived four-view continuation.", "zh": "四视角续跑归档的官方最终观测。"}
+    },
+    "P51": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2609.37583v1/RoboRSI-teaser.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2609.37583v1/RoboRSI-teaser.png",
+      "source_page_url": "https://arxiv.org/abs/2609.37583",
+      "source_path": "Official arXiv paper teaser figure served from the v1 HTML page.",
+      "classification": "Paper overview figure for the hierarchical physical-knowledge workflow; not an independently reproduced result.",
+      "source_id": "S111",
+      "alt": {"en": "RoboHarn-Evo hierarchical physical-knowledge workflow.", "zh": "RoboHarn-Evo 层级物理知识工作流。"},
+      "caption": {"en": "Official RoboHarn-Evo paper teaser.", "zh": "RoboHarn-Evo 论文官方概览图。"}
+    },
+    "P52": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2609.36605v1/show_cropped.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2609.36605v1/show_cropped.png",
+      "source_page_url": "https://arxiv.org/abs/2609.36605",
+      "source_path": "Official arXiv v1 paper overview figure served from the paper HTML page.",
+      "classification": "Paper figure illustrating the streaming robot-task benchmark; not independently reproduced media.",
+      "source_id": "S112",
+      "alt": {"en": "RoboChrono streaming task-understanding benchmark overview.", "zh": "RoboChrono 流式任务理解基准概览。"},
+      "caption": {"en": "Official RoboChrono paper overview figure.", "zh": "RoboChrono 论文官方概览图。"}
     }
   },
   "missing_policy": {

@@ -7,8 +7,8 @@
     },
     "P02": {
       "title": "GPT-as-Policy · GPT-6 Direct / π0.5 Hybrid",
-      "summary": "Compares direct GPT control with GPT-reviewed and corrected π0.5 actions on aligned RoboDojo cases.",
-      "detail": "Reported results apply to a selected aligned case set, not a same-seed rerun of official baselines."
+      "summary": "The new paper expands the earlier direct and hybrid RoboDojo study across gripper, dexterous, mobile, navigation, locomotion, and humanoid domains.",
+      "detail": "This card merges the same team's earlier GPT-as-Policy release; reported results use different task subsets and protocols and must not be pooled into one success rate."
     },
     "P03": {
       "title": "Agent as Policy (AGP)",
@@ -47,8 +47,8 @@
     },
     "P10": {
       "title": "Real2Gym",
-      "summary": "A workflow from human or robot video to executable robot simulation using Blender and MuJoCo; Prompt v5.3 adds compact state, batched deterministic checks, and scoped subagent execution.",
-      "detail": "The September 26 Beijing-time change is an orchestration update, not a new robot success-rate experiment; the repository declares no license."
+      "summary": "Real2Gym turns human or robot videos into interactive simulation gyms, distills executable manipulation skills from outcomes, and adapts them through a shared interface to simulation and a real Franka robot.",
+      "detail": "The paper reports gains over Astra Direct Mode, but the full system changes reconstruction, code generation, experience reuse, and execution; this catalogue did not reproduce the experiments."
     },
     "P11": {
       "title": "dexgpt · Hand Video to Simulation",
@@ -279,8 +279,8 @@
     },
     "P42": {
       "title": "GPT-6 Astra Real2Sim Workflow · Editable Rooms and Simulation Review",
-      "summary": "Astra observes room photos, makes modelling decisions, and reviews previews while Blender and Python produce editable scenes; a new independent candidate preserves failed visual/static gates and reference-assisted cabinet metrics.",
-      "detail": "The candidate is not simulation-ready, and its cabinet scores cannot be treated as independent whole-room accuracy or as a controlled comparison with the revised showcase."
+      "summary": "Astra observes room photos, makes modelling decisions, and reviews previews while Blender and Python produce editable scenes; a September 30 release adds one-image Desk1 comparisons with scoped Pi3X and MoGe-3 static adapters.",
+      "detail": "The reference routes did not run the other projects' complete frameworks or independent Astra iterations, so the image-fit values are not a framework ranking, 3D-accuracy result, or SOTA claim."
     },
     "P43": {
       "title": "AgenticGenTAMP · Coding Agents for Generalized Task and Motion Planning",
@@ -316,6 +316,21 @@
       "title": "CodeActionBench · Agentic Code-as-Policy for Embodied Manipulation",
       "summary": "Across 25 fixed RoboTwin 2.0 tasks, GPT-6 Astra with Codex CLI interprets RGB observations, constructs spatial targets, and writes and revises robot programs under a shared API and hidden verifier.",
       "detail": "The 73.3% result belongs to the complete Astra-plus-Codex configuration on fixed simulation seeds, not to direct joint control or a physical-robot benchmark."
+    },
+    "P50": {
+      "title": "Astra RoboTwin 2 · Four-View Bimanual Block Stacking",
+      "summary": "GPT-6 Astra emits bounded end-effector actions from four RGB views and robot state, continuing one previously interrupted RoboTwin scene until the official block-stacking success condition is met.",
+      "detail": "This is a continuation of one scene after 72 earlier decisions, not a fresh episode or a success-rate estimate; the repository publishes frozen code, calls, audits, and video."
+    },
+    "P51": {
+      "title": "RoboHarn-Evo · Evolving Hierarchical Physical Knowledge",
+      "summary": "RoboHarn-Evo accumulates task-level and action-level physical knowledge from interaction feedback and retrieves it for GPT-6 manipulation on RMBench and RoboDojo without updating the base model.",
+      "detail": "The gains belong to the full model, retrieval, execution, and cross-episode knowledge-maintenance system; this catalogue did not reproduce the experiments."
+    },
+    "P52": {
+      "title": "RoboChrono · Streaming Robot Task Understanding",
+      "summary": "RoboChrono evaluates streaming recognition, visual alignment, and temporal grounding on real-robot and human recordings; GPT-6 Astra is one of 18 zero-shot vision-language baselines.",
+      "detail": "Astra analyzes recorded task streams and does not control the robot in this benchmark; Frame Matching and Frame Ordering are distinct subtasks."
     }
   }
 }

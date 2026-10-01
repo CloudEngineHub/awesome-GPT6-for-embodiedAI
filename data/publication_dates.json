@@ -553,5 +553,26 @@
     "basis": "arXiv:2609.33807 v1 was submitted 2026-09-27T17:59:31Z.",
     "rule": null,
     "uncertainty": "Paper submission date; experiments and project preparation predate public submission."
+  },
+  "P50": {
+    "date": "2026-09-28",
+    "status": "verified",
+    "basis": "GitHub commit d3ca09de published the repository and experiment archive on 2026-09-28T10:08:11Z.",
+    "rule": null,
+    "uncertainty": "Repository publication date; the archived simulation sessions occurred earlier on 2026-09-28 local time."
+  },
+  "P51": {
+    "date": "2026-09-29",
+    "status": "verified",
+    "basis": "arXiv:2609.37583 v1 was submitted 2026-09-29T13:42:22Z.",
+    "rule": null,
+    "uncertainty": "Initial paper submission date; v2 was published on 2026-09-30."
+  },
+  "P52": {
+    "date": "2026-09-29",
+    "status": "verified",
+    "basis": "arXiv:2609.36605 v1 was submitted 2026-09-29T03:21:32Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; benchmark recordings and project preparation predate publication."
   }
 }

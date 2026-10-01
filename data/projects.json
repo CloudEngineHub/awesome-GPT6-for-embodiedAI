@@ -48,8 +48,8 @@
     ],
     "gpt6_relation": "explicit_primary",
     "evidence_level": "A",
-    "summary": "在对齐 RoboDojo cases 上比较 GPT 直接控制与审查/修正 π0.5 动作；同时提供 RoboLab 展示入口。",
-    "authors": "Jiayi Su, Yixin Zheng et al.",
+    "summary": "新论文把早期 RoboDojo 直接/混合策略结果扩展到夹爪、灵巧手、移动操作、导航、运动与人形全身任务；本卡合并同团队早期 GPT-as-Policy 发布，避免重复计算 48% 混合控制结果。",
+    "authors": "Galbot Team, Jiayi Su, Yixin Zheng et al.",
     "event_date": "2026-09",
     "event_date_basis": "月级公开快照；不把报道日期、账号建立日期当成代码首发日",
     "window_status": "month_only",
@@ -103,13 +103,15 @@
       "S003",
       "S004",
       "S045",
-      "S050"
+      "S050",
+      "S113"
     ],
     "links": {
       "project": "https://anonymous-report-421.github.io/public-website/?lang=zh&view=1",
-      "dataset": "https://huggingface.co/datasets/YuMoool/astra-robodojo-rollouts"
+      "dataset": "https://huggingface.co/datasets/YuMoool/astra-robodojo-rollouts",
+      "paper": "https://arxiv.org/abs/2609.38537"
     },
-    "last_checked": "2026-09-18",
+    "last_checked": "2026-10-01",
     "independently_reproduced": false
   },
   {
@@ -440,27 +442,47 @@
     ],
     "gpt6_relation": "explicit_primary",
     "evidence_level": "A",
-    "summary": "项目页展示真人/机器人视频到可执行机器人仿真的工作流，结合 Blender 与 MuJoCo；9 月 26 日（北京时间）发布的 Real2Sim Prompt v5.3 又加入批量确定性检查、紧凑状态和限定范围的子智能体执行。",
-    "authors": "Real2Gym contributors",
-    "event_date": "2026-09-26",
-    "event_date_basis": "Repository created 2026-09-08T17:52:53Z; v5.3 update commit b705ee9 was published 2026-09-25T22:08:47Z (2026-09-26 06:08 Beijing time).",
+    "summary": "Real2Gym 将人类或机器人视频重建为可交互仿真环境，让智能体在仿真中生成、执行并提炼操作技能，再通过共享感知控制接口迁移到真实 Franka；新论文补充了与 GPT-6 Astra Direct Mode 的仿真和真机比较。",
+    "authors": "Kerui Ren, Yingxiang Xu, Kaiwen Song et al.",
+    "event_date": "2026-09-29",
+    "event_date_basis": "arXiv:2609.37089 v1 was submitted 2026-09-29T09:16:49Z; the earlier repository and v5.3 workflow update predate the paper.",
     "window_status": "updated_in_window",
-    "url": "https://cskrren.github.io/real2gym-site/",
-    "code_url": "https://github.com/cskrren/Real2Gym",
-    "license_status": "GitHub 未声明仓库许可证；项目依赖与资产仍适用各自许可。",
-    "control_interface": "真实演示 → 场景重建/动作重定向 → 仿真执行与场景变化",
-    "metrics": [],
+    "url": "https://real2gym.github.io/",
+    "code_url": "https://github.com/real2gym/Real2Gym",
+    "license_status": "论文为 arXiv non-exclusive distribution license；当前代码、依赖与资产许可需在复用前分别核对。",
+    "control_interface": "人类/机器人视频 → 可编辑 Real2Sim gym 与物理动作验证 → Astra 生成操作代码并从成败中提炼技能 → 共享视觉/控制接口适配仿真和真实 Franka",
+    "metrics": [
+      {
+        "name": "Simulation success-rate gain over Astra Direct Mode",
+        "value": 16.7,
+        "unit": "percentage points",
+        "denominator": "paper simulation evaluation environments",
+        "protocol": "Real2Gym versus GPT-6 Astra Direct Mode; author-reported with approximately 74.9% fewer policy-execution tokens"
+      },
+      {
+        "name": "Physical execution success-rate gain over Astra Direct Mode",
+        "value": 33.3,
+        "unit": "percentage points",
+        "denominator": "four tasks on a real Franka robot",
+        "protocol": "author-reported Real2Gym comparison"
+      }
+    ],
     "limitations": [
-      "v5.3 是提示词与执行编排更新，不是新的机器人成功率实验；环境安装、资产完备性和完整端到端复现仍待核。",
-      "不能把视觉匹配自动等同于新场景闭环泛化。"
+      "论文摘要报告百分点提升，但未在摘要中给出每组原始成功次数；本站未独立复现实验。",
+      "四项 Franka 任务和作者构建的仿真环境不能代表开放世界机器人泛化。",
+      "完整系统同时改变环境重建、代码策略、经验提炼与执行接口，差异不能只归因于基础模型。"
     ],
     "source_ids": [
-      "S022"
+      "S022",
+      "S114"
     ],
     "links": {
+      "paper": "https://arxiv.org/abs/2609.37089",
+      "project": "https://real2gym.github.io/",
+      "code": "https://github.com/real2gym/Real2Gym",
       "v5.3_update": "https://github.com/cskrren/Real2Gym/commit/b705ee9427af748fabdb3877d7678ce05b28de77"
     },
-    "last_checked": "2026-09-27",
+    "last_checked": "2026-10-01",
     "independently_reproduced": false
   },
   {
@@ -1599,14 +1621,16 @@
     ],
     "source_ids": [
       "S085",
-      "S086"
+      "S086",
+      "S115"
     ],
     "links": {
       "report": "https://drivingbench.com/report/",
       "trace": "https://drivingbench.com/trace/gpt-6-astra/2/",
-      "code": "https://github.com/aditya-ramabadran/drivingbench_harness_v1"
+      "code": "https://github.com/aditya-ramabadran/drivingbench_harness_v1",
+      "paper": "https://arxiv.org/abs/2609.38948"
     },
-    "last_checked": "2026-09-25",
+    "last_checked": "2026-10-01",
     "independently_reproduced": false
   },
   {
@@ -1889,10 +1913,10 @@
     ],
     "gpt6_relation": "explicit_primary",
     "evidence_level": "A",
-    "summary": "该工作流用 GPT-6 Astra 观察房间照片、决定建模步骤并复查预览，Blender/Python 生成可编辑场景；9 月 26–27 日新增的独立整场景候选保留了失败的视觉/静态验收，并公开两件柜体的参考辅助表面误差。",
+    "summary": "该工作流用 GPT-6 Astra 观察房间照片、决定建模步骤并复查预览，Blender/Python 生成可编辑场景；9 月 30 日又公开同一 Desk1 图像上的原生方案与两条受限 Pi3X/MoGe-3 静态适配对照。",
     "authors": "Roboparty",
-    "event_date": "2026-09-27",
-    "event_date_basis": "Repository first published 2026-09-24; independent whole-scene audit commit 0ddd2aa followed 2026-09-26T09:22:34Z and surface-metric commit 5fb8464 on 2026-09-27T02:07:26Z.",
+    "event_date": "2026-09-30",
+    "event_date_basis": "Repository first published 2026-09-24; Desk1 comparison release commit f3fedad4 was published 2026-09-30T10:59:47Z.",
     "window_status": "updated_in_window",
     "url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow",
     "code_url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow",
@@ -1938,16 +1962,18 @@
     ],
     "source_ids": [
       "S095",
-      "S102"
+      "S102",
+      "S116"
     ],
     "links": {
       "video": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/media/overview.mp4",
       "accuracy": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/ACCURACY.md",
       "replay": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/example/REPLAY.md",
       "independent_test": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/README.md",
-      "independent_accuracy": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/ACCURACY.md"
+      "independent_accuracy": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/ACCURACY.md",
+      "desk1_comparison": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/f3fedad4be37a63189edd3414e47095bb3838e2b/docs/research/DESK1_GPT6_PROJECT_COMPARISON_20260930.md"
     },
-    "last_checked": "2026-09-27",
+    "last_checked": "2026-10-01",
     "independently_reproduced": false
   },
   {
@@ -2315,6 +2341,143 @@
       "video": "https://codeactionbench.org/release-traces/codex-astra/lift_pot/review.mp4"
     },
     "last_checked": "2026-09-30",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P50",
+    "title": "Astra RoboTwin 2 · 四视角双臂方块堆叠",
+    "section": "core",
+    "category": "closed_loop",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "GPT-6 Astra 从主摄、双腕与固定斜侧相机的 RGB 及机器人自身状态生成受限末端动作，在一个此前三视角阶段中断的 RoboTwin 方块堆叠场景中续跑至官方成功；仓库公开冻结代码、调用记录、审计与录像。",
+    "authors": "RedAmancy918",
+    "event_date": "2026-09-28",
+    "event_date_basis": "GitHub repository and experiment archive were published in commit d3ca09de on 2026-09-28T10:08:11Z.",
+    "window_status": "in_window",
+    "url": "https://github.com/RedAmancy918/astra-robotwin2",
+    "code_url": "https://github.com/RedAmancy918/astra-robotwin2",
+    "license_status": "仓库在本轮检查时未声明许可证；RoboTwin、SAPIEN、CuRobo、模型输出和媒体适用各自条款。",
+    "control_interface": "四路 RGB + 机器人 TCP/关节/夹爪状态 + 同局交互记忆 → GPT-6 Astra/max → 受限 TCP、XYZ 平移与夹爪动作 → 通用 IK/运动规划 → 官方任务判定",
+    "metrics": [
+      {
+        "name": "Four-view continuation completion",
+        "value": 1,
+        "unit": "successes",
+        "denominator": 1,
+        "protocol": "same scene resumed after 72 three-view decisions; 10 new model decisions and 12 new actions; 500/500 post-success physics steps remained successful"
+      }
+    ],
+    "limitations": [
+      "这是同一中断场景增加第四视角后的续跑，不是独立新测试局，不能解释为总体成功率或第四相机的普遍增益。",
+      "原场景累计 82 次模型决策、127 次动作尝试；模型推理时仿真暂停，墙钟时间与物理录像时长不可混用。",
+      "运行时隔离不能审计基础模型预训练数据；本站未重新运行模型或仿真。",
+      "仓库依赖原实验机环境、外部资产和现有 Codex 登录，不是一键独立复现包。"
+    ],
+    "source_ids": ["S110"],
+    "links": {
+      "code": "https://github.com/RedAmancy918/astra-robotwin2",
+      "report": "https://github.com/RedAmancy918/astra-robotwin2/blob/d3ca09de421e09e1fe3bb1a232c2fc4eeb7bc192/runs/20260928-isolated-four-view-resume01/RESULT_REPORT.md",
+      "video": "https://raw.githubusercontent.com/RedAmancy918/astra-robotwin2/d3ca09de421e09e1fe3bb1a232c2fc4eeb7bc192/runs/20260928-isolated-four-view-resume01/videos/agent-seed4885058-0.mp4"
+    },
+    "last_checked": "2026-10-01",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P51",
+    "title": "RoboHarn-Evo · 从交互中演化层级物理知识",
+    "section": "core",
+    "category": "policy_improvement",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "RoboHarn-Evo 不更新基础模型，而是从机器人交互反馈中持续修订任务级与动作级物理知识，并让 GPT-6 在 RMBench 与 RoboDojo 操作任务中检索复用。",
+    "authors": "Shifeng Bao, Fanding Huang, Yihan Lin et al.",
+    "event_date": "2026-09-29",
+    "event_date_basis": "arXiv:2609.37583 v1 was submitted 2026-09-29T13:42:22Z; v2 followed 2026-09-30T07:12:16Z.",
+    "window_status": "updated_in_window",
+    "url": "https://arxiv.org/abs/2609.37583",
+    "code_url": null,
+    "license_status": "论文为 arXiv non-exclusive distribution license；摘要页未提供公开代码入口。",
+    "control_interface": "当前场景/目标 + 检索到的任务知识与对象相对动作知识 → GPT-6 分层决策 → 机器人操作 → 物理反馈修订知识库并跨 episode 复用",
+    "metrics": [
+      {
+        "name": "GPT-6 held-out RMBench success after HPK",
+        "value": 88.3,
+        "unit": "%",
+        "denominator": "held-out RMBench evaluation after 80 interaction rollouts",
+        "protocol": "author-reported increase from 70.0% without the evolved knowledge harness"
+      },
+      {
+        "name": "RoboDojo zero-shot transfer gain",
+        "value": 25.0,
+        "unit": "percentage points",
+        "denominator": "reported GPT-6 transfer evaluation",
+        "protocol": "HPK learned on RMBench and transferred without target-benchmark updates"
+      }
+    ],
+    "limitations": [
+      "结果来自作者论文，本站未独立运行模型、仿真或知识演化流程。",
+      "摘要未完整给出 GPT-6 各指标的 episode 分母与方差；百分比须结合论文协议理解。",
+      "提升属于基础模型、检索知识库、执行接口与跨 episode 更新的完整系统，不能只归因于模型。"
+    ],
+    "source_ids": ["S111"],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.37583",
+      "html": "https://arxiv.org/html/2609.37583v2"
+    },
+    "last_checked": "2026-10-01",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P52",
+    "title": "RoboChrono · 流式机器人任务理解评测",
+    "section": "core",
+    "category": "understanding_benchmark",
+    "environment": "noninteractive",
+    "scene_tags": ["real"],
+    "gpt6_relation": "comparison_only",
+    "evidence_level": "A",
+    "summary": "RoboChrono 用真实机器人执行与徒手人类录像构建 39 个场景、34,713 个实例的流式任务理解基准；GPT-6 Astra 作为零样本对照接受动作识别、视觉对应、时序排序与定位评测。",
+    "authors": "Yuzhou Wu, Longteng Fan, Zimeng Li et al.",
+    "event_date": "2026-09-29",
+    "event_date_basis": "arXiv:2609.36605 v1 was submitted 2026-09-29T03:21:32Z.",
+    "window_status": "in_window",
+    "url": "https://arxiv.org/abs/2609.36605",
+    "code_url": "https://github.com/Continuity3/RoboChrono",
+    "license_status": "论文为 arXiv non-exclusive distribution license；代码与数据许可需在复用前分别核对。",
+    "control_interface": "机器人执行历史与流式视觉片段 → GPT-6 Astra 零样本回答识别、对齐和时序问题；模型不控制机器人",
+    "metrics": [
+      {
+        "name": "GPT-6 Astra Frame Matching accuracy",
+        "value": 98.3,
+        "unit": "%",
+        "denominator": "RoboChrono Frame Matching evaluation instances",
+        "protocol": "zero-shot evaluation reported by the authors"
+      },
+      {
+        "name": "GPT-6 Astra Frame Ordering accuracy",
+        "value": 68.3,
+        "unit": "%",
+        "denominator": "RoboChrono Frame Ordering evaluation instances",
+        "protocol": "zero-shot evaluation reported by the authors"
+      }
+    ],
+    "limitations": [
+      "Astra 只分析记录的视觉与任务上下文，不向真实机器人输出动作；该卡是评测对照而非控制成果。",
+      "98.3% 与 68.3% 属于不同子任务，不能相减解释为统一时序能力下降。",
+      "摘要未给出每个 Astra 子任务的精确样本分母；本站未复跑 34,713 个实例。"
+    ],
+    "source_ids": ["S112"],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.36605",
+      "project": "https://continuity3.github.io/RoboChrono/",
+      "code": "https://github.com/Continuity3/RoboChrono"
+    },
+    "last_checked": "2026-10-01",
     "independently_reproduced": false
   },
   {

@@ -970,5 +970,68 @@
     "access": "page_text",
     "checked_at": "2026-09-30",
     "notes": "CC BY 4.0 arXiv v1 submitted 2026-09-27 defines 25 fixed RoboTwin 2.0 tasks, three attempts per task, shared robot APIs, and hidden physical-state verification. GPT-6 Astra with Codex CLI records 55/75 successes (73.3%) and 22/25 task coverage. The official project page exposes per-configuration review videos, including the retained Astra + Codex lift_pot clip; the catalogue did not rerun the 675-attempt study."
+  },
+  {
+    "id": "S110",
+    "title": "Astra RoboTwin 2 repository and isolated four-view run",
+    "url": "https://github.com/RedAmancy918/astra-robotwin2",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-01",
+    "notes": "Repository commit d3ca09de publishes the GPT-6 Astra/max input and action boundary, frozen run code, per-decision records, audits, result JSON, and video for a four-view continuation of one earlier interrupted RoboTwin scene. The continuation uses 10 new model decisions and 12 new actions, then remains successful for 500 physics steps; it is not a fresh episode or a success-rate estimate."
+  },
+  {
+    "id": "S111",
+    "title": "RoboHarn-Evo arXiv paper",
+    "url": "https://arxiv.org/abs/2609.37583",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-01",
+    "notes": "arXiv v2 describes the dual-loop Hierarchical Physical Knowledge harness and reports GPT-6 manipulation results on RMBench plus zero-shot transfer to RoboDojo. No public code link was present on the abstract page; results were not independently reproduced."
+  },
+  {
+    "id": "S112",
+    "title": "RoboChrono arXiv paper, project, and repository",
+    "url": "https://arxiv.org/abs/2609.36605",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-01",
+    "notes": "arXiv v1 defines a streaming task-understanding benchmark from real-robot and human recordings and reports zero-shot GPT-6 Astra Frame Matching and Frame Ordering accuracy. Astra analyzes recorded streams and does not control the robot in this benchmark."
+  },
+  {
+    "id": "S113",
+    "title": "Systematically Exploring GPT-6 Astra as Embodied Policies",
+    "url": "https://arxiv.org/abs/2609.38537",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-01",
+    "notes": "arXiv v1 expands the earlier GPT-as-Policy release across gripper, dexterous, mobile, navigation, locomotion, and humanoid domains. The retained P02 card merges this paper rather than duplicating the same RoboDojo hybrid result."
+  },
+  {
+    "id": "S114",
+    "title": "Real2Gym arXiv paper and current project page",
+    "url": "https://arxiv.org/abs/2609.37089",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-01",
+    "notes": "arXiv v1 and the current real2gym.github.io project page describe the video-to-simulation-to-robot framework and report comparisons against GPT-6 Astra Direct Mode in simulation and four physical Franka tasks. The paper result is merged into the existing Real2Gym card."
+  },
+  {
+    "id": "S115",
+    "title": "DrivingBench arXiv paper",
+    "url": "https://arxiv.org/abs/2609.38948",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-01",
+    "notes": "arXiv v1 formalizes the previously catalogued real Toyota Corolla benchmark, four-model protocol, and Astra's second-attempt course completion. It adds a paper entry point but does not create a separate experiment."
+  },
+  {
+    "id": "S116",
+    "title": "GPT-6 Astra Real2Sim Desk1 comparison release",
+    "url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/f3fedad4be37a63189edd3414e47095bb3838e2b/docs/research/DESK1_GPT6_PROJECT_COMPARISON_20260930.md",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-01",
+    "notes": "The 2026-09-30 release publishes one Desk1 image comparison among the project's native scene and scoped Pi3X- and MoGe-3-based static adapters. It explicitly does not run the other projects' full frameworks or independent Astra iterations, and does not claim SOTA."
   }
 ]

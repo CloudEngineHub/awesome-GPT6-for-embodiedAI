@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-30 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-01 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -977,3 +977,66 @@ arXiv v1 submitted 2026-09-28 describes a training-free cross-session navigation
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-30
 
 CC BY 4.0 arXiv v1 submitted 2026-09-27 defines 25 fixed RoboTwin 2.0 tasks, three attempts per task, shared robot APIs, and hidden physical-state verification. GPT-6 Astra with Codex CLI records 55/75 successes (73.3%) and 22/25 task coverage. The official project page exposes per-configuration review videos, including the retained Astra + Codex lift_pot clip; the catalogue did not rerun the 675-attempt study.
+
+<a id="s110"></a>
+## S110 · Astra RoboTwin 2 repository and isolated four-view run
+
+[https://github.com/RedAmancy918/astra-robotwin2](https://github.com/RedAmancy918/astra-robotwin2)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
+
+Repository commit d3ca09de publishes the GPT-6 Astra/max input and action boundary, frozen run code, per-decision records, audits, result JSON, and video for a four-view continuation of one earlier interrupted RoboTwin scene. The continuation uses 10 new model decisions and 12 new actions, then remains successful for 500 physics steps; it is not a fresh episode or a success-rate estimate.
+
+<a id="s111"></a>
+## S111 · RoboHarn-Evo arXiv paper
+
+[https://arxiv.org/abs/2609.37583](https://arxiv.org/abs/2609.37583)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
+
+arXiv v2 describes the dual-loop Hierarchical Physical Knowledge harness and reports GPT-6 manipulation results on RMBench plus zero-shot transfer to RoboDojo. No public code link was present on the abstract page; results were not independently reproduced.
+
+<a id="s112"></a>
+## S112 · RoboChrono arXiv paper, project, and repository
+
+[https://arxiv.org/abs/2609.36605](https://arxiv.org/abs/2609.36605)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
+
+arXiv v1 defines a streaming task-understanding benchmark from real-robot and human recordings and reports zero-shot GPT-6 Astra Frame Matching and Frame Ordering accuracy. Astra analyzes recorded streams and does not control the robot in this benchmark.
+
+<a id="s113"></a>
+## S113 · Systematically Exploring GPT-6 Astra as Embodied Policies
+
+[https://arxiv.org/abs/2609.38537](https://arxiv.org/abs/2609.38537)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
+
+arXiv v1 expands the earlier GPT-as-Policy release across gripper, dexterous, mobile, navigation, locomotion, and humanoid domains. The retained P02 card merges this paper rather than duplicating the same RoboDojo hybrid result.
+
+<a id="s114"></a>
+## S114 · Real2Gym arXiv paper and current project page
+
+[https://arxiv.org/abs/2609.37089](https://arxiv.org/abs/2609.37089)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
+
+arXiv v1 and the current real2gym.github.io project page describe the video-to-simulation-to-robot framework and report comparisons against GPT-6 Astra Direct Mode in simulation and four physical Franka tasks. The paper result is merged into the existing Real2Gym card.
+
+<a id="s115"></a>
+## S115 · DrivingBench arXiv paper
+
+[https://arxiv.org/abs/2609.38948](https://arxiv.org/abs/2609.38948)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
+
+arXiv v1 formalizes the previously catalogued real Toyota Corolla benchmark, four-model protocol, and Astra's second-attempt course completion. It adds a paper entry point but does not create a separate experiment.
+
+<a id="s116"></a>
+## S116 · GPT-6 Astra Real2Sim Desk1 comparison release
+
+[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/f3fedad4be37a63189edd3414e47095bb3838e2b/docs/research/DESK1_GPT6_PROJECT_COMPARISON_20260930.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/f3fedad4be37a63189edd3414e47095bb3838e2b/docs/research/DESK1_GPT6_PROJECT_COMPARISON_20260930.md)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
+
+The 2026-09-30 release publishes one Desk1 image comparison among the project's native scene and scoped Pi3X- and MoGe-3-based static adapters. It explicitly does not run the other projects' full frameworks or independent Astra iterations, and does not claim SOTA.
