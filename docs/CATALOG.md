@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-01。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-02。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 42
+## 核心项目与评测 · 43
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1173,6 +1173,37 @@ project：[https://continuity3.github.io/RoboChrono/](https://continuity3.github
 code：[https://github.com/Continuity3/RoboChrono](https://github.com/Continuity3/RoboChrono)  
 
 **来源：** [S112 · RoboChrono arXiv paper, project, and repository](SOURCES.md#s112)
+
+---
+
+<a id="p53"></a>
+### P53 · LIBERO-Agent · 通用智能体原生机器人操控评测
+
+LIBERO-Agent 让通用智能体自行选择 RGB、深度、标定与机器人状态，并通过原生末端动作操控 MuJoCo 中的 Franka；在 30 项主评测中，GPT-6 Astra 的加权 Performance Score 为 45.0/100，在七个受测智能体配置中最高。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Zijie Diao, Yitong Chen, Sicheng Xie et al.  
+**事件日期：** 2026-09-30（窗口内）  
+**日期依据：** arXiv:2609.39507 v1 was submitted 2026-09-30T11:10:10Z; the linked GitHub repository was created earlier that day.  
+**入口：** [https://arxiv.org/abs/2609.39507](https://arxiv.org/abs/2609.39507)  
+**代码入口：** [https://github.com/dzj441/Libero-Agent](https://github.com/dzj441/Libero-Agent)  
+**许可状态：** 论文为 arXiv non-exclusive distribution license；链接仓库声明 MIT，但截至本轮检查仅含代码待发布占位，不能视为完整实现。  
+**控制接口 / 作用：** 任务指令 + 可选双视角 RGB/深度、相机标定与机器人状态 → GPT-6 Astra/Codex 自主检查与计算 → 每批 1–50 个受限 OSC_POSE 末端动作 → MuJoCo Franka 与私有任务核验器
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Primary-suite Performance Score | 45.0 /100 | 30 tasks × 3 rollouts | weighted stable score across perception, short-horizon, and long-horizon subsets; GPT-6 Astra with Codex 0.154.0, high reasoning, full observations, and no demonstrations |
+| Hard short-horizon stable success rate | 40.0 % | 5 hard short-horizon tasks × 3 rollouts | a task counts only when all three same-seed rollouts succeed |
+| Hard long-horizon stable stage completion | 22.0 % | 5 hard long-horizon tasks × 3 rollouts | minimum stage completion across the three rollouts per task |
+
+**限制与未决项：** 结果评估的是 GPT-6 Astra 与 Codex 0.154.0、可用观测、工具和受限控制接口组成的完整配置，不能只归因于基础模型。 全部主评测均为 MuJoCo 仿真，没有真机验证、独立复现或训练数据暴露审计。 45.0 是强调困难长程任务的加权分数，不是原始任务成功率；不同子集指标不可直接混算。 论文链接的 GitHub 仓库当前仅含代码待发布说明，公开代码、任务资产与结果复现条件仍待补齐。
+
+paper：[https://arxiv.org/abs/2609.39507](https://arxiv.org/abs/2609.39507)  
+html：[https://arxiv.org/html/2609.39507](https://arxiv.org/html/2609.39507)  
+code：[https://github.com/dzj441/Libero-Agent](https://github.com/dzj441/Libero-Agent)  
+
+**来源：** [S117 · LIBERO-Agent arXiv paper and linked repository](SOURCES.md#s117)
 
 ---
 

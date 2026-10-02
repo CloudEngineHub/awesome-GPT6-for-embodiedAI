@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-01 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-02 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1040,3 +1040,12 @@ arXiv v1 formalizes the previously catalogued real Toyota Corolla benchmark, fou
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-01
 
 The 2026-09-30 release publishes one Desk1 image comparison among the project's native scene and scoped Pi3X- and MoGe-3-based static adapters. It explicitly does not run the other projects' full frameworks or independent Astra iterations, and does not claim SOTA.
+
+<a id="s117"></a>
+## S117 · LIBERO-Agent arXiv paper and linked repository
+
+[https://arxiv.org/abs/2609.39507](https://arxiv.org/abs/2609.39507)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-02
+
+arXiv v1 defines an agent-native MuJoCo/Franka benchmark with 200 integrated tasks and a 30-task primary suite. It reports GPT-6 Astra/Codex as the strongest of seven evaluated agent configurations while retaining hard-task failures. The paper links dzj441/Libero-Agent, whose README still says code is coming soon at this check.

@@ -331,6 +331,11 @@
       "title": "RoboChrono · Streaming Robot Task Understanding",
       "summary": "RoboChrono evaluates streaming recognition, visual alignment, and temporal grounding on real-robot and human recordings; GPT-6 Astra is one of 18 zero-shot vision-language baselines.",
       "detail": "Astra analyzes recorded task streams and does not control the robot in this benchmark; Frame Matching and Frame Ordering are distinct subtasks."
+    },
+    "P53": {
+      "title": "LIBERO-Agent · Agent-Native Robot Manipulation Evaluation",
+      "summary": "LIBERO-Agent lets general-purpose agents select observations and issue native end-effector actions in MuJoCo; GPT-6 Astra leads seven evaluated configurations with a weighted score of 45.0/100 on the 30-task primary suite.",
+      "detail": "The result belongs to the complete Astra, Codex 0.154.0, observation, tool, and control-interface configuration; hard short- and long-horizon tasks remain unreliable, and the linked repository currently contains only a code-coming-soon placeholder."
     }
   }
 }

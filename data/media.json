@@ -1138,6 +1138,18 @@
       "source_id": "S112",
       "alt": {"en": "RoboChrono streaming task-understanding benchmark overview.", "zh": "RoboChrono 流式任务理解基准概览。"},
       "caption": {"en": "Official RoboChrono paper overview figure.", "zh": "RoboChrono 论文官方概览图。"}
+    },
+    "P53": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2609.39507v1/Fig1v7.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2609.39507v1/Fig1v7.png",
+      "source_page_url": "https://arxiv.org/html/2609.39507",
+      "source_path": "Official Figure 1 from the arXiv v1 HTML paper.",
+      "classification": "Paper overview figure showing the agent-native interaction protocol, task suite, and reported findings; not an independently reproduced rollout.",
+      "source_id": "S117",
+      "alt": {"en": "LIBERO-Agent interaction protocol, benchmark suite, and findings overview.", "zh": "LIBERO-Agent 交互协议、评测任务与主要发现概览。"},
+      "caption": {"en": "Official LIBERO-Agent paper overview figure.", "zh": "LIBERO-Agent 论文官方概览图。"}
     }
   },
   "missing_policy": {

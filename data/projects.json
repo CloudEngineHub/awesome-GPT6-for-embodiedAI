@@ -2481,6 +2481,62 @@
     "independently_reproduced": false
   },
   {
+    "id": "P53",
+    "title": "LIBERO-Agent · 通用智能体原生机器人操控评测",
+    "section": "core",
+    "category": "evaluation",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "LIBERO-Agent 让通用智能体自行选择 RGB、深度、标定与机器人状态，并通过原生末端动作操控 MuJoCo 中的 Franka；在 30 项主评测中，GPT-6 Astra 的加权 Performance Score 为 45.0/100，在七个受测智能体配置中最高。",
+    "authors": "Zijie Diao, Yitong Chen, Sicheng Xie et al.",
+    "event_date": "2026-09-30",
+    "event_date_basis": "arXiv:2609.39507 v1 was submitted 2026-09-30T11:10:10Z; the linked GitHub repository was created earlier that day.",
+    "window_status": "in_window",
+    "url": "https://arxiv.org/abs/2609.39507",
+    "code_url": "https://github.com/dzj441/Libero-Agent",
+    "license_status": "论文为 arXiv non-exclusive distribution license；链接仓库声明 MIT，但截至本轮检查仅含代码待发布占位，不能视为完整实现。",
+    "control_interface": "任务指令 + 可选双视角 RGB/深度、相机标定与机器人状态 → GPT-6 Astra/Codex 自主检查与计算 → 每批 1–50 个受限 OSC_POSE 末端动作 → MuJoCo Franka 与私有任务核验器",
+    "metrics": [
+      {
+        "name": "Primary-suite Performance Score",
+        "value": 45.0,
+        "unit": "/100",
+        "denominator": "30 tasks × 3 rollouts",
+        "protocol": "weighted stable score across perception, short-horizon, and long-horizon subsets; GPT-6 Astra with Codex 0.154.0, high reasoning, full observations, and no demonstrations"
+      },
+      {
+        "name": "Hard short-horizon stable success rate",
+        "value": 40.0,
+        "unit": "%",
+        "denominator": "5 hard short-horizon tasks × 3 rollouts",
+        "protocol": "a task counts only when all three same-seed rollouts succeed"
+      },
+      {
+        "name": "Hard long-horizon stable stage completion",
+        "value": 22.0,
+        "unit": "%",
+        "denominator": "5 hard long-horizon tasks × 3 rollouts",
+        "protocol": "minimum stage completion across the three rollouts per task"
+      }
+    ],
+    "limitations": [
+      "结果评估的是 GPT-6 Astra 与 Codex 0.154.0、可用观测、工具和受限控制接口组成的完整配置，不能只归因于基础模型。",
+      "全部主评测均为 MuJoCo 仿真，没有真机验证、独立复现或训练数据暴露审计。",
+      "45.0 是强调困难长程任务的加权分数，不是原始任务成功率；不同子集指标不可直接混算。",
+      "论文链接的 GitHub 仓库当前仅含代码待发布说明，公开代码、任务资产与结果复现条件仍待补齐。"
+    ],
+    "source_ids": ["S117"],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.39507",
+      "html": "https://arxiv.org/html/2609.39507",
+      "code": "https://github.com/dzj441/Libero-Agent"
+    },
+    "last_checked": "2026-10-02",
+    "independently_reproduced": false
+  },
+  {
     "id": "X01",
     "title": "真实机器人键盘打字",
     "section": "watchlist",

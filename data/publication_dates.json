@@ -574,5 +574,12 @@
     "basis": "arXiv:2609.36605 v1 was submitted 2026-09-29T03:21:32Z.",
     "rule": null,
     "uncertainty": "Paper submission date; benchmark recordings and project preparation predate publication."
+  },
+  "P53": {
+    "date": "2026-09-30",
+    "status": "verified",
+    "basis": "arXiv:2609.39507 v1 was submitted 2026-09-30T11:10:10Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; repository creation and benchmark experiments predate the public paper."
   }
 }

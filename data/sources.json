@@ -1033,5 +1033,14 @@
     "access": "page_text",
     "checked_at": "2026-10-01",
     "notes": "The 2026-09-30 release publishes one Desk1 image comparison among the project's native scene and scoped Pi3X- and MoGe-3-based static adapters. It explicitly does not run the other projects' full frameworks or independent Astra iterations, and does not claim SOTA."
+  },
+  {
+    "id": "S117",
+    "title": "LIBERO-Agent arXiv paper and linked repository",
+    "url": "https://arxiv.org/abs/2609.39507",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-02",
+    "notes": "arXiv v1 defines an agent-native MuJoCo/Franka benchmark with 200 integrated tasks and a 30-task primary suite. It reports GPT-6 Astra/Codex as the strongest of seven evaluated agent configurations while retaining hard-task failures. The paper links dzj441/Libero-Agent, whose README still says code is coming soon at this check."
   }
 ]

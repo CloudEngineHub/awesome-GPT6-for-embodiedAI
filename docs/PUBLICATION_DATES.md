@@ -56,6 +56,7 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P50 | 2026-0928 | verified | 2026-09-28 | GitHub commit d3ca09de published the repository and experiment archive on 2026-09-28T10:08:11Z. | — | Repository publication date; the archived simulation sessions occurred earlier on 2026-09-28 local time. | [S110](SOURCES.md#s110) |
 | P51 | 2026-0929 | verified | 2026-09-29 | arXiv:2609.37583 v1 was submitted 2026-09-29T13:42:22Z. | — | Initial paper submission date; v2 was published on 2026-09-30. | [S111](SOURCES.md#s111) |
 | P52 | 2026-0929 | verified | 2026-09-29 | arXiv:2609.36605 v1 was submitted 2026-09-29T03:21:32Z. | — | Paper submission date; benchmark recordings and project preparation predate publication. | [S112](SOURCES.md#s112) |
+| P53 | 2026-0930 | verified | 2026-09-30 | arXiv:2609.39507 v1 was submitted 2026-09-30T11:10:10Z. | — | Paper submission date; repository creation and benchmark experiments predate the public paper. | [S117](SOURCES.md#s117) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |
