@@ -2611,7 +2611,7 @@
     "window_status": "in_window",
     "url": "https://litereality.github.io/agent/",
     "code_url": "https://github.com/LiteReality/LiteReality-Agent",
-    "license_status": "论文为 arXiv non-exclusive distribution license；官方仓库公开源代码，扫描、生成资产与第三方模型适用各自许可。",
+    "license_status": "论文采用 CC BY 4.0；官方仓库公开源代码，扫描、生成资产与第三方模型适用各自许可。",
     "control_interface": "RGB-D 扫描或图像 → 编码智能体使用测量、布局、物理与渲染工具迭代编辑 Room.py → 可执行、可验证的仿真场景",
     "metrics": [],
     "limitations": [
@@ -2645,7 +2645,7 @@
     "window_status": "in_window",
     "url": "https://rpg-robot.github.io/",
     "code_url": null,
-    "license_status": "论文为 arXiv non-exclusive distribution license；项目页公开演示媒体，但本轮未定位公开代码或统一媒体再许可。",
+    "license_status": "论文采用 CC BY 4.0；项目页公开演示媒体，但本轮未定位公开代码或统一媒体再许可。",
     "control_interface": "任务观测 → CaP-Agent0 + GPT-6 Astra Pro 对照选择感知与控制技能 → 共享校准/硬件适配 → 仿真或真机执行反馈",
     "metrics": [
       {

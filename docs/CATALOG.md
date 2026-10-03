@@ -1252,7 +1252,7 @@ LiteReality-Agent 把 RGB-D 室内扫描重建表述为可执行 Room.py 的代�
 **日期依据：** arXiv:2610.01863 v1 was submitted 2026-10-01T15:25:35Z.  
 **入口：** [https://litereality.github.io/agent/](https://litereality.github.io/agent/)  
 **代码入口：** [https://github.com/LiteReality/LiteReality-Agent](https://github.com/LiteReality/LiteReality-Agent)  
-**许可状态：** 论文为 arXiv non-exclusive distribution license；官方仓库公开源代码，扫描、生成资产与第三方模型适用各自许可。  
+**许可状态：** 论文采用 CC BY 4.0；官方仓库公开源代码，扫描、生成资产与第三方模型适用各自许可。  
 **控制接口 / 作用：** RGB-D 扫描或图像 → 编码智能体使用测量、布局、物理与渲染工具迭代编辑 Room.py → 可执行、可验证的仿真场景
 
 **限制与未决项：** GPT-6 Astra 是重建对照，不是 LiteReality-Agent 主方法的运行模型，也不控制真实机器人。 论文页面在图表中简写为 GPT-6，但方法部分明确该对照为 Codex 中运行的 GPT-6 Astra；不得把同名 Astra 系统混入。 视觉、几何、物理与人工偏好指标口径不同；本站未从论文挑选单一数字包装为总体成功率。 结果由作者发布，本站未下载扫描数据、运行渲染或复核人工评审。
@@ -1277,7 +1277,7 @@ Reconstruct, Practice, Go Real 通过仿真练习、失败诊断和跨任务验�
 **日期依据：** arXiv:2610.02204 v1 was submitted 2026-10-01T17:59:50Z.  
 **入口：** [https://rpg-robot.github.io/](https://rpg-robot.github.io/)  
 **代码入口：** 未定位公开代码；不等于确认代码不存在  
-**许可状态：** 论文为 arXiv non-exclusive distribution license；项目页公开演示媒体，但本轮未定位公开代码或统一媒体再许可。  
+**许可状态：** 论文采用 CC BY 4.0；项目页公开演示媒体，但本轮未定位公开代码或统一媒体再许可。  
 **控制接口 / 作用：** 任务观测 → CaP-Agent0 + GPT-6 Astra Pro 对照选择感知与控制技能 → 共享校准/硬件适配 → 仿真或真机执行反馈
 
 | 指标 | 结果 | 分母 | 协议 / 注意事项 |
