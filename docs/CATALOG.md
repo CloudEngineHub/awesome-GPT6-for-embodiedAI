@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-02。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-03。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 43
+## 核心项目与评测 · 46
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -582,7 +582,7 @@ weights：[https://huggingface.co/bingaochen/Astra-on-RoboMME-Monitor](https://h
 <a id="p30"></a>
 ### P30 · RoboICL · 具身上下文学习
 
-RoboICL 以统一的观测—动作—回执—观测语法组织示范与交互记忆，让冻结的 GPT-6 Astra 在 RoboDojo 与三项真机任务中从上下文适应；新发布论文扩展了早期九任务结果。
+RoboICL 以统一的观测—动作—回执—观测语法组织示范与交互记忆，让冻结的 GPT-6 Astra 在 RoboDojo 与三项真机任务中从上下文适应；10 月 1 日发布的完整参考设置固定了论文 30 任务中 8 个零样本任务和 22 个一示范任务的来源 episode、哈希与窗口。
 
 **来源等级：A** · 真机 + 仿真 · 一手资料明确涉及 GPT-6
 
@@ -599,10 +599,11 @@ RoboICL 以统一的观测—动作—回执—观测语法组织示范与交互
 | RoboDojo 30-task overall score | 50.64 score | 30 tasks | zero-shot for Open tasks and one demonstration elsewhere; strongest reported baseline 33.68 |
 | Three-shot real-robot mean progress | 78.89 score | 3 real-robot tasks | author-reported mean; zero-shot 14.45 and one-shot 63.33 |
 
-**限制与未决项：** 论文和代码均为作者发布，本目录未独立复现模型调用、仿真或真机实验。 30-task 汇总混合 Open 零样本与其余类别一示范设置，不是统一 shot 数的单一协议。 真机结果只有三项任务；不同 shot 数的提升不能外推为跨机器人稳定收益。
+**限制与未决项：** 论文和代码均为作者发布，本目录未独立复现模型调用、仿真或真机实验。 30-task 汇总混合 Open 零样本与其余类别一示范设置，不是统一 shot 数的单一协议。 真机结果只有三项任务；不同 shot 数的提升不能外推为跨机器人稳定收益。 10 月 1 日的参考清单提升了论文设置的可复核性，但不包含完整仿真资产或已复跑结果；本站未下载大体积 HDF5 或执行 929 条 rollout。
 
 paper：[https://arxiv.org/abs/2609.34261](https://arxiv.org/abs/2609.34261)  
 code：[https://github.com/Mosi-AI/RoboICL](https://github.com/Mosi-AI/RoboICL)  
+reference_setting：[https://github.com/Mosi-AI/RoboICL/blob/2898c2b9dd8f42587b24cb555f21777b2e98272b/configs/references/one_shot_j12_b12.json](https://github.com/Mosi-AI/RoboICL/blob/2898c2b9dd8f42587b24cb555f21777b2e98272b/configs/references/one_shot_j12_b12.json)  
 
 **来源：** [S072 · RoboICL repository](SOURCES.md#s072) · [S107 · RoboICL arXiv paper and official repository](SOURCES.md#s107)
 
@@ -851,7 +852,7 @@ PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对
 
 **作者 / 团队：** Ruiyang Si, Jianxin Bi, Wenbo Huang et al. / DAGroup-PKU  
 **事件日期：** 2026-09-25（本月更新，基础项目更早）  
-**日期依据：** Repository created 2026-09-25T08:04:11Z; its current canonical public tree is commit 0f88f1c dated 2026-09-26T15:29:24Z after history replacement.  
+**日期依据：** Repository created 2026-09-25T08:04:11Z; arXiv:2610.01939 v1 was submitted 2026-10-01T16:07:49Z and linked by repository commit 57b4e6d on 2026-10-02.  
 **入口：** [https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)  
 **代码入口：** [https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)  
 **许可状态：** PyRUA-Lean 采用 Apache-2.0；依赖的 RPent、仿真器、VLA 与模型资产适用各自许可。  
@@ -864,12 +865,14 @@ PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对
 | RoboCasa365 atomic code-arm success rate | 86.7 % | 18 tasks × 5 seeds; paired against 78.9% tool-calling arm | same model, RLDX-1/navigation skills, task cells, and request budget |
 | RoboCasa365 composite code-arm success rate | 39.4 % | 32 tasks × 5 seeds; paired against 34.4% tool-calling arm | same model and 100-response composite-task budget |
 
-**限制与未决项：** 结果由作者提供并附协议与分析脚本，本站未下载模型权重、运行 GPU 仿真或独立复现。 代码臂与工具调用臂的交互形式有意不同：代码臂把多步操作放进 Python cell，工具臂在动作后持续接收图像；结果不能归因为单一低层技能。 成本与 token 降幅仅在两种方式都成功的实例上计算，并依赖发布时的模型价格与网关行为。 四组结果均为仿真；不代表真实机器人成功率。
+**限制与未决项：** 结果由作者提供并附协议与分析脚本，本站未下载模型权重、运行 GPU 仿真或独立复现。 代码臂与工具调用臂的交互形式有意不同：代码臂把多步操作放进 Python cell，工具臂在动作后持续接收图像；结果不能归因为单一低层技能。 成本与 token 降幅仅在两种方式都成功的实例上计算，并依赖发布时的模型价格与网关行为。 四组结果均为仿真；不代表真实机器人成功率。 10 月论文把四组汇总为 700 个任务实例；71.7% 对 63.1% 是接口系统的配对比较，不能只归因为基础模型。
 
 guide：[https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/docs/guide.md](https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/docs/guide.md)  
-canonical_commit：[https://github.com/DAGroup-PKU/PyRUA-Lean/commit/0f88f1cc5e3ebacd15869b0697a4739704cdd56c](https://github.com/DAGroup-PKU/PyRUA-Lean/commit/0f88f1cc5e3ebacd15869b0697a4739704cdd56c)  
+canonical_commit：[https://github.com/DAGroup-PKU/PyRUA-Lean/commit/57b4e6db77ad624d1fe935d36fc97d1c56f697d8](https://github.com/DAGroup-PKU/PyRUA-Lean/commit/57b4e6db77ad624d1fe935d36fc97d1c56f697d8)  
+paper：[https://arxiv.org/abs/2610.01939](https://arxiv.org/abs/2610.01939)  
+project：[https://dagroup-pku.github.io/PyRUA-Lean/](https://dagroup-pku.github.io/PyRUA-Lean/)  
 
-**来源：** [S093 · PyRUA-Lean official repository](SOURCES.md#s093)
+**来源：** [S093 · PyRUA-Lean official repository](SOURCES.md#s093) · [S118 · PyRUA-Lean arXiv paper](SOURCES.md#s118)
 
 ---
 
@@ -951,10 +954,10 @@ HomeBody 让 GPT-6 Astra 为 Unitree G1 建立带对象记忆的 Isaac Sim 数�
 **日期依据：** Official repository created 2026-09-26T02:17:09Z (10:17 Beijing); author X post 2103671433679224912 was published 2026-09-26T02:22:08.771Z (10:22 Beijing).  
 **入口：** [https://tml.stanford.edu/homebody/](https://tml.stanford.edu/homebody/)  
 **代码入口：** [https://github.com/Stanford-TML/homebody](https://github.com/Stanford-TML/homebody)  
-**许可状态：** 仓库尚未声明许可证，README 标注代码即将发布；官网媒体与第三方模型/资产适用各自条款。  
+**许可状态：** 仓库尚未声明许可证；README 于 10 月 1 日公布分阶段代码计划，但截至本轮检查尚未到首个 SIM 目标日。官网媒体与第三方模型/资产适用各自条款。  
 **控制接口 / 作用：** 探索图像、SLAM/关节状态与对象记忆 → Astra 选择目标和结构化技能调用 → 导航、抓取、放置、开抽屉等技能及全身控制器执行 → 结果返回模型
 
-**限制与未决项：** Astra 是高层 VLM/Real2Sim 智能体，并不直接输出高频关节控制；低层运动由导航、操作技能和 AMO 等控制器承担。 官网展示选定的长程任务，但未给出试验次数、成功率分母或完整失败分布，本站未在真实 G1 上独立复现。 项目尚无论文链接，公开仓库标注代码即将发布且未声明许可证；实现与复现实验暂不可完整审计。 作者说明 Astra 推理会在技能之间造成停顿，本地栈需要 RTX 4090 笔记本 GPU，并存在 API 成本和手指过热等部署限制。
+**限制与未决项：** Astra 是高层 VLM/Real2Sim 智能体，并不直接输出高频关节控制；低层运动由导航、操作技能和 AMO 等控制器承担。 官网展示选定的长程任务，但未给出试验次数、成功率分母或完整失败分布，本站未在真实 G1 上独立复现。 项目尚无论文链接，公开仓库仅公布 SIM（10 月 4 日）、REAL2SIM（10 月 11 日）和 REAL（10 月 18 日）的计划日期，尚未发布实现且未声明许可证。 作者说明 Astra 推理会在技能之间造成停顿，本地栈需要 RTX 4090 笔记本 GPU，并存在 API 成本和手指过热等部署限制。
 
 project：[https://tml.stanford.edu/homebody/](https://tml.stanford.edu/homebody/)  
 code：[https://github.com/Stanford-TML/homebody](https://github.com/Stanford-TML/homebody)  
@@ -986,7 +989,7 @@ R2S2R 从机器人外部/腕部相机与关节状态构建 Isaac Lab 场景；�
 | Agentic wrist-only object size error | 0.1 cm or less | one synthetic PhysCoder box-block scene | same author-reported run; compared against simulation ground truth |
 | Agentic wrist-only replay depth residual | 1 mm or less | camera frames from the same synthetic run | median absolute depth difference between Isaac Lab replay and recording |
 
-**限制与未决项：** Astra 的量化 agentic 结果来自一个 MuJoCo 合成场景，不是真实 DROID 场景，也不是多任务基准成功率。 仓库同时包含不等同于 Astra 路线的 fixed/SimFoundry 结果；本站未将两条管线的数值合并比较。 流程依赖多套外部模型、GPU 环境、Isaac Lab 与本地 Codex 会话；本站未独立复跑。 重建用于场景生成与重放，不代表 Astra 在线控制真实机器人。
+**限制与未决项：** Astra 的量化 agentic 结果来自一个 MuJoCo 合成场景，不是真实 DROID 场景，也不是多任务基准成功率。 仓库同时包含不等同于 Astra 路线的 fixed/SimFoundry 结果；本站未将两条管线的数值合并比较。 流程依赖多套外部模型、GPU 环境、Isaac Lab 与本地 Codex 会话；本站未独立复跑。 10 月 1–2 日新增关节/布料场景、机器人夹爪与 Isaac/viewer 改进，但未发布新的 Astra 量化结果。 重建用于场景生成与重放，不代表 Astra 在线控制真实机器人。
 
 code：[https://github.com/weiqianwang123/R2S2R](https://github.com/weiqianwang123/R2S2R)  
 agentic_pipeline：[https://github.com/weiqianwang123/R2S2R/tree/main/src/r2s2r/pipeline/agentic](https://github.com/weiqianwang123/R2S2R/tree/main/src/r2s2r/pipeline/agentic)  
@@ -1207,6 +1210,91 @@ code：[https://github.com/dzj441/Libero-Agent](https://github.com/dzj441/Libero
 
 ---
 
+<a id="p54"></a>
+### P54 · Embodied Agent Arena · 前沿 VLM 机器人通才评测
+
+Embodied Agent Arena 汇集 32 个来源和 GeoProbe 的 1,000 个几何、空间推理、可供性、规划与操作案例；论文用明确的 `gpt-6-astra` 配置评测七个 VLM，并区分局部度量、功能落点与完整任务成功。
+
+**来源等级：A** · 非交互评测 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Haojian Huang, Pukun Zhao, Zexi Li et al.  
+**事件日期：** 2026-10-01（窗口内）  
+**日期依据：** arXiv:2610.00854 v1 was submitted 2026-10-01T00:14:50Z.  
+**入口：** [https://embodied-agent-arena.github.io/embodied-agent-arena/](https://embodied-agent-arena.github.io/embodied-agent-arena/)  
+**代码入口：** [https://github.com/embodied-agent-arena/embodied-agent-arena](https://github.com/embodied-agent-arena/embodied-agent-arena)  
+**许可状态：** 论文为 arXiv non-exclusive distribution license；代码仓库与整合的 32 个上游数据源、仿真器和资产适用各自许可。  
+**控制接口 / 作用：** 保留各来源观测与操作的最小评测 harness → GPT-6 Astra/六个对照 VLM → 几何、空间、接触、规划与原生任务指标
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Astra contact validity | 60.3 % | arena affordance cases with valid contact scoring | paper-wide aggregate under the matched arena harness; not a robot-task success rate |
+| Astra planning success | 80.3 % | arena task-planning cases across six sources | source-preserving evaluation under stated inference budgets |
+
+**限制与未决项：** 该工作主要评测已有数据和仿真任务，不代表 Astra 在一个统一真机平台上的端到端控制成功率。 五个领域混合不同来源、指标和执行接口；60.3% 接触有效率与 80.3% 规划成功率不能合并或外推为总体成功率。 论文指出 Astra 的局部估计和可用接触定位领先，但协调动作、终点放置与完整 household goal 仍是主要失败点。 结果由作者发布，本站未调用七个模型或重跑 1,000 个案例。
+
+paper：[https://arxiv.org/abs/2610.00854](https://arxiv.org/abs/2610.00854)  
+project：[https://embodied-agent-arena.github.io/embodied-agent-arena/](https://embodied-agent-arena.github.io/embodied-agent-arena/)  
+code：[https://github.com/embodied-agent-arena/embodied-agent-arena](https://github.com/embodied-agent-arena/embodied-agent-arena)  
+
+**来源：** [S119 · Embodied Agent Arena paper, project, and repository](SOURCES.md#s119)
+
+---
+
+<a id="p55"></a>
+### P55 · LiteReality-Agent · 可交互室内场景重建
+
+LiteReality-Agent 把 RGB-D 室内扫描重建表述为可执行 Room.py 的代码编辑与验证流程，并将 GPT-6 Astra（Codex）作为通用编码智能体对照，在仅 RGB 与附加扫描两种输入下生成可交互数字孪生。
+
+**来源等级：A** · 混合资源 · GPT-6 仅作对照
+
+**作者 / 团队：** Zhening Huang, Yueyan Li, Johnathan Chiu et al.  
+**事件日期：** 2026-10-01（窗口内）  
+**日期依据：** arXiv:2610.01863 v1 was submitted 2026-10-01T15:25:35Z.  
+**入口：** [https://litereality.github.io/agent/](https://litereality.github.io/agent/)  
+**代码入口：** [https://github.com/LiteReality/LiteReality-Agent](https://github.com/LiteReality/LiteReality-Agent)  
+**许可状态：** 论文为 arXiv non-exclusive distribution license；官方仓库公开源代码，扫描、生成资产与第三方模型适用各自许可。  
+**控制接口 / 作用：** RGB-D 扫描或图像 → 编码智能体使用测量、布局、物理与渲染工具迭代编辑 Room.py → 可执行、可验证的仿真场景
+
+**限制与未决项：** GPT-6 Astra 是重建对照，不是 LiteReality-Agent 主方法的运行模型，也不控制真实机器人。 论文页面在图表中简写为 GPT-6，但方法部分明确该对照为 Codex 中运行的 GPT-6 Astra；不得把同名 Astra 系统混入。 视觉、几何、物理与人工偏好指标口径不同；本站未从论文挑选单一数字包装为总体成功率。 结果由作者发布，本站未下载扫描数据、运行渲染或复核人工评审。
+
+paper：[https://arxiv.org/abs/2610.01863](https://arxiv.org/abs/2610.01863)  
+project：[https://litereality.github.io/agent/](https://litereality.github.io/agent/)  
+code：[https://github.com/LiteReality/LiteReality-Agent](https://github.com/LiteReality/LiteReality-Agent)  
+
+**来源：** [S120 · LiteReality-Agent paper, project, and repository](SOURCES.md#s120)
+
+---
+
+<a id="p56"></a>
+### P56 · RPG · 重建、练习再上真机
+
+Reconstruct, Practice, Go Real 通过仿真练习、失败诊断和跨任务验证改进技能库与系统提示；GPT-6 Astra Pro 仅作为 CaP-Agent0 的仿真与真机对照，而 RPG 主系统使用 Gemini 3.8 Flash。
+
+**来源等级：A** · 真机 + 仿真 · GPT-6 仅作对照
+
+**作者 / 团队：** Yen-Jen Wang, Haozhe Jiang, Shuying Deng et al.  
+**事件日期：** 2026-10-01（窗口内）  
+**日期依据：** arXiv:2610.02204 v1 was submitted 2026-10-01T17:59:50Z.  
+**入口：** [https://rpg-robot.github.io/](https://rpg-robot.github.io/)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 论文为 arXiv non-exclusive distribution license；项目页公开演示媒体，但本轮未定位公开代码或统一媒体再许可。  
+**控制接口 / 作用：** 任务观测 → CaP-Agent0 + GPT-6 Astra Pro 对照选择感知与控制技能 → 共享校准/硬件适配 → 仿真或真机执行反馈
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Astra Pro CaP-Agent0 simulation success | 60.0 % | 132/220 held-out simulation trials across 22 tasks | comparison baseline after the common first practice-round setup; RPG uses a different runtime model and reaches 209/220 |
+| Astra Pro CaP-Agent0 physical success | 14 successes | 30 physical trials: 10 each on drawer closing, towel folding, and handover | same calibration and hardware-adaptation procedure; low reasoning effort; 30-call or 20-minute cap |
+
+**限制与未决项：** Astra Pro 是 CaP-Agent0 对照；RPG 的 95.0% 仿真与 30/30 真机结果使用 Gemini 3.8 Flash，不能归给 Astra。 真机只覆盖三个任务，且所有方法共享一次校准和硬件适配；不能外推为通用机器人成功率。 论文报告允许 episode 内自主重试与恢复，单次成功数不等于无重试一次完成。 未定位公开代码，本站未复跑仿真或真机实验。
+
+paper：[https://arxiv.org/abs/2610.02204](https://arxiv.org/abs/2610.02204)  
+project：[https://rpg-robot.github.io/](https://rpg-robot.github.io/)  
+video：[https://rpg-robot.github.io/static/videos/demo/sort_utensils.mp4](https://rpg-robot.github.io/static/videos/demo/sort_utensils.mp4)  
+
+**来源：** [S121 · Reconstruct, Practice, Go Real paper and project](SOURCES.md#s121)
+
+---
+
 ## 配套资源与对照 · 10
 
 <a id="p13"></a>
@@ -1405,49 +1493,50 @@ Astra 读取 RGB/几何输入并调用 Blender 构造对象化三维场景；下
 <a id="p39"></a>
 ### P39 · BluPe Remote YAM · Astra 共享真机运行基础设施
 
-开源 runner 让本地 Codex/Astra 通过公开 Session API 加入 BluPe 共享 YAM/SO101 机器人队列，读取三路相机并提交受限轨迹；近期更新加入运行对比指标与可选推理强度。
+开源 runner 让本地 Codex/Astra 通过公开 Session API 加入 BluPe 共享 YAM/SO101 机器人队列，读取三路相机并提交受限轨迹；10 月更新增加可选的 API RGB-D 深度查询、连续 RoboHouse 视频与多 YAM 停驻就绪识别。
 
 **来源等级：A** · 真机 + 仿真 · 基础设施，不是单独的 GPT-6 成果
 
 **作者 / 团队：** Andrew Liu / BluPe  
 **事件日期：** 2026-09-07（本月更新，基础项目更早）  
-**日期依据：** GitHub repository created 2026-09-07T08:32:16Z; active run-metrics and reasoning-effort updates landed 2026-09-25.  
+**日期依据：** GitHub repository created 2026-09-07T08:32:16Z; RGB-D, continuous-video and readiness updates landed 2026-10-01–02.  
 **入口：** [https://github.com/andlyu/blupe-remote-yam](https://github.com/andlyu/blupe-remote-yam)  
 **代码入口：** [https://github.com/andlyu/blupe-remote-yam](https://github.com/andlyu/blupe-remote-yam)  
 **许可状态：** 仓库无统一项目许可；RoboCurve 适配代码与 I2RT/robot models 各自保留上游许可。  
 **控制接口 / 作用：** 远端三相机/队列状态 → 本地 Astra runner 与 IK → Session API 轨迹请求 → 网关就绪/限位/停止检查 → 共享 YAM 或 SO101
 
-**限制与未决项：** 这是可复用基础设施，不是独立 GPT-6 成功率或新模型能力结果。 真机执行依赖共享队列、现场操作者就绪和网关安全检查；本轮未远程启动机器人。 仓库未提供统一许可，不能把可访问性等同于可自由再分发。 mock 与 no-hardware-control 模式不构成真机验证。
+**限制与未决项：** 这是可复用基础设施，不是独立 GPT-6 成功率或新模型能力结果。 真机执行依赖共享队列、现场操作者就绪和网关安全检查；本轮未远程启动机器人。 仓库未提供统一许可，不能把可访问性等同于可自由再分发。 mock 与 no-hardware-control 模式不构成真机验证。 10 月发布的是 runner、观测与就绪处理代码，不是新的 Astra 真机成功率；深度功能默认关闭。
 
 runs：[https://huggingface.co/datasets/andlyu/Public-YAM-runs](https://huggingface.co/datasets/andlyu/Public-YAM-runs)  
 api：[https://github.com/andlyu/blupe-remote-yam/blob/main/API.md](https://github.com/andlyu/blupe-remote-yam/blob/main/API.md)  
+astra_rgbd：[https://github.com/andlyu/blupe-remote-yam/blob/a0a35371e4b20c07ff81aa88257f20bf5dd5513b/codex-runner/docs/astra-depth-example.md](https://github.com/andlyu/blupe-remote-yam/blob/a0a35371e4b20c07ff81aa88257f20bf5dd5513b/codex-runner/docs/astra-depth-example.md)  
 
 **来源：** [S089 · BluPe Remote YAM runner](SOURCES.md#s089)
 
 ---
 
 <a id="p46"></a>
-### P46 · RC DexBench · GPT-6 Astra 灵巧手评测接口
+### P46 · RC XEbench · GPT-6 Astra 跨本体评测接口
 
-RC DexBench 为按键、钢琴序列和固定场景抓放定义事件级评分与统一适配器；示例策略通过 GPT-6 Astra 每轮选择一个受限手指动作，但公开快速示例只连接 mock adapter。
+RC DexBench 于 10 月 1 日更名为 XEbench，新增跨本体成功率离散度 σ、平均成功率与本体覆盖率协议；示例策略仍由 GPT-6 Astra 每轮选择一个受限手指动作，公开快速示例只连接 mock adapter。
 
 **来源等级：A** · 仿真 · 基础设施，不是单独的 GPT-6 成果
 
 **作者 / 团队：** Robotics Center  
 **事件日期：** 2026-09-28（窗口内）  
-**日期依据：** GitHub repository created 2026-09-28T00:42:19Z; public README/media/Astra example were completed in commit 89599c3 at 2026-09-28T00:58:24Z.  
+**日期依据：** GitHub repository created 2026-09-28T00:42:19Z; renamed to XEbench with cross-embodiment protocol in commit 46e4685 on 2026-10-01T01:40:14Z.  
 **入口：** [https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)  
 **代码入口：** [https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)  
 **许可状态：** 仓库采用 Apache-2.0；连接的机器人、数据记录、模型服务与第三方资产适用各自许可。  
 **控制接口 / 作用：** 任务/观测 → Astra 从 index/middle/ring/stop 中选择单个受限动作 → adapter 映射到手指运动 → 键盘、MIDI、触觉与时钟事件记录和评分
 
-**限制与未决项：** 公开 README 的 Astra 命令使用 mock adapter；没有发布 GPT-6 Astra 真机成功率、结果文件或 MCAP 试验集。 任务 GIF 与真实夹爪照片用于说明基准硬件和协议，不证明模型已在这些设备上完成评测。 替换为真实机器人 adapter 需要维护者自行实现硬件映射、校准与安全边界。 这是新发布的评测基础设施，不是独立的 GPT-6 机器人能力结果；本站未调用模型或硬件。
+**限制与未决项：** 公开 README 的 Astra 命令使用 mock adapter；没有发布 GPT-6 Astra 真机成功率、结果文件或 MCAP 试验集。 任务 GIF 与真实夹爪照片用于说明基准硬件和协议，不证明模型已在这些设备上完成评测。 替换为真实机器人 adapter 需要维护者自行实现硬件映射、校准与安全边界。 这是评测基础设施，不是独立的 GPT-6 机器人能力结果；本站未调用模型或硬件。 跨本体页面的 preview/XE-Table 数值被作者明确标为示意数据，不能作为 Astra 实测结果收录。
 
 code：[https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)  
 spec：[https://github.com/RoboticsCenter/dexbench/blob/main/SPEC.md](https://github.com/RoboticsCenter/dexbench/blob/main/SPEC.md)  
 adapter_guide：[https://github.com/RoboticsCenter/dexbench/blob/main/docs/add_an_adapter.md](https://github.com/RoboticsCenter/dexbench/blob/main/docs/add_an_adapter.md)  
 
-**来源：** [S104 · RC DexBench official repository](SOURCES.md#s104)
+**来源：** [S104 · RC XEbench official repository](SOURCES.md#s104)
 
 ---
 

@@ -1150,6 +1150,42 @@
       "source_id": "S117",
       "alt": {"en": "LIBERO-Agent interaction protocol, benchmark suite, and findings overview.", "zh": "LIBERO-Agent 交互协议、评测任务与主要发现概览。"},
       "caption": {"en": "Official LIBERO-Agent paper overview figure.", "zh": "LIBERO-Agent 论文官方概览图。"}
+    },
+    "P54": {
+      "kind": "image",
+      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/assets/overview.webp",
+      "fit": "contain",
+      "source_url": "https://embodied-agent-arena.github.io/embodied-agent-arena/assets/overview.webp",
+      "source_page_url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
+      "source_path": "Official project-page overview image checked 2026-10-03.",
+      "classification": "Author-provided arena overview spanning the five evaluated capability domains; not an independently reproduced result.",
+      "source_id": "S119",
+      "alt": {"en": "Embodied Agent Arena benchmark overview.", "zh": "Embodied Agent Arena 评测概览。"},
+      "caption": {"en": "Official Embodied Agent Arena overview.", "zh": "Embodied Agent Arena 官方概览图。"}
+    },
+    "P55": {
+      "kind": "image",
+      "url": "https://litereality.github.io/agent/assets/gallery/studio-office.jpg",
+      "fit": "cover",
+      "source_url": "https://litereality.github.io/agent/assets/gallery/studio-office.jpg",
+      "source_page_url": "https://litereality.github.io/agent/",
+      "source_path": "Official project-page studio-office reconstruction gallery image checked 2026-10-03.",
+      "classification": "Author-provided reconstructed indoor-scene image; it illustrates the real-to-sim output and is not an Astra-only result.",
+      "source_id": "S120",
+      "alt": {"en": "LiteReality-Agent reconstructed studio-office scene.", "zh": "LiteReality-Agent 重建的工作室办公室场景。"},
+      "caption": {"en": "Official studio-office reconstruction from the project gallery.", "zh": "项目图库中的官方工作室办公室重建图。"}
+    },
+    "P56": {
+      "kind": "image",
+      "url": "https://rpg-robot.github.io/static/images/teaser.webp",
+      "fit": "contain",
+      "source_url": "https://rpg-robot.github.io/static/images/teaser.webp",
+      "source_page_url": "https://rpg-robot.github.io/",
+      "source_path": "Official project-page teaser image and Open Graph image checked 2026-10-03.",
+      "classification": "Author-provided RPG simulation and physical-task teaser; RPG uses Gemini 3.8 Flash, while Astra Pro is only a comparison baseline.",
+      "source_id": "S121",
+      "alt": {"en": "RPG simulation-practice and physical-task overview.", "zh": "RPG 仿真练习与真机任务概览。"},
+      "caption": {"en": "Official RPG project teaser; Astra Pro is a comparison baseline.", "zh": "RPG 官方项目概览；Astra Pro 仅为对照基线。"}
     }
   },
   "missing_policy": {

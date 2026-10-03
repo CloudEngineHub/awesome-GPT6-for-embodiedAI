@@ -264,8 +264,8 @@
     },
     "P39": {
       "title": "BluPe Remote YAM · Shared Real-Robot Infrastructure",
-      "summary": "An open runner lets local Codex/Astra sessions join a shared YAM/SO101 queue, receive three camera views, and submit bounded trajectories through a supervised gateway.",
-      "detail": "This is execution infrastructure, not a standalone GPT-6 performance result; no robot was started during this catalogue review."
+      "summary": "An open runner lets local Codex/Astra sessions join a shared YAM/SO101 queue, receive camera and optional RGB-D observations, and submit bounded trajectories through a supervised gateway.",
+      "detail": "The October RGB-D, video, and readiness updates are infrastructure, not a standalone GPT-6 performance result; no robot was started during this catalogue review."
     },
     "P40": {
       "title": "Robo-Harness K1 · Perception Tools for Robot-Use Agents",
@@ -274,8 +274,8 @@
     },
     "P41": {
       "title": "PyRUA-Lean · Robot Agents That Act in Code",
-      "summary": "GPT-6 Astra writes Python against a persistent robot object, combining perception, motion, VLA skills, and checks inside each call; the release compares this interface with RPent tool calling on four simulation suites.",
-      "detail": "The repository history was replaced by a canonical September 26 tree with package, CLI, docs, and tests; the reported benchmark values are unchanged and no physical-robot result is claimed."
+      "summary": "GPT-6 Astra writes Python against a persistent robot object, combining perception, motion, VLA skills, and checks inside each call; the October paper reports the paired interface study across 700 simulation instances.",
+      "detail": "The 71.7% versus 63.1% comparison belongs to complete code and tool-calling interfaces under equal call budgets; no physical-robot result is claimed."
     },
     "P42": {
       "title": "GPT-6 Astra Real2Sim Workflow · Editable Rooms and Simulation Review",
@@ -290,7 +290,7 @@
     "P44": {
       "title": "HomeBody · A G1 That Explores, Remembers, and Acts",
       "summary": "GPT-6 Astra builds and consults a spatial memory, then composes navigation, picking, placing, and drawer skills for long-horizon Unitree G1 tasks in an unseen kitchen.",
-      "detail": "Astra performs high-level reasoning and tool selection rather than direct joint control; the official demos have no trial denominator, and the repository says code is coming soon."
+      "detail": "Astra performs high-level reasoning and tool selection rather than direct joint control; the official demos have no trial denominator, and the October 1 repository update publishes only a future code-release schedule."
     },
     "P45": {
       "title": "R2S2R · Robot-View Real-to-Sim with Astra",
@@ -298,9 +298,9 @@
       "detail": "The reported Astra numbers come from one synthetic wrist-only PhysCoder scene, not the real DROID capture or a multi-task benchmark; this catalogue did not rerun the GPU/model stack."
     },
     "P46": {
-      "title": "RC DexBench · A GPT-6 Astra Interface for Dexterous-Hand Evaluation",
-      "summary": "RC DexBench defines event-based scoring and common adapters for keypress, piano-sequence, and fixed-scene pick-and-place tasks; its example Astra policy chooses one bounded finger action per turn.",
-      "detail": "The published Astra command uses a mock adapter and provides no physical-robot model result; the hardware media illustrates the benchmark rather than proving a completed Astra run."
+      "title": "RC XEbench · A GPT-6 Astra Cross-Embodiment Evaluation Interface",
+      "summary": "Renamed from DexBench, XEbench defines event-based scoring, common adapters, and cross-embodiment success spread, mean, and coverage; its example Astra policy chooses one bounded finger action per turn.",
+      "detail": "The published Astra command still uses a mock adapter and provides no physical-robot model result; preview cross-embodiment values are explicitly illustrative."
     },
     "P47": {
       "title": "Astra Manipulation · Direct Simulation Control from Images and Proprioception",
@@ -336,6 +336,21 @@
       "title": "LIBERO-Agent · Agent-Native Robot Manipulation Evaluation",
       "summary": "LIBERO-Agent lets general-purpose agents select observations and issue native end-effector actions in MuJoCo; GPT-6 Astra leads seven evaluated configurations with a weighted score of 45.0/100 on the 30-task primary suite.",
       "detail": "The result belongs to the complete Astra, Codex 0.154.0, observation, tool, and control-interface configuration; hard short- and long-horizon tasks remain unreliable, and the linked repository currently contains only a code-coming-soon placeholder."
+    },
+    "P54": {
+      "title": "Embodied Agent Arena · Are Frontier VLMs Robot Generalists?",
+      "summary": "Embodied Agent Arena evaluates seven VLMs on 1,000 geometry, spatial, affordance, planning, and manipulation cases while separating local precision, usable grounding, and native task completion.",
+      "detail": "The paper explicitly evaluates gpt-6-astra and finds strong estimation and contact localization alongside persistent endpoint and coordinated-action failures; this is not one unified physical-robot success rate."
+    },
+    "P55": {
+      "title": "LiteReality-Agent · Interactable Indoor Scene Reconstruction",
+      "summary": "LiteReality-Agent iteratively edits and verifies an executable Room.py digital twin from indoor scans; GPT-6 Astra running in Codex is evaluated as an RGB-only and scan-assisted coding-agent baseline.",
+      "detail": "Astra is a reconstruction baseline rather than the LiteReality-Agent system itself, and it does not control a physical robot in this study."
+    },
+    "P56": {
+      "title": "RPG · Reconstruct, Practice, Go Real",
+      "summary": "RPG improves a reusable robot skill library through simulation practice and cross-task validation; GPT-6 Astra Pro appears only as the CaP-Agent0 comparison in simulation and physical trials.",
+      "detail": "RPG's 95.0% simulation and 30/30 physical results use Gemini 3.8 Flash and must not be attributed to Astra; the Astra baseline records 132/220 simulation and 14/30 physical successes."
     }
   }
 }

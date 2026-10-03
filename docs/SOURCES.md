@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-02 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-03 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -803,9 +803,9 @@ Consolidated public repository records six fresh-session Astra/XLeRobot carton-g
 
 [https://github.com/andlyu/blupe-remote-yam](https://github.com/andlyu/blupe-remote-yam)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
-Official repository documents the local Codex/Astra runner, public shared-robot queue, camera/session API, gateway safety checks, local logs, and 2026-09-25 run-metric and reasoning-effort updates. No meaningful project image was found in the repository tree.
+Official repository documents the local Codex/Astra runner, public shared-robot queue, camera/session API, gateway safety checks and local logs. Commits a0a3537, e93b538 and 61f8b61 add opt-in Astra RGB-D queries, continuous RoboHouse video, and parked-readiness handling; they do not report a new Astra success rate. No meaningful project image was found in the repository tree.
 
 <a id="s090"></a>
 ## S090 · Robo-Harness K1 preprint
@@ -839,9 +839,9 @@ Official website repository created 2026-09-24 contains the updated report, loca
 
 [https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
-Apache-2.0 repository publishes the robot-code interface, package, CLI, prompts, guides, tests, and four benchmark summaries. Its history was replaced; commit 0f88f1c dated 2026-09-26T15:29:24Z is the current canonical public tree, while the reported benchmark values remain unchanged. The catalogue did not rerun the GPU evaluations.
+Apache-2.0 repository publishes the robot-code interface, package, CLI, prompts, guides, tests, and four benchmark summaries. Commit 57b4e6d links the new arXiv:2610.01939 paper and citation; the README explicitly uses model id gpt-6-astra and summarizes the 700-instance paired interface comparison. The catalogue did not rerun the GPU evaluations.
 
 <a id="s095"></a>
 ## S095 · GPT-6 Astra Real2Sim workflow release
@@ -884,18 +884,18 @@ MIT repository publishes the AgenticGenPlan experiment code, pinned Codex/Astra 
 
 [https://tml.stanford.edu/homebody/](https://tml.stanford.edu/homebody/)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
-Official Stanford TML project page names GPT Astra, documents the G1/Isaac Sim memory and skill architecture, publishes kitchen-cleanup and remembered-object demonstrations, lists system limitations, and hosts the retained teaser poster and video. No success-rate denominator or paper is published.
+Official Stanford TML project page names GPT Astra, documents the G1/Isaac Sim memory and skill architecture, publishes kitchen-cleanup and remembered-object demonstrations, lists system limitations, and hosts the retained teaser poster and video. The repository added a staged code-release schedule on 2026-10-01, with SIM planned for October 4; no implementation, success-rate denominator, or paper was public at this check.
 
 <a id="s100"></a>
 ## S100 · HomeBody official repository
 
 [https://github.com/Stanford-TML/homebody](https://github.com/Stanford-TML/homebody)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-27
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
-Official repository was created 2026-09-26T02:17:09Z and links the project page, but currently says code is coming soon and declares no license.
+Official repository was created 2026-09-26T02:17:09Z and links the project page. Commit 6c6d721 on 2026-10-01 replaced the generic code-coming-soon line with planned SIM, REAL2SIM and REAL release dates of October 4, 11 and 18; no implementation or license was public at this check.
 
 <a id="s101"></a>
 ## S101 · Gio Huh HomeBody announcement
@@ -920,18 +920,18 @@ Repository evidence preserves the unchanged independent candidate, a changes-req
 
 [https://github.com/weiqianwang123/R2S2R](https://github.com/weiqianwang123/R2S2R)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-28
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
-MIT repository documents fixed and GPT-6 Astra agentic real-to-sim pipelines, robot/camera inputs, checked tool stages, Isaac Lab replay, synthetic ground-truth evaluation, and official GIF media. The September 27 README reports a single wrist-only PhysCoder agentic run; the catalogue did not rerun its GPU/model stack.
+MIT repository documents fixed and GPT-6 Astra agentic real-to-sim pipelines, robot/camera inputs, checked tool stages, Isaac Lab replay, synthetic ground-truth evaluation, and official GIF media. October 1–2 commits add articulated/cloth scene support, multiple robot/gripper refinements, viewer work, and Isaac simulation fixes; these are code capabilities, not new Astra benchmark results. The catalogue did not rerun its GPU/model stack.
 
 <a id="s104"></a>
-## S104 · RC DexBench official repository
+## S104 · RC XEbench official repository
 
 [https://github.com/RoboticsCenter/dexbench](https://github.com/RoboticsCenter/dexbench)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-28
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
-Apache-2.0 repository created 2026-09-28 publishes dexterous-hand task specifications, event scoring, adapters, official task media, and a bounded GPT-6 Astra example policy. Its published command uses a mock adapter and no Astra hardware result is claimed.
+Apache-2.0 repository created 2026-09-28 was renamed from DexBench to XEbench on 2026-10-01 and added a cross-embodiment protocol based on success-rate spread, mean, and coverage while retaining legacy compatibility. Its bounded GPT-6 Astra example still uses a mock adapter; preview/XE-Table values are illustrative and no Astra hardware result is claimed.
 
 <a id="s105"></a>
 ## S105 · ZeYanjie Rubik's Cube original X post
@@ -956,9 +956,9 @@ Repository created 2026-09-28 publishes the GPT-6 Astra observation/action bound
 
 [https://arxiv.org/abs/2609.34261](https://arxiv.org/abs/2609.34261)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-30
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
-arXiv v1 submitted 2026-09-28 documents the observation-action-receipt-observation context format, 30-task RoboDojo evaluation, three real-robot tasks, and optional Jev-gated action reuse. The linked official MIT repository provides code and pinned benchmark dependencies; this catalogue did not rerun them.
+arXiv v1 submitted 2026-09-28 documents the observation-action-receipt-observation context format, 30-task RoboDojo evaluation, three real-robot tasks, and optional Jev-gated action reuse. Repository commit 2898c2b on 2026-10-01 publishes the complete paper reference setting: eight zero-shot tasks plus source identity, SHA-256, horizon, and exact 12-window selections for all 22 one-shot tasks. The catalogue did not download the HDF5 data or rerun the evaluation.
 
 <a id="s108"></a>
 ## S108 · NavHarness arXiv paper
@@ -1049,3 +1049,39 @@ The 2026-09-30 release publishes one Desk1 image comparison among the project's 
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-02
 
 arXiv v1 defines an agent-native MuJoCo/Franka benchmark with 200 integrated tasks and a 30-task primary suite. It reports GPT-6 Astra/Codex as the strongest of seven evaluated agent configurations while retaining hard-task failures. The paper links dzj441/Libero-Agent, whose README still says code is coming soon at this check.
+
+<a id="s118"></a>
+## S118 · PyRUA-Lean arXiv paper
+
+[https://arxiv.org/abs/2610.01939](https://arxiv.org/abs/2610.01939)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
+
+arXiv v1 submitted 2026-10-01T16:07:49Z names GPT-6 Astra as the shared planner and reports a 700-instance paired comparison across LIBERO-PRO, RoboTwin 2.0 and RoboCasa365. Under equal LLM-call budgets, the code interface reaches 71.7% versus 63.1% for tool calling; token and call reductions are measured only on jointly solved instances.
+
+<a id="s119"></a>
+## S119 · Embodied Agent Arena paper, project, and repository
+
+[https://arxiv.org/abs/2610.00854](https://arxiv.org/abs/2610.00854)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
+
+arXiv v1 submitted 2026-10-01T00:14:50Z evaluates seven VLM agents on 1,000 cases spanning five robotic capability domains. The methods identify the evaluated OpenAI model as gpt-6-astra; the paper separates local metrics, grounding, planning and native task completion and documents Astra's endpoint and coordinated-action failures.
+
+<a id="s120"></a>
+## S120 · LiteReality-Agent paper, project, and repository
+
+[https://arxiv.org/abs/2610.01863](https://arxiv.org/abs/2610.01863)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
+
+arXiv v1 submitted 2026-10-01T15:25:35Z and the official project page describe an executable Room.py real-to-sim reconstruction system. The paper explicitly identifies the comparison agent as GPT-6 Astra running in Codex, with RGB-only and scan-assisted conditions; Astra is a baseline rather than the LiteReality-Agent system itself.
+
+<a id="s121"></a>
+## S121 · Reconstruct, Practice, Go Real paper and project
+
+[https://arxiv.org/abs/2610.02204](https://arxiv.org/abs/2610.02204)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
+
+arXiv v1 submitted 2026-10-01T17:59:50Z evaluates CaP-Agent0 powered by GPT-6 Astra Pro as a comparison in 220 held-out simulation trials and 30 physical trials. RPG itself uses Gemini 3.8 Flash, so its 95.0% simulation and 30/30 physical results are not attributed to Astra.
