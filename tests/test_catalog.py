@@ -130,7 +130,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
         self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
         self.assertEqual(self.meta['window_start'],'2026-08-20')
-        self.assertEqual(self.meta['window_end'],'2026-10-03')
+        self.assertEqual(self.meta['window_end'],'2026-10-04')
         self.assertEqual(self.by_id['P43']['code_url'],'https://github.com/tomsilver/robocode')
         self.assertEqual(self.by_id['P43']['gpt6_relation'],'explicit_primary')
         self.assertIn('official project video',self.media['media']['P43']['classification'].lower())

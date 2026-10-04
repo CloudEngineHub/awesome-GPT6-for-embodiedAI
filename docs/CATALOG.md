@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-03。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-04。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -13,23 +13,24 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
 
-固定 VLM 从示教、目标图像和交互历史中适应任务，经受约束的机器人工具闭环执行。
+固定 VLM 从示教、目标图像和交互历史中适应任务，经受约束的机器人工具闭环执行；10 月 3 日公开更新把 GPT-6 Astra Codex 与 YAM 设为默认组合，并补充实测标定、示范状态/动作复用和评测工具。
 
 **来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
 
 **作者 / 团队：** Dongzhou Cheng et al.  
-**事件日期：** 2026-09-16（窗口内）  
-**日期依据：** README：论文、项目页及代码发布日；首批演示为 09-11  
+**事件日期：** 2026-09-16（本月更新，基础项目更早）  
+**日期依据：** README：论文、项目页及代码发布日；首批演示为 09-11；YAM 默认运行链路、公开机器标定和评测工具于 2026-10-03 更新。  
 **入口：** [https://github.com/cheng-haha/GPT-Policy](https://github.com/cheng-haha/GPT-Policy)  
 **代码入口：** [https://github.com/cheng-haha/GPT-Policy](https://github.com/cheng-haha/GPT-Policy)  
 **许可状态：** 项目许可 pending；公开预览不授予再分发/商业使用  
 **控制接口 / 作用：** 相机/状态/上下文 → Cartesian targets / waypoints → IK 校验 → ARX X5 或 I2RT/YAM
 
-**限制与未决项：** 真实评测记录、私有提示和现场标定不随代码完整提供。 README 的少量条件任务 100% 不等于整体通用成功率。 RoboDojo 完整仿真管线仍列在 TODO。
+**限制与未决项：** 真实评测记录、私有提示和现场标定不随代码完整提供。 README 的少量条件任务 100% 不等于整体通用成功率。 RoboDojo 完整仿真管线仍列在 TODO。 10 月更新提供部署配置、离线测试和评测脚本，但不公开私有任务提示、运行记录或完整评测环境；本站未连接 YAM/ARX 硬件复跑。
 
 paper：[https://arxiv.org/abs/2609.19138](https://arxiv.org/abs/2609.19138)  
 project：[https://cheng-haha.github.io/GPT-Policy/](https://cheng-haha.github.io/GPT-Policy/)  
 legacy：[https://github.com/cheng-haha/GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval)  
+runtime_update：[https://github.com/cheng-haha/GPT-Policy/commit/3a74ed4b45d25ff9af4939c9209292e725712f50](https://github.com/cheng-haha/GPT-Policy/commit/3a74ed4b45d25ff9af4939c9209292e725712f50)  
 
 **来源：** [S001 · GPT-Policy public implementation](SOURCES.md#s001) · [S002 · In-Context Robot Learning with VLM Agents](SOURCES.md#s002)
 

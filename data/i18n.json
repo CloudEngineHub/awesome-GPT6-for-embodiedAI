@@ -2,8 +2,8 @@
   "en": {
     "P01": {
       "title": "GPT-Policy · In-Context Robot Learning",
-      "summary": "A fixed VLM adapts from demonstrations, goal images, and interaction history before using constrained robot tools in a closed loop.",
-      "detail": "Primary project material describes in-context adaptation and constrained tool execution; public experimental assets and licensing remain incomplete."
+      "summary": "A fixed VLM adapts from demonstrations, goal images, and interaction history before using constrained robot tools in a closed loop; the October 3 update makes GPT-6 Astra through Codex with YAM the default public path and adds measured calibration, action-bearing demonstrations, and evaluation tools.",
+      "detail": "The public release now includes deployment profiles and offline regression tests, but private prompts, run records, the complete evaluation environment, and a hardware rerun remain unavailable; licensing is still pending."
     },
     "P02": {
       "title": "GPT-as-Policy · GPT-6 Direct / π0.5 Hybrid",

@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-03 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-04 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -11,9 +11,9 @@
 
 [https://github.com/cheng-haha/GPT-Policy](https://github.com/cheng-haha/GPT-Policy)
 
-类型：`primary` · 读取：`search_text` · 检查日期：2026-09-18
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-04
 
-README substantive text reviewed; project license explicitly pending. No robot execution performed.
+README and 2026-10-03 commits 8359646–3a74ed4 identify YAM (`yambox`) + Codex (`gpt-6-astra`) as the default public path and add measured YAM/ARX calibration profiles, demonstration state/action reuse, evaluation tooling, runtime controls and offline regression tests. Private prompts, recordings and the complete evaluation environment remain excluded; the catalogue did not energize hardware or rerun physical trials. The project license remains pending.
 
 <a id="s002"></a>
 ## S002 · In-Context Robot Learning with VLM Agents

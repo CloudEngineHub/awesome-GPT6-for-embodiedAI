@@ -4,9 +4,9 @@
     "title": "GPT-Policy public implementation",
     "url": "https://github.com/cheng-haha/GPT-Policy",
     "kind": "primary",
-    "access": "search_text",
-    "checked_at": "2026-09-18",
-    "notes": "README substantive text reviewed; project license explicitly pending. No robot execution performed."
+    "access": "page_text",
+    "checked_at": "2026-10-04",
+    "notes": "README and 2026-10-03 commits 8359646–3a74ed4 identify YAM (`yambox`) + Codex (`gpt-6-astra`) as the default public path and add measured YAM/ARX calibration profiles, demonstration state/action reuse, evaluation tooling, runtime controls and offline regression tests. Private prompts, recordings and the complete evaluation environment remain excluded; the catalogue did not energize hardware or rerun physical trials. The project license remains pending."
   },
   {
     "id": "S002",

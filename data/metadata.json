@@ -1,10 +1,10 @@
 {
   "name": "awesome-gpt6-embodied",
-  "version": "0.2.56-preview",
-  "snapshot_date": "2026-10-03",
+  "version": "0.2.57-preview",
+  "snapshot_date": "2026-10-04",
   "timezone": "Asia/Shanghai",
   "window_start": "2026-08-20",
-  "window_end": "2026-10-03",
+  "window_end": "2026-10-04",
   "description": "Evidence-aware catalogue of GPT-6 Astra embodied AI projects, evaluations and demos.",
   "scope_note": "本月出现/更新的 GPT6 相关条目优先；较早基础设施与日期未确认条目明确分层。",
   "independent_experiments_run": 0,
