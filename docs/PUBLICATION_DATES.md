@@ -60,6 +60,8 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P54 | 2026-1001 | verified | 2026-10-01 | arXiv:2610.00854 v1 was submitted 2026-10-01T00:14:50Z. | — | Paper submission date; benchmark sources, model runs, and project preparation predate publication. | [S119](SOURCES.md#s119) |
 | P55 | 2026-1001 | verified | 2026-10-01 | arXiv:2610.01863 v1 was submitted 2026-10-01T15:25:35Z. | — | Paper submission date; reconstruction experiments and public repository preparation predate publication. | [S120](SOURCES.md#s120) |
 | P56 | 2026-1001 | verified | 2026-10-01 | arXiv:2610.02204 v1 was submitted 2026-10-01T17:59:50Z. | — | Paper submission date; practice rounds, physical trials, and project media predate publication. | [S121](SOURCES.md#s121) |
+| P57 | 2026-1002 | verified | 2026-10-02 | arXiv:2610.02788 v1 was submitted 2026-10-02T04:25:12Z. | — | Paper submission date; simulation learning, physical trials, and project preparation predate publication. | [S122](SOURCES.md#s122) |
+| P58 | 2026-0917 | verified | 2026-09-17 | arXiv:2609.20822 v1 was submitted 2026-09-17T17:59:58Z. | — | Initial paper date; v2 was updated 2026-10-02 with the SafeHarness title and revised GPT-6 Astra results. | [S123](SOURCES.md#s123) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |

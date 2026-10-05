@@ -2681,6 +2681,103 @@
     "independently_reproduced": false
   },
   {
+    "id": "P57",
+    "title": "Skill2Real · 仿真技能零样本迁移到真机",
+    "section": "core",
+    "category": "policy_improvement",
+    "environment": "real_and_sim",
+    "scene_tags": ["sim", "real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "Skill2Real 用 Proposer–Verifier–Governor 循环在仿真中学习可复用的 Cerebellum 技能与 Brain 组合程序，再冻结技能库并由 GPT-6 Astra 通过同一机器人 API 在未见任务和 UR5e 真机上执行。",
+    "authors": "Xincheng He, Siyu Ma, Chang Yu et al.",
+    "event_date": "2026-10-02",
+    "event_date_basis": "arXiv:2610.02788 v1 was submitted 2026-10-02T04:25:12Z.",
+    "window_status": "in_window",
+    "url": "https://skill2real.github.io/",
+    "code_url": null,
+    "license_status": "论文为 arXiv non-exclusive distribution license；官方项目页公开图片与视频，但本轮未定位公开代码或统一媒体再许可。",
+    "control_interface": "仿真公开观测与共享 API → GPT-5.6 Sol 训练并验证两级技能记忆 → 冻结技能库 → GPT-6 Astra 根据 RGB-D、机器人状态与 API 回执生成程序 → LIBERO 或 UR5e/ROS 执行",
+    "metrics": [
+      {
+        "name": "Astra LIBERO-Pro Long overall success",
+        "value": 56.3,
+        "unit": "%",
+        "denominator": "20 unseen tasks × 10 seeds",
+        "protocol": "GPT-5.6 Sol learns skills only on LIBERO-90; GPT-6 Astra evaluates each frozen checkpoint without Pro Long training or memory updates"
+      },
+      {
+        "name": "Astra physical mean completion",
+        "value": 78.75,
+        "unit": "%",
+        "denominator": "4 UR5e tasks × 20 trials per method/task",
+        "protocol": "full frozen Skill2Real hierarchy; unweighted mean across pick-and-place, sorting, equation assembly, and drawer manipulation"
+      }
+    ],
+    "limitations": [
+      "仿真技能由 GPT-5.6 Sol 在特权诊断与验证回放的辅助下学习；Astra 负责冻结后的目标评测，不能把全部学习增益归因于 Astra。",
+      "56.3% 是 20 项 LIBERO-Pro Long 未见任务上的 checkpoint 结果；论文另有固定 C3/B3 子集比较，协议和数值不可混用。",
+      "真机结果来自单台 UR5e、四项任务与每项 20 次试验；技能库在真机上不更新，不能外推为跨机器人通用成功率。",
+      "结果与媒体均由作者发布；本站未调用模型、运行仿真或复现 80 次真机试验，且本轮未定位公开实现。"
+    ],
+    "source_ids": ["S122"],
+    "links": {
+      "paper": "https://arxiv.org/abs/2610.02788",
+      "project": "https://skill2real.github.io/",
+      "video": "https://skill2real.github.io/assets/project-film.mp4"
+    },
+    "last_checked": "2026-10-05",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P58",
+    "title": "SafeHarness · 面向安全机器人控制的编码智能体框架",
+    "section": "supporting",
+    "category": "harness",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "SafeHarness 为 GPT-6 Astra 编码智能体加入障碍感知的路径规划、几何核验、失败重规划与接触位姿选择，在 SafeLIBERO 中同时评估任务完成和碰撞规避。",
+    "authors": "Bingxin Xu, Yuzhang Shang, Zhen Dong, Emilio Ferrara",
+    "event_date": "2026-09-17",
+    "event_date_basis": "arXiv:2609.20822 v1 was submitted 2026-09-17T17:59:58Z; v2 was updated 2026-10-02T03:23:26Z with the renamed SafeHarness paper and revised GPT-6 Astra results.",
+    "window_status": "updated_in_window",
+    "url": "https://arxiv.org/abs/2609.20822",
+    "code_url": null,
+    "license_status": "论文为 arXiv non-exclusive distribution license；截至本轮检查未定位官方公开实现。",
+    "control_interface": "第三人称/腕部图像与本体状态 → Astra 编写调用感知、解析运动与冻结 π0.5 技能的程序 → 障碍框、航点与接触位姿核验 → LIBERO 仿真执行与位移阈值评分",
+    "metrics": [
+      {
+        "name": "Astra SafeLIBERO task success",
+        "value": 81.2,
+        "unit": "%",
+        "denominator": "32 obstacle-augmented tasks × 10 seeds",
+        "protocol": "SafeHarness with GPT-6 Astra, shared coding-agent loop and frozen VLA; 900-step cap"
+      },
+      {
+        "name": "Astra SafeLIBERO collision avoidance",
+        "value": 91.9,
+        "unit": "%",
+        "denominator": "same 320 simulation episodes",
+        "protocol": "collision-free means the designated obstacle is never displaced by more than 1 mm"
+      }
+    ],
+    "limitations": [
+      "81.2% 与 91.9% 分别是任务成功率和碰撞规避率，不能合并为单一成功率；论文另报 78.1% safe success。",
+      "增益属于 Astra、技能记忆、冻结 VLA、SAM-3 分割与两类安全 harness 组成的完整系统，不能只归因于基础模型。",
+      "GPT-6 Astra 的量化结果只在 SafeLIBERO 仿真中报告；论文的 PiPER-X 真机试验使用 GPT-5.5，不应归给 Astra。",
+      "基准每场景指定一个障碍，接触检查针对平行夹爪；本站未复跑 320 个仿真 episode，公开代码仍待确认。"
+    ],
+    "source_ids": ["S123"],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.20822",
+      "html": "https://arxiv.org/html/2609.20822v2"
+    },
+    "last_checked": "2026-10-05",
+    "independently_reproduced": false
+  },
+  {
     "id": "X01",
     "title": "真实机器人键盘打字",
     "section": "watchlist",

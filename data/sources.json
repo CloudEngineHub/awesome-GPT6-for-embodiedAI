@@ -1078,5 +1078,23 @@
     "access": "page_text",
     "checked_at": "2026-10-03",
     "notes": "arXiv v1 submitted 2026-10-01T17:59:50Z evaluates CaP-Agent0 powered by GPT-6 Astra Pro as a comparison in 220 held-out simulation trials and 30 physical trials. RPG itself uses Gemini 3.8 Flash, so its 95.0% simulation and 30/30 physical results are not attributed to Astra."
+  },
+  {
+    "id": "S122",
+    "title": "Skill2Real paper and official project page",
+    "url": "https://arxiv.org/abs/2610.02788",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-05",
+    "notes": "arXiv v1 submitted 2026-10-02T04:25:12Z and the official project page document two-level skills learned by GPT-5.6 Sol in simulation, frozen before GPT-6 Astra evaluation. The paper reports 56.3% overall success on 20 unseen LIBERO-Pro Long tasks × 10 seeds and 78.75% mean completion over four UR5e tasks × 20 trials with the full frozen hierarchy. No public code was located; results were not independently reproduced."
+  },
+  {
+    "id": "S123",
+    "title": "SafeHarness arXiv v2 paper",
+    "url": "https://arxiv.org/abs/2609.20822",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-05",
+    "notes": "arXiv v2 updated 2026-10-02T03:23:26Z renames the work SafeHarness and revises GPT-6 Astra results to 81.2% task success, 91.9% collision avoidance and 78.1% safe success across 32 SafeLIBERO tasks × 10 seeds. Astra is the coding-agent backbone in simulation; the paper's 40 PiPER-X real-robot trials use GPT-5.5 and are not attributed to Astra. No official public code was located."
   }
 ]

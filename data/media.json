@@ -1186,6 +1186,30 @@
       "source_id": "S121",
       "alt": {"en": "RPG simulation-practice and physical-task overview.", "zh": "RPG 仿真练习与真机任务概览。"},
       "caption": {"en": "Official RPG project teaser; Astra Pro is a comparison baseline.", "zh": "RPG 官方项目概览；Astra Pro 仅为对照基线。"}
+    },
+    "P57": {
+      "kind": "image",
+      "url": "https://skill2real.github.io/assets/teaser-174-9b7c0d60.webp",
+      "fit": "contain",
+      "source_url": "https://skill2real.github.io/assets/teaser-174-9b7c0d60.webp",
+      "source_page_url": "https://skill2real.github.io/",
+      "source_path": "Official project-page teaser image checked 2026-10-05.",
+      "classification": "Author-provided montage of simulation scenes and physical UR5e executions; not an independently reproduced result.",
+      "source_id": "S122",
+      "alt": {"en": "Skill2Real simulation scenes and physical UR5e task executions.", "zh": "Skill2Real 仿真场景与 UR5e 真机任务执行概览。"},
+      "caption": {"en": "Official Skill2Real sim-to-real teaser.", "zh": "Skill2Real 官方仿真到真机概览图。"}
+    },
+    "P58": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2609.20822v2/teaser_safeharness_v4_cropped.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2609.20822v2/teaser_safeharness_v4_cropped.png",
+      "source_page_url": "https://arxiv.org/html/2609.20822v2",
+      "source_path": "Official SafeHarness v2 paper teaser served from the arXiv HTML page.",
+      "classification": "Paper teaser illustrating obstacle-aware route and contact planning; simulation and physical examples remain author-provided evidence.",
+      "source_id": "S123",
+      "alt": {"en": "SafeHarness obstacle-aware robot route and contact execution overview.", "zh": "SafeHarness 障碍感知路径与接触执行概览。"},
+      "caption": {"en": "Official SafeHarness v2 paper teaser.", "zh": "SafeHarness v2 论文官方概览图。"}
     }
   },
   "missing_policy": {

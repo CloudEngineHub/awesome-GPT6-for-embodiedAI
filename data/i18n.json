@@ -351,6 +351,16 @@
       "title": "RPG · Reconstruct, Practice, Go Real",
       "summary": "RPG improves a reusable robot skill library through simulation practice and cross-task validation; GPT-6 Astra Pro appears only as the CaP-Agent0 comparison in simulation and physical trials.",
       "detail": "RPG's 95.0% simulation and 30/30 physical results use Gemini 3.8 Flash and must not be attributed to Astra; the Astra baseline records 132/220 simulation and 14/30 physical successes."
+    },
+    "P57": {
+      "title": "Skill2Real · Zero-Shot Transfer of Simulation-Learned Skills",
+      "summary": "Skill2Real learns reusable Cerebellum skills and Brain composition programs in simulation, freezes the hierarchy, and uses GPT-6 Astra to execute through the same robot API on unseen LIBERO tasks and a physical UR5e.",
+      "detail": "GPT-5.6 Sol performs skill learning with privileged simulation diagnosis; Astra evaluates the frozen hierarchy, reaching 56.3% on LIBERO-Pro Long and 78.75% mean completion across four physical tasks."
+    },
+    "P58": {
+      "title": "SafeHarness · Coding Agents for Safe Robot Control",
+      "summary": "SafeHarness adds obstacle-aware route planning, geometric verification, replanning, and contact-pose selection to a GPT-6 Astra coding agent evaluated on SafeLIBERO.",
+      "detail": "The revised v2 reports 81.2% task success and 91.9% collision avoidance across 320 Astra simulation episodes; its physical-robot evaluation uses GPT-5.5, not Astra."
     }
   }
 }

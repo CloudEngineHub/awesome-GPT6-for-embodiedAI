@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-04 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-05 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1085,3 +1085,21 @@ arXiv v1 submitted 2026-10-01T15:25:35Z and the official project page describe a
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
 
 arXiv v1 submitted 2026-10-01T17:59:50Z evaluates CaP-Agent0 powered by GPT-6 Astra Pro as a comparison in 220 held-out simulation trials and 30 physical trials. RPG itself uses Gemini 3.8 Flash, so its 95.0% simulation and 30/30 physical results are not attributed to Astra.
+
+<a id="s122"></a>
+## S122 · Skill2Real paper and official project page
+
+[https://arxiv.org/abs/2610.02788](https://arxiv.org/abs/2610.02788)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-05
+
+arXiv v1 submitted 2026-10-02T04:25:12Z and the official project page document two-level skills learned by GPT-5.6 Sol in simulation, frozen before GPT-6 Astra evaluation. The paper reports 56.3% overall success on 20 unseen LIBERO-Pro Long tasks × 10 seeds and 78.75% mean completion over four UR5e tasks × 20 trials with the full frozen hierarchy. No public code was located; results were not independently reproduced.
+
+<a id="s123"></a>
+## S123 · SafeHarness arXiv v2 paper
+
+[https://arxiv.org/abs/2609.20822](https://arxiv.org/abs/2609.20822)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-05
+
+arXiv v2 updated 2026-10-02T03:23:26Z renames the work SafeHarness and revises GPT-6 Astra results to 81.2% task success, 91.9% collision avoidance and 78.1% safe success across 32 SafeLIBERO tasks × 10 seeds. Astra is the coding-agent backbone in simulation; the paper's 40 PiPER-X real-robot trials use GPT-5.5 and are not attributed to Astra. No official public code was located.
