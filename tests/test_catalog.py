@@ -41,9 +41,9 @@ class CatalogueTests(unittest.TestCase):
     def test_scene_tags_are_complete_and_source_bounded(self):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
-        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),54)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),33)
-        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),14)
+        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),56)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),34)
+        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),15)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
         ledger=(ROOT/'docs/SCENE_TAGS.md').read_text(encoding='utf-8')
@@ -63,8 +63,8 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),73)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),49)
+        self.assertEqual(len(retained),75)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),51)
         self.assertEqual(sum(item['kind']=='video' for item in retained),24)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),24)
@@ -130,7 +130,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
         self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
         self.assertEqual(self.meta['window_start'],'2026-08-20')
-        self.assertEqual(self.meta['window_end'],'2026-10-05')
+        self.assertEqual(self.meta['window_end'],'2026-10-07')
         self.assertEqual(self.by_id['P43']['code_url'],'https://github.com/tomsilver/robocode')
         self.assertEqual(self.by_id['P43']['gpt6_relation'],'explicit_primary')
         self.assertIn('official project video',self.media['media']['P43']['classification'].lower())
@@ -171,6 +171,13 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.by_id['P58']['window_status'],'updated_in_window')
         self.assertEqual(self.by_id['P58']['metrics'][1]['value'],91.9)
         self.assertIn('physical-robot evaluation uses GPT-5.5',self.i18n['en']['P58']['detail'])
+        self.assertEqual(self.by_id['P59']['links']['paper'],'https://arxiv.org/abs/2610.03715')
+        self.assertEqual(self.by_id['P59']['gpt6_relation'],'comparison_only')
+        self.assertIn('Official repository teaser',self.media['media']['P59']['source_path'])
+        self.assertEqual(self.by_id['P60']['gpt6_relation'],'infrastructure')
+        self.assertEqual(self.by_id['P60']['metrics'],[])
+        self.assertIn('not a rollout image or result chart',self.media['media']['P60']['classification'])
+        self.assertIn('zero model calls and zero robot actions',next(s for s in self.sources if s['id']=='S125')['notes'])
 
     def test_initial_snapshot_counts(self):
         if self.meta['version']!='0.1.0':
@@ -183,7 +190,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':47,'supporting':11,'watchlist':15})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':48,'supporting':12,'watchlist':15})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}

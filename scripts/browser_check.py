@@ -25,7 +25,7 @@ def main() -> int:
         page.on('console', lambda message: errors.append(message.text) if message.type == 'error' and 'Failed to load resource' not in message.text else None)
         page.goto(args.url, wait_until='domcontentloaded')
         assert page.locator('html').get_attribute('lang') == 'en'
-        assert page.locator('.card').count() == 49
+        assert page.locator('.card').count() == 60
         assert page.locator('[data-group="projects"]').inner_text() == 'Projects'
         assert page.locator('[data-group="social"]').inner_text() == 'Social'
         assert page.locator('dialog, #detail-dialog, .dialog-media').count() == 0
@@ -45,7 +45,7 @@ def main() -> int:
         tag_labels = manifest['tag_labels']
         assert set(topic_tags) == set(by_id)
         assert set(tag_labels) >= {'sim', 'real', 'control', 'real-to-sim', 'replay'}
-        assert sum(item['status'] == 'verified' for item in publication_dates.values()) == 61
+        assert sum(item['status'] == 'verified' for item in publication_dates.values()) == 72
         assert sum(item['status'] == 'estimated' for item in publication_dates.values()) == 3
 
         def group_for(project: dict) -> str:
@@ -66,7 +66,7 @@ def main() -> int:
             )]
             for name in ('projects', 'social')
         }
-        assert len(expected['projects']) == 49 and len(expected['social']) == 15
+        assert len(expected['projects']) == 60 and len(expected['social']) == 15
         assert set(expected['projects']).isdisjoint(expected['social'])
 
         def activate(name: str):
@@ -99,7 +99,7 @@ def main() -> int:
 
         retained = {pid: item for pid, item in manifest['media'].items() if item['kind'] in {'image', 'video'}}
         videos = {pid: item for pid, item in retained.items() if item['kind'] == 'video'}
-        assert len(retained) == 64 and len(videos) == 23
+        assert len(retained) == 75 and len(videos) == 24
         statuses = page.evaluate("""async (posters) => Promise.all(posters.map(async (poster) => {
             const response = await fetch(new URL(poster, location.href));
             return response.ok && (response.headers.get('content-type') || '').startsWith('image/');
@@ -191,7 +191,7 @@ def main() -> int:
                 route.fulfill(status=204)
         page.route('http://gallery.test/**', subpath_route)
         page.goto('http://gallery.test/project/', wait_until='domcontentloaded')
-        assert page.locator('.card').count() == 49
+        assert page.locator('.card').count() == 60
         assert page.locator('dialog, #detail-dialog').count() == 0
         assert not errors, errors
         browser.close()

@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-05。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-07。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 47
+## 核心项目与评测 · 48
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1326,7 +1326,38 @@ video：[https://skill2real.github.io/assets/project-film.mp4](https://skill2rea
 
 ---
 
-## 配套资源与对照 · 11
+<a id="p59"></a>
+### P59 · 4DCodeBench · 动态场景逆图形代码基准
+
+4DCodeBench 要求编码智能体从真实或仿真物理事件视频重建可执行的 4D 场景程序；GPT-6 Astra 以 Low、High、Max 三档推理强度接受 200 个任务评测，并在作者的总体排名中由 Max 配置取得最高 Overall。
+
+**来源等级：A** · 非交互评测 · GPT-6 仅作对照
+
+**作者 / 团队：** Ruihong Shen, Žiga Kovačič, Peter Kulits et al.  
+**事件日期：** 2026-10-02（本月更新，基础项目更早）  
+**日期依据：** arXiv:2610.03715 v1 was submitted 2026-10-02T17:58:49Z; the public repository added the arXiv link on 2026-10-05 and received a further public update on 2026-10-06.  
+**入口：** [https://4dcodebench.com/](https://4dcodebench.com/)  
+**代码入口：** [https://github.com/4DCodeBench/4DCodeBench](https://github.com/4DCodeBench/4DCodeBench)  
+**许可状态：** 论文为 arXiv non-exclusive distribution license；公开仓库未声明顶层许可证，数据集、模型输出和第三方仿真资产适用各自条款。  
+**控制接口 / 作用：** 单段真实或仿真物理事件视频 + 固定任务说明 → Astra/Codex 在隔离容器中编写几何、运动、相机与渲染程序 → 重渲染视频及逐帧 4D 世界 → 五类自动指标与独立 VLM/人工偏好评测
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| GPT-6 Astra Max Overall | 0.79 score | 200 tasks: 100 real videos and 100 simulated videos | unweighted mean of five metric families; one attempt per scene under the benchmark container |
+| GPT-6 Astra Low Overall | 0.73 score | same 200-task benchmark | same benchmark with lower reasoning effort; not a robot-control success rate |
+
+**限制与未决项：** 这是从视频重建动态场景的非交互基准；Astra 不控制真实机器人，也不输出机器人动作。 Overall 是五类重建指标的平均值，不是任务成功率；真实视频没有完整 4D 真值，真实与仿真子集采用的可用指标不同。 作者报告 Astra Max 的静态指标约 0.91、动态指标约 0.67；较高总体排名不代表可靠恢复复杂动力学。 结果由作者发布，本站未下载约 65 GB 的合成参考世界、构建 GPU 容器或重跑 18 个智能体配置。
+
+paper：[https://arxiv.org/abs/2610.03715](https://arxiv.org/abs/2610.03715)  
+project：[https://4dcodebench.com/](https://4dcodebench.com/)  
+code：[https://github.com/4DCodeBench/4DCodeBench](https://github.com/4DCodeBench/4DCodeBench)  
+data：[https://huggingface.co/4DCodeBench](https://huggingface.co/4DCodeBench)  
+
+**来源：** [S124 · 4DCodeBench paper, project page, and repository](SOURCES.md#s124)
+
+---
+
+## 配套资源与对照 · 12
 
 <a id="p13"></a>
 ### P13 · Inspect Robots
@@ -1597,6 +1628,31 @@ paper：[https://arxiv.org/abs/2609.20822](https://arxiv.org/abs/2609.20822)
 html：[https://arxiv.org/html/2609.20822v2](https://arxiv.org/html/2609.20822v2)  
 
 **来源：** [S123 · SafeHarness arXiv v2 paper](SOURCES.md#s123)
+
+---
+
+<a id="p60"></a>
+### P60 · Astra RoboCasa Experiments · 订阅式仿真评测运行栈
+
+该公开仓库扩展 Inspect Robots，为 GPT-6 Astra 增加基于本地 Codex 订阅认证的 RoboCasa 策略适配器、31 项任务清单、PandaOmron/GR1 队列、并行调度和视频看板。
+
+**来源等级：A** · 仿真 · 基础设施，不是单独的 GPT-6 成果
+
+**作者 / 团队：** aiden890 / Inspect Robots contributors  
+**事件日期：** 2026-10-06（窗口内）  
+**日期依据：** GitHub repository created 2026-10-06T11:34:08Z; reviewed branch codex/robocasa-astra commit 2c18a073 was authored 2026-10-06T23:33:05+09:00.  
+**入口：** [https://github.com/aiden890/astra-robocasa](https://github.com/aiden890/astra-robocasa)  
+**代码入口：** [https://github.com/aiden890/astra-robocasa](https://github.com/aiden890/astra-robocasa)  
+**许可状态：** 仓库采用 MIT；RoboCasa、robosuite、Inspect Robots、机器人模型、对象资产与本地 Codex 订阅适用各自许可和访问条件。  
+**控制接口 / 作用：** RoboCasa 原生任务指令、相机与本体状态 → gpt-6-astra（low）输出满足动作 JSON schema 的受限动作 → PandaOmron 或 GR1FloatingBody 仿真执行 → 原生 success_at_end 与运行日志/视频记录
+
+**限制与未决项：** 公开仓库说明运行日志、录像、模型登录凭据、私有配置和数据集均未入库；因此没有可核验的 GPT-6 Astra 任务成功率。 publication-verification.json 只核验 50 个多样化初始场景的生成归档，明确记录 0 次模型调用和 0 个机器人动作；它不是 Astra rollout 结果。 31 项任务队列与双本体配置证明的是运行基础设施和计划协议，不证明所有任务已经完成或评分。 部署脚本含当前实验主机路径；在其他机器复用前需另行准备兼容的 RoboCasa/robosuite 资产、认证与算力。
+
+code：[https://github.com/aiden890/astra-robocasa](https://github.com/aiden890/astra-robocasa)  
+astra_readme：[https://github.com/aiden890/astra-robocasa/blob/codex/robocasa-astra/README-ASTRA.md](https://github.com/aiden890/astra-robocasa/blob/codex/robocasa-astra/README-ASTRA.md)  
+protocol：[https://github.com/aiden890/astra-robocasa/blob/codex/robocasa-astra/docs/robocasa-astra-multitask.md](https://github.com/aiden890/astra-robocasa/blob/codex/robocasa-astra/docs/robocasa-astra-multitask.md)  
+
+**来源：** [S125 · Astra RoboCasa experiments repository](SOURCES.md#s125)
 
 ---
 

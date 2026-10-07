@@ -361,6 +361,16 @@
       "title": "SafeHarness · Coding Agents for Safe Robot Control",
       "summary": "SafeHarness adds obstacle-aware route planning, geometric verification, replanning, and contact-pose selection to a GPT-6 Astra coding agent evaluated on SafeLIBERO.",
       "detail": "The revised v2 reports 81.2% task success and 91.9% collision avoidance across 320 Astra simulation episodes; its physical-robot evaluation uses GPT-5.5, not Astra."
+    },
+    "P59": {
+      "title": "4DCodeBench · Inverse Graphics of Dynamic Scenes",
+      "summary": "4DCodeBench asks coding agents to reconstruct executable 4D worlds from 100 real and 100 simulated physical-event videos; GPT-6 Astra is evaluated at Low, High, and Max reasoning effort.",
+      "detail": "Astra Max leads the authors' Overall ranking at 0.79 versus 0.73 at Low, but dynamic reconstruction remains substantially weaker than static appearance and geometry; this is not a robot-control success rate."
+    },
+    "P60": {
+      "title": "Astra RoboCasa Experiments · Subscription-Based Simulation Harness",
+      "summary": "This Inspect Robots extension adds a GPT-6 Astra RoboCasa policy adapter, a 31-task manifest, PandaOmron and GR1 queues, parallel scheduling, recording, and a status board.",
+      "detail": "Public runtime logs, rollout videos, credentials, and private datasets are excluded, and the committed scene-verification archive records zero model calls and robot actions; the card therefore describes infrastructure, not a completed model result."
     }
   }
 }

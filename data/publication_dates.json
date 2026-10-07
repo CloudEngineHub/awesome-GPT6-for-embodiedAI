@@ -616,5 +616,19 @@
     "basis": "arXiv:2609.20822 v1 was submitted 2026-09-17T17:59:58Z.",
     "rule": null,
     "uncertainty": "Initial paper date; v2 was updated 2026-10-02 with the SafeHarness title and revised GPT-6 Astra results."
+  },
+  "P59": {
+    "date": "2026-10-02",
+    "status": "verified",
+    "basis": "arXiv:2610.03715 v1 was submitted 2026-10-02T17:58:49Z; the public repository added the paper link on 2026-10-05 and was updated on 2026-10-06.",
+    "rule": null,
+    "uncertainty": "Display date is the initial paper submission; public code and project materials received later in-window updates."
+  },
+  "P60": {
+    "date": "2026-10-06",
+    "status": "verified",
+    "basis": "GitHub repository created_at is 2026-10-06T11:34:08Z.",
+    "rule": null,
+    "uncertainty": "Repository creation date; experiment runs and excluded runtime artifacts may have different timestamps."
   }
 }

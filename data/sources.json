@@ -1096,5 +1096,23 @@
     "access": "page_text",
     "checked_at": "2026-10-05",
     "notes": "arXiv v2 updated 2026-10-02T03:23:26Z renames the work SafeHarness and revises GPT-6 Astra results to 81.2% task success, 91.9% collision avoidance and 78.1% safe success across 32 SafeLIBERO tasks × 10 seeds. Astra is the coding-agent backbone in simulation; the paper's 40 PiPER-X real-robot trials use GPT-5.5 and are not attributed to Astra. No official public code was located."
+  },
+  {
+    "id": "S124",
+    "title": "4DCodeBench paper, project page, and repository",
+    "url": "https://arxiv.org/abs/2610.03715",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-07",
+    "notes": "arXiv v1 was submitted 2026-10-02T17:58:49Z; the official project page and public repository define 200 video-to-executable-world tasks split evenly between real and simulated scenes. They explicitly evaluate GPT-6 Astra at Low, High and Max reasoning effort. The authors report Overall 0.73 at Low and 0.79 at Max, while warning that dynamic reconstruction remains substantially weaker than static appearance and geometry. The repository added the arXiv link on 2026-10-05 and was updated again on 2026-10-06."
+  },
+  {
+    "id": "S125",
+    "title": "Astra RoboCasa experiments repository",
+    "url": "https://github.com/aiden890/astra-robocasa",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-07",
+    "notes": "The repository was created 2026-10-06 and publishes an Inspect Robots extension for gpt-6-astra at low reasoning effort, a 31-task RoboCasa manifest, PandaOmron and GR1FloatingBody scheduling, recording and status-board code. Runtime logs, videos, credentials and private datasets are explicitly excluded. The committed 50-scene publication verification records zero model calls and zero robot actions, so it is treated as infrastructure rather than a completed Astra evaluation result."
   }
 ]

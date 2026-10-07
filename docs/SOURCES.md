@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-05 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-07 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1103,3 +1103,21 @@ arXiv v1 submitted 2026-10-02T04:25:12Z and the official project page document t
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-05
 
 arXiv v2 updated 2026-10-02T03:23:26Z renames the work SafeHarness and revises GPT-6 Astra results to 81.2% task success, 91.9% collision avoidance and 78.1% safe success across 32 SafeLIBERO tasks × 10 seeds. Astra is the coding-agent backbone in simulation; the paper's 40 PiPER-X real-robot trials use GPT-5.5 and are not attributed to Astra. No official public code was located.
+
+<a id="s124"></a>
+## S124 · 4DCodeBench paper, project page, and repository
+
+[https://arxiv.org/abs/2610.03715](https://arxiv.org/abs/2610.03715)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-07
+
+arXiv v1 was submitted 2026-10-02T17:58:49Z; the official project page and public repository define 200 video-to-executable-world tasks split evenly between real and simulated scenes. They explicitly evaluate GPT-6 Astra at Low, High and Max reasoning effort. The authors report Overall 0.73 at Low and 0.79 at Max, while warning that dynamic reconstruction remains substantially weaker than static appearance and geometry. The repository added the arXiv link on 2026-10-05 and was updated again on 2026-10-06.
+
+<a id="s125"></a>
+## S125 · Astra RoboCasa experiments repository
+
+[https://github.com/aiden890/astra-robocasa](https://github.com/aiden890/astra-robocasa)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-07
+
+The repository was created 2026-10-06 and publishes an Inspect Robots extension for gpt-6-astra at low reasoning effort, a 31-task RoboCasa manifest, PandaOmron and GR1FloatingBody scheduling, recording and status-board code. Runtime logs, videos, credentials and private datasets are explicitly excluded. The committed 50-scene publication verification records zero model calls and zero robot actions, so it is treated as infrastructure rather than a completed Astra evaluation result.

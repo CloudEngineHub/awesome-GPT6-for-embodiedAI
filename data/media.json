@@ -1210,6 +1210,30 @@
       "source_id": "S123",
       "alt": {"en": "SafeHarness obstacle-aware robot route and contact execution overview.", "zh": "SafeHarness 障碍感知路径与接触执行概览。"},
       "caption": {"en": "Official SafeHarness v2 paper teaser.", "zh": "SafeHarness v2 论文官方概览图。"}
+    },
+    "P59": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/4DCodeBench/4DCodeBench/aa05fb426273b59f47fac71825f77ca1b7a64c08/assets/teaser.jpg",
+      "fit": "contain",
+      "source_url": "https://github.com/4DCodeBench/4DCodeBench/blob/aa05fb426273b59f47fac71825f77ca1b7a64c08/assets/teaser.jpg",
+      "source_page_url": "https://4dcodebench.com/",
+      "source_path": "Official repository teaser pinned to commit aa05fb426273b59f47fac71825f77ca1b7a64c08.",
+      "classification": "Author-provided benchmark overview; model outputs and scores are not independently reproduced.",
+      "source_id": "S124",
+      "alt": {"en": "4DCodeBench video-to-executable-world benchmark overview.", "zh": "4DCodeBench 从视频到可执行动态世界的基准概览。"},
+      "caption": {"en": "Official 4DCodeBench teaser.", "zh": "4DCodeBench 官方概览图。"}
+    },
+    "P60": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/aiden890/astra-robocasa/2c18a07305ab5d5d5ce5d0d44f980e7933a415eb/website/static/img/social-card.png",
+      "fit": "contain",
+      "source_url": "https://github.com/aiden890/astra-robocasa/blob/2c18a07305ab5d5d5ce5d0d44f980e7933a415eb/website/static/img/social-card.png",
+      "source_page_url": "https://github.com/aiden890/astra-robocasa",
+      "source_path": "Repository-hosted Inspect Robots social card pinned to reviewed commit 2c18a07305ab5d5d5ce5d0d44f980e7933a415eb.",
+      "classification": "Framework branding from the extended Inspect Robots codebase; not a rollout image or result chart.",
+      "source_id": "S125",
+      "alt": {"en": "Inspect Robots framework branding used by the Astra RoboCasa extension.", "zh": "Astra RoboCasa 扩展所基于的 Inspect Robots 框架标识。"},
+      "caption": {"en": "Repository-hosted framework image; no public Astra rollout media is included.", "zh": "仓库托管的框架图片；未公开 Astra rollout 媒体。"}
     }
   },
   "missing_policy": {
