@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-07。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-08。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 48
+## 核心项目与评测 · 51
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1354,6 +1354,91 @@ code：[https://github.com/4DCodeBench/4DCodeBench](https://github.com/4DCodeBen
 data：[https://huggingface.co/4DCodeBench](https://huggingface.co/4DCodeBench)  
 
 **来源：** [S124 · 4DCodeBench paper, project page, and repository](SOURCES.md#s124)
+
+---
+
+<a id="p61"></a>
+### P61 · Video2World · 从具身视频重建交互世界
+
+Video2World 要求编码智能体从机器人与人类具身视频构建可执行仿真环境和机器人行为；GPT-6 Astra 以 Codex CLI Ultra 配置完成 222 个实例，在作者的九系统比较中取得第二高 V2WScore，并在对象形状与尺寸重建上领先。
+
+**来源等级：A** · 仿真 · GPT-6 仅作对照
+
+**作者 / 团队：** Jinzhou Tang, Zijun Zhang, Jing Yang et al.  
+**事件日期：** 2026-10-03（窗口内）  
+**日期依据：** arXiv:2610.04432 v1 was submitted 2026-10-03T10:46:52Z; the public repository was created 2026-10-05T21:27:56Z.  
+**入口：** [https://aetherlabsai.github.io/Video2World/](https://aetherlabsai.github.io/Video2World/)  
+**代码入口：** [https://github.com/AetherLabsAI/Video2World](https://github.com/AetherLabsAI/Video2World)  
+**许可状态：** 论文采用 CC BY 4.0；官方代码仓库采用 Apache-2.0，视频、机器人数据、仿真器与第三方资产适用各自许可。  
+**控制接口 / 作用：** 具身视频 + 目标仿真器/机器人/控制接口 + 公开资产与文档 → GPT-6 Astra/Codex 在隔离工作区编写并迭代仿真环境和机器人行为 → 统一执行器评估可执行性、几何、动力学与任务功能
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| GPT-6 Astra V2WScore | 43.55 /100 | 222 reconstruction instances from 189 embodied videos and 39 task families | macro-average of build, functionality, geometry, and dynamics; one autonomous construction attempt per instance |
+| GPT-6 Astra task success | 10.7 % | the benchmark's Table 2 functionality aggregation over the 222-instance evaluation | functional task completion after executing the submitted world and behavior; not physical-robot success |
+
+**限制与未决项：** Astra 是九个完整编码智能体配置之一，并非 Video2World 主方法；43.55 分包含 Codex CLI、模型、脚手架和推理设置的共同作用。 输入含真实机器人、人类和仿真视频，但所有候选提交均在仿真器中执行；该结果不代表 Astra 控制真实机器人。 作者指出 Astra 的对象几何较强，但任务成功率只有 10.7%，准确外观并不保证交互世界可用。 不同附录使用不同有效行分母；本站保留主表口径，未混用条件子集结果，也未重跑 222 个 Astra 构建任务。
+
+paper：[https://arxiv.org/abs/2610.04432](https://arxiv.org/abs/2610.04432)  
+project：[https://aetherlabsai.github.io/Video2World/](https://aetherlabsai.github.io/Video2World/)  
+code：[https://github.com/AetherLabsAI/Video2World](https://github.com/AetherLabsAI/Video2World)  
+astra_example：[https://aetherlabsai.github.io/Video2World/video/exp/tape-gpt6astra.mp4](https://aetherlabsai.github.io/Video2World/video/exp/tape-gpt6astra.mp4)  
+
+**来源：** [S126 · Video2World paper, project page, and repository](SOURCES.md#s126)
+
+---
+
+<a id="p62"></a>
+### P62 · SimEX · 仿真驱动的机器人自动研究
+
+SimEX 让编码智能体先在仿真中发现并优化机器人能力，再用有限部署反馈修复工具箱和模拟器；论文以 GPT-6 Astra 替换主实验模型，完成七项条码扫描仿真任务的端到端对照。
+
+**来源等级：A** · 仿真 · GPT-6 仅作对照
+
+**作者 / 团队：** Jiaheng Hu, Roberto Martin-Martin, Peter Stone et al.  
+**事件日期：** 2026-09-30（窗口内）  
+**日期依据：** arXiv:2609.38982 v1 was submitted 2026-09-30T04:58:21Z.  
+**入口：** [https://robo-simex.github.io/](https://robo-simex.github.io/)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 论文采用 CC BY 4.0；项目页公开图片与视频，但本轮未定位公开代码或统一媒体再许可。  
+**控制接口 / 作用：** 任务目标与仿真观测 → GPT-6 Astra 在 Stage 1 探索/优化能力库并在 Stage 2 编写任务程序 → 程序调用感知与动作工具在评测仿真器执行；执行时无在线模型调用
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Astra SimEX barcode success | 82 % | 7 simulation tasks × 5 independent runs × 5 evaluation trials | end-to-end GPT-6 Astra configuration; highest effort in Stage 1 and medium effort in Stage 2 |
+
+**限制与未决项：** 论文主实验及 26/30 真机结果使用 Fable 5.1；GPT-6 Astra 的量化对照只覆盖七项条码扫描 sim-to-sim 任务，不能把真机结果归给 Astra。 82% 属于完整 SimEX、Astra、工具箱发现、仿真修复和程序执行配置，不是基础模型单独能力。 Astra 在任务开始前生成程序，程序执行时没有模型调用；这不是逐帧在线视觉控制。 项目未公开可定位代码，本站未复跑 175 个 Astra 评测 trial。
+
+paper：[https://arxiv.org/abs/2609.38982](https://arxiv.org/abs/2609.38982)  
+project：[https://robo-simex.github.io/](https://robo-simex.github.io/)  
+video：[https://robo-simex.github.io/assets/videos/real/task%20video/good_scan_8x.mp4](https://robo-simex.github.io/assets/videos/real/task%20video/good_scan_8x.mp4)  
+
+**来源：** [S127 · SimEX paper and official project page](SOURCES.md#s127)
+
+---
+
+<a id="p63"></a>
+### P63 · The Need for Speed · 动态操作轨迹生成
+
+该演示用 Vicon 人体手部轨迹生成满足动力学约束的机器人轨迹，并让 OpenarmX 抽响鞭子、xArm7 套住系缆桩；作者明确说明 GPT-6 Astra 从单一提示构建了近乎完整的重定向、校准、动力学建模与逆动力学控制管线。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Krishna Suresh, Chris Atkeson  
+**事件日期：** 2026-09-26（窗口内）  
+**日期依据：** The authors' primary blog page states Created on September 26, 2026.  
+**入口：** [https://krishnasuresh.org/blog/2026/robot-whips/](https://krishnasuresh.org/blog/2026/robot-whips/)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 作者博客公开演示视频；本轮未定位该管线的公开代码或媒体统一再许可，所调用的 Drake、CasADi、Pinocchio、Pink 与 mjlab 适用各自许可。  
+**控制接口 / 作用：** Vicon 人体手部轨迹 → Astra 组合 IK warm start、动力学约束轨迹优化、自动校准、动力学模型与逆动力学控制代码 → OpenarmX/xArm7 开环跟踪轨迹 → 鞭击或套索任务
+
+**限制与未决项：** Astra 的角色是实现机器人软件管线与生成控制程序，不是在演示执行期间在线观察或逐步控制机器人。 网页展示若干成功视频但未报告总试验次数、失败分布、跟踪误差或成功率，不能从剪辑推断可靠性。 OpenarmX 鞭击与 xArm7 套索使用不同机器人和任务；不得合并为单一性能指标。 演示采用开环轨迹跟踪，作者也说明形态、关节限制和高速动作会造成不可行或不精确跟踪；本站未独立复现。
+
+project：[https://krishnasuresh.org/blog/2026/robot-whips/](https://krishnasuresh.org/blog/2026/robot-whips/)  
+video：[https://krishnasuresh.org/assets/video/robot-whips/teaser.mp4](https://krishnasuresh.org/assets/video/robot-whips/teaser.mp4)  
+additional_video：[https://www.youtube.com/shorts/ey0uHuXv8Fs](https://www.youtube.com/shorts/ey0uHuXv8Fs)  
+
+**来源：** [S128 · The Need for Speed author blog and videos](SOURCES.md#s128)
 
 ---
 

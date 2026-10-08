@@ -630,5 +630,26 @@
     "basis": "GitHub repository created_at is 2026-10-06T11:34:08Z.",
     "rule": null,
     "uncertainty": "Repository creation date; experiment runs and excluded runtime artifacts may have different timestamps."
+  },
+  "P61": {
+    "date": "2026-10-03",
+    "status": "verified",
+    "basis": "arXiv:2610.04432 v1 was submitted 2026-10-03T10:46:52Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; the public repository was created on 2026-10-05 and benchmark runs predate both releases."
+  },
+  "P62": {
+    "date": "2026-09-30",
+    "status": "verified",
+    "basis": "arXiv:2609.38982 v1 was submitted 2026-09-30T04:58:21Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; simulation optimization and physical experiments predate publication."
+  },
+  "P63": {
+    "date": "2026-09-26",
+    "status": "verified",
+    "basis": "The primary author blog states Created on September 26, 2026.",
+    "rule": null,
+    "uncertainty": "Author-blog publication date; code generation and physical demonstrations predate the post."
   }
 }

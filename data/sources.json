@@ -1114,5 +1114,32 @@
     "access": "page_text",
     "checked_at": "2026-10-07",
     "notes": "The repository was created 2026-10-06 and publishes an Inspect Robots extension for gpt-6-astra at low reasoning effort, a 31-task RoboCasa manifest, PandaOmron and GR1FloatingBody scheduling, recording and status-board code. Runtime logs, videos, credentials and private datasets are explicitly excluded. The committed 50-scene publication verification records zero model calls and zero robot actions, so it is treated as infrastructure rather than a completed Astra evaluation result."
+  },
+  {
+    "id": "S126",
+    "title": "Video2World paper, project page, and repository",
+    "url": "https://arxiv.org/abs/2610.04432",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-08",
+    "notes": "arXiv v1 submitted 2026-10-03T10:46:52Z and the official project/repository define 222 video-to-simulation instances from 189 embodied videos. The paper identifies the comparison configuration as model id gpt-6-astra using Codex CLI 0.154.0-alpha.6.2 at Ultra effort. Its main table reports V2WScore 43.55, 93.1% build rate and 10.7% task success; outputs are simulated worlds and behaviors, not physical-robot control."
+  },
+  {
+    "id": "S127",
+    "title": "SimEX paper and official project page",
+    "url": "https://arxiv.org/abs/2609.38982",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-08",
+    "notes": "arXiv v1 submitted 2026-09-30T04:58:21Z explicitly replaces the main Fable 5.1 coding agent with GPT-6 Astra in both optimization and policy-writing roles for seven barcode-scanning simulation tasks. Across 175 evaluation trials the full Astra SimEX configuration is reported at 82%. The paper's 26/30 physical-robot result uses Fable 5.1 and is not attributed to Astra; no public code was located."
+  },
+  {
+    "id": "S128",
+    "title": "The Need for Speed author blog and videos",
+    "url": "https://krishnasuresh.org/blog/2026/robot-whips/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-08",
+    "notes": "The author page was published 2026-09-26 and explicitly says GPT-6 Astra nearly fully implemented the motion-retargeting pipeline from one prompt, including calibration collection, a dynamics model and inverse-dynamics controller. OpenarmX and xArm7 execute open-loop trajectories for whip cracking and cleat lassoing. Videos are public, but trial counts, success rates, code and a unified media license were not located."
   }
 ]

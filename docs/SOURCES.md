@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-07 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-08 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1121,3 +1121,30 @@ arXiv v1 was submitted 2026-10-02T17:58:49Z; the official project page and publi
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-07
 
 The repository was created 2026-10-06 and publishes an Inspect Robots extension for gpt-6-astra at low reasoning effort, a 31-task RoboCasa manifest, PandaOmron and GR1FloatingBody scheduling, recording and status-board code. Runtime logs, videos, credentials and private datasets are explicitly excluded. The committed 50-scene publication verification records zero model calls and zero robot actions, so it is treated as infrastructure rather than a completed Astra evaluation result.
+
+<a id="s126"></a>
+## S126 · Video2World paper, project page, and repository
+
+[https://arxiv.org/abs/2610.04432](https://arxiv.org/abs/2610.04432)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-08
+
+arXiv v1 submitted 2026-10-03T10:46:52Z and the official project/repository define 222 video-to-simulation instances from 189 embodied videos. The paper identifies the comparison configuration as model id gpt-6-astra using Codex CLI 0.154.0-alpha.6.2 at Ultra effort. Its main table reports V2WScore 43.55, 93.1% build rate and 10.7% task success; outputs are simulated worlds and behaviors, not physical-robot control.
+
+<a id="s127"></a>
+## S127 · SimEX paper and official project page
+
+[https://arxiv.org/abs/2609.38982](https://arxiv.org/abs/2609.38982)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-08
+
+arXiv v1 submitted 2026-09-30T04:58:21Z explicitly replaces the main Fable 5.1 coding agent with GPT-6 Astra in both optimization and policy-writing roles for seven barcode-scanning simulation tasks. Across 175 evaluation trials the full Astra SimEX configuration is reported at 82%. The paper's 26/30 physical-robot result uses Fable 5.1 and is not attributed to Astra; no public code was located.
+
+<a id="s128"></a>
+## S128 · The Need for Speed author blog and videos
+
+[https://krishnasuresh.org/blog/2026/robot-whips/](https://krishnasuresh.org/blog/2026/robot-whips/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-08
+
+The author page was published 2026-09-26 and explicitly says GPT-6 Astra nearly fully implemented the motion-retargeting pipeline from one prompt, including calibration collection, a dynamics model and inverse-dynamics controller. OpenarmX and xArm7 execute open-loop trajectories for whip cracking and cleat lassoing. Videos are public, but trial counts, success rates, code and a unified media license were not located.

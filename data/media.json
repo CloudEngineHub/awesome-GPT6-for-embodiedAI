@@ -1234,6 +1234,42 @@
       "source_id": "S125",
       "alt": {"en": "Inspect Robots framework branding used by the Astra RoboCasa extension.", "zh": "Astra RoboCasa 扩展所基于的 Inspect Robots 框架标识。"},
       "caption": {"en": "Repository-hosted framework image; no public Astra rollout media is included.", "zh": "仓库托管的框架图片；未公开 Astra rollout 媒体。"}
+    },
+    "P61": {
+      "kind": "image",
+      "url": "https://aetherlabsai.github.io/Video2World/figures/social.png",
+      "fit": "contain",
+      "source_url": "https://aetherlabsai.github.io/Video2World/figures/social.png",
+      "source_page_url": "https://aetherlabsai.github.io/Video2World/",
+      "source_path": "Official project Open Graph image checked 2026-10-08; the project page also hosts per-model Astra reconstruction videos.",
+      "classification": "Author-provided benchmark overview; not an independently reproduced model output.",
+      "source_id": "S126",
+      "alt": {"en": "Video2World embodied-video to interactive-simulation benchmark overview.", "zh": "Video2World 从具身视频到交互仿真的基准概览。"},
+      "caption": {"en": "Official Video2World project overview.", "zh": "Video2World 官方项目概览图。"}
+    },
+    "P62": {
+      "kind": "image",
+      "url": "https://robo-simex.github.io/assets/figures/website_image.png",
+      "fit": "contain",
+      "source_url": "https://robo-simex.github.io/assets/figures/website_image.png",
+      "source_page_url": "https://robo-simex.github.io/",
+      "source_path": "Official SimEX project Open Graph image checked 2026-10-08.",
+      "classification": "Author-provided SimEX overview spanning simulation and real-robot tasks; the Astra card reports only the cross-agent simulation subset.",
+      "source_id": "S127",
+      "alt": {"en": "SimEX simulation-integrated robot autoresearch overview.", "zh": "SimEX 仿真驱动机器人自动研究概览。"},
+      "caption": {"en": "Official SimEX project overview; Astra is evaluated in the simulation cross-agent study.", "zh": "SimEX 官方概览；Astra 用于仿真跨智能体研究。"}
+    },
+    "P63": {
+      "kind": "image",
+      "url": "https://krishnasuresh.org/assets/img/robot-whips/social-preview.png",
+      "fit": "cover",
+      "source_url": "https://krishnasuresh.org/assets/img/robot-whips/social-preview.png",
+      "source_page_url": "https://krishnasuresh.org/blog/2026/robot-whips/",
+      "source_path": "Official author-blog Open Graph image checked 2026-10-08; the page hosts the full teaser and task videos.",
+      "classification": "Author-provided physical-robot dynamic-manipulation preview; no synthetic decorative media was used.",
+      "source_id": "S128",
+      "alt": {"en": "Physical robots executing whip-cracking and cleat-lassoing trajectories.", "zh": "真机执行抽鞭与套索轨迹的动态操作演示。"},
+      "caption": {"en": "Official author-blog preview for the whip-cracking and lassoing demonstrations.", "zh": "作者博客中的抽鞭与套索演示官方预览图。"}
     }
   },
   "missing_policy": {

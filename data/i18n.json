@@ -371,6 +371,21 @@
       "title": "Astra RoboCasa Experiments · Subscription-Based Simulation Harness",
       "summary": "This Inspect Robots extension adds a GPT-6 Astra RoboCasa policy adapter, a 31-task manifest, PandaOmron and GR1 queues, parallel scheduling, recording, and a status board.",
       "detail": "Public runtime logs, rollout videos, credentials, and private datasets are excluded, and the committed scene-verification archive records zero model calls and robot actions; the card therefore describes infrastructure, not a completed model result."
+    },
+    "P61": {
+      "title": "Video2World · Interactive Worlds from Embodied Videos",
+      "summary": "Video2World asks coding agents to build executable simulation environments and robot behaviors from embodied videos; GPT-6 Astra completes all 222 instances through Codex CLI at Ultra effort.",
+      "detail": "Astra ranks second by V2WScore at 43.55 and leads object shape and size reconstruction, but reaches only 10.7% functional task success; the benchmark executes simulated worlds rather than physical robots."
+    },
+    "P62": {
+      "title": "SimEX · Simulation-Integrated Robotics AutoResearch",
+      "summary": "SimEX discovers and optimizes robot capabilities in simulation, then uses limited deployment feedback to repair its toolbox and simulator; GPT-6 Astra is tested as the complete coding-agent configuration on seven simulated barcode tasks.",
+      "detail": "The Astra configuration reaches 82% across 175 simulation trials. SimEX's 26/30 physical-robot result uses Fable 5.1, not Astra, and execution runs generated programs without online model calls."
+    },
+    "P63": {
+      "title": "The Need for Speed · Dynamic Manipulation Trajectory Generation",
+      "summary": "GPT-6 Astra implements a motion-retargeting, calibration, dynamics-modeling, and inverse-dynamics pipeline that turns Vicon hand demonstrations into open-loop trajectories for whip cracking and cleat lassoing on physical robots.",
+      "detail": "Astra writes the robotics pipeline rather than controlling the robot online; the author page shows successful demonstrations but does not report trial counts, failure distributions, or success rates."
     }
   }
 }

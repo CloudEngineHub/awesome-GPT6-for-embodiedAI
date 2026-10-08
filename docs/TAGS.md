@@ -84,6 +84,9 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | P58 | sim | harness, control |
 | P59 | sim, real | benchmark, understanding |
 | P60 | sim | harness, control |
+| P61 | sim, real | real-to-sim, replay |
+| P62 | sim | policy, control |
+| P63 | real | code-generation, control |
 | X01 | real | control |
 | X02 | real | control |
 | X03 | real | control |
