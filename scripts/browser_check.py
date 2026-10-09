@@ -25,7 +25,7 @@ def main() -> int:
         page.on('console', lambda message: errors.append(message.text) if message.type == 'error' and 'Failed to load resource' not in message.text else None)
         page.goto(args.url, wait_until='domcontentloaded')
         assert page.locator('html').get_attribute('lang') == 'en'
-        assert page.locator('.card').count() == 60
+        assert page.locator('.card').count() == 66
         assert page.locator('[data-group="projects"]').inner_text() == 'Projects'
         assert page.locator('[data-group="social"]').inner_text() == 'Social'
         assert page.locator('dialog, #detail-dialog, .dialog-media').count() == 0
@@ -45,7 +45,7 @@ def main() -> int:
         tag_labels = manifest['tag_labels']
         assert set(topic_tags) == set(by_id)
         assert set(tag_labels) >= {'sim', 'real', 'control', 'real-to-sim', 'replay'}
-        assert sum(item['status'] == 'verified' for item in publication_dates.values()) == 72
+        assert sum(item['status'] == 'verified' for item in publication_dates.values()) == 78
         assert sum(item['status'] == 'estimated' for item in publication_dates.values()) == 3
 
         def group_for(project: dict) -> str:
@@ -66,7 +66,7 @@ def main() -> int:
             )]
             for name in ('projects', 'social')
         }
-        assert len(expected['projects']) == 60 and len(expected['social']) == 15
+        assert len(expected['projects']) == 66 and len(expected['social']) == 15
         assert set(expected['projects']).isdisjoint(expected['social'])
 
         def activate(name: str):
@@ -99,7 +99,7 @@ def main() -> int:
 
         retained = {pid: item for pid, item in manifest['media'].items() if item['kind'] in {'image', 'video'}}
         videos = {pid: item for pid, item in retained.items() if item['kind'] == 'video'}
-        assert len(retained) == 75 and len(videos) == 24
+        assert len(retained) == 81 and len(videos) == 24
         statuses = page.evaluate("""async (posters) => Promise.all(posters.map(async (poster) => {
             const response = await fetch(new URL(poster, location.href));
             return response.ok && (response.headers.get('content-type') || '').startsWith('image/');
@@ -164,14 +164,14 @@ def main() -> int:
         page.locator('#clear-query').evaluate('(element) => element.click()')
         activate('projects')
         page.locator('#query').fill('real-to-sim')
-        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P45', 'P42', 'P11', 'P10', 'P08', 'P09']
+        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P61', 'P55', 'P45', 'P42', 'P11', 'P10', 'P08', 'P09']
         page.get_by_role('button', name='中文').evaluate('(element) => element.click()')
-        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P45', 'P42', 'P11', 'P10', 'P08', 'P09']
+        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P61', 'P55', 'P45', 'P42', 'P11', 'P10', 'P08', 'P09']
         page.locator('#query').fill('真转仿')
-        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P45', 'P42', 'P11', 'P10', 'P08', 'P09']
+        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P61', 'P55', 'P45', 'P42', 'P11', 'P10', 'P08', 'P09']
         page.locator('#query').fill('sim real')
         actual_dual = page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)')
-        assert actual_dual == ['P44', 'P37', 'P30', 'P35', 'P06', 'P16', 'P14', 'P15', 'P39', 'P13'], actual_dual
+        assert actual_dual == ['P61', 'P57', 'P59', 'P54', 'P55', 'P56', 'P44', 'P37', 'P30', 'P35', 'P06', 'P16', 'P14', 'P15', 'P39', 'P13'], actual_dual
         page.locator('#clear-query').evaluate('(element) => element.click()')
         page.set_viewport_size({'width': 390, 'height': 844})
         assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
@@ -191,11 +191,11 @@ def main() -> int:
                 route.fulfill(status=204)
         page.route('http://gallery.test/**', subpath_route)
         page.goto('http://gallery.test/project/', wait_until='domcontentloaded')
-        assert page.locator('.card').count() == 60
+        assert page.locator('.card').count() == 66
         assert page.locator('dialog, #detail-dialog').count() == 0
         assert not errors, errors
         browser.close()
-    print('PASS: no detail UI/keyboard/click hooks; all 64 sourced verified-or-explicitly-estimated publication displays, 23 first-frame video posters plus retained image covers, video controls, search, groups, language, mobile, and Pages subpath work.')
+    print('PASS: no detail UI/keyboard/click hooks; all 81 sourced publication displays and retained media entries, 24 first-frame video posters, video controls, search, groups, language, mobile, and Pages subpath work.')
     return 0
 
 

@@ -1270,6 +1270,42 @@
       "source_id": "S128",
       "alt": {"en": "Physical robots executing whip-cracking and cleat-lassoing trajectories.", "zh": "真机执行抽鞭与套索轨迹的动态操作演示。"},
       "caption": {"en": "Official author-blog preview for the whip-cracking and lassoing demonstrations.", "zh": "作者博客中的抽鞭与套索演示官方预览图。"}
+    },
+    "P64": {
+      "kind": "image",
+      "url": "https://robotworldai.github.io/assets/images/showreel-poster.png",
+      "fit": "cover",
+      "source_url": "https://robotworldai.github.io/assets/images/showreel-poster.png",
+      "source_page_url": "https://robotworldai.github.io/",
+      "source_path": "Official poster for the project-hosted 45-second RobotWorld showreel, checked 2026-10-09.",
+      "classification": "Author-provided showreel cover drawn from RobotWorld simulation recordings; not an independently reproduced result.",
+      "source_id": "S129",
+      "alt": {"en": "RobotWorld simulation tasks across manipulation, locomotion, driving, and flight.", "zh": "RobotWorld 的操作、运动、驾驶与飞行仿真任务。"},
+      "caption": {"en": "Official RobotWorld showreel cover; the project page links recordings and per-task results.", "zh": "RobotWorld 官方 showreel 封面；项目页提供任务录像与逐任务结果。"}
+    },
+    "P65": {
+      "kind": "image",
+      "url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/10/image6-2-625x352.gif",
+      "fit": "cover",
+      "source_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/10/image6-2-625x352.gif",
+      "source_page_url": "https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/",
+      "source_path": "Official NVIDIA Technical Blog Open Graph animation checked 2026-10-09.",
+      "classification": "Author-provided YuMi SimReady workflow animation; not an independently reproduced asset or run.",
+      "source_id": "S130",
+      "alt": {"en": "ABB YuMi robot prepared and tested as a SimReady asset in Isaac Sim.", "zh": "在 Isaac Sim 中完成 SimReady 准备与测试的 ABB YuMi 机器人。"},
+      "caption": {"en": "Official NVIDIA YuMi SimReady workflow animation.", "zh": "NVIDIA 官方 YuMi SimReady 工作流动图。"}
+    },
+    "P66": {
+      "kind": "image",
+      "url": "https://blogs.nvidia.com/wp-content/uploads/2026/10/Copy-of-nvidia-ov-x-astra-4up-KV-r1-press-4k-r2-1680x945.png",
+      "fit": "cover",
+      "source_url": "https://blogs.nvidia.com/wp-content/uploads/2026/10/Copy-of-nvidia-ov-x-astra-4up-KV-r1-press-4k-r2-1680x945.png",
+      "source_page_url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+      "source_path": "Official NVIDIA blog Open Graph image checked 2026-10-09; the page hosts project videos.",
+      "classification": "NVIDIA-provided composite preview of the featured Astra/Omniverse simulation projects; not independent evidence.",
+      "source_id": "S131",
+      "alt": {"en": "Composite preview of Astra-assisted NVIDIA Omniverse simulation projects.", "zh": "Astra 辅助 NVIDIA Omniverse 仿真项目的组合预览。"},
+      "caption": {"en": "Official NVIDIA preview for the frontier-agent simulation collection.", "zh": "NVIDIA 前沿智能体仿真项目集官方预览图。"}
     }
   },
   "missing_policy": {

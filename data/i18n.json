@@ -386,6 +386,21 @@
       "title": "The Need for Speed · Dynamic Manipulation Trajectory Generation",
       "summary": "GPT-6 Astra implements a motion-retargeting, calibration, dynamics-modeling, and inverse-dynamics pipeline that turns Vicon hand demonstrations into open-loop trajectories for whip cracking and cleat lassoing on physical robots.",
       "detail": "Astra writes the robotics pipeline rather than controlling the robot online; the author page shows successful demonstrations but does not report trial counts, failure distributions, or success rates."
+    },
+    "P64": {
+      "title": "RobotWorld · Robot Use Across Tasks and Embodiments",
+      "summary": "RobotWorld connects 84 manipulation, mobile-manipulation, locomotion, driving, and flight tasks from 20 source projects to a multimodal agent runtime; GPT-6 Astra acts through bounded robot interfaces and execution feedback.",
+      "detail": "Astra completes 16/84 tasks (19.0%), but each model-task pair has only one retained simulation episode, interfaces and controller assistance vary, and the result is neither repeated-trial reliability nor physical-robot performance."
+    },
+    "P65": {
+      "title": "SimReady YuMi · Astra-Assisted Robot Asset Preparation",
+      "summary": "NVIDIA's five-step workflow uses GPT-6 Astra through Codex CLI to write Python for Omniverse Libraries, turning ABB YuMi STEP files into a validated SimReady OpenUSD asset and testing both arms in Isaac Sim.",
+      "detail": "The four documented pick-and-place cycles validate one tutorial asset; they are not a multi-seed benchmark or physical-robot result, and a person supplies prompts and reviews each stage."
+    },
+    "P66": {
+      "title": "Into the Omniverse · Astra Physical-Simulation Collection",
+      "summary": "NVIDIA developers direct GPT-6 Astra to build and revise humanoid, autonomous-driving, digital-twin, robot-sports, and disassembly simulations with Omniverse libraries and physics tools.",
+      "detail": "The collection is not one benchmark: the reported 64/100 hurdle result applies only to one simulated Unitree G1 Robo Olympics experiment, while unified code, prompts, and run logs are unavailable."
     }
   }
 }

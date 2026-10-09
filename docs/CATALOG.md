@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-08。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-09。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 51
+## 核心项目与评测 · 54
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1439,6 +1439,95 @@ video：[https://krishnasuresh.org/assets/video/robot-whips/teaser.mp4](https://
 additional_video：[https://www.youtube.com/shorts/ey0uHuXv8Fs](https://www.youtube.com/shorts/ey0uHuXv8Fs)  
 
 **来源：** [S128 · The Need for Speed author blog and videos](SOURCES.md#s128)
+
+---
+
+<a id="p64"></a>
+### P64 · RobotWorld · 跨任务与本体的机器人使用评测
+
+RobotWorld 把 20 个来源项目的 84 项操作、移动操作、运动、驾驶与飞行任务统一接入多模态智能体运行时；GPT-6 Astra 根据观测调用受限机器人接口并利用执行反馈修正动作，在作者的一次/任务评测中完成 16 项。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Zhiqin Yang, Chenxin Li, Xiaomeng Hu et al.  
+**事件日期：** 2026-10-07（窗口内）  
+**日期依据：** arXiv:2610.10409 v1 was submitted 2026-10-07T16:55:24Z; the public repository was created 2026-10-07T04:53:28Z.  
+**入口：** [https://robotworldai.github.io/](https://robotworldai.github.io/)  
+**代码入口：** [https://github.com/robotworldai/robotworld](https://github.com/robotworldai/robotworld)  
+**许可状态：** 论文采用 arXiv.org perpetual non-exclusive license；公开仓库截至本轮检查没有顶层许可证，第三方代码与资产保留各自许可，部分镜像和资产需授权访问。  
+**控制接口 / 作用：** 任务说明 + 多视角图像/状态观测 → GPT-6 Astra 在前沿智能体运行时中进行视觉分析、工作区计算并调用受限机器人动作工具 → 仿真器执行 → 新观测与执行反馈返回模型 → 独立任务检查器判定成功
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| GPT-6 Astra task success | 19.0 % | 16 successful tasks / 84 simulation tasks from 20 source projects | one retained episode per model-task pair; task-specific executable success checks and interaction budgets |
+
+**限制与未决项：** 每个模型-任务组合只有一次保留 episode，19.0% 是该评测的任务覆盖率，不是重复试验可靠性或真机成功率。 84 项任务的机器人接口、原生控制器、交互预算与辅助程度不同，跨本体覆盖不能解释为完全受控的模型能力比较。 仿真在模型推理与工作区分析期间暂停；结果不代表实时控制速度，且 68 项任务仍未完成。 仓库发布了运行栈与任务适配器，但完整部署依赖 Linux/NVIDIA、多个上游仿真器以及受限资产；本站未独立复跑 420 个评测 episode。
+
+paper：[https://arxiv.org/abs/2610.10409](https://arxiv.org/abs/2610.10409)  
+project：[https://robotworldai.github.io/](https://robotworldai.github.io/)  
+code：[https://github.com/robotworldai/robotworld](https://github.com/robotworldai/robotworld)  
+video：[https://robotworldai.github.io/assets/videos/robotworld_showreel_45s_v3_en.mp4?v=20261005b](https://robotworldai.github.io/assets/videos/robotworld_showreel_45s_v3_en.mp4?v=20261005b)  
+
+**来源：** [S129 · RobotWorld paper, official project page, and repository](SOURCES.md#s129)
+
+---
+
+<a id="p65"></a>
+### P65 · SimReady YuMi · Astra 辅助构建仿真机器人资产
+
+NVIDIA 的五步工作流让 GPT-6 Astra 通过 Codex CLI 编写调用 Omniverse Libraries 的 Python 代码，把 ABB YuMi STEP 文件转换、装配并验证为 SimReady OpenUSD 资产，随后在 Isaac Sim 中完成双臂抓取、保持、搬运与释放测试。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Pomi Lee, Rishabh Chadha, Dillon Bailey  
+**事件日期：** 2026-10-08（窗口内）  
+**日期依据：** The NVIDIA Technical Blog post is dated 2026-10-08.  
+**入口：** [https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/](https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/)  
+**代码入口：** [https://github.com/NVIDIA/skills/tree/main/skills/omniverse-cad-to-simready](https://github.com/NVIDIA/skills/tree/main/skills/omniverse-cad-to-simready)  
+**许可状态：** NVIDIA 博文公开工作流和示例提示；CAD-to-SimReady skill、SimReady Foundation、Isaac Sim、ABB STEP/URDF 与参考媒体分别适用各自许可证或使用条款。  
+**控制接口 / 作用：** ABB STEP/URDF、参考图像/视频与 SimReady 规范 → Astra/Codex 编写 Python 并调用 Omniverse Libraries → OpenUSD 几何、材质、关节、碰撞和物理属性迭代 → SimReady 校验 → Isaac Sim 双臂抓放测试
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Documented pick-and-place cycles | 4 cycles | the four validation cycles described in the official walkthrough | both arms and grippers grasp, hold, transfer, and release colored cubes and a reference-image Sharpie without attachment joints |
+
+**限制与未决项：** Astra 负责解释资料并编写工具调用代码，不是在测试期间根据相机观测在线控制真实 YuMi。 四个抓放循环是教程中的资产验证示例，不是跨随机种子、模型或真实硬件的成功率评测。 工作流需要人工逐步给出示例提示、审查仿真结果并根据验证反馈迭代，不能描述为无人监督端到端生成。 相机感知被明确留给独立工作流；本站未取得完整运行日志，也未复跑 Isaac Sim 6.1 示例。
+
+project：[https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/](https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/)  
+skill：[https://github.com/NVIDIA/skills/tree/main/skills/omniverse-cad-to-simready](https://github.com/NVIDIA/skills/tree/main/skills/omniverse-cad-to-simready)  
+specification：[https://github.com/NVIDIA/simready-foundation](https://github.com/NVIDIA/simready-foundation)  
+
+**来源：** [S130 · NVIDIA SimReady YuMi workflow](SOURCES.md#s130)
+
+---
+
+<a id="p66"></a>
+### P66 · Into the Omniverse · Astra 物理仿真项目集
+
+NVIDIA 汇总由开发者指导 GPT-6 Astra 连接 Omniverse Libraries 的物理仿真项目，包括仓库人形机器人模拟器、自动驾驶测试环境、传感器数字孪生、G1 运动控制与机器人拆解工具设计；其中 Robo Olympics 的单跨栏控制器在 100 次仿真试验中成功 64 次。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** NVIDIA developers and NVIDIA Writers  
+**事件日期：** 2026-10-08（窗口内）  
+**日期依据：** The official NVIDIA blog collection is dated 2026-10-08.  
+**入口：** [https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/](https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** NVIDIA 官方页面公开文字与演示视频，但未为项目集提供统一代码或媒体再许可；Omniverse、SimReady、Warp、Newton 及各资产适用各自条款。  
+**控制接口 / 作用：** 自然语言目标与开发者反馈 → Astra 生成/修订应用、动画、控制器或场景代码 → ovphysx/ovstage/ovrtx/ovui、Newton/Warp 等执行物理仿真 → 开发者检查行为、传感器指标或任务结果并继续迭代
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Robo Olympics single-hurdle success | 64 % | 64 successful trials / 100 simulation trials for one Unitree G1 hurdle experiment | Astra-built controller refined through Newton/Warp physics trials under developer direction |
+
+**限制与未决项：** 这是多个开发者项目的官方汇总，不是统一基准；64/100 仅属于 Robo Olympics 的单跨栏实验，不能归给其他仿真项目。 开发者通过自然语言指令、结果审查和修正持续指导 Astra，页面未提供统一提示、调用日志、模型努力级别或对照模型。 项目主要展示 Astra 构建仿真应用和控制器，而不是模型在部署期间直接控制真实机器人。 公开页面提供视频与部分工具链接，但没有统一源代码、完整试验分布或独立复现材料；本站未复跑。
+
+project：[https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/](https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/)  
+humanoid_video：[https://blogs.nvidia.com/wp-content/uploads/2026/10/Humanoid-Warehouse.mp4](https://blogs.nvidia.com/wp-content/uploads/2026/10/Humanoid-Warehouse.mp4)  
+driving_video：[https://blogs.nvidia.com/wp-content/uploads/2026/10/zero-to-alpamayo-under-10MB.mp4](https://blogs.nvidia.com/wp-content/uploads/2026/10/zero-to-alpamayo-under-10MB.mp4)  
+tools：[https://github.com/NVIDIA-Omniverse](https://github.com/NVIDIA-Omniverse)  
+
+**来源：** [S131 · NVIDIA Into the Omniverse frontier-agent simulation collection](SOURCES.md#s131)
 
 ---
 

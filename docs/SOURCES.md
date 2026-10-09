@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-08 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-09 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1148,3 +1148,30 @@ arXiv v1 submitted 2026-09-30T04:58:21Z explicitly replaces the main Fable 5.1 c
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-08
 
 The author page was published 2026-09-26 and explicitly says GPT-6 Astra nearly fully implemented the motion-retargeting pipeline from one prompt, including calibration collection, a dynamics model and inverse-dynamics controller. OpenarmX and xArm7 execute open-loop trajectories for whip cracking and cleat lassoing. Videos are public, but trial counts, success rates, code and a unified media license were not located.
+
+<a id="s129"></a>
+## S129 · RobotWorld paper, official project page, and repository
+
+[https://arxiv.org/abs/2610.10409](https://arxiv.org/abs/2610.10409)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-09
+
+arXiv v1 submitted 2026-10-07T16:55:24Z evaluates GPT-6 Astra and four other multimodal agents on 84 simulation tasks from 20 source projects. The paper reports Astra completing 16/84 tasks (19.0%) with one retained episode per model-task pair, and explicitly distinguishes spatial/constrained-contact strengths from continuous-balance and timed-interaction weaknesses. The official repository publishes the agent runtime and task adapters but has no top-level license; restricted assets and substantial simulator provisioning remain required. Results were not independently reproduced.
+
+<a id="s130"></a>
+## S130 · NVIDIA SimReady YuMi workflow
+
+[https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/](https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-09
+
+The official NVIDIA Technical Blog post dated 2026-10-08 documents a five-step ABB YuMi workflow using GPT-6 Astra through Codex CLI with Isaac Sim 6.1. Astra writes Python that calls Omniverse libraries to import STEP geometry, match appearance, configure joints/collisions/physics, validate against SimReady, and prepare pick-and-place tests. The walkthrough states that both arms and grippers completed four validation cycles; it does not report a repeated benchmark or physical-robot deployment.
+
+<a id="s131"></a>
+## S131 · NVIDIA Into the Omniverse frontier-agent simulation collection
+
+[https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/](https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-09
+
+The official NVIDIA collection dated 2026-10-08 describes developers directing GPT-6 Astra to build a humanoid warehouse simulator, an autonomous-driving test environment, sensor-matched digital twins, Robo Olympics controllers, a robotic-disassembly tool workflow, and other simulation applications. The only repeated task metric is scoped to Robo Olympics: a simulated Unitree G1 cleared one hurdle in 64/100 trials. The page provides videos and selected tool links but no unified code release, prompts, logs, or cross-project protocol.

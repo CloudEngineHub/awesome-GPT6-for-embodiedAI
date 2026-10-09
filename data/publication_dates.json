@@ -651,5 +651,26 @@
     "basis": "The primary author blog states Created on September 26, 2026.",
     "rule": null,
     "uncertainty": "Author-blog publication date; code generation and physical demonstrations predate the post."
+  },
+  "P64": {
+    "date": "2026-10-07",
+    "status": "verified",
+    "basis": "arXiv:2610.10409 v1 was submitted 2026-10-07T16:55:24Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; the public repository was created earlier the same UTC day and evaluation episodes were collected between September 30 and October 6."
+  },
+  "P65": {
+    "date": "2026-10-08",
+    "status": "verified",
+    "basis": "The official NVIDIA Technical Blog post is dated 2026-10-08.",
+    "rule": null,
+    "uncertainty": "Publication date of the walkthrough; asset preparation and Isaac Sim validation occurred earlier."
+  },
+  "P66": {
+    "date": "2026-10-08",
+    "status": "verified",
+    "basis": "The official NVIDIA blog collection is dated 2026-10-08.",
+    "rule": null,
+    "uncertainty": "Publication date of the collection; the featured development sessions and simulation trials occurred earlier."
   }
 }

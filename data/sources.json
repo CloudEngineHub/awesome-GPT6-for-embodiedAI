@@ -1141,5 +1141,32 @@
     "access": "page_text",
     "checked_at": "2026-10-08",
     "notes": "The author page was published 2026-09-26 and explicitly says GPT-6 Astra nearly fully implemented the motion-retargeting pipeline from one prompt, including calibration collection, a dynamics model and inverse-dynamics controller. OpenarmX and xArm7 execute open-loop trajectories for whip cracking and cleat lassoing. Videos are public, but trial counts, success rates, code and a unified media license were not located."
+  },
+  {
+    "id": "S129",
+    "title": "RobotWorld paper, official project page, and repository",
+    "url": "https://arxiv.org/abs/2610.10409",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-09",
+    "notes": "arXiv v1 submitted 2026-10-07T16:55:24Z evaluates GPT-6 Astra and four other multimodal agents on 84 simulation tasks from 20 source projects. The paper reports Astra completing 16/84 tasks (19.0%) with one retained episode per model-task pair, and explicitly distinguishes spatial/constrained-contact strengths from continuous-balance and timed-interaction weaknesses. The official repository publishes the agent runtime and task adapters but has no top-level license; restricted assets and substantial simulator provisioning remain required. Results were not independently reproduced."
+  },
+  {
+    "id": "S130",
+    "title": "NVIDIA SimReady YuMi workflow",
+    "url": "https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-09",
+    "notes": "The official NVIDIA Technical Blog post dated 2026-10-08 documents a five-step ABB YuMi workflow using GPT-6 Astra through Codex CLI with Isaac Sim 6.1. Astra writes Python that calls Omniverse libraries to import STEP geometry, match appearance, configure joints/collisions/physics, validate against SimReady, and prepare pick-and-place tests. The walkthrough states that both arms and grippers completed four validation cycles; it does not report a repeated benchmark or physical-robot deployment."
+  },
+  {
+    "id": "S131",
+    "title": "NVIDIA Into the Omniverse frontier-agent simulation collection",
+    "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-09",
+    "notes": "The official NVIDIA collection dated 2026-10-08 describes developers directing GPT-6 Astra to build a humanoid warehouse simulator, an autonomous-driving test environment, sensor-matched digital twins, Robo Olympics controllers, a robotic-disassembly tool workflow, and other simulation applications. The only repeated task metric is scoped to Robo Olympics: a simulated Unitree G1 cleared one hurdle in 64/100 trials. The page provides videos and selected tool links but no unified code release, prompts, logs, or cross-project protocol."
   }
 ]
