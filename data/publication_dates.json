@@ -672,5 +672,19 @@
     "basis": "The official NVIDIA blog collection is dated 2026-10-08.",
     "rule": null,
     "uncertainty": "Publication date of the collection; the featured development sessions and simulation trials occurred earlier."
+  },
+  "P67": {
+    "date": "2026-10-08",
+    "status": "verified",
+    "basis": "arXiv:2610.12457 v1 was submitted 2026-10-08T17:59:20Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; robot experiments, harness preparation and the currently unavailable claimed project page predate publication."
+  },
+  "P68": {
+    "date": "2026-10-08",
+    "status": "verified",
+    "basis": "arXiv:2610.11328 v1 was submitted 2026-10-08T06:26:43Z; the official repository was created 2026-10-07T06:55:41Z.",
+    "rule": null,
+    "uncertainty": "Display date is the paper submission; benchmark construction, model runs and initial public repository preparation predate it."
   }
 }

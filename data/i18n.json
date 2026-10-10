@@ -401,6 +401,16 @@
       "title": "Into the Omniverse · Astra Physical-Simulation Collection",
       "summary": "NVIDIA developers direct GPT-6 Astra to build and revise humanoid, autonomous-driving, digital-twin, robot-sports, and disassembly simulations with Omniverse libraries and physics tools.",
       "detail": "The collection is not one benchmark: the reported 64/100 hurdle result applies only to one simulated Unitree G1 Robo Olympics experiment, while unified code, prompts, and run logs are unavailable."
+    },
+    "P67": {
+      "title": "SpatialHarness · Test-Time Spatial Scaffolding for Fine Real-Robot Manipulation",
+      "summary": "SpatialHarness gives a frozen GPT-6 Astra manipulation policy two synchronized virtual views and object poses from an online MuJoCo scene; across four Franka Research 3 tasks, the authors report mean success rising from 18.33% to 83.33%.",
+      "detail": "Each task has 15 trials per condition. The harness depends on calibrated cameras, object CAD, segmentation and scene synchronization; the claimed project page was unavailable, no public code or per-trial logs were found, and the results were not independently reproduced."
+    },
+    "P68": {
+      "title": "Mine Odyssey · Spatial Intelligence in Reconstructions of Real Places",
+      "summary": "Mine Odyssey evaluates long-horizon, multi-stop navigation in 30 Minecraft reconstructions of real locations; GPT-6 Astra Medium writes action programs from first-person observations and execution feedback and completes 154 of 180 tasks.",
+      "detail": "The 85.56% result uses one run per task in simulation, not repeated physical-robot trials. The public release includes tasks, maps, runtime and an independent verifier, but the repository has no top-level license and was not independently rerun."
     }
   }
 }

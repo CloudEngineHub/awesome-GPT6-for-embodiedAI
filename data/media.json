@@ -1306,6 +1306,30 @@
       "source_id": "S131",
       "alt": {"en": "Composite preview of Astra-assisted NVIDIA Omniverse simulation projects.", "zh": "Astra 辅助 NVIDIA Omniverse 仿真项目的组合预览。"},
       "caption": {"en": "Official NVIDIA preview for the frontier-agent simulation collection.", "zh": "NVIDIA 前沿智能体仿真项目集官方预览图。"}
+    },
+    "P67": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2610.12457v1/fig/teaser.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2610.12457v1/fig/teaser.png",
+      "source_page_url": "https://arxiv.org/html/2610.12457v1",
+      "source_path": "Official Figure 1 teaser served from the arXiv v1 HTML paper.",
+      "classification": "Paper overview comparing real and auxiliary views and author-reported success rates; not an independently reproduced result.",
+      "source_id": "S132",
+      "alt": {"en": "SpatialHarness real and virtual views for four Franka manipulation tasks.", "zh": "SpatialHarness 四项 Franka 操作任务的真实与虚拟视图。"},
+      "caption": {"en": "Official paper teaser for the four real-robot tasks and reported baseline comparison.", "zh": "论文官方概览图，展示四项真机任务及作者报告的基线比较。"}
+    },
+    "P68": {
+      "kind": "image",
+      "url": "https://mine-odyssey.github.io/assets/overview-figure-1-full.webp?v=white-green-20261008",
+      "fit": "contain",
+      "source_url": "https://mine-odyssey.github.io/assets/overview-figure-1-full.webp?v=white-green-20261008",
+      "source_page_url": "https://mine-odyssey.github.io/",
+      "source_path": "Official project-page Figure 1 showing the 30 environments and task construction, checked 2026-10-10.",
+      "classification": "Author-provided benchmark overview from Minecraft reconstructions; not an independently reproduced trajectory or result.",
+      "source_id": "S133",
+      "alt": {"en": "Mine Odyssey environments and ordered multi-stop navigation task construction.", "zh": "Mine Odyssey 环境与有序多站点导航任务构建。"},
+      "caption": {"en": "Official Mine Odyssey overview spanning 30 reconstructed locations and task examples.", "zh": "Mine Odyssey 官方概览，展示 30 个重建地点与任务示例。"}
     }
   },
   "missing_policy": {

@@ -41,9 +41,9 @@ class CatalogueTests(unittest.TestCase):
     def test_scene_tags_are_complete_and_source_bounded(self):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
-        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),61)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),36)
-        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),16)
+        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),63)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),37)
+        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),17)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
         ledger=(ROOT/'docs/SCENE_TAGS.md').read_text(encoding='utf-8')
@@ -63,8 +63,8 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),81)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),57)
+        self.assertEqual(len(retained),83)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),59)
         self.assertEqual(sum(item['kind']=='video' for item in retained),24)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),24)
@@ -130,7 +130,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
         self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
         self.assertEqual(self.meta['window_start'],'2026-08-20')
-        self.assertEqual(self.meta['window_end'],'2026-10-09')
+        self.assertEqual(self.meta['window_end'],'2026-10-10')
         self.assertEqual(self.by_id['P43']['code_url'],'https://github.com/tomsilver/robocode')
         self.assertEqual(self.by_id['P43']['gpt6_relation'],'explicit_primary')
         self.assertIn('official project video',self.media['media']['P43']['classification'].lower())
@@ -196,6 +196,14 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.by_id['P66']['metrics'][0]['denominator'],'64 successful trials / 100 simulation trials for one Unitree G1 hurdle experiment')
         self.assertIn('no unified code release',next(s for s in self.sources if s['id']=='S131')['notes'])
         self.assertIn('composite preview',self.media['media']['P66']['classification'])
+        self.assertEqual(self.by_id['P67']['metrics'][0]['denominator'],'50 successful trials / 60 real-robot trials across four tasks')
+        self.assertEqual(self.by_id['P67']['scene_tags'],['real','sim'])
+        self.assertIn('project URL returned 404',next(s for s in self.sources if s['id']=='S132')['notes'])
+        self.assertIn('Official Figure 1 teaser',self.media['media']['P67']['source_path'])
+        self.assertEqual(self.by_id['P68']['metrics'][0]['denominator'],'154 successful tasks / 180 Minecraft navigation tasks')
+        self.assertEqual(self.by_id['P68']['code_url'],'https://github.com/hkust-nlp/MineOdyssey')
+        self.assertIn('one run per task',next(s for s in self.sources if s['id']=='S133')['notes'])
+        self.assertIn('30 reconstructed locations',self.media['media']['P68']['caption']['en'])
         self.assertFalse(any('moonlakeai.com/blog/evaluating-3d-agent' in s['url'] for s in self.sources))
 
     def test_initial_snapshot_counts(self):
@@ -209,7 +217,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':54,'supporting':12,'watchlist':15})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':56,'supporting':12,'watchlist':15})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}

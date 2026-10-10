@@ -3150,6 +3150,113 @@
     "independently_reproduced": false
   },
   {
+    "id": "P67",
+    "title": "SpatialHarness · 精细真机操作的测试时空间支架",
+    "section": "core",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": [
+      "real",
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "SpatialHarness 将持续同步的 MuJoCo 场景、两路辅助虚拟视图与物体位姿提供给冻结的 GPT-6 Astra 操作策略；在 Franka Research 3 的四项精细操作中，作者报告平均成功率由 18.33% 提升到 83.33%。",
+    "authors": "Jiayu Wang, Yue Yu, Bin Zhu, Zhiyao Yang, Jingjing Chen",
+    "event_date": "2026-10-08",
+    "event_date_basis": "arXiv:2610.12457 v1 was submitted 2026-10-08T17:59:20Z.",
+    "window_status": "in_window",
+    "url": "https://arxiv.org/abs/2610.12457",
+    "code_url": null,
+    "license_status": "论文采用 arXiv.org perpetual non-exclusive license；论文指向的项目页在本轮检查返回 404，未找到公开代码或媒体再许可。",
+    "control_interface": "双路真实 RGB-D 图像、机器人状态与执行反馈 + SpatialHarness 的双路虚拟 RGB、物体 6-DoF 位姿和渲染可靠性 → GPT-6 Astra Low 生成 10/20/30 步的末端增量与夹爪动作块 → 本地约束检查 → Franka Research 3 执行 → 新观测闭环反馈",
+    "metrics": [
+      {
+        "name": "Mean task success with SpatialHarness",
+        "value": 83.33,
+        "unit": "%",
+        "denominator": "50 successful trials / 60 real-robot trials across four tasks",
+        "protocol": "15 trials per task; same frozen GPT-6 Astra Low policy, physical cameras, action representation and local checks as the 11/60 (18.33%) baseline"
+      },
+      {
+        "name": "Plug-insertion success",
+        "value": 66.67,
+        "unit": "%",
+        "denominator": "10 successful trials / 15 real-robot trials",
+        "protocol": "SpatialHarness versus 4/15 (26.67%) with the real-camera-only baseline"
+      }
+    ],
+    "limitations": [
+      "这是同一实验室平台上的四项任务、每项 15 次试验；83.33% 不能外推为开放世界精细操作可靠性。",
+      "SpatialHarness 依赖预先构建并持续校正的物体 CAD、相机标定、SAM 3 分割与 MuJoCo 场景；这些额外结构与计算使其不是纯粹增加相机视角的单变量比较。",
+      "虚拟视角由 GPT-6 Astra xhigh 在执行前选择，操作策略使用 Low；平均成功率同时反映支架配置与冻结策略，不能归因于模型参数更新。",
+      "论文项目页在本轮检查返回 404，未找到公开代码、完整提示或逐次试验日志；本站未独立复跑真机结果。"
+    ],
+    "source_ids": [
+      "S132"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2610.12457",
+      "paper_html": "https://arxiv.org/html/2610.12457v1"
+    },
+    "last_checked": "2026-10-10",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P68",
+    "title": "Mine Odyssey · 真实地点重建中的空间智能评测",
+    "section": "core",
+    "category": "evaluation",
+    "environment": "simulation",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "Mine Odyssey 在 30 个真实地点的 Minecraft 重建中设置 180 项多站点长程导航任务；GPT-6 Astra Medium 根据第一人称图像与执行反馈编写动作程序，在独立位置验证器下完成 154 项，作者报告成功率 85.56%。",
+    "authors": "Yuxuan Cao, Junlong Li, Hao Li, Junxian He",
+    "event_date": "2026-10-08",
+    "event_date_basis": "arXiv:2610.11328 v1 was submitted 2026-10-08T06:26:43Z; the official repository was created 2026-10-07T06:55:41Z.",
+    "window_status": "in_window",
+    "url": "https://mine-odyssey.github.io/",
+    "code_url": "https://github.com/hkust-nlp/MineOdyssey",
+    "license_status": "论文采用 arXiv.org perpetual non-exclusive license；公开仓库截至本轮检查没有顶层许可证，Minecraft、社区地图、地理参考图像与依赖项分别适用各自条款。",
+    "control_interface": "自然语言多站点指令 + 单路第一人称图像、世界地图与执行反馈 → GPT-6 Astra Medium 通过统一工具接口编写并异步执行键鼠/游戏 API 动作程序 → Minecraft 持续运行 → 智能体观察或中断命令并恢复导航 → 独立验证器按顺序核对实际位置与完成声明",
+    "metrics": [
+      {
+        "name": "GPT-6 Astra task success",
+        "value": 85.56,
+        "unit": "%",
+        "denominator": "154 successful tasks / 180 Minecraft navigation tasks",
+        "protocol": "one run per task; GPT-6 Astra Medium, native tool calls, 500-step and six-hour limits, at most three completion claims"
+      },
+      {
+        "name": "Checkpoint coverage",
+        "value": 89.04,
+        "unit": "%",
+        "denominator": "ordered intermediate stops across all 180 tasks",
+        "protocol": "evaluator-recorded ordered arrivals; includes failed tasks"
+      }
+    ],
+    "limitations": [
+      "每个模型-任务组合只运行一次；85.56% 是该固定任务集的覆盖率，不是跨随机种子可靠性。",
+      "评测发生在 Minecraft 重建而非物理机器人上，键鼠与游戏 API 动作、世界地图和可程序化工作区不能直接等同于真实导航本体。",
+      "所有模型共享接口和限制，但闭源模型的具体服务版本、推理实现与成本会变化；模型间差异不能单独归因于空间推理。",
+      "仓库公开任务、运行时、地图发布和验证器，但没有顶层许可证，完整复跑还需约 2.60 GB 地图、Minecraft 依赖与模型 API；本站未独立复跑 1,440 个主比较 episode。"
+    ],
+    "source_ids": [
+      "S133"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2610.11328",
+      "project": "https://mine-odyssey.github.io/",
+      "code": "https://github.com/hkust-nlp/MineOdyssey",
+      "maps": "https://github.com/hkust-nlp/MineOdyssey/releases/tag/navigation-maps-1.21.11-v1"
+    },
+    "last_checked": "2026-10-10",
+    "independently_reproduced": false
+  },
+  {
     "id": "X01",
     "title": "真实机器人键盘打字",
     "section": "watchlist",

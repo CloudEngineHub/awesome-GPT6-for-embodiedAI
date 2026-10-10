@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-09 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-10 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1175,3 +1175,21 @@ The official NVIDIA Technical Blog post dated 2026-10-08 documents a five-step A
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-09
 
 The official NVIDIA collection dated 2026-10-08 describes developers directing GPT-6 Astra to build a humanoid warehouse simulator, an autonomous-driving test environment, sensor-matched digital twins, Robo Olympics controllers, a robotic-disassembly tool workflow, and other simulation applications. The only repeated task metric is scoped to Robo Olympics: a simulated Unitree G1 cleared one hurdle in 64/100 trials. The page provides videos and selected tool links but no unified code release, prompts, logs, or cross-project protocol.
+
+<a id="s132"></a>
+## S132 · SpatialHarness arXiv paper
+
+[https://arxiv.org/abs/2610.12457](https://arxiv.org/abs/2610.12457)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-10
+
+arXiv v1 submitted 2026-10-08T17:59:20Z evaluates a frozen GPT-6 Astra Low manipulation policy on four Franka Research 3 tasks with 15 trials per task and condition. Adding synchronized MuJoCo views and object poses raises mean success from 18.33% to 83.33%; the paper reports 100% block stacking and Tower of Hanoi, 66.67% plug insertion and 66.67% drawer placement. The claimed project URL returned 404, and no public code or per-trial logs were located.
+
+<a id="s133"></a>
+## S133 · Mine Odyssey paper, project page, and repository
+
+[https://arxiv.org/abs/2610.11328](https://arxiv.org/abs/2610.11328)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-10
+
+arXiv v1 submitted 2026-10-08T06:26:43Z and the official public repository define 180 long-horizon Minecraft navigation tasks across 30 reconstructions of real locations. GPT-6 Astra Medium uses the shared programmable action interface and completes 154/180 tasks (85.56%) in one run per task, with 89.04% checkpoint coverage. The repository publishes tasks, runtime, map archives and an independent position verifier but has no top-level license; results were not independently reproduced.

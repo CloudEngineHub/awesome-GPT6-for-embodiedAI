@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-09。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-10。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 54
+## 核心项目与评测 · 56
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1528,6 +1528,66 @@ driving_video：[https://blogs.nvidia.com/wp-content/uploads/2026/10/zero-to-alp
 tools：[https://github.com/NVIDIA-Omniverse](https://github.com/NVIDIA-Omniverse)  
 
 **来源：** [S131 · NVIDIA Into the Omniverse frontier-agent simulation collection](SOURCES.md#s131)
+
+---
+
+<a id="p67"></a>
+### P67 · SpatialHarness · 精细真机操作的测试时空间支架
+
+SpatialHarness 将持续同步的 MuJoCo 场景、两路辅助虚拟视图与物体位姿提供给冻结的 GPT-6 Astra 操作策略；在 Franka Research 3 的四项精细操作中，作者报告平均成功率由 18.33% 提升到 83.33%。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Jiayu Wang, Yue Yu, Bin Zhu, Zhiyao Yang, Jingjing Chen  
+**事件日期：** 2026-10-08（窗口内）  
+**日期依据：** arXiv:2610.12457 v1 was submitted 2026-10-08T17:59:20Z.  
+**入口：** [https://arxiv.org/abs/2610.12457](https://arxiv.org/abs/2610.12457)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 论文采用 arXiv.org perpetual non-exclusive license；论文指向的项目页在本轮检查返回 404，未找到公开代码或媒体再许可。  
+**控制接口 / 作用：** 双路真实 RGB-D 图像、机器人状态与执行反馈 + SpatialHarness 的双路虚拟 RGB、物体 6-DoF 位姿和渲染可靠性 → GPT-6 Astra Low 生成 10/20/30 步的末端增量与夹爪动作块 → 本地约束检查 → Franka Research 3 执行 → 新观测闭环反馈
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Mean task success with SpatialHarness | 83.33 % | 50 successful trials / 60 real-robot trials across four tasks | 15 trials per task; same frozen GPT-6 Astra Low policy, physical cameras, action representation and local checks as the 11/60 (18.33%) baseline |
+| Plug-insertion success | 66.67 % | 10 successful trials / 15 real-robot trials | SpatialHarness versus 4/15 (26.67%) with the real-camera-only baseline |
+
+**限制与未决项：** 这是同一实验室平台上的四项任务、每项 15 次试验；83.33% 不能外推为开放世界精细操作可靠性。 SpatialHarness 依赖预先构建并持续校正的物体 CAD、相机标定、SAM 3 分割与 MuJoCo 场景；这些额外结构与计算使其不是纯粹增加相机视角的单变量比较。 虚拟视角由 GPT-6 Astra xhigh 在执行前选择，操作策略使用 Low；平均成功率同时反映支架配置与冻结策略，不能归因于模型参数更新。 论文项目页在本轮检查返回 404，未找到公开代码、完整提示或逐次试验日志；本站未独立复跑真机结果。
+
+paper：[https://arxiv.org/abs/2610.12457](https://arxiv.org/abs/2610.12457)  
+paper_html：[https://arxiv.org/html/2610.12457v1](https://arxiv.org/html/2610.12457v1)  
+
+**来源：** [S132 · SpatialHarness arXiv paper](SOURCES.md#s132)
+
+---
+
+<a id="p68"></a>
+### P68 · Mine Odyssey · 真实地点重建中的空间智能评测
+
+Mine Odyssey 在 30 个真实地点的 Minecraft 重建中设置 180 项多站点长程导航任务；GPT-6 Astra Medium 根据第一人称图像与执行反馈编写动作程序，在独立位置验证器下完成 154 项，作者报告成功率 85.56%。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Yuxuan Cao, Junlong Li, Hao Li, Junxian He  
+**事件日期：** 2026-10-08（窗口内）  
+**日期依据：** arXiv:2610.11328 v1 was submitted 2026-10-08T06:26:43Z; the official repository was created 2026-10-07T06:55:41Z.  
+**入口：** [https://mine-odyssey.github.io/](https://mine-odyssey.github.io/)  
+**代码入口：** [https://github.com/hkust-nlp/MineOdyssey](https://github.com/hkust-nlp/MineOdyssey)  
+**许可状态：** 论文采用 arXiv.org perpetual non-exclusive license；公开仓库截至本轮检查没有顶层许可证，Minecraft、社区地图、地理参考图像与依赖项分别适用各自条款。  
+**控制接口 / 作用：** 自然语言多站点指令 + 单路第一人称图像、世界地图与执行反馈 → GPT-6 Astra Medium 通过统一工具接口编写并异步执行键鼠/游戏 API 动作程序 → Minecraft 持续运行 → 智能体观察或中断命令并恢复导航 → 独立验证器按顺序核对实际位置与完成声明
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| GPT-6 Astra task success | 85.56 % | 154 successful tasks / 180 Minecraft navigation tasks | one run per task; GPT-6 Astra Medium, native tool calls, 500-step and six-hour limits, at most three completion claims |
+| Checkpoint coverage | 89.04 % | ordered intermediate stops across all 180 tasks | evaluator-recorded ordered arrivals; includes failed tasks |
+
+**限制与未决项：** 每个模型-任务组合只运行一次；85.56% 是该固定任务集的覆盖率，不是跨随机种子可靠性。 评测发生在 Minecraft 重建而非物理机器人上，键鼠与游戏 API 动作、世界地图和可程序化工作区不能直接等同于真实导航本体。 所有模型共享接口和限制，但闭源模型的具体服务版本、推理实现与成本会变化；模型间差异不能单独归因于空间推理。 仓库公开任务、运行时、地图发布和验证器，但没有顶层许可证，完整复跑还需约 2.60 GB 地图、Minecraft 依赖与模型 API；本站未独立复跑 1,440 个主比较 episode。
+
+paper：[https://arxiv.org/abs/2610.11328](https://arxiv.org/abs/2610.11328)  
+project：[https://mine-odyssey.github.io/](https://mine-odyssey.github.io/)  
+code：[https://github.com/hkust-nlp/MineOdyssey](https://github.com/hkust-nlp/MineOdyssey)  
+maps：[https://github.com/hkust-nlp/MineOdyssey/releases/tag/navigation-maps-1.21.11-v1](https://github.com/hkust-nlp/MineOdyssey/releases/tag/navigation-maps-1.21.11-v1)  
+
+**来源：** [S133 · Mine Odyssey paper, project page, and repository](SOURCES.md#s133)
 
 ---
 
