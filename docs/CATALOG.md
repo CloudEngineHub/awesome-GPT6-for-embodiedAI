@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-10。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-12。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 56
+## 核心项目与评测 · 57
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1588,6 +1588,31 @@ code：[https://github.com/hkust-nlp/MineOdyssey](https://github.com/hkust-nlp/M
 maps：[https://github.com/hkust-nlp/MineOdyssey/releases/tag/navigation-maps-1.21.11-v1](https://github.com/hkust-nlp/MineOdyssey/releases/tag/navigation-maps-1.21.11-v1)  
 
 **来源：** [S133 · Mine Odyssey paper, project page, and repository](SOURCES.md#s133)
+
+---
+
+<a id="p69"></a>
+### P69 · PiPER Astra + Jev · 分层的真机操作演示
+
+RobotKitAI 的开源项目将多模态模型、视觉感知、抓取规划与 PiPER 真机控制分层组合；其中 GPT-6 Astra 在第 1 次演示中直接读取相机图像并选择技能，将方块放入托盘。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** RobotKitAI (Michal Kubenka, Marian Pogran); AgileX Robotics technical write-up  
+**事件日期：** 2026-10-10（本月更新，基础项目更早）  
+**日期依据：** AgileX Robotics' official technical article is dated 2026-10-10; the public repository's single commit was authored 2026-09-19T10:05:48+02:00.  
+**入口：** [https://global.agilex.ai/blogs/robotics/how-to-control-robotic-arm-with-gpt-6-astra-and-jev-llm-model](https://global.agilex.ai/blogs/robotics/how-to-control-robotic-arm-with-gpt-6-astra-and-jev-llm-model)  
+**代码入口：** [https://github.com/RobotKitAI/piper-astra-jev](https://github.com/RobotKitAI/piper-astra-jev)  
+**许可状态：** 仓库顶层采用 Apache-2.0；内置 MuJoCo Menagerie PiPER 模型保留 MIT 许可，AgileX 文章图像与演示媒体不因代码许可而自动获得再分发权。  
+**控制接口 / 作用：** 任务与固定相机图像 → GPT-6 Astra 进行视觉理解并选择受限技能 → 本地抓取规划、逆运动学与安全检查 → PiPER 通过 CAN 执行 → 相机与夹爪触觉状态反馈
+
+**限制与未决项：** GPT-6 Astra 只用于第 1 次 cube-to-tray 演示；第 2–8 次的高层决策器是 Jev，不应将几何拟合、SAM 3 或反光部件装配结果归因于 Astra。 每个 notebook 只为录像执行一次，不是重复试验或模型比较基准；项目没有报告 Astra 成功率。 真机结果依赖 RealSense 标定、预定义技能、抓取规划、运动学、限位和人工急停，Astra 不是电机或关节级控制器。 本站核对了官方文章、仓库说明、唯一公开提交与许可，但未在 PiPER 硬件上独立复现。
+
+project：[https://global.agilex.ai/blogs/robotics/how-to-control-robotic-arm-with-gpt-6-astra-and-jev-llm-model](https://global.agilex.ai/blogs/robotics/how-to-control-robotic-arm-with-gpt-6-astra-and-jev-llm-model)  
+code：[https://github.com/RobotKitAI/piper-astra-jev](https://github.com/RobotKitAI/piper-astra-jev)  
+post：[https://x.com/MarianPogran/status/2101179679319241076](https://x.com/MarianPogran/status/2101179679319241076)  
+
+**来源：** [S134 · AgileX PiPER Astra + Jev technical article and RobotKitAI repository](SOURCES.md#s134)
 
 ---
 

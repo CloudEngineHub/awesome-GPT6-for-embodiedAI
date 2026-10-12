@@ -686,5 +686,12 @@
     "basis": "arXiv:2610.11328 v1 was submitted 2026-10-08T06:26:43Z; the official repository was created 2026-10-07T06:55:41Z.",
     "rule": null,
     "uncertainty": "Display date is the paper submission; benchmark construction, model runs and initial public repository preparation predate it."
+  },
+  "P69": {
+    "date": "2026-10-10",
+    "status": "verified",
+    "basis": "AgileX Robotics' official technical article is dated 2026-10-10.",
+    "rule": null,
+    "uncertainty": "This is the official article date; the repository's only commit and the recorded physical runs predate publication."
   }
 }

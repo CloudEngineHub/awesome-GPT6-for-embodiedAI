@@ -411,6 +411,11 @@
       "title": "Mine Odyssey · Spatial Intelligence in Reconstructions of Real Places",
       "summary": "Mine Odyssey evaluates long-horizon, multi-stop navigation in 30 Minecraft reconstructions of real locations; GPT-6 Astra Medium writes action programs from first-person observations and execution feedback and completes 154 of 180 tasks.",
       "detail": "The 85.56% result uses one run per task in simulation, not repeated physical-robot trials. The public release includes tasks, maps, runtime and an independent verifier, but the repository has no top-level license and was not independently rerun."
+    },
+    "P69": {
+      "title": "PiPER Astra + Jev · Layered Real-Robot Manipulation Demos",
+      "summary": "RobotKitAI combines multimodal models, visual perception, grasp planning, and PiPER control in layers; in Run 1, GPT-6 Astra reads camera images and selects bounded skills to place a cube in a tray.",
+      "detail": "Only Run 1 uses Astra; Runs 2–8 use Jev with local perception or geometry. Every notebook was recorded once, no Astra success rate is reported, and the model does not command motors or joints directly."
     }
   }
 }

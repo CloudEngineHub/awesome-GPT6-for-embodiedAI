@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-10 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-12 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1193,3 +1193,12 @@ arXiv v1 submitted 2026-10-08T17:59:20Z evaluates a frozen GPT-6 Astra Low manip
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-10
 
 arXiv v1 submitted 2026-10-08T06:26:43Z and the official public repository define 180 long-horizon Minecraft navigation tasks across 30 reconstructions of real locations. GPT-6 Astra Medium uses the shared programmable action interface and completes 154/180 tasks (85.56%) in one run per task, with 89.04% checkpoint coverage. The repository publishes tasks, runtime, map archives and an independent position verifier but has no top-level license; results were not independently reproduced.
+
+<a id="s134"></a>
+## S134 · AgileX PiPER Astra + Jev technical article and RobotKitAI repository
+
+[https://global.agilex.ai/blogs/robotics/how-to-control-robotic-arm-with-gpt-6-astra-and-jev-llm-model](https://global.agilex.ai/blogs/robotics/how-to-control-robotic-arm-with-gpt-6-astra-and-jev-llm-model)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-12
+
+AgileX Robotics' official article dated 2026-10-10 and the Apache-2.0 RobotKitAI repository document eight single-recording real-PiPER runs. GPT-6 Astra appears only in Run 1, where it receives camera images and selects a bounded skill for a cube-to-tray task; Runs 2–8 use Jev with local perception and geometry components. The repository has one commit authored 2026-09-19T10:05:48+02:00. Neither source reports repeated Astra trials or an Astra success rate, and the result was not independently reproduced.

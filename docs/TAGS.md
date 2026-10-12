@@ -92,6 +92,7 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | P66 | sim | environment-building, rl-training |
 | P67 | real, sim | control |
 | P68 | sim | evaluation |
+| P69 | real | control |
 | X01 | real | control |
 | X02 | real | control |
 | X03 | real | control |

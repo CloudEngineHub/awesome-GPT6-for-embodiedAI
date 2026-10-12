@@ -1330,6 +1330,18 @@
       "source_id": "S133",
       "alt": {"en": "Mine Odyssey environments and ordered multi-stop navigation task construction.", "zh": "Mine Odyssey 环境与有序多站点导航任务构建。"},
       "caption": {"en": "Official Mine Odyssey overview spanning 30 reconstructed locations and task examples.", "zh": "Mine Odyssey 官方概览，展示 30 个重建地点与任务示例。"}
+    },
+    "P69": {
+      "kind": "image",
+      "url": "https://global.agilex.ai/cdn/shop/articles/PiPER_robotic_arm_enabled_by_GPT6-ASTRA_Jev_LLM.jpg?v=1791624400&width=1914",
+      "fit": "cover",
+      "source_url": "https://global.agilex.ai/cdn/shop/articles/PiPER_robotic_arm_enabled_by_GPT6-ASTRA_Jev_LLM.jpg?v=1791624400&width=1914",
+      "source_page_url": "https://global.agilex.ai/blogs/robotics/how-to-control-robotic-arm-with-gpt-6-astra-and-jev-llm-model",
+      "source_path": "Official AgileX Robotics article hero image checked 2026-10-12; the page embeds the associated public demonstration post.",
+      "classification": "AgileX-provided PiPER project image; not an independently reproduced run or a claim that Astra powered Runs 2–8.",
+      "source_id": "S134",
+      "alt": {"en": "AgileX PiPER robotic arm used in the Astra and Jev demonstration project.", "zh": "Astra 与 Jev 演示项目中使用的 AgileX PiPER 机械臂。"},
+      "caption": {"en": "Official AgileX Robotics image for the layered PiPER manipulation project.", "zh": "AgileX Robotics 官方 PiPER 分层操作项目图。"}
     }
   },
   "missing_policy": {
