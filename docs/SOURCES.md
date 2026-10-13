@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-12 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-13 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1202,3 +1202,39 @@ arXiv v1 submitted 2026-10-08T06:26:43Z and the official public repository defin
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-12
 
 AgileX Robotics' official article dated 2026-10-10 and the Apache-2.0 RobotKitAI repository document eight single-recording real-PiPER runs. GPT-6 Astra appears only in Run 1, where it receives camera images and selects a bounded skill for a cube-to-tray task; Runs 2–8 use Jev with local perception and geometry components. The repository has one commit authored 2026-09-19T10:05:48+02:00. Neither source reports repeated Astra trials or an Astra success rate, and the result was not independently reproduced.
+
+<a id="s135"></a>
+## S135 · RoboARCade repository, paper, leaderboard, and per-trial result indexes
+
+[https://roboarcade.org/](https://roboarcade.org/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-13
+
+The official site and public repository released on 2026-10-13 define 22 long-horizon simulated manipulation tasks. GPT-6 Astra xhigh runs through Codex for five trials per task under each of two interfaces. The leaderboard reports mean rubric-stage completion of 49.8% for VIA and 48.3% for multi-view RGBD over 110 trials each; task saturation is 7/22 and 8/22 respectively. The public result indexes expose per-trial seeds, simulator-state grades, tool calls, tokens, costs, and trace links. These are simulation results with interface and controller assistance; the catalogue did not independently rerun them.
+
+<a id="s136"></a>
+## S136 · SO-101 pen-in-bowl repository, real-robot logs, and published replay
+
+[https://github.com/ttpierson/SO101-pen-in-bowl](https://github.com/ttpierson/SO101-pen-in-bowl)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-13
+
+The 2026-10-12 repository update adds a physical SO-101 embodiment using openai/gpt-6-astra through OpenRouter, a wrist camera, calibrated joint limits, and a 3-degree-per-step slew limit. The first physical trial is operator-graded 0 after the model gives up at roughly 1,200 steps; the author attributes the failure partly to bowl occlusion and a poor scene setup. The eval-logs branch publishes the action log, transcript, and HTML replay. The repository's prominent GIF instead shows the scripted privileged-state simulation baseline and is not the Astra physical trial.
+
+<a id="s137"></a>
+## S137 · Embedded Astra Comparison repository and aggregate result figures
+
+[https://github.com/CouchPugtato/embedded-astra-comparison](https://github.com/CouchPugtato/embedded-astra-comparison)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-13
+
+The repository's 2026-10-11 commit publishes a ROS 2, Gazebo Harmonic, and MoveIt 2 Code-as-Policies benchmark plus aggregate figures. GPT-6 Astra High revises policy.py across one sequential 25-attempt run on a fixed reset scene and is reported at 8/25 complete successes and 27/50 target-cube placements, versus GPT-5.6 Sol at 2/25 and 20/50. Generated per-attempt public and private result directories are gitignored, so the aggregate numbers cannot be recomputed from this checkout. The result is simulation-only and not 25 independent tasks.
+
+<a id="s138"></a>
+## S138 · EmbodiedSkillBench public code release and manuscript result tables
+
+[https://github.com/HanZhi306/EmbodiedSkill-Bench](https://github.com/HanZhi306/EmbodiedSkill-Bench)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-13
+
+The public code release was created 2026-10-10 and reports GPT-6 Astra through Codex CLI 0.148.0 on Clean100: 25 LIBERO-Pro base tasks crossed with four perturbations at environment seed 26. Manuscript tables report 92% native-control success, 61% with fixed selected skills, 85% with Agent-Directed Reuse, and 81% with a Jev skill. Raw rollout archives, the 250-skill library, skill indexes, and standalone ADR/Jev experiment integrations are not included, so these values were not independently regenerated from the public checkout.

@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-12。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-13。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 57
+## 核心项目与评测 · 61
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1613,6 +1613,129 @@ code：[https://github.com/RobotKitAI/piper-astra-jev](https://github.com/RobotK
 post：[https://x.com/MarianPogran/status/2101179679319241076](https://x.com/MarianPogran/status/2101179679319241076)  
 
 **来源：** [S134 · AgileX PiPER Astra + Jev technical article and RobotKitAI repository](SOURCES.md#s134)
+
+---
+
+<a id="p70"></a>
+### P70 · RoboARCade · 智能体直接机器人控制基准
+
+RoboARCade 在 22 项长时程操作任务中让 Codex 驱动的 GPT-6 Astra 通过视觉交互界面或多视角 RGBD 接口直接选择末端执行器动作；每种接口公开 110 条逐次试验、同步轨迹和模拟器状态评分。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Satvik Sharma / RoboARCade  
+**事件日期：** 2026-10-13（窗口内）  
+**日期依据：** The public repository's initial commit was authored 2026-10-13T00:21:47Z; the official leaderboard and per-trial result indexes were checked the same day.  
+**入口：** [https://roboarcade.org/](https://roboarcade.org/)  
+**代码入口：** [https://github.com/Satvik1701/RoboARCade](https://github.com/Satvik1701/RoboARCade)  
+**许可状态：** 仓库未声明顶层许可证；README 逐项列出部分上游机器人与任务资产许可，论文、网站轨迹和其他资产不因此自动获得统一再分发许可。  
+**控制接口 / 作用：** 任务指令与视觉观测 → GPT-6 Astra xhigh（Codex）→ VIA 交互式视觉界面或多视角 RGBD 工具 → 末端位姿/夹爪目标 → 模拟器低层控制器执行 → 新观测与状态外评分
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| VIA mean rubric-stage completion | 49.8 % | 22 tasks × 5 trials = 110 simulation trials | GPT-6 Astra xhigh through Codex and the VIA interface; simulator-state rubric stages averaged across all tasks and trials |
+| Multi-view RGBD mean rubric-stage completion | 48.3 % | 22 tasks × 5 trials = 110 simulation trials | GPT-6 Astra xhigh through Codex and the multi-view RGBD interface; simulator-state rubric stages averaged across all tasks and trials |
+
+**限制与未决项：** 49.8% 与 48.3% 是分阶段 rubric 完成度，不是完整任务成功率；完整任务多数通过的饱和度分别只有 7/22 与 8/22。 两种接口分别提供交互式视觉工具或多视角 RGBD、机器人状态与末端 waypoint 命令，不能把成绩归因于裸模型或关节级实时控制。 每项任务只有 5 个固定 trial；部分任务沿用公开基准资产，训练污染与少样本方差仍可能影响比较。 本站核对了公开代码、排行榜、220 条 Astra 结果索引及可浏览轨迹，但未下载全部资产或复跑模型评测。
+
+project：[https://roboarcade.org/](https://roboarcade.org/)  
+paper：[https://roboarcade.org/assets/roboarcade.pdf](https://roboarcade.org/assets/roboarcade.pdf)  
+code：[https://github.com/Satvik1701/RoboARCade](https://github.com/Satvik1701/RoboARCade)  
+via_results：[https://roboarcade.org/run/gpt-6-astra-via/](https://roboarcade.org/run/gpt-6-astra-via/)  
+rgbd_results：[https://roboarcade.org/run/gpt-6-astra-rgbd/](https://roboarcade.org/run/gpt-6-astra-rgbd/)  
+
+**来源：** [S135 · RoboARCade repository, paper, leaderboard, and per-trial result indexes](SOURCES.md#s135)
+
+---
+
+<a id="p71"></a>
+### P71 · SO-101 Pen-in-Bowl · Astra 真机单次评测
+
+该 Inspect Robots 项目把 GPT-6 Astra 通过腕部相机与受限关节目标接口接到真实 SO-101 机械臂；2026-10-12 公布的首次 pen-in-bowl 试验在约 1,200 步后放弃并由操作员评为 0 分。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Thomas Pierson  
+**事件日期：** 2026-10-12（窗口内）  
+**日期依据：** The real-robot integration commit was authored 2026-10-12T17:48:35Z, and the published physical log records a run starting 2026-10-12T17:42:46Z.  
+**入口：** [https://github.com/ttpierson/SO101-pen-in-bowl](https://github.com/ttpierson/SO101-pen-in-bowl)  
+**代码入口：** [https://github.com/ttpierson/SO101-pen-in-bowl](https://github.com/ttpierson/SO101-pen-in-bowl)  
+**许可状态：** 仓库未声明顶层许可证；Inspect Robots 标注 MIT，但 SO-101、Isaac Lab、YCB 资产、日志与项目媒体分别适用其自身条款。  
+**控制接口 / 作用：** 真实 SO-101 腕部 RGB 相机与关节状态 → Inspect Robots agent 调用 openai/gpt-6-astra → 受关节限位与每步 3° slew limit 约束的绝对关节目标 → LeRobot 驱动执行 → 操作员终止并评分
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| First physical trial completion | 0 successes | 1 | One operator-graded real SO-101 pen-in-bowl trial using openai/gpt-6-astra through OpenRouter |
+
+**限制与未决项：** 只有一次真机试验且失败，不能估计成功率或与其他模型比较；作者明确指出碗遮挡腕部相机且场景布置不佳。 模型曾抓到碗沿而非笔，并在约 1,200 步后放弃；该记录说明接口与失败边界，不证明可靠操作能力。 README 顶部 GIF 和两路 MP4 展示的是特权状态脚本 IK 仿真基线，不是这次 Astra 真机轨迹；真机日志与 replay 单独发布。 本站核对了代码、主分支说明、eval-logs 分支、转录和公开 replay，但未连接 SO-101 或独立调用模型。
+
+code：[https://github.com/ttpierson/SO101-pen-in-bowl](https://github.com/ttpierson/SO101-pen-in-bowl)  
+results：[https://ttpierson.com/SO101-pen-in-bowl/](https://ttpierson.com/SO101-pen-in-bowl/)  
+physical_replay：[https://ttpierson.com/SO101-pen-in-bowl/adhoc_e4e77616.html](https://ttpierson.com/SO101-pen-in-bowl/adhoc_e4e77616.html)  
+logs：[https://github.com/ttpierson/SO101-pen-in-bowl/tree/eval-logs/logs_real](https://github.com/ttpierson/SO101-pen-in-bowl/tree/eval-logs/logs_real)  
+
+**来源：** [S136 · SO-101 pen-in-bowl repository, real-robot logs, and published replay](SOURCES.md#s136)
+
+---
+
+<a id="p72"></a>
+### P72 · Embedded Astra Comparison · 迭代式代码策略评测
+
+该 ROS 2 / Gazebo 基准让 GPT-6 Astra High 查看单目 RGB 与前次公开反馈，连续 25 次改写 Python 操作策略；作者报告 Astra 完成 8/25 次双方块入托盘任务，并完成 27/50 个目标方块放置。
+
+**来源等级：B** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Dylan Aulson  
+**事件日期：** 2026-10-11（窗口内）  
+**日期依据：** The repository commit that added the README, aggregate results, and figures was authored 2026-10-11T17:45:52Z.  
+**入口：** [https://github.com/CouchPugtato/embedded-astra-comparison](https://github.com/CouchPugtato/embedded-astra-comparison)  
+**代码入口：** [https://github.com/CouchPugtato/embedded-astra-comparison](https://github.com/CouchPugtato/embedded-astra-comparison)  
+**许可状态：** 仓库未声明顶层许可证；ROS 2、Gazebo、MoveIt 2、Franka 模型与其他依赖适用各自许可。  
+**控制接口 / 作用：** 固定 RGB 图像、提示与前次公开图像/动作日志/评分 → GPT-6 Astra High 在人工回合交接中改写 policy.py → MoveIt 2 碰撞检查的 Cartesian move/gripper API → Gazebo 执行与私有位姿评分
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Complete task success | 8 successes | 25 | One sequential 25-attempt Astra High run on the same reset scene, with prior public feedback available between attempts |
+| Target-cube placements | 27 successes | 50 | Two required target cubes per attempt across the same sequential 25-attempt Astra High run |
+
+**限制与未决项：** 25 次尝试共享同一固定重置场景，模型会依据前次反馈改写策略，因此不是 25 个独立任务或独立同分布样本。 仓库提交了运行器、评分逻辑、提示与汇总图，但生成的公开/私有逐次结果目录被忽略，无法从当前 checkout 独立重算 8/25 与 27/50。 策略代码通过高层、碰撞检查的 Cartesian API 控制仿真 Franka，不是模型在线输出关节或电机命令。 结果只有每个模型一条 25 回合序列，没有跨 seed 置信区间；本站未复跑 Gazebo 与模型调用。
+
+code：[https://github.com/CouchPugtato/embedded-astra-comparison](https://github.com/CouchPugtato/embedded-astra-comparison)  
+results_figure：[https://github.com/CouchPugtato/embedded-astra-comparison/blob/d9088a425d2171748ff1578d13db26b2f3179da0/docs/figures/sucsess_rate.png](https://github.com/CouchPugtato/embedded-astra-comparison/blob/d9088a425d2171748ff1578d13db26b2f3179da0/docs/figures/sucsess_rate.png)  
+
+**来源：** [S137 · Embedded Astra Comparison repository and aggregate result figures](SOURCES.md#s137)
+
+---
+
+<a id="p73"></a>
+### P73 · EmbodiedSkillBench · 具身技能复用效用评测
+
+EmbodiedSkillBench 在 100 个 LIBERO-Pro 扰动任务上比较 GPT-6 Astra 的原生控制、固定技能、Agent-Directed Reuse 与 Jev 技能模式；作者报告原生控制 92% 成功，而 ADR 以 85% 成功换取 14.1% token 与 11.9% 时间下降。
+
+**来源等级：B** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** HanZhi306 / EmbodiedSkillBench contributors  
+**事件日期：** 2026-10-10（窗口内）  
+**日期依据：** The initial public code release was authored 2026-10-10T10:17:06Z and followed by an overview-caption update at 2026-10-10T10:49:50Z.  
+**入口：** [https://github.com/HanZhi306/EmbodiedSkill-Bench](https://github.com/HanZhi306/EmbodiedSkill-Bench)  
+**代码入口：** [https://github.com/HanZhi306/EmbodiedSkill-Bench](https://github.com/HanZhi306/EmbodiedSkill-Bench)  
+**许可状态：** 仓库未声明顶层许可证；LIBERO、LIBERO-Pro、RPent、PyRoKi、CaP-X 与模型 CLI 等依赖和数据适用各自条款，论文的 250 个技能包未随仓库发布。  
+**控制接口 / 作用：** 任务观测 → GPT-6 Astra（Codex CLI 0.148.0）选择原生控制或读取/调用技能 → 类型化 P3 关节位置控制与经审计的 PyRoKi IK → LIBERO-Pro 执行 → 官方最终状态与轨迹计量
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Native-control task success | 92 % | 100 Clean100 task cases | GPT-6 Astra native control on 25 LIBERO-Pro base tasks × four perturbations at environment seed 26 |
+| Agent-Directed Reuse task success | 85 % | 100 Clean100 task cases | GPT-6 Astra retains native control and decides whether to invoke, modify, combine, or ignore supplied skills |
+| Fixed selected-skill task success | 61 % | 100 Clean100 task cases | GPT-6 Astra receives the manuscript's task-specific selected skill sets |
+| Jev-skill task success | 81 % | 100 Clean100 task cases | GPT-6 Astra delegates local motion decisions through the manuscript's Jev skill integration |
+
+**限制与未决项：** 这些是手稿报告值；原始 rollout archive、250 个技能包、技能索引与源资源快照未公开，当前仓库不能独立重算主要表格。 所有 100 个 case 使用环境 seed 26，四种模式不是跨多 seed 的可靠性估计；92% 也不代表物理机器人成功率。 公开 launcher 支持原生控制与本地技能包，但独立 ADR 与 Jev 实验集成未包含在代码发布中。 技能由不同动作、感知与经验模块组成，成绩属于完整模型、CLI、技能选择、IK 与仿真器组合；本站只运行离线校验，未复跑模型评测。
+
+code：[https://github.com/HanZhi306/EmbodiedSkill-Bench](https://github.com/HanZhi306/EmbodiedSkill-Bench)  
+results：[https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/results.md](https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/results.md)  
+release_scope：[https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/release-scope.md](https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/release-scope.md)  
+
+**来源：** [S138 · EmbodiedSkillBench public code release and manuscript result tables](SOURCES.md#s138)
 
 ---
 

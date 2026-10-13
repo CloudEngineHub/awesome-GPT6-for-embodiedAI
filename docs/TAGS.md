@@ -93,6 +93,10 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | P67 | real, sim | control |
 | P68 | sim | evaluation |
 | P69 | real | control |
+| P70 | sim | evaluation |
+| P71 | real | evaluation |
+| P72 | sim | evaluation, code-generation |
+| P73 | sim | evaluation |
 | X01 | real | control |
 | X02 | real | control |
 | X03 | real | control |

@@ -693,5 +693,33 @@
     "basis": "AgileX Robotics' official technical article is dated 2026-10-10.",
     "rule": null,
     "uncertainty": "This is the official article date; the repository's only commit and the recorded physical runs predate publication."
+  },
+  "P70": {
+    "date": "2026-10-13",
+    "status": "verified",
+    "basis": "The public repository's initial commit was authored 2026-10-13T00:21:47Z.",
+    "rule": null,
+    "uncertainty": "Repository publication date; benchmark design, model trials, paper preparation, and website generation occurred earlier."
+  },
+  "P71": {
+    "date": "2026-10-12",
+    "status": "verified",
+    "basis": "The real-robot integration commit was authored 2026-10-12T17:48:35Z, and the published log identifies the physical run from the same date.",
+    "rule": null,
+    "uncertainty": "Public integration date; simulation task development and the physical setup predate the commit."
+  },
+  "P72": {
+    "date": "2026-10-11",
+    "status": "verified",
+    "basis": "The commit adding the README, aggregate results, and figures was authored 2026-10-11T17:45:52Z.",
+    "rule": null,
+    "uncertainty": "Public result-commit date; the sequential evaluation attempts occurred before publication."
+  },
+  "P73": {
+    "date": "2026-10-10",
+    "status": "verified",
+    "basis": "The initial public code release was authored 2026-10-10T10:17:06Z.",
+    "rule": null,
+    "uncertainty": "Repository publication date; manuscript experiments and construction of the undistributed skill corpus occurred earlier."
   }
 }

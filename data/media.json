@@ -1342,6 +1342,54 @@
       "source_id": "S134",
       "alt": {"en": "AgileX PiPER robotic arm used in the Astra and Jev demonstration project.", "zh": "Astra 与 Jev 演示项目中使用的 AgileX PiPER 机械臂。"},
       "caption": {"en": "Official AgileX Robotics image for the layered PiPER manipulation project.", "zh": "AgileX Robotics 官方 PiPER 分层操作项目图。"}
+    },
+    "P70": {
+      "kind": "image",
+      "url": "https://roboarcade.org/assets/hero/mosaic-v5.webp",
+      "fit": "cover",
+      "source_url": "https://roboarcade.org/assets/hero/mosaic-v5.webp",
+      "source_page_url": "https://roboarcade.org/",
+      "source_path": "Official RoboARCade homepage poster for the animated multi-task trace mosaic, checked 2026-10-13.",
+      "classification": "Author-provided composite of benchmark task traces; it is a benchmark overview, not one Astra trial or an independently reproduced result.",
+      "source_id": "S135",
+      "alt": {"en": "RoboARCade mosaic of long-horizon simulated robot manipulation tasks.", "zh": "RoboARCade 长时程仿真机器人操作任务轨迹拼图。"},
+      "caption": {"en": "Official RoboARCade benchmark trace mosaic poster.", "zh": "RoboARCade 官方基准轨迹拼图封面。"}
+    },
+    "P71": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/ttpierson/SO101-pen-in-bowl/981a77a3c16112f2fab564ae556af78fefc6f860/media/demo.gif",
+      "fit": "cover",
+      "source_url": "https://github.com/ttpierson/SO101-pen-in-bowl/blob/981a77a3c16112f2fab564ae556af78fefc6f860/media/demo.gif",
+      "source_page_url": "https://github.com/ttpierson/SO101-pen-in-bowl",
+      "source_path": "Official repository demo GIF at reviewed commit 981a77a3c16112f2fab564ae556af78fefc6f860, checked 2026-10-13.",
+      "classification": "Author-provided scripted-IK simulation baseline for the same pen-in-bowl task; not the failed GPT-6 Astra physical trial, whose replay is linked on the card.",
+      "source_id": "S136",
+      "alt": {"en": "Simulated SO-101 scripted baseline placing a pen into a bowl from overhead and wrist views.", "zh": "仿真 SO-101 脚本基线从顶视与腕部视角将笔放入碗中。"},
+      "caption": {"en": "Official task demo using the scripted simulation baseline; the Astra physical replay is linked separately.", "zh": "官方任务动图使用脚本仿真基线；Astra 真机 replay 另行链接。"}
+    },
+    "P72": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/CouchPugtato/embedded-astra-comparison/d9088a425d2171748ff1578d13db26b2f3179da0/docs/figures/sucsess_rate.png",
+      "fit": "contain",
+      "source_url": "https://github.com/CouchPugtato/embedded-astra-comparison/blob/d9088a425d2171748ff1578d13db26b2f3179da0/docs/figures/sucsess_rate.png",
+      "source_page_url": "https://github.com/CouchPugtato/embedded-astra-comparison",
+      "source_path": "Official aggregate task-success figure at the sole reviewed result commit d9088a425d2171748ff1578d13db26b2f3179da0.",
+      "classification": "Author-provided aggregate plot for one sequential 25-attempt run per model; raw per-attempt result directories are not committed and the plot was not independently regenerated.",
+      "source_id": "S137",
+      "alt": {"en": "Aggregate success comparison for Astra and Sol across sequential manipulation-policy attempts.", "zh": "Astra 与 Sol 在连续操作策略尝试中的汇总成功率对比。"},
+      "caption": {"en": "Official aggregate success figure for the fixed-scene iterative evaluation.", "zh": "固定场景迭代评测的官方汇总成功率图。"}
+    },
+    "P73": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/HanZhi306/EmbodiedSkill-Bench/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/images/benchmark-overview.png",
+      "fit": "contain",
+      "source_url": "https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/images/benchmark-overview.png",
+      "source_page_url": "https://github.com/HanZhi306/EmbodiedSkill-Bench",
+      "source_path": "Official benchmark overview at reviewed commit 3a6c645aac388eeff0a41dc2bb42174f55e3472b.",
+      "classification": "Author-provided system overview of resource collection, skill assembly, agent execution, and evaluation; not a rollout frame or independently reproduced result chart.",
+      "source_id": "S138",
+      "alt": {"en": "EmbodiedSkillBench pipeline for resource modules, skill assembly, simulated interaction, and evaluation.", "zh": "EmbodiedSkillBench 的资源模块、技能组装、仿真交互与评测流程。"},
+      "caption": {"en": "Official EmbodiedSkillBench system overview.", "zh": "EmbodiedSkillBench 官方系统概览图。"}
     }
   },
   "missing_policy": {

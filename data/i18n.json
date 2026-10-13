@@ -416,6 +416,26 @@
       "title": "PiPER Astra + Jev · Layered Real-Robot Manipulation Demos",
       "summary": "RobotKitAI combines multimodal models, visual perception, grasp planning, and PiPER control in layers; in Run 1, GPT-6 Astra reads camera images and selects bounded skills to place a cube in a tray.",
       "detail": "Only Run 1 uses Astra; Runs 2–8 use Jev with local perception or geometry. Every notebook was recorded once, no Astra success rate is reported, and the model does not command motors or joints directly."
+    },
+    "P70": {
+      "title": "RoboARCade · Benchmarking Direct Agentic Robot Control",
+      "summary": "RoboARCade lets GPT-6 Astra running through Codex choose end-effector actions on 22 long-horizon simulation tasks through either an interactive visual interface or multi-view RGBD tools, with 110 public trials per interface.",
+      "detail": "The reported 49.8% and 48.3% values are mean rubric-stage completion, not full-task success rates; only 7/22 and 8/22 tasks respectively have a majority of trials fully solved, and the catalogue did not rerun the benchmark."
+    },
+    "P71": {
+      "title": "SO-101 Pen-in-Bowl · One Physical Astra Evaluation",
+      "summary": "This Inspect Robots project connects GPT-6 Astra to a physical SO-101 through a wrist camera and bounded joint targets; the first published trial ends after roughly 1,200 steps and receives an operator grade of zero.",
+      "detail": "This is one failed trial, not a success-rate estimate. The prominent project GIF shows a privileged-state scripted simulation baseline rather than the Astra physical run; the action log, transcript, and real replay are published separately."
+    },
+    "P72": {
+      "title": "Embedded Astra Comparison · Iterative Code-as-Policy Evaluation",
+      "summary": "In this ROS 2 and Gazebo benchmark, GPT-6 Astra High reviews monocular RGB and prior public feedback while revising a Python manipulation policy over 25 attempts; the authors report 8/25 complete successes and 27/50 target placements.",
+      "detail": "All attempts share one fixed reset scene and form one feedback-linked sequence. The repository publishes the harness, grader, prompts, and aggregate figures, but gitignores the generated per-attempt results needed to recompute the reported totals."
+    },
+    "P73": {
+      "title": "EmbodiedSkillBench · Measuring the Utility of Reusable Embodied Skills",
+      "summary": "EmbodiedSkillBench compares GPT-6 Astra native control, fixed skills, Agent-Directed Reuse, and a Jev skill over 100 perturbed LIBERO-Pro cases; the manuscript reports 92% native success and 85% for ADR with lower token and time use.",
+      "detail": "The public release omits raw rollouts, the 250-skill library, skill indexes, and standalone ADR and Jev integrations, so the manuscript tables cannot be independently regenerated from this checkout; all results are simulation-only at one environment seed."
     }
   }
 }
