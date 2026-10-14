@@ -112,3 +112,7 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | X13 | sim | replay, control |
 | X14 | sim | environment-building, rl-training |
 | X15 | real | control |
+| P74 | sim | evaluation |
+| P75 | sim | evaluation |
+| P76 | real | control |
+| X16 | sim | environment-building, rl-training |

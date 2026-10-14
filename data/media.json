@@ -1390,6 +1390,54 @@
       "source_id": "S138",
       "alt": {"en": "EmbodiedSkillBench pipeline for resource modules, skill assembly, simulated interaction, and evaluation.", "zh": "EmbodiedSkillBench 的资源模块、技能组装、仿真交互与评测流程。"},
       "caption": {"en": "Official EmbodiedSkillBench system overview.", "zh": "EmbodiedSkillBench 官方系统概览图。"}
+    },
+    "P74": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/hamzmu/astra-opus-libero-loho/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/plots/completion_percent.png",
+      "fit": "contain",
+      "source_url": "https://github.com/hamzmu/astra-opus-libero-loho/blob/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/plots/completion_percent.png",
+      "source_page_url": "https://github.com/hamzmu/astra-opus-libero-loho",
+      "source_path": "Official mean final-goal-completion plot at reviewed commit a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a.",
+      "classification": "Author-provided aggregate plot over five retained episodes per model/task; not an independently rerun result.",
+      "source_id": "S139",
+      "alt": {"en": "Mean final goal completion for Astra and Opus on three LIBERO-LoHo tasks.", "zh": "Astra 与 Opus 在三个 LIBERO-LoHo 任务上的平均最终目标完成度。"},
+      "caption": {"en": "Official comparison plot for the retained LIBERO-LoHo episodes.", "zh": "保留的 LIBERO-LoHo 试验官方对比图。"}
+    },
+    "P75": {
+      "kind": "image",
+      "url": "assets/posters/P75-robomme-waypoint-title.svg",
+      "fit": "cover",
+      "source_url": "https://github.com/jackbjed/embodied-astra-robomme",
+      "source_page_url": "https://github.com/jackbjed/embodied-astra-robomme",
+      "source_path": "Site-made typographic cover created 2026-10-14 after the repository was confirmed to omit the model-input images and episode videos.",
+      "classification": "Site-made text cover using the project name and disclosed protocol; not project media, a rollout frame, or experimental evidence.",
+      "source_id": "S140",
+      "alt": {"en": "Text cover reading Embodied Astra on RoboMME and End-to-End Waypoint Policy.", "zh": "写有 Embodied Astra on RoboMME 与 End-to-End Waypoint Policy 的文字封面。"},
+      "caption": {"en": "Site-made text cover because public rollout images and videos are unavailable.", "zh": "因公开仓库未提供 rollout 图像和视频，本站制作文字封面。"}
+    },
+    "P76": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/Ticotico410/r1a7_gpt6_control/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/demo_cover.jpg",
+      "fit": "cover",
+      "source_url": "https://github.com/Ticotico410/r1a7_gpt6_control/blob/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/demo.mp4",
+      "source_page_url": "https://github.com/Ticotico410/r1a7_gpt6_control",
+      "source_path": "Repository-provided cover for the official 30.1-second 3200x1080 H.264 author demo at reviewed commit 97bb73274b18fb95fa99e59852efb51b0c01e22d.",
+      "classification": "Author-provided physical-robot demo cover; not a repeated-trial evaluation or independently reproduced run.",
+      "source_id": "S141",
+      "alt": {"en": "Unitree R1-A7 author demonstration of a camera-guided grasp and transfer.", "zh": "Unitree R1-A7 相机引导抓取与搬运的作者演示。"},
+      "caption": {"en": "Official repository demo; no public rollout log or repeated-trial count accompanies it.", "zh": "仓库官方演示；未同时公开 rollout 日志或重复试验数。"}
+    },
+    "X16": {
+      "kind": "image",
+      "url": "https://pbs.twimg.com/amplify_video_thumb/2110057077901238272/img/I4Y7F3t8OYoL5wQA.jpg",
+      "fit": "cover",
+      "source_url": "https://x.com/memmelma/status/2110057174609330316",
+      "source_page_url": "https://x.com/memmelma/status/2110057174609330316",
+      "source_path": "Original-post video thumbnail recovered from public embed metadata for exact status 2110057174609330316 on 2026-10-14; the card links the post containing the video.",
+      "classification": "Author-posted simulation-montage thumbnail; the 25/25/5 counts are author reports and not independently audited task outcomes.",
+      "source_id": "S142",
+      "alt": {"en": "Author montage of Astra-generated simulation environments, tasks, and robot embodiments.", "zh": "Astra 生成仿真环境、任务与机器人 embodiment 的作者汇总视频。"},
+      "caption": {"en": "Original-post montage; the author's follow-up discloses reuse and shortcut failure modes.", "zh": "原帖汇总视频；作者后续帖披露复用与取巧失败模式。"}
     }
   },
   "missing_policy": {

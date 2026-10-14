@@ -721,5 +721,33 @@
     "basis": "The initial public code release was authored 2026-10-10T10:17:06Z.",
     "rule": null,
     "uncertainty": "Repository publication date; manuscript experiments and construction of the undistributed skill corpus occurred earlier."
+  },
+  "P74": {
+    "date": "2026-10-13",
+    "status": "verified",
+    "basis": "The reviewed public comparison commit was authored 2026-10-13T11:25:57-04:00.",
+    "rule": null,
+    "uncertainty": "Public result-commit date; the retained model runs were recorded on October 11 and 12."
+  },
+  "P75": {
+    "date": "2026-10-11",
+    "status": "verified",
+    "basis": "The reviewed release commit was authored 2026-10-11T22:16:59-04:00, and the retained evaluation records are dated 2026-10-11 UTC.",
+    "rule": null,
+    "uncertainty": "Public release/evaluation date; harness development and the earlier test-split run predate it."
+  },
+  "P76": {
+    "date": "2026-10-12",
+    "status": "verified",
+    "basis": "The public repository was created 2026-10-12T08:57:03Z and its reviewed main-branch commit was authored the same UTC day.",
+    "rule": null,
+    "uncertainty": "Repository publication date; the physical setup and any unshared runs may predate publication."
+  },
+  "X16": {
+    "date": "2026-10-13",
+    "status": "verified",
+    "basis": "Exact X status 2110057174609330316 has public embed timestamp 2026-10-13T17:16:48Z.",
+    "rule": null,
+    "uncertainty": "Original-post timestamp; the reported 23-hour generation run began earlier."
   }
 }

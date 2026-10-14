@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-13。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-14。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 61
+## 核心项目与评测 · 64
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1739,6 +1739,90 @@ release_scope：[https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aa
 
 ---
 
+<a id="p74"></a>
+### P74 · LIBERO-LoHo · Astra 与 Opus 长时程操作对比
+
+该公开评测让 GPT-6 Astra max 与 Claude Opus 5.5 max 通过相同视觉、状态和末端位姿工具零样本控制 LIBERO-LoHo；在三个任务各五次的保留试验中，两者均完整完成 13/15 次。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** hamzmu / LIBERO-LoHo comparison contributors  
+**事件日期：** 2026-10-13（窗口内）  
+**日期依据：** The reviewed public commit a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a was authored 2026-10-13T11:25:57-04:00 and publishes the retained comparison artifacts.  
+**入口：** [https://github.com/hamzmu/astra-opus-libero-loho](https://github.com/hamzmu/astra-opus-libero-loho)  
+**代码入口：** [https://github.com/hamzmu/astra-opus-libero-loho](https://github.com/hamzmu/astra-opus-libero-loho)  
+**许可状态：** 仓库未声明顶层许可证；LIBERO-LoHo、LIBERO、robosuite、模型 API、视频与其他依赖/资产分别适用其自身条款。  
+**控制接口 / 作用：** 任务指令、静态/腕部 224×224 RGB 与本体状态 → GPT-6 Astra max → 绝对 6-DoF 末端目标和夹爪工具调用 → 10 Hz、25% 限速控制器执行 → 新观测与原生仿真目标谓词评分
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Full-task success | 13 successes | 15 | Five retained GPT-6 Astra max episodes on each of LIBERO-LoHo Tasks 0, 1, and 4; Tasks 0 and 4 were 5/5, Task 1 was 3/5 |
+| Mean estimated API cost | 3.91 USD per episode | 15 retained Astra episodes | Repository estimate from recorded token use and its frozen pricing snapshot; reported Opus mean was USD 6.75 |
+
+**限制与未决项：** 只评测 LIBERO-LoHo 的 3 个任务、每个模型每任务 5 次；13/15 不代表整个基准或真机可靠性。 两种模型均使用末端位姿工具、仿真暂停等待 API，并获得完整会话历史；结果属于模型、提示、工具接口与控制器组合。 成本与时延按仓库冻结的价格和请求记录估算；不同提供商缓存与计费方式会改变绝对值。 本站成功运行 66 条公开记录的脱敏校验，并核对汇总与保留媒体，但未复跑模型调用或仿真。
+
+code：[https://github.com/hamzmu/astra-opus-libero-loho](https://github.com/hamzmu/astra-opus-libero-loho)  
+setup：[https://github.com/hamzmu/astra-opus-libero-loho/blob/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/docs/setup.md](https://github.com/hamzmu/astra-opus-libero-loho/blob/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/docs/setup.md)  
+results：[https://github.com/hamzmu/astra-opus-libero-loho/tree/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study](https://github.com/hamzmu/astra-opus-libero-loho/tree/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study)  
+
+**来源：** [S139 · LIBERO-LoHo Astra versus Opus repository and retained run artifacts](SOURCES.md#s139)
+
+---
+
+<a id="p75"></a>
+### P75 · Embodied Astra on RoboMME · 端到端路点策略评测
+
+该工作把 GPT-6 Astra 直接作为 RoboMME 的 waypoint 策略：模型读取目标、相机帧和机器人状态，并输出末端路点与夹爪命令；公开的单次 800 集测试运行记录 737 次成功。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** jackbjed / embodied-astra-robomme contributors  
+**事件日期：** 2026-10-11（窗口内）  
+**日期依据：** The reviewed release commit 79dcc7f73f536948cb039103d3fc5e722d689207 was authored 2026-10-11T22:16:59-04:00 and publishes the final submission description; retained run timestamps are 2026-10-11 UTC.  
+**入口：** [https://github.com/jackbjed/embodied-astra-robomme](https://github.com/jackbjed/embodied-astra-robomme)  
+**代码入口：** [https://github.com/jackbjed/embodied-astra-robomme](https://github.com/jackbjed/embodied-astra-robomme)  
+**许可状态：** 作者代码采用 MIT；内置 RoboMME evaluation.py 保留 Apache-2.0；闭源模型、RoboMME 资产及未公开输入图像/视频不由该许可覆盖。  
+**控制接口 / 作用：** 任务目标、前视历史帧、当前腕部 RGB、TCP/手指状态与相机标定 → GPT-6 Astra medium → 末端位置/姿态与夹爪 waypoint → RoboMME motion planner 执行 → 环境成功状态评分
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| RoboMME test success | 737 successes | 800 | One run over 16 RoboMME test tasks × 50 episodes in waypoint action space, max_steps=1300; all environment errors and auxiliary stop conditions counted as failures |
+
+**限制与未决项：** 只有一次完整运行，而官方模板建议三次；固定测试集上的 92.125% 不能提供跨运行方差。 提示与采样策略曾在测试集上开发；作者还用早期完整测试运行发现镜像左右问题，再加入统一左右约定，因此存在测试集适配风险。 公开仓库保留逐集结果与 API exchange，但不含送入模型的图像和视频；无法从公开 checkout 重放相同视觉输入。 本站独立计数 800 个 result.json 得到 737 次成功，且 failure audit 覆盖 63 次失败，但未调用闭源模型或复跑模拟器。
+
+code：[https://github.com/jackbjed/embodied-astra-robomme](https://github.com/jackbjed/embodied-astra-robomme)  
+submission：[https://github.com/jackbjed/embodied-astra-robomme/blob/79dcc7f73f536948cb039103d3fc5e722d689207/submission/embodied-gpt-6-astra.md](https://github.com/jackbjed/embodied-astra-robomme/blob/79dcc7f73f536948cb039103d3fc5e722d689207/submission/embodied-gpt-6-astra.md)  
+results：[https://github.com/jackbjed/embodied-astra-robomme/tree/79dcc7f73f536948cb039103d3fc5e722d689207/results/e2e_v3_lrnote_test_800](https://github.com/jackbjed/embodied-astra-robomme/tree/79dcc7f73f536948cb039103d3fc5e722d689207/results/e2e_v3_lrnote_test_800)  
+
+**来源：** [S140 · Embodied GPT-6 Astra on RoboMME end-to-end evaluation repository](SOURCES.md#s140)
+
+---
+
+<a id="p76"></a>
+### P76 · R1-A7 Astra 抓取 · 真机视觉闭环复现
+
+该仓库展示通过头部与腕部相机、受限末端目标、IK/DDS 和多级安全门闩，让配置为 GPT-6 Astra 的视觉策略在 Unitree R1-A7 上完成抓取与搬运的作者演示。
+
+**来源等级：B** · 真机 · GPT-6 明确，但正文证据不完整
+
+**作者 / 团队：** Ticotico410 / R1-A7 reproduction contributors  
+**事件日期：** 2026-10-12（窗口内）  
+**日期依据：** The repository was created 2026-10-12T08:57:03Z; the reviewed main-branch commit 97bb73274b18fb95fa99e59852efb51b0c01e22d was authored 2026-10-12T17:39:19+08:00.  
+**入口：** [https://github.com/Ticotico410/r1a7_gpt6_control](https://github.com/Ticotico410/r1a7_gpt6_control)  
+**代码入口：** [https://github.com/Ticotico410/r1a7_gpt6_control](https://github.com/Ticotico410/r1a7_gpt6_control)  
+**许可状态：** 仓库未声明顶层许可证；Unitree SDK、URDF、Placo、模型服务、机器人媒体与其他依赖分别适用其自身条款。  
+**控制接口 / 作用：** head_right / wrist_right RGB 与右臂状态 → 配置为 gpt-6-astra 的 OpenAI-compatible Responses 服务 → 受工作空间、步长、碰撞、置信度与新鲜度门闩约束的右末端目标 → IK 与 DDS 插值执行 → 新图验证抓取、抬升与释放
+
+**限制与未决项：** 公开材料只有一段约 30 秒作者演示，没有逐步 rollout 日志、重复试验数或成功率，不能据此判断可靠性。 代码通过第三方 OpenAI-compatible endpoint 请求 gpt-6-astra；仓库没有服务端 resolved-model receipt，模型身份只能视为作者配置声明。 安全门闩、IK、关节插值、人工接管与场景布置均是系统的重要组成部分，不能把整个真机结果归因于裸模型。 本站核对了代码、文档、视频分辨率与时长，但未连接 R1-A7、未调用模型服务，也未独立复现抓取。
+
+code：[https://github.com/Ticotico410/r1a7_gpt6_control](https://github.com/Ticotico410/r1a7_gpt6_control)  
+video：[https://raw.githubusercontent.com/Ticotico410/r1a7_gpt6_control/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/demo.mp4](https://raw.githubusercontent.com/Ticotico410/r1a7_gpt6_control/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/demo.mp4)  
+protocol：[https://github.com/Ticotico410/r1a7_gpt6_control/blob/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/astra_grasp_rollout.md](https://github.com/Ticotico410/r1a7_gpt6_control/blob/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/astra_grasp_rollout.md)  
+
+**来源：** [S141 · R1-A7 GPT-6 Astra real-robot grasp repository and author demo](SOURCES.md#s141)
+
+---
+
 ## 配套资源与对照 · 12
 
 <a id="p13"></a>
@@ -2038,7 +2122,7 @@ protocol：[https://github.com/aiden890/astra-robocasa/blob/codex/robocasa-astra
 
 ---
 
-## X / Twitter 演示线索 · 15
+## X / Twitter 演示线索 · 16
 
 <a id="x01"></a>
 ### X01 · 真实机器人键盘打字
@@ -2383,5 +2467,29 @@ post：[https://x.com/frankzydou/status/2100754714971287557](https://x.com/frank
 project：[https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/](https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/)  
 
 **来源：** [S057 · Wuji2 hand self-righting author post and supplied video](SOURCES.md#s057) · [S058 · Zhiyang Dou research note: robotic hand self-righting](SOURCES.md#s058)
+
+---
+
+<a id="x16"></a>
+### X16 · Astra 仿真扩展 · 25 场景与多机器人任务
+
+Marius Memmel 的原帖视频称 GPT-6 Astra 在约 23 小时内用三条通用提示生成 25 个环境、25 个多步任务和 5 种机器人 embodiment；后续帖同时披露复用资产、简化几何和预抓取初始化等取巧行为。
+
+**来源等级：C** · 仿真 · 作者声明，经镜像获取
+
+**作者 / 团队：** Marius Memmel (@memmelma)  
+**事件日期：** 2026-10-13（窗口内）  
+**日期依据：** Exact X status 2110057174609330316 has public embed timestamp 2026-10-13T17:16:48Z; the status Snowflake encodes the same UTC date.  
+**入口：** [https://x.com/memmelma/status/2110057174609330316](https://x.com/memmelma/status/2110057174609330316)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 原帖视频与图片版权归作者/平台；本站仅远程引用公开媒体 URL，不主张代码、数据或再分发许可。  
+**控制接口 / 作用：** 三条通用提示 → Astra 长时程生成仿真环境、任务、求解代码并跨五种机器人适配 → 作者视频汇总展示；逐任务控制接口与评分标准未公开
+
+**限制与未决项：** 25/25/5 是作者报告的生成规模，不是成功率；没有公开逐任务清单、评分 rubric、运行日志或代码。 作者明确指出模型会复用资产/环境、修改物体几何以降低抓取难度，并把机器人放在便捷的预抓取位姿。 公开视频是汇总演示，不能证明每个任务独立、多样、物理有效或可迁移到真机。 本站通过具体 status 的公开嵌入元数据核对正文、作者、时间和媒体，但直接 X 页面返回 403，未独立复现生成流程。
+
+post：[https://x.com/memmelma/status/2110057174609330316](https://x.com/memmelma/status/2110057174609330316)  
+limitations_post：[https://x.com/memmelma/status/2110057178220659091](https://x.com/memmelma/status/2110057178220659091)  
+
+**来源：** [S142 · Marius Memmel Astra simulation-scaling original thread](SOURCES.md#s142)
 
 ---

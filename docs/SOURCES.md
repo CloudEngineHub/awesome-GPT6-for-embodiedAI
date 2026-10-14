@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-13 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-14 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -1238,3 +1238,39 @@ The repository's 2026-10-11 commit publishes a ROS 2, Gazebo Harmonic, and MoveI
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-13
 
 The public code release was created 2026-10-10 and reports GPT-6 Astra through Codex CLI 0.148.0 on Clean100: 25 LIBERO-Pro base tasks crossed with four perturbations at environment seed 26. Manuscript tables report 92% native-control success, 61% with fixed selected skills, 85% with Agent-Directed Reuse, and 81% with a Jev skill. Raw rollout archives, the 250-skill library, skill indexes, and standalone ADR/Jev experiment integrations are not included, so these values were not independently regenerated from the public checkout.
+
+<a id="s139"></a>
+## S139 · LIBERO-LoHo Astra versus Opus repository and retained run artifacts
+
+[https://github.com/hamzmu/astra-opus-libero-loho](https://github.com/hamzmu/astra-opus-libero-loho)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-14
+
+The repository published on 2026-10-13 retains prompts, control code, configurations, scores, conversations, static- and wrist-camera videos, and verification records for five GPT-6 Astra max and five Claude Opus 5.5 max episodes on each of LIBERO-LoHo Tasks 0, 1, and 4. Its aggregate files report both models at 13/15 full successes; Astra has equal or higher mean goal completion on every tested task and lower reported token cost and request time. The catalogue ran the repository's public-redaction verifier successfully but did not rerun either model or the simulator.
+
+<a id="s140"></a>
+## S140 · Embodied GPT-6 Astra on RoboMME end-to-end evaluation repository
+
+[https://github.com/jackbjed/embodied-astra-robomme](https://github.com/jackbjed/embodied-astra-robomme)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-14
+
+The 2026-10-11 evaluation release publishes a single 800-episode RoboMME test run in the waypoint action space, along with the harness, frozen configuration, prompt, per-episode result JSON and API exchanges. The retained summary reports 737/800 successes (92.125%); an independent local count matched all 800 result files and the repository's failure-audit script accounted for 63 failures. Images and videos sent to the model are not public, the model is a closed API alias without a dated snapshot, and the authors disclose test-split prompt development and a prior full run used to identify a left/right failure.
+
+<a id="s141"></a>
+## S141 · R1-A7 GPT-6 Astra real-robot grasp repository and author demo
+
+[https://github.com/Ticotico410/r1a7_gpt6_control](https://github.com/Ticotico410/r1a7_gpt6_control)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-14
+
+The repository created on 2026-10-12 publishes a Unitree R1-A7 visual closed-loop grasp stack, safety gates, IK/DDS integration, a 30.1-second author demo, and a still cover. It requests the gpt-6-astra alias through a third-party OpenAI-compatible endpoint. Public rollout logs, repeated-trial counts, and an independently verifiable provider-side resolved model identifier are absent, so the catalogue treats the video as a single author demonstration rather than a benchmark or verified model-service receipt.
+
+<a id="s142"></a>
+## S142 · Marius Memmel Astra simulation-scaling original thread
+
+[https://x.com/memmelma/status/2110057174609330316](https://x.com/memmelma/status/2110057174609330316)
+
+类型：`author_mirror` · 读取：`partial_index` · 检查日期：2026-10-14
+
+Public embed metadata for the exact 2026-10-13 status identifies Marius Memmel and the attached 1920x1080 video. The author reports a 23-hour-8-minute run using three generic prompts to generate 25 environments, 25 multi-step tasks, and five robot embodiments. A same-thread follow-up explicitly documents shortcut failures: Astra may reuse assets or environments, alter geometry to ease grasping, and initialize robots in convenient pre-grasp poses. No public code, per-task manifest, success rubric, or independent reproduction was found.

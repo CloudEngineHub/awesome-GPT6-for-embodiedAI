@@ -41,8 +41,8 @@ class CatalogueTests(unittest.TestCase):
     def test_scene_tags_are_complete_and_source_bounded(self):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
-        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),66)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),39)
+        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),69)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),40)
         self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),17)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
@@ -63,8 +63,8 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),88)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),64)
+        self.assertEqual(len(retained),92)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),68)
         self.assertEqual(sum(item['kind']=='video' for item in retained),24)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),24)
@@ -130,7 +130,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
         self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
         self.assertEqual(self.meta['window_start'],'2026-08-20')
-        self.assertEqual(self.meta['window_end'],'2026-10-13')
+        self.assertEqual(self.meta['window_end'],'2026-10-14')
         self.assertEqual(self.by_id['P43']['code_url'],'https://github.com/tomsilver/robocode')
         self.assertEqual(self.by_id['P43']['gpt6_relation'],'explicit_primary')
         self.assertIn('official project video',self.media['media']['P43']['classification'].lower())
@@ -219,6 +219,21 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.by_id['P73']['metrics'][0]['value'],92)
         self.assertIn('250-skill library',next(s for s in self.sources if s['id']=='S138')['notes'])
         self.assertIn('not a rollout frame',self.media['media']['P73']['classification'])
+        self.assertEqual(self.by_id['P74']['metrics'][0]['denominator'],15)
+        self.assertIn('66 条公开记录',self.by_id['P74']['limitations'][3])
+        self.assertIn('aggregate plot',self.media['media']['P74']['classification'])
+        self.assertEqual(self.by_id['P75']['metrics'][0]['value'],737)
+        self.assertEqual(self.by_id['P75']['metrics'][0]['denominator'],800)
+        self.assertIn('test-split prompt development',next(s for s in self.sources if s['id']=='S140')['notes'])
+        self.assertIn('Site-made text cover',self.media['media']['P75']['classification'])
+        self.assertEqual(self.by_id['P76']['gpt6_relation'],'explicit_partial')
+        self.assertEqual(self.by_id['P76']['metrics'],[])
+        self.assertIn('third-party OpenAI-compatible endpoint',next(s for s in self.sources if s['id']=='S141')['notes'])
+        self.assertIn('physical-robot demo cover',self.media['media']['P76']['classification'])
+        self.assertEqual(self.by_id['X16']['url'],'https://x.com/memmelma/status/2110057174609330316')
+        self.assertEqual(self.by_id['X16']['metrics'],[])
+        self.assertIn('shortcut failures',next(s for s in self.sources if s['id']=='S142')['notes'])
+        self.assertIn('simulation-montage thumbnail',self.media['media']['X16']['classification'])
         self.assertFalse(any('moonlakeai.com/blog/evaluating-3d-agent' in s['url'] for s in self.sources))
 
     def test_initial_snapshot_counts(self):
@@ -232,7 +247,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':61,'supporting':12,'watchlist':15})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':64,'supporting':12,'watchlist':16})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}
@@ -246,10 +261,10 @@ class CatalogueTests(unittest.TestCase):
         # independent content verification.
         self.assertEqual(urlsplit(self.by_id['X01']['url']).netloc,'x.com')
         self.assertNotEqual(self.by_id['X01']['url'],self.by_id['X02']['url'])
-        social=[self.by_id[f'X{n:02d}'] for n in (*range(1,7),*range(8,16))]
+        social=[self.by_id[f'X{n:02d}'] for n in (*range(1,7),*range(8,17))]
         verified=[p for p in social if '/status/' in p['url']]
-        self.assertEqual(len(verified),14)
-        self.assertEqual(len({p['url'] for p in verified}),14)
+        self.assertEqual(len(verified),15)
+        self.assertEqual(len({p['url'] for p in verified}),15)
         self.assertEqual(self.by_id['X13']['links'],{})
         self.assertEqual(self.by_id['X13']['url'],'https://x.com/qineng_wang/status/2099893504658866561')
         self.assertIn('S052',self.by_id['X13']['source_ids'])

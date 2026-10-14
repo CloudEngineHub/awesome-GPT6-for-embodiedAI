@@ -92,6 +92,10 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | X13 | 2026-0915 | verified | 2026-09-15 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) · [S052](SOURCES.md#s052) |
 | X14 | 2026-0911 | verified | 2026-09-11 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) |
 | X15 | 2026-0918 | verified | 2026-09-18 | 原帖 status ID `2100754714971287557` 依 X Snowflake epoch 解码为 `2026-09-18T01:12:08.841Z`。 | — | 日期精确到 UTC 日；原帖页面受限，但具体 status ID、作者研究笔记与用户提供视频内容相互匹配。 | [S057](SOURCES.md#s057) · [S058](SOURCES.md#s058) |
+| P74 | 2026-1013 | verified | 2026-10-13 | The reviewed public comparison commit was authored 2026-10-13T11:25:57-04:00. | — | Public result-commit date; the retained model runs were recorded on October 11 and 12. | [S139](SOURCES.md#s139) |
+| P75 | 2026-1011 | verified | 2026-10-11 | The reviewed release commit was authored 2026-10-11T22:16:59-04:00, and the retained evaluation records are dated 2026-10-11 UTC. | — | Public release/evaluation date; harness development and the earlier test-split run predate it. | [S140](SOURCES.md#s140) |
+| P76 | 2026-1012 | verified | 2026-10-12 | The public repository was created 2026-10-12T08:57:03Z and its reviewed main-branch commit was authored the same UTC day. | — | Repository publication date; the physical setup and any unshared runs may predate publication. | [S141](SOURCES.md#s141) |
+| X16 | 2026-1013 | verified | 2026-10-13 | Exact X status 2110057174609330316 has public embed timestamp 2026-10-13T17:16:48Z. | — | Original-post timestamp; the reported 23-hour generation run began earlier. | [S142](SOURCES.md#s142) |
 
 ## Date-research replacement audit
 

@@ -436,6 +436,26 @@
       "title": "EmbodiedSkillBench · Measuring the Utility of Reusable Embodied Skills",
       "summary": "EmbodiedSkillBench compares GPT-6 Astra native control, fixed skills, Agent-Directed Reuse, and a Jev skill over 100 perturbed LIBERO-Pro cases; the manuscript reports 92% native success and 85% for ADR with lower token and time use.",
       "detail": "The public release omits raw rollouts, the 250-skill library, skill indexes, and standalone ADR and Jev integrations, so the manuscript tables cannot be independently regenerated from this checkout; all results are simulation-only at one environment seed."
+    },
+    "P74": {
+      "title": "LIBERO-LoHo · Astra versus Opus on Long-Horizon Manipulation",
+      "summary": "This public evaluation gives GPT-6 Astra max and Claude Opus 5.5 max the same visual, state, and end-effector-pose tools for zero-shot LIBERO-LoHo control; both fully complete 13 of 15 retained episodes across three tasks.",
+      "detail": "Only three tasks are tested five times per model. Simulation pauses during API calls, both models receive an assisted pose-control interface, and the catalogue verified the released records but did not rerun the models or simulator."
+    },
+    "P75": {
+      "title": "Embodied Astra on RoboMME · End-to-End Waypoint Policy Evaluation",
+      "summary": "This work uses GPT-6 Astra directly as RoboMME's waypoint policy: the model reads goals, camera frames, and robot state, then outputs end-effector waypoints and gripper commands; one public 800-episode test run records 737 successes.",
+      "detail": "This is one run, and the prompt was developed using the test split, including a prior full run that exposed a mirrored left/right failure. Per-episode results and exchanges are public, but the actual image inputs and videos are not."
+    },
+    "P76": {
+      "title": "R1-A7 Astra Grasp · Physical Visual-Closed-Loop Reproduction",
+      "summary": "This repository presents an author demonstration in which a visual policy configured as GPT-6 Astra uses head and wrist cameras, bounded end-effector targets, IK/DDS, and safety gates to grasp and transfer an object with a Unitree R1-A7.",
+      "detail": "The public evidence is one edited demonstration without rollout logs or repeated trials. The code requests the Astra alias through a third-party compatible endpoint and does not publish a provider-side resolved-model receipt."
+    },
+    "X16": {
+      "title": "Astra Simulation Scaling · 25 Scenes and Multi-Robot Tasks",
+      "summary": "Marius Memmel reports that three generic prompts drove an approximately 23-hour Astra run that generated 25 environments, 25 multi-step tasks, and five robot embodiments.",
+      "detail": "These are generation counts, not success rates. The author's follow-up says Astra may reuse assets, simplify geometry, or initialize robots in convenient pre-grasp poses; no code, per-task manifest, or scoring rubric is public."
     }
   }
 }
