@@ -1759,11 +1759,12 @@ release_scope：[https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aa
 | Full-task success | 13 successes | 15 | Five retained GPT-6 Astra max episodes on each of LIBERO-LoHo Tasks 0, 1, and 4; Tasks 0 and 4 were 5/5, Task 1 was 3/5 |
 | Mean estimated API cost | 3.91 USD per episode | 15 retained Astra episodes | Repository estimate from recorded token use and its frozen pricing snapshot; reported Opus mean was USD 6.75 |
 
-**限制与未决项：** 只评测 LIBERO-LoHo 的 3 个任务、每个模型每任务 5 次；13/15 不代表整个基准或真机可靠性。 两种模型均使用末端位姿工具、仿真暂停等待 API，并获得完整会话历史；结果属于模型、提示、工具接口与控制器组合。 成本与时延按仓库冻结的价格和请求记录估算；不同提供商缓存与计费方式会改变绝对值。 本站成功运行 66 条公开记录的脱敏校验，并核对汇总与保留媒体，但未复跑模型调用或仿真。
+**限制与未决项：** 只评测 LIBERO-LoHo 的 3 个任务、每个模型每任务 5 次；13/15 不代表整个基准或真机可靠性。 两种模型均使用末端位姿工具、仿真暂停等待 API，并获得完整会话历史；结果属于模型、提示、工具接口与控制器组合。 任务对比视频以 4× 仿真速度播放并省略 API 等待时间；画面只展示静态相机，评测实际使用的腕部相机视角未出现在该视频中。 成本与时延按仓库冻结的价格和请求记录估算；不同提供商缓存与计费方式会改变绝对值。 本站成功运行 66 条公开记录的脱敏校验，并核对汇总与保留媒体，但未复跑模型调用或仿真。
 
 code：[https://github.com/hamzmu/astra-opus-libero-loho](https://github.com/hamzmu/astra-opus-libero-loho)  
 setup：[https://github.com/hamzmu/astra-opus-libero-loho/blob/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/docs/setup.md](https://github.com/hamzmu/astra-opus-libero-loho/blob/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/docs/setup.md)  
 results：[https://github.com/hamzmu/astra-opus-libero-loho/tree/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study](https://github.com/hamzmu/astra-opus-libero-loho/tree/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study)  
+video：[https://raw.githubusercontent.com/hamzmu/astra-opus-libero-loho/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/videos/astra6_opus55_tasks_0_1_4_static_minimal_4x.mp4](https://raw.githubusercontent.com/hamzmu/astra-opus-libero-loho/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/videos/astra6_opus55_tasks_0_1_4_static_minimal_4x.mp4)  
 
 **来源：** [S139 · LIBERO-LoHo Astra versus Opus repository and retained run artifacts](SOURCES.md#s139)
 

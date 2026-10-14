@@ -1393,15 +1393,15 @@
     },
     "P74": {
       "kind": "image",
-      "url": "https://raw.githubusercontent.com/hamzmu/astra-opus-libero-loho/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/plots/completion_percent.png",
-      "fit": "contain",
-      "source_url": "https://github.com/hamzmu/astra-opus-libero-loho/blob/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/plots/completion_percent.png",
+      "url": "https://raw.githubusercontent.com/hamzmu/astra-opus-libero-loho/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/videos/astra6_opus55_tasks_0_1_4_static_minimal_4x_preview.gif",
+      "fit": "cover",
+      "source_url": "https://github.com/hamzmu/astra-opus-libero-loho/blob/a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a/loho-study/videos/astra6_opus55_tasks_0_1_4_static_minimal_4x_preview.gif",
       "source_page_url": "https://github.com/hamzmu/astra-opus-libero-loho",
-      "source_path": "Official mean final-goal-completion plot at reviewed commit a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a.",
-      "classification": "Author-provided aggregate plot over five retained episodes per model/task; not an independently rerun result.",
+      "source_path": "Official preview GIF for the task-comparison MP4 at reviewed commit a2b035d6f44b1d4cac75f7afad8ed4c3e0e4013a; Tasks 0, 1, and 4 run left to right, Astra above Opus, at 4x simulation speed.",
+      "classification": "Author-provided preview of selected comparison episodes; API waiting is omitted and the wrist-camera view used in evaluation is not shown.",
       "source_id": "S139",
-      "alt": {"en": "Mean final goal completion for Astra and Opus on three LIBERO-LoHo tasks.", "zh": "Astra 与 Opus 在三个 LIBERO-LoHo 任务上的平均最终目标完成度。"},
-      "caption": {"en": "Official comparison plot for the retained LIBERO-LoHo episodes.", "zh": "保留的 LIBERO-LoHo 试验官方对比图。"}
+      "alt": {"en": "Official preview of Astra and Opus comparison episodes on three LIBERO-LoHo tasks.", "zh": "Astra 与 Opus 在三个 LIBERO-LoHo 任务上的官方试验对比预览。"},
+      "caption": {"en": "Official 4x simulation-speed video preview; API waiting and the evaluation wrist-camera view are omitted.", "zh": "官方 4× 仿真速度视频预览；省略 API 等待时间及评测所用腕部相机视角。"}
     },
     "P75": {
       "kind": "image",

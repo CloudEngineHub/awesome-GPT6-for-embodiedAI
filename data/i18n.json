@@ -440,7 +440,7 @@
     "P74": {
       "title": "LIBERO-LoHo · Astra versus Opus on Long-Horizon Manipulation",
       "summary": "This public evaluation gives GPT-6 Astra max and Claude Opus 5.5 max the same visual, state, and end-effector-pose tools for zero-shot LIBERO-LoHo control; both fully complete 13 of 15 retained episodes across three tasks.",
-      "detail": "Only three tasks are tested five times per model. Simulation pauses during API calls, both models receive an assisted pose-control interface, and the catalogue verified the released records but did not rerun the models or simulator."
+      "detail": "Only three tasks are tested five times per model. Simulation pauses during API calls, while the 4x comparison video omits API waiting and does not show the wrist-camera view used in evaluation; the catalogue verified the released records but did not rerun the models or simulator."
     },
     "P75": {
       "title": "Embodied Astra on RoboMME · End-to-End Waypoint Policy Evaluation",
