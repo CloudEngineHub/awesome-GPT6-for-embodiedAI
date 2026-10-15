@@ -1836,7 +1836,7 @@ protocol：[https://github.com/Ticotico410/r1a7_gpt6_control/blob/97bb73274b18fb
 
 **作者 / 团队：** Siriuslala / G1 Robot Performance contributors  
 **事件日期：** 2026-10-13（窗口内）  
-**日期依据：** The first public v3 online-control commit cc53c82509ec7f550fbeef82fe8f69ea048506be was authored 2026-10-13T12:00:19Z; reviewed revision_005 and its media were updated through commit e1ed4164aa01ab6e4ff716787d286387648ab2c3 on 2026-10-14T06:27:10Z.  
+**日期依据：** The first public v3 online-control commit cc53c82509ec7f550fbeef82fe8f69ea048506be was authored 2026-10-13T12:00:19Z; reviewed revision_005 and its media were updated through commit e1ed4164aa018b55b799c59b147d61eb59293437 on 2026-10-14T06:27:10Z.  
 **入口：** [https://siriuslala.github.io/g1-robot-burpee/](https://siriuslala.github.io/g1-robot-burpee/)  
 **代码入口：** [https://github.com/Siriuslala/g1-robot-burpee](https://github.com/Siriuslala/g1-robot-burpee)  
 **许可状态：** 仓库未声明许可证；Unitree G1、MuJoCo、SONIC、控制器、模型服务与媒体分别适用其自身条款。  
@@ -1847,8 +1847,8 @@ protocol：[https://github.com/Ticotico410/r1a7_gpt6_control/blob/97bb73274b18fb
 code：[https://github.com/Siriuslala/g1-robot-burpee](https://github.com/Siriuslala/g1-robot-burpee)  
 project：[https://siriuslala.github.io/g1-robot-burpee/](https://siriuslala.github.io/g1-robot-burpee/)  
 technical_report：[https://siriuslala.github.io/g1-robot-burpee/technical.html](https://siriuslala.github.io/g1-robot-burpee/technical.html)  
-video：[https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/media/v3/revision_005/transition.mp4](https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/media/v3/revision_005/transition.mp4)  
-audit：[https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/data/v3/revision_005](https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/data/v3/revision_005)  
+video：[https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa018b55b799c59b147d61eb59293437/assets/media/v3/revision_005/transition.mp4](https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa018b55b799c59b147d61eb59293437/assets/media/v3/revision_005/transition.mp4)  
+audit：[https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa018b55b799c59b147d61eb59293437/assets/data/v3/revision_005](https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa018b55b799c59b147d61eb59293437/assets/data/v3/revision_005)  
 
 **来源：** [S144 · G1 Robot Performance v3 repository, technical report, and retained run](SOURCES.md#s144)
 

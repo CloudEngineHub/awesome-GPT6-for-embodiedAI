@@ -4200,7 +4200,7 @@
     "summary": "该项目在连续 MuJoCo 舞台表演中让 GPT-6 Astra 于检查点读取 G1 的第一视角与本体状态，再批准执行窗口并选择 SONIC 或传统控制后端；最新版公开 51 组决策、159.672 秒仿真、审计记录和多视角视频。",
     "authors": "Siriuslala / G1 Robot Performance contributors",
     "event_date": "2026-10-13",
-    "event_date_basis": "The first public v3 online-control commit cc53c82509ec7f550fbeef82fe8f69ea048506be was authored 2026-10-13T12:00:19Z; reviewed revision_005 and its media were updated through commit e1ed4164aa01ab6e4ff716787d286387648ab2c3 on 2026-10-14T06:27:10Z.",
+    "event_date_basis": "The first public v3 online-control commit cc53c82509ec7f550fbeef82fe8f69ea048506be was authored 2026-10-13T12:00:19Z; reviewed revision_005 and its media were updated through commit e1ed4164aa018b55b799c59b147d61eb59293437 on 2026-10-14T06:27:10Z.",
     "window_status": "in_window",
     "url": "https://siriuslala.github.io/g1-robot-burpee/",
     "code_url": "https://github.com/Siriuslala/g1-robot-burpee",
@@ -4220,8 +4220,8 @@
       "code": "https://github.com/Siriuslala/g1-robot-burpee",
       "project": "https://siriuslala.github.io/g1-robot-burpee/",
       "technical_report": "https://siriuslala.github.io/g1-robot-burpee/technical.html",
-      "video": "https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/media/v3/revision_005/transition.mp4",
-      "audit": "https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/data/v3/revision_005"
+      "video": "https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa018b55b799c59b147d61eb59293437/assets/media/v3/revision_005/transition.mp4",
+      "audit": "https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa018b55b799c59b147d61eb59293437/assets/data/v3/revision_005"
     },
     "last_checked": "2026-10-15",
     "independently_reproduced": false
