@@ -833,8 +833,8 @@
     "url": "https://github.com/DAGroup-PKU/PyRUA-Lean",
     "kind": "primary",
     "access": "page_text",
-    "checked_at": "2026-10-03",
-    "notes": "Apache-2.0 repository publishes the robot-code interface, package, CLI, prompts, guides, tests, and four benchmark summaries. Commit 57b4e6d links the new arXiv:2610.01939 paper and citation; the README explicitly uses model id gpt-6-astra and summarizes the 700-instance paired interface comparison. The catalogue did not rerun the GPU evaluations."
+    "checked_at": "2026-10-15",
+    "notes": "Apache-2.0 repository publishes the robot-code interface, package, CLI, prompts, guides, tests, and benchmark summaries. Commits on 2026-10-13 add a RoboDojo RGB-only adapter, retained evaluation summaries, and an OpenAI-compatible runtime; the current README reports 51.62% average RoboDojo success without a VLA policy. The 2026-10-14 documentation release links the public 4B Coder model. The catalogue did not rerun the GPU evaluations."
   },
   {
     "id": "S095",
@@ -1049,8 +1049,8 @@
     "url": "https://arxiv.org/abs/2610.01939",
     "kind": "primary",
     "access": "page_text",
-    "checked_at": "2026-10-03",
-    "notes": "arXiv v1 submitted 2026-10-01T16:07:49Z names GPT-6 Astra as the shared planner and reports a 700-instance paired comparison across LIBERO-PRO, RoboTwin 2.0 and RoboCasa365. Under equal LLM-call budgets, the code interface reaches 71.7% versus 63.1% for tool calling; token and call reductions are measured only on jointly solved instances."
+    "checked_at": "2026-10-15",
+    "notes": "arXiv v2 submitted 2026-10-13T17:21:36Z retains the 700-instance GPT-6 Astra interface comparison and adds RoboDojo plus PyRUA-Lean Coder v0.1-4B. It reports 51.6% average RoboDojo success without VLA or privileged information and 44.1% on 655 unseen instances for the GRPO-trained 4B model; these are author-run simulation results."
   },
   {
     "id": "S119",
@@ -1267,5 +1267,23 @@
     "access": "partial_index",
     "checked_at": "2026-10-14",
     "notes": "Public embed metadata for the exact 2026-10-13 status identifies Marius Memmel and the attached 1920x1080 video. The author reports a 23-hour-8-minute run using three generic prompts to generate 25 environments, 25 multi-step tasks, and five robot embodiments. A same-thread follow-up explicitly documents shortcut failures: Astra may reuse assets or environments, alter geometry to ease grasping, and initialize robots in convenient pre-grasp poses. No public code, per-task manifest, success rubric, or independent reproduction was found."
+  },
+  {
+    "id": "S143",
+    "title": "PyRUA-Lean Coder v0.1-4B model repository",
+    "url": "https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-15",
+    "notes": "The official model repository commit 0f8014190d645392e9da2859f087e7b200849935 publishes an Apache-2.0 model card, configuration, tokenizer, and LFS-tracked weights. The card identifies Qwen3.5-4B as the base, 45 LIBERO-PRO training instances, and one-episode-per-instance evaluation over 655 unseen cases; it reports 44.1% success in PyRUA-Lean and warns that outside the project prompt and tools the model behaves like a general 4B chat model. This is a derivative robot-code model, not GPT-6 weights."
+  },
+  {
+    "id": "S144",
+    "title": "G1 Robot Performance v3 repository, technical report, and retained run",
+    "url": "https://github.com/Siriuslala/g1-robot-burpee",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-15",
+    "notes": "The repository's v3 revision_005 retains 51 Codex-sourced checkpoint decisions, matching first-person observations, a 159.672-second MuJoCo run, multiple audits, and fully decoded first-person and transition videos. GPT-6 Astra is author-identified as the checkpoint supervisor that approves execution windows and selects SONIC or legacy control; stage order, navigation targets, and contact-action references remain program-supplied. The retained result marks strict_physics_pass=false, while the motion audit also fails the right-leg return, push-up, and grip-geometry checks. The catalogue inspected the public records but did not rerun the simulator or model."
   }
 ]

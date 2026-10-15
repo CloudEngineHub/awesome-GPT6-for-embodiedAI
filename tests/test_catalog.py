@@ -41,7 +41,7 @@ class CatalogueTests(unittest.TestCase):
     def test_scene_tags_are_complete_and_source_bounded(self):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
-        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),69)
+        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),70)
         self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),40)
         self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),17)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
@@ -63,8 +63,8 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),92)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),68)
+        self.assertEqual(len(retained),93)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),69)
         self.assertEqual(sum(item['kind']=='video' for item in retained),24)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),24)
@@ -130,7 +130,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
         self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
         self.assertEqual(self.meta['window_start'],'2026-08-20')
-        self.assertEqual(self.meta['window_end'],'2026-10-14')
+        self.assertEqual(self.meta['window_end'],'2026-10-15')
         self.assertEqual(self.by_id['P43']['code_url'],'https://github.com/tomsilver/robocode')
         self.assertEqual(self.by_id['P43']['gpt6_relation'],'explicit_primary')
         self.assertIn('official project video',self.media['media']['P43']['classification'].lower())
@@ -232,6 +232,13 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.by_id['P76']['metrics'],[])
         self.assertIn('third-party OpenAI-compatible endpoint',next(s for s in self.sources if s['id']=='S141')['notes'])
         self.assertIn('physical-robot demo cover',self.media['media']['P76']['classification'])
+        self.assertEqual(self.by_id['P77']['gpt6_relation'],'explicit_primary')
+        self.assertEqual(self.by_id['P77']['metrics'],[])
+        self.assertIn('strict_physics_pass=false',next(s for s in self.sources if s['id']=='S144')['notes'])
+        self.assertIn('first-frame poster',self.media['media']['P77']['classification'])
+        self.assertEqual(self.by_id['P41']['metrics'][-2]['value'],51.62)
+        self.assertEqual(self.by_id['P41']['links']['model'],'https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B')
+        self.assertEqual(next(a for a in self.artifacts if a['id']=='HF09')['project_id'],'P41')
         self.assertEqual(self.by_id['X16']['url'],'https://x.com/memmelma/status/2110057174609330316')
         self.assertEqual(self.by_id['X16']['metrics'],[])
         self.assertIn('shortcut failures',next(s for s in self.sources if s['id']=='S142')['notes'])
@@ -249,7 +256,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':64,'supporting':12,'watchlist':16})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':65,'supporting':12,'watchlist':16})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}

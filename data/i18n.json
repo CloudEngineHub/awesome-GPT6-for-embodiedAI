@@ -452,6 +452,11 @@
       "summary": "This repository presents an author demonstration in which a visual policy configured as GPT-6 Astra uses head and wrist cameras, bounded end-effector targets, IK/DDS, and safety gates to grasp and transfer an object with a Unitree R1-A7.",
       "detail": "The public evidence is one edited demonstration without rollout logs or repeated trials. The code requests the Astra alias through a third-party compatible endpoint and does not publish a provider-side resolved-model receipt."
     },
+    "P77": {
+      "title": "G1 Robot Performance · Astra-Supervised Simulation Stage Show",
+      "summary": "In this continuous MuJoCo stage performance, GPT-6 Astra reads G1 first-person images and proprioceptive state at checkpoints, then approves an execution window and selects the SONIC or legacy backend; the latest release publishes 51 decisions, 159.672 simulation seconds, audits, and multi-view video.",
+      "detail": "A stage program supplies task order, navigation targets, and contact-action references, and simulation pauses while the model decides. The full sequence was recorded, but strict_physics_pass is false and several motion-quality checks do not pass."
+    },
     "X16": {
       "title": "Astra Simulation Scaling · 25 Scenes and Multi-Robot Tasks",
       "summary": "Marius Memmel reports that three generic prompts drove an approximately 23-hour Astra run that generated 25 environments, 25 multi-step tasks, and five robot embodiments.",

@@ -1427,6 +1427,17 @@
       "alt": {"en": "Unitree R1-A7 author demonstration of a camera-guided grasp and transfer.", "zh": "Unitree R1-A7 相机引导抓取与搬运的作者演示。"},
       "caption": {"en": "Official repository demo; no public rollout log or repeated-trial count accompanies it.", "zh": "仓库官方演示；未同时公开 rollout 日志或重复试验数。"}
     },
+    "P77": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/media/v3/revision_005/transition_poster.png",
+      "source_url": "https://github.com/Siriuslala/g1-robot-burpee/blob/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/media/v3/revision_005/transition.mp4",
+      "source_page_url": "https://siriuslala.github.io/g1-robot-burpee/",
+      "source_path": "Official revision_005 transition-view MP4 and repository-provided poster from the first decoded frame at 00:00:00, at reviewed commit e1ed4164aa01ab6e4ff716787d286387648ab2c3; the media manifest reports 2,395 H.264 frames at 15 fps and 159.67 seconds.",
+      "classification": "Author-provided first-frame poster for the retained online-supervision simulation video; the project card links the full video, whose strict physics audit does not pass.",
+      "source_id": "S144",
+      "alt": {"en": "Unitree G1 simulation stage performance with object transport, a support-frame push-up, a jump, and a final pose.", "zh": "Unitree G1 仿真舞台表演，包含搬运、支架俯卧撑、跳跃与结束定姿。"},
+      "caption": {"en": "Official revision_005 video; GPT supervises checkpoint execution while stage programs and low-level controllers generate motion, and strict physics checks do not all pass.", "zh": "官方 revision_005 视频；GPT 在检查点监督执行，阶段程序与低层控制器生成动作，严格物理检查未全部通过。"}
+    },
     "X16": {
       "kind": "image",
       "url": "https://pbs.twimg.com/amplify_video_thumb/2110057077901238272/img/I4Y7F3t8OYoL5wQA.jpg",

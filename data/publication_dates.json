@@ -743,6 +743,13 @@
     "rule": null,
     "uncertainty": "Repository publication date; the physical setup and any unshared runs may predate publication."
   },
+  "P77": {
+    "date": "2026-10-13",
+    "status": "verified",
+    "basis": "The first public v3 online-control commit was authored 2026-10-13T12:00:19Z; reviewed revision_005 media and audit corrections continued through 2026-10-14.",
+    "rule": null,
+    "uncertainty": "Public online-control release date; earlier offline-programmed versions and simulation development predate it."
+  },
   "X16": {
     "date": "2026-10-13",
     "status": "verified",

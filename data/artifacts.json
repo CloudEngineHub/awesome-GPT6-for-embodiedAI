@@ -112,5 +112,19 @@
     ],
     "license_status": "未核实",
     "last_checked": "2026-09-18"
+  },
+  {
+    "id": "HF09",
+    "title": "PyRUA-Lean Coder v0.1-4B",
+    "project_id": "P41",
+    "url": "https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B",
+    "kind": "model",
+    "verification": "primary_card",
+    "description": "Qwen3.5-4B 经 45 个 LIBERO-PRO 实例上的 GRPO 训练，用于在 PyRUA-Lean 接口中生成机器人 Python cells；不是 GPT-6 权重。",
+    "source_ids": [
+      "S143"
+    ],
+    "license_status": "Apache-2.0（模型卡声明继承 Qwen3.5-4B）",
+    "last_checked": "2026-10-15"
   }
 ]

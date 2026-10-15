@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-14。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-15。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 64
+## 核心项目与评测 · 65
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -847,7 +847,7 @@ html：[https://arxiv.org/html/2609.29389v1](https://arxiv.org/html/2609.29389v1
 <a id="p41"></a>
 ### P41 · PyRUA-Lean · 用代码而非逐步工具调用控制机器人
 
-PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对象的代码，以一次调用组合感知、运动、VLA 技能与状态检查；作者在四组仿真基准上与相同模型、基元和调用预算的 RPent 工具调用方式做配对比较。
+PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对象的代码，以一次调用组合感知、运动、VLA 技能与状态检查；10 月 13 日发布的论文 v2 又加入无 VLA 的 RoboDojo 适配与评测，10 月 15 日公开了在该框架内训练的 4B Coder 模型。
 
 **来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
 
@@ -862,18 +862,21 @@ PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对
 | 指标 | 结果 | 分母 | 协议 / 注意事项 |
 | --- | --- | --- | --- |
 | LIBERO-PRO code-arm success rate | 94.0 % | 40 tasks × 5 seeds; paired against 83.0% tool-calling arm | same GPT-6 Astra, primitives, simulator, success predicate, and 40-response budget |
-| RoboTwin 2.0 code-arm success rate | 67.2 % | 50 tasks × 5 buildable seeds; paired against 60.0% tool-calling arm | same model, LingBot-VLA skills, task cells, and request budget |
+| RoboTwin 2.0 code-arm success rate | 69.2 % | 50 tasks × 5 buildable seeds; paired against 60.0% tool-calling arm | same model, LingBot-VLA skills, task cells, and request budget |
 | RoboCasa365 atomic code-arm success rate | 86.7 % | 18 tasks × 5 seeds; paired against 78.9% tool-calling arm | same model, RLDX-1/navigation skills, task cells, and request budget |
 | RoboCasa365 composite code-arm success rate | 39.4 % | 32 tasks × 5 seeds; paired against 34.4% tool-calling arm | same model and 100-response composite-task budget |
+| RoboDojo average success rate | 51.62 % | 42 RoboDojo tasks using the public benchmark protocol | GPT-6 Astra writes Python against PyRUA-Lean perception, motion, and gripper primitives; RGB-only default observation, no VLA policy or privileged state |
+| PyRUA-Lean Coder unseen-task success rate | 44.1 % | 655 unseen task instances across LIBERO-PRO, RoboTwin 2.0, and RoboCasa365 | Qwen3.5-4B trained with GRPO on 45 separate LIBERO-PRO instances and evaluated for one episode per task instance in the PyRUA-Lean framework |
 
-**限制与未决项：** 结果由作者提供并附协议与分析脚本，本站未下载模型权重、运行 GPU 仿真或独立复现。 代码臂与工具调用臂的交互形式有意不同：代码臂把多步操作放进 Python cell，工具臂在动作后持续接收图像；结果不能归因为单一低层技能。 成本与 token 降幅仅在两种方式都成功的实例上计算，并依赖发布时的模型价格与网关行为。 四组结果均为仿真；不代表真实机器人成功率。 10 月论文把四组汇总为 700 个任务实例；71.7% 对 63.1% 是接口系统的配对比较，不能只归因为基础模型。
+**限制与未决项：** 结果由作者提供并附协议与分析脚本，本站未下载模型权重、运行 GPU 仿真或独立复现。 代码臂与工具调用臂的交互形式有意不同：代码臂把多步操作放进 Python cell，工具臂在动作后持续接收图像；结果不能归因为单一低层技能。 成本与 token 降幅仅在两种方式都成功的实例上计算，并依赖发布时的模型价格与网关行为。 全部结果均为仿真；不代表真实机器人成功率。 10 月论文把四组汇总为 700 个任务实例；71.7% 对 63.1% 是接口系统的配对比较，不能只归因为基础模型。 RoboDojo 的 51.62% 是作者针对 10 月 9 日排行榜快照的比较，本站未复跑 42 个任务；4B Coder 的 44.1% 也来自作者的一次逐实例评测。
 
-guide：[https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/docs/guide.md](https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/docs/guide.md)  
-canonical_commit：[https://github.com/DAGroup-PKU/PyRUA-Lean/commit/57b4e6db77ad624d1fe935d36fc97d1c56f697d8](https://github.com/DAGroup-PKU/PyRUA-Lean/commit/57b4e6db77ad624d1fe935d36fc97d1c56f697d8)  
+guide：[https://dagroup-pku.github.io/PyRUA-Lean/docs/](https://dagroup-pku.github.io/PyRUA-Lean/docs/)  
+canonical_commit：[https://github.com/DAGroup-PKU/PyRUA-Lean/commit/e8a85df81e42a43491e6200d3420cbb4b1502894](https://github.com/DAGroup-PKU/PyRUA-Lean/commit/e8a85df81e42a43491e6200d3420cbb4b1502894)  
 paper：[https://arxiv.org/abs/2610.01939](https://arxiv.org/abs/2610.01939)  
 project：[https://dagroup-pku.github.io/PyRUA-Lean/](https://dagroup-pku.github.io/PyRUA-Lean/)  
+model：[https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B](https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B)  
 
-**来源：** [S093 · PyRUA-Lean official repository](SOURCES.md#s093) · [S118 · PyRUA-Lean arXiv paper](SOURCES.md#s118)
+**来源：** [S093 · PyRUA-Lean official repository](SOURCES.md#s093) · [S118 · PyRUA-Lean arXiv paper](SOURCES.md#s118) · [S143 · PyRUA-Lean Coder v0.1-4B model repository](SOURCES.md#s143)
 
 ---
 
@@ -1821,6 +1824,33 @@ video：[https://raw.githubusercontent.com/Ticotico410/r1a7_gpt6_control/97bb732
 protocol：[https://github.com/Ticotico410/r1a7_gpt6_control/blob/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/astra_grasp_rollout.md](https://github.com/Ticotico410/r1a7_gpt6_control/blob/97bb73274b18fb95fa99e59852efb51b0c01e22d/agent/docs/astra_grasp_rollout.md)  
 
 **来源：** [S141 · R1-A7 GPT-6 Astra real-robot grasp repository and author demo](SOURCES.md#s141)
+
+---
+
+<a id="p77"></a>
+### P77 · G1 Robot Performance · Astra 在线监督的仿真舞台表演
+
+该项目在连续 MuJoCo 舞台表演中让 GPT-6 Astra 于检查点读取 G1 的第一视角与本体状态，再批准执行窗口并选择 SONIC 或传统控制后端；最新版公开 51 组决策、159.672 秒仿真、审计记录和多视角视频。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Siriuslala / G1 Robot Performance contributors  
+**事件日期：** 2026-10-13（窗口内）  
+**日期依据：** The first public v3 online-control commit cc53c82509ec7f550fbeef82fe8f69ea048506be was authored 2026-10-13T12:00:19Z; reviewed revision_005 and its media were updated through commit e1ed4164aa01ab6e4ff716787d286387648ab2c3 on 2026-10-14T06:27:10Z.  
+**入口：** [https://siriuslala.github.io/g1-robot-burpee/](https://siriuslala.github.io/g1-robot-burpee/)  
+**代码入口：** [https://github.com/Siriuslala/g1-robot-burpee](https://github.com/Siriuslala/g1-robot-burpee)  
+**许可状态：** 仓库未声明许可证；Unitree G1、MuJoCo、SONIC、控制器、模型服务与媒体分别适用其自身条款。  
+**控制接口 / 作用：** 第一视角 RGB、29 个身体关节状态、机身速度/重力方向、手足接触力与夹爪位移 → Codex 会话中的 GPT-6 Astra → 批准/终止、0.1–8 秒执行窗口、速度比例与 SONIC/legacy 后端选择 → 预编排阶段程序、SONIC、IK、接触支撑与 PD 执行 → 新检查点观测
+
+**限制与未决项：** GPT 不输出连续关节动作，也不能任意重排阶段；任务顺序、导航目标和接触动作参考由阶段程序提供，51 次决策全部批准执行且速度比例均为 1.0。 仿真在模型决策期间暂停，尚未验证物理持续推进时的实时推理；公开日志标记来源为 codex，没有独立模型 API receipt。 revision_005 完成了完整序列，但 strict_physics_pass=false；动作审计中右腿回收、俯卧撑和夹持几何等严格检查未全部通过，因此不能表述为严格物理成功。 本站核对了决策、观测、审计摘要和媒体清单，但未运行 MuJoCo、SONIC 或模型，也未独立复现表演。
+
+code：[https://github.com/Siriuslala/g1-robot-burpee](https://github.com/Siriuslala/g1-robot-burpee)  
+project：[https://siriuslala.github.io/g1-robot-burpee/](https://siriuslala.github.io/g1-robot-burpee/)  
+technical_report：[https://siriuslala.github.io/g1-robot-burpee/technical.html](https://siriuslala.github.io/g1-robot-burpee/technical.html)  
+video：[https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/media/v3/revision_005/transition.mp4](https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/media/v3/revision_005/transition.mp4)  
+audit：[https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/data/v3/revision_005](https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa01ab6e4ff716787d286387648ab2c3/assets/data/v3/revision_005)  
+
+**来源：** [S144 · G1 Robot Performance v3 repository, technical report, and retained run](SOURCES.md#s144)
 
 ---
 

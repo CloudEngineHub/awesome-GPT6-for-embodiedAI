@@ -14,6 +14,7 @@
 | HF06 | [PhysBrain 1.5 8B](https://huggingface.co/DeepCybo/PhysBrain1.5-8B) | model | [P15](CATALOG.md#p15) | linked_from_primary |
 | HF07 | [PhysBrain 1.5 2B](https://huggingface.co/DeepCybo/PhysBrain1.5-2B) | model | [P15](CATALOG.md#p15) | linked_from_primary |
 | HF08 | [RoboDojo official HF repository](https://huggingface.co/datasets/RoboDojo-Benchmark/RoboDojo) | dataset | [P16](CATALOG.md#p16) | partial_index |
+| HF09 | [PyRUA-Lean Coder v0.1-4B](https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B) | model | [P41](CATALOG.md#p41) | primary_card |
 
 ## HF01 · AGP canonical evaluated trials
 
@@ -78,6 +79,14 @@
 许可：未核实
 
 来源：[S016](SOURCES.md#s016) · [S046](SOURCES.md#s046)
+
+## HF09 · PyRUA-Lean Coder v0.1-4B
+
+Qwen3.5-4B 经 45 个 LIBERO-PRO 实例上的 GRPO 训练，用于在 PyRUA-Lean 接口中生成机器人 Python cells；不是 GPT-6 权重。
+
+许可：Apache-2.0（模型卡声明继承 Qwen3.5-4B）
+
+来源：[S143](SOURCES.md#s143)
 
 ## 下载之前
 

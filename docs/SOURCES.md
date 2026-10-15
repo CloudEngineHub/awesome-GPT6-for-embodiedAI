@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-10-14 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-10-15 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -839,9 +839,9 @@ Official website repository created 2026-09-24 contains the updated report, loca
 
 [https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-15
 
-Apache-2.0 repository publishes the robot-code interface, package, CLI, prompts, guides, tests, and four benchmark summaries. Commit 57b4e6d links the new arXiv:2610.01939 paper and citation; the README explicitly uses model id gpt-6-astra and summarizes the 700-instance paired interface comparison. The catalogue did not rerun the GPU evaluations.
+Apache-2.0 repository publishes the robot-code interface, package, CLI, prompts, guides, tests, and benchmark summaries. Commits on 2026-10-13 add a RoboDojo RGB-only adapter, retained evaluation summaries, and an OpenAI-compatible runtime; the current README reports 51.62% average RoboDojo success without a VLA policy. The 2026-10-14 documentation release links the public 4B Coder model. The catalogue did not rerun the GPU evaluations.
 
 <a id="s095"></a>
 ## S095 · GPT-6 Astra Real2Sim workflow release
@@ -1055,9 +1055,9 @@ arXiv v1 defines an agent-native MuJoCo/Franka benchmark with 200 integrated tas
 
 [https://arxiv.org/abs/2610.01939](https://arxiv.org/abs/2610.01939)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-10-03
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-15
 
-arXiv v1 submitted 2026-10-01T16:07:49Z names GPT-6 Astra as the shared planner and reports a 700-instance paired comparison across LIBERO-PRO, RoboTwin 2.0 and RoboCasa365. Under equal LLM-call budgets, the code interface reaches 71.7% versus 63.1% for tool calling; token and call reductions are measured only on jointly solved instances.
+arXiv v2 submitted 2026-10-13T17:21:36Z retains the 700-instance GPT-6 Astra interface comparison and adds RoboDojo plus PyRUA-Lean Coder v0.1-4B. It reports 51.6% average RoboDojo success without VLA or privileged information and 44.1% on 655 unseen instances for the GRPO-trained 4B model; these are author-run simulation results.
 
 <a id="s119"></a>
 ## S119 · Embodied Agent Arena paper, project, and repository
@@ -1274,3 +1274,21 @@ The repository created on 2026-10-12 publishes a Unitree R1-A7 visual closed-loo
 类型：`author_mirror` · 读取：`partial_index` · 检查日期：2026-10-14
 
 Public embed metadata for the exact 2026-10-13 status identifies Marius Memmel and the attached 1920x1080 video. The author reports a 23-hour-8-minute run using three generic prompts to generate 25 environments, 25 multi-step tasks, and five robot embodiments. A same-thread follow-up explicitly documents shortcut failures: Astra may reuse assets or environments, alter geometry to ease grasping, and initialize robots in convenient pre-grasp poses. No public code, per-task manifest, success rubric, or independent reproduction was found.
+
+<a id="s143"></a>
+## S143 · PyRUA-Lean Coder v0.1-4B model repository
+
+[https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B](https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-15
+
+The official model repository commit 0f8014190d645392e9da2859f087e7b200849935 publishes an Apache-2.0 model card, configuration, tokenizer, and LFS-tracked weights. The card identifies Qwen3.5-4B as the base, 45 LIBERO-PRO training instances, and one-episode-per-instance evaluation over 655 unseen cases; it reports 44.1% success in PyRUA-Lean and warns that outside the project prompt and tools the model behaves like a general 4B chat model. This is a derivative robot-code model, not GPT-6 weights.
+
+<a id="s144"></a>
+## S144 · G1 Robot Performance v3 repository, technical report, and retained run
+
+[https://github.com/Siriuslala/g1-robot-burpee](https://github.com/Siriuslala/g1-robot-burpee)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-15
+
+The repository's v3 revision_005 retains 51 Codex-sourced checkpoint decisions, matching first-person observations, a 159.672-second MuJoCo run, multiple audits, and fully decoded first-person and transition videos. GPT-6 Astra is author-identified as the checkpoint supervisor that approves execution windows and selects SONIC or legacy control; stage order, navigation targets, and contact-action references remain program-supplied. The retained result marks strict_physics_pass=false, while the motion audit also fails the right-leg return, push-up, and grip-geometry checks. The catalogue inspected the public records but did not rerun the simulator or model.
