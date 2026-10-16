@@ -1405,15 +1405,15 @@
     },
     "P75": {
       "kind": "image",
-      "url": "assets/posters/P75-robomme-waypoint-title.svg",
-      "fit": "cover",
-      "source_url": "https://github.com/jackbjed/embodied-astra-robomme",
-      "source_page_url": "https://github.com/jackbjed/embodied-astra-robomme",
-      "source_path": "Site-made typographic cover created 2026-10-14 after the repository was confirmed to omit the model-input images and episode videos.",
-      "classification": "Site-made text cover using the project name and disclosed protocol; not project media, a rollout frame, or experimental evidence.",
-      "source_id": "S140",
-      "alt": {"en": "Text cover reading Embodied Astra on RoboMME and End-to-End Waypoint Policy.", "zh": "写有 Embodied Astra on RoboMME 与 End-to-End Waypoint Policy 的文字封面。"},
-      "caption": {"en": "Site-made text cover because public rollout images and videos are unavailable.", "zh": "因公开仓库未提供 rollout 图像和视频，本站制作文字封面。"}
+      "url": "https://embodied-astra.github.io/img/system.png",
+      "fit": "contain",
+      "source_url": "https://embodied-astra.github.io/img/system.png",
+      "source_page_url": "https://embodied-astra.github.io/",
+      "source_path": "Official system diagram published on the paper project page and checked 2026-10-16.",
+      "classification": "Author-provided mechanism figure showing the goal, video, robot-state, episode-context, waypoint, and motion-planner loop; not a rollout frame or independently reproduced result.",
+      "source_id": "S146",
+      "alt": {"en": "RoboMME task observations and episode history flow through GPT-6 Astra to waypoint execution and new observations.", "zh": "RoboMME 任务观测与 episode 历史经 GPT-6 Astra 生成路点，再执行并返回新观测。"},
+      "caption": {"en": "Official project-page diagram of the end-to-end waypoint-policy loop.", "zh": "项目页官方端到端路点策略闭环机制图。"}
     },
     "P76": {
       "kind": "image",
