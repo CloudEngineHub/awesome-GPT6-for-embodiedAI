@@ -64,10 +64,10 @@ class CatalogueTests(unittest.TestCase):
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
         self.assertEqual(len(retained),94)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),70)
-        self.assertEqual(sum(item['kind']=='video' for item in retained),24)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),69)
+        self.assertEqual(sum(item['kind']=='video' for item in retained),25)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
-        self.assertEqual(len(videos),24)
+        self.assertEqual(len(videos),25)
         self.assertTrue(all(item.get('poster','').startswith('assets/') for item in videos.values()))
         self.assertTrue(all((ROOT/'site'/item['poster']).is_file() for item in videos.values()))
         self.assertTrue(all('first decoded frame at 00:00:00' in item.get('source_path','') for item in videos.values()))
@@ -243,7 +243,8 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn('mechanism figure',self.media['media']['P75']['classification'])
         self.assertEqual(self.by_id['P78']['links']['technical_report'],'https://research.nvidia.com/labs/srl/projects/astranomy/')
         self.assertEqual(self.by_id['P78']['metrics'][0]['denominator'],'120 RoboLab tasks × 5 episodes')
-        self.assertIn('Author-provided RoboLab-120 result figure',self.media['media']['P78']['classification'])
+        self.assertEqual(self.media['media']['P78']['poster'],'assets/posters/P78-astranomy-prompt-progression.jpg')
+        self.assertIn('successful Yogurt task rollout',self.media['media']['P78']['classification'])
         self.assertEqual(self.by_id['P41']['metrics'][-2]['value'],51.62)
         self.assertEqual(self.by_id['P41']['links']['model'],'https://huggingface.co/DAGroup-PKU/PyRUA-Lean-Coder-v0.1-4B')
         self.assertEqual(next(a for a in self.artifacts if a['id']=='HF09')['project_id'],'P41')

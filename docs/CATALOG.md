@@ -1883,6 +1883,7 @@ NVIDIA Astranomy 在 RoboLab-120 上比较 GPT-6 Astra 的直接动作生成、C
 technical_report：[https://research.nvidia.com/labs/srl/projects/astranomy/](https://research.nvidia.com/labs/srl/projects/astranomy/)  
 gallery：[https://research.nvidia.com/labs/srl/projects/astranomy/gallery.html](https://research.nvidia.com/labs/srl/projects/astranomy/gallery.html)  
 benchmark：[https://research.nvidia.com/labs/srl/projects/robolab/](https://research.nvidia.com/labs/srl/projects/robolab/)  
+video：[https://research.nvidia.com/labs/srl/projects/astranomy/article/assets/videos/prompt-progression/combined.mp4](https://research.nvidia.com/labs/srl/projects/astranomy/article/assets/videos/prompt-progression/combined.mp4)  
 
 **来源：** [S147 · NVIDIA Astranomy technical report and rollout gallery](SOURCES.md#s147)
 

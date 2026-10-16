@@ -99,7 +99,7 @@ def main() -> int:
 
         retained = {pid: item for pid, item in manifest['media'].items() if item['kind'] in {'image', 'video'}}
         videos = {pid: item for pid, item in retained.items() if item['kind'] == 'video'}
-        assert len(retained) == 94 and len(videos) == 24
+        assert len(retained) == 94 and len(videos) == 25
         statuses = page.evaluate("""async (posters) => Promise.all(posters.map(async (poster) => {
             const response = await fetch(new URL(poster, location.href));
             return response.ok && (response.headers.get('content-type') || '').startsWith('image/');
@@ -195,7 +195,7 @@ def main() -> int:
         assert page.locator('dialog, #detail-dialog').count() == 0
         assert not errors, errors
         browser.close()
-    print('PASS: no detail UI/keyboard/click hooks; all 94 sourced publication displays and retained media entries, 24 first-frame video posters, video controls, search, groups, language, mobile, and Pages subpath work.')
+    print('PASS: no detail UI/keyboard/click hooks; all 94 sourced publication displays and retained media entries, 25 official video posters, video controls, search, groups, language, mobile, and Pages subpath work.')
     return 0
 
 

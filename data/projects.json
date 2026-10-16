@@ -4286,7 +4286,8 @@
     "links": {
       "technical_report": "https://research.nvidia.com/labs/srl/projects/astranomy/",
       "gallery": "https://research.nvidia.com/labs/srl/projects/astranomy/gallery.html",
-      "benchmark": "https://research.nvidia.com/labs/srl/projects/robolab/"
+      "benchmark": "https://research.nvidia.com/labs/srl/projects/robolab/",
+      "video": "https://research.nvidia.com/labs/srl/projects/astranomy/article/assets/videos/prompt-progression/combined.mp4"
     },
     "last_checked": "2026-10-16",
     "independently_reproduced": false
