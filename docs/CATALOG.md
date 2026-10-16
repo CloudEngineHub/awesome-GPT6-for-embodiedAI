@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-10-15。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-10-16。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 65
+## 核心项目与评测 · 66
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -1717,7 +1717,7 @@ EmbodiedSkillBench 在 100 个 LIBERO-Pro 扰动任务上比较 GPT-6 Astra 的�
 
 **来源等级：B** · 仿真 · 一手资料明确涉及 GPT-6
 
-**作者 / 团队：** HanZhi306 / EmbodiedSkillBench contributors  
+**作者 / 团队：** Zhi Han, Zihan Guo, Chenxi Zeng et al. / EmbodiedSkillBench contributors  
 **事件日期：** 2026-10-10（窗口内）  
 **日期依据：** The initial public code release was authored 2026-10-10T10:17:06Z and followed by an overview-caption update at 2026-10-10T10:49:50Z.  
 **入口：** [https://github.com/HanZhi306/EmbodiedSkill-Bench](https://github.com/HanZhi306/EmbodiedSkill-Bench)  
@@ -1737,8 +1737,9 @@ EmbodiedSkillBench 在 100 个 LIBERO-Pro 扰动任务上比较 GPT-6 Astra 的�
 code：[https://github.com/HanZhi306/EmbodiedSkill-Bench](https://github.com/HanZhi306/EmbodiedSkill-Bench)  
 results：[https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/results.md](https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/results.md)  
 release_scope：[https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/release-scope.md](https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/release-scope.md)  
+paper：[https://arxiv.org/abs/2610.16238](https://arxiv.org/abs/2610.16238)  
 
-**来源：** [S138 · EmbodiedSkillBench public code release and manuscript result tables](SOURCES.md#s138)
+**来源：** [S138 · EmbodiedSkillBench public code release and manuscript result tables](SOURCES.md#s138) · [S145 · Embodied Skill Bench arXiv paper](SOURCES.md#s145)
 
 ---
 
@@ -1780,7 +1781,7 @@ video：[https://raw.githubusercontent.com/hamzmu/astra-opus-libero-loho/a2b035d
 
 **来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
 
-**作者 / 团队：** jackbjed / embodied-astra-robomme contributors  
+**作者 / 团队：** Jack B. Jedlicki, Amish Sethi, Heng Yang  
 **事件日期：** 2026-10-11（窗口内）  
 **日期依据：** The reviewed release commit 79dcc7f73f536948cb039103d3fc5e722d689207 was authored 2026-10-11T22:16:59-04:00 and publishes the final submission description; retained run timestamps are 2026-10-11 UTC.  
 **入口：** [https://github.com/jackbjed/embodied-astra-robomme](https://github.com/jackbjed/embodied-astra-robomme)  
@@ -1797,8 +1798,10 @@ video：[https://raw.githubusercontent.com/hamzmu/astra-opus-libero-loho/a2b035d
 code：[https://github.com/jackbjed/embodied-astra-robomme](https://github.com/jackbjed/embodied-astra-robomme)  
 submission：[https://github.com/jackbjed/embodied-astra-robomme/blob/79dcc7f73f536948cb039103d3fc5e722d689207/submission/embodied-gpt-6-astra.md](https://github.com/jackbjed/embodied-astra-robomme/blob/79dcc7f73f536948cb039103d3fc5e722d689207/submission/embodied-gpt-6-astra.md)  
 results：[https://github.com/jackbjed/embodied-astra-robomme/tree/79dcc7f73f536948cb039103d3fc5e722d689207/results/e2e_v3_lrnote_test_800](https://github.com/jackbjed/embodied-astra-robomme/tree/79dcc7f73f536948cb039103d3fc5e722d689207/results/e2e_v3_lrnote_test_800)  
+paper：[https://arxiv.org/abs/2610.17350](https://arxiv.org/abs/2610.17350)  
+project：[https://embodied-astra.github.io/](https://embodied-astra.github.io/)  
 
-**来源：** [S140 · Embodied GPT-6 Astra on RoboMME end-to-end evaluation repository](SOURCES.md#s140)
+**来源：** [S140 · Embodied GPT-6 Astra on RoboMME end-to-end evaluation repository](SOURCES.md#s140) · [S146 · Frontier VLM as a RoboMME policy paper and project page](SOURCES.md#s146)
 
 ---
 
@@ -1851,6 +1854,37 @@ video：[https://raw.githubusercontent.com/Siriuslala/g1-robot-burpee/e1ed4164aa
 audit：[https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa018b55b799c59b147d61eb59293437/assets/data/v3/revision_005](https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa018b55b799c59b147d61eb59293437/assets/data/v3/revision_005)  
 
 **来源：** [S144 · G1 Robot Performance v3 repository, technical report, and retained run](SOURCES.md#s144)
+
+---
+
+<a id="p78"></a>
+### P78 · Astranomy · Astra 原生机器人策略系统评测
+
+NVIDIA Astranomy 在 RoboLab-120 上比较 GPT-6 Astra 的直接动作生成、Codex 持久会话代理与监督机器人基础模型三种角色；作者报告 Agentic Policy 成功率 74.8%，同时量化直接策略平均 18.56 秒调用延迟与不同方案的 token/API 成本。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Jenai Xuning Yang, Ashna Khetan, Shun Zhang / NVIDIA Seattle Robotics Lab  
+**事件日期：** 2026-10-14（窗口内）  
+**日期依据：** The NVIDIA Research technical report is dated 2026-10-14; the public page object reports Last-Modified 2026-10-14T21:50:59Z.  
+**入口：** [https://research.nvidia.com/labs/srl/projects/astranomy/](https://research.nvidia.com/labs/srl/projects/astranomy/)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 技术报告、图表与视频版权归 NVIDIA/作者；页面标注代码与 arXiv 均为 coming soon，未确认可再分发许可。  
+**控制接口 / 作用：** RoboLab 相机观测、机器人状态、任务指令与可选几何/历史 → GPT-6 Astra 直接策略或 Codex 持久会话代理，或 Astra 审核 Cosmos3-Nano-Policy 动作 → 末端/关节/B-spline 动作块 → 仿真执行与新观测
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Agentic Policy success rate | 74.8 % | 120 RoboLab tasks × 5 episodes | Persistent Codex session with Astra, historical context and optional computation tools |
+| Direct Policy EEF success rate | 66.3 % | 120 RoboLab tasks × 5 episodes | Direct Astra API policy generating variable-length end-effector action chunks |
+| Orchestrated Policy success rate | 66.5 % | 120 RoboLab tasks × 5 episodes | Astra monitors and may intervene on Cosmos3-Nano-Policy action generation |
+
+**限制与未决项：** 全部结果来自 RoboLab-120 仿真；不覆盖接触丰富装配、超长时程移动操作或需要快速反应的动态任务，且推理期间仿真暂停。 Agentic、Direct 与 Orchestrated 方案的上下文、工具、动作接口和下层策略不同，三者差异不能归因于单一模型能力。 Agentic Policy 平均每个成功 episode 约 30.9M tokens / 36.40 美元；Direct Policy 平均调用延迟 18.56 秒，均限制实际部署。 截至核验时官方代码和 arXiv 均标注 coming soon；本站核对了完整技术报告、结果表与视频画廊，但未取得运行日志或独立复现实验。
+
+technical_report：[https://research.nvidia.com/labs/srl/projects/astranomy/](https://research.nvidia.com/labs/srl/projects/astranomy/)  
+gallery：[https://research.nvidia.com/labs/srl/projects/astranomy/gallery.html](https://research.nvidia.com/labs/srl/projects/astranomy/gallery.html)  
+benchmark：[https://research.nvidia.com/labs/srl/projects/robolab/](https://research.nvidia.com/labs/srl/projects/robolab/)  
+
+**来源：** [S147 · NVIDIA Astranomy technical report and rollout gallery](SOURCES.md#s147)
 
 ---
 

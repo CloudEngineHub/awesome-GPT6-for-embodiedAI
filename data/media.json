@@ -1438,6 +1438,18 @@
       "alt": {"en": "Unitree G1 simulation stage performance with object transport, a support-frame push-up, a jump, and a final pose.", "zh": "Unitree G1 仿真舞台表演，包含搬运、支架俯卧撑、跳跃与结束定姿。"},
       "caption": {"en": "Official revision_005 video; GPT supervises checkpoint execution while stage programs and low-level controllers generate motion, and strict physics checks do not all pass.", "zh": "官方 revision_005 视频；GPT 在检查点监督执行，阶段程序与低层控制器生成动作，严格物理检查未全部通过。"}
     },
+    "P78": {
+      "kind": "image",
+      "url": "https://research.nvidia.com/labs/srl/projects/astranomy/social-preview.png",
+      "fit": "contain",
+      "source_url": "https://research.nvidia.com/labs/srl/projects/astranomy/social-preview.png",
+      "source_page_url": "https://research.nvidia.com/labs/srl/projects/astranomy/",
+      "source_path": "Official 2400x1260 Open Graph preview published with the NVIDIA Astranomy technical report and checked 2026-10-16.",
+      "classification": "Author-provided RoboLab-120 result figure comparing Astra policy forms and leaderboard policies; not an independently reproduced plot.",
+      "source_id": "S147",
+      "alt": {"en": "Astranomy comparison of GPT-6 Astra policy forms and RoboLab-120 leaderboard policies.", "zh": "Astranomy 对 GPT-6 Astra 策略形态与 RoboLab-120 榜单策略的对比。"},
+      "caption": {"en": "Official Astranomy RoboLab-120 result preview.", "zh": "Astranomy 官方 RoboLab-120 结果预览图。"}
+    },
     "X16": {
       "kind": "image",
       "url": "https://pbs.twimg.com/amplify_video_thumb/2110057077901238272/img/I4Y7F3t8OYoL5wQA.jpg",

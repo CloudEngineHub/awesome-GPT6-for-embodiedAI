@@ -750,6 +750,13 @@
     "rule": null,
     "uncertainty": "Public online-control release date; earlier offline-programmed versions and simulation development predate it."
   },
+  "P78": {
+    "date": "2026-10-14",
+    "status": "verified",
+    "basis": "The official NVIDIA Research technical report is dated 2026-10-14, and the public page object reports Last-Modified 2026-10-14T21:50:59Z.",
+    "rule": null,
+    "uncertainty": "Technical-report publication date; benchmark design, model evaluations, analysis, and media preparation occurred earlier."
+  },
   "X16": {
     "date": "2026-10-13",
     "status": "verified",

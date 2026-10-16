@@ -3477,7 +3477,7 @@
     "gpt6_relation": "explicit_primary",
     "evidence_level": "B",
     "summary": "EmbodiedSkillBench 在 100 个 LIBERO-Pro 扰动任务上比较 GPT-6 Astra 的原生控制、固定技能、Agent-Directed Reuse 与 Jev 技能模式；作者报告原生控制 92% 成功，而 ADR 以 85% 成功换取 14.1% token 与 11.9% 时间下降。",
-    "authors": "HanZhi306 / EmbodiedSkillBench contributors",
+    "authors": "Zhi Han, Zihan Guo, Chenxi Zeng et al. / EmbodiedSkillBench contributors",
     "event_date": "2026-10-10",
     "event_date_basis": "The initial public code release was authored 2026-10-10T10:17:06Z and followed by an overview-caption update at 2026-10-10T10:49:50Z.",
     "window_status": "in_window",
@@ -3522,14 +3522,16 @@
       "技能由不同动作、感知与经验模块组成，成绩属于完整模型、CLI、技能选择、IK 与仿真器组合；本站只运行离线校验，未复跑模型评测。"
     ],
     "source_ids": [
-      "S138"
+      "S138",
+      "S145"
     ],
     "links": {
       "code": "https://github.com/HanZhi306/EmbodiedSkill-Bench",
       "results": "https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/results.md",
-      "release_scope": "https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/release-scope.md"
+      "release_scope": "https://github.com/HanZhi306/EmbodiedSkill-Bench/blob/3a6c645aac388eeff0a41dc2bb42174f55e3472b/docs/release-scope.md",
+      "paper": "https://arxiv.org/abs/2610.16238"
     },
-    "last_checked": "2026-10-13",
+    "last_checked": "2026-10-16",
     "independently_reproduced": false
   },
   {
@@ -4114,7 +4116,7 @@
     "gpt6_relation": "explicit_primary",
     "evidence_level": "A",
     "summary": "该工作把 GPT-6 Astra 直接作为 RoboMME 的 waypoint 策略：模型读取目标、相机帧和机器人状态，并输出末端路点与夹爪命令；公开的单次 800 集测试运行记录 737 次成功。",
-    "authors": "jackbjed / embodied-astra-robomme contributors",
+    "authors": "Jack B. Jedlicki, Amish Sethi, Heng Yang",
     "event_date": "2026-10-11",
     "event_date_basis": "The reviewed release commit 79dcc7f73f536948cb039103d3fc5e722d689207 was authored 2026-10-11T22:16:59-04:00 and publishes the final submission description; retained run timestamps are 2026-10-11 UTC.",
     "window_status": "in_window",
@@ -4138,14 +4140,17 @@
       "本站独立计数 800 个 result.json 得到 737 次成功，且 failure audit 覆盖 63 次失败，但未调用闭源模型或复跑模拟器。"
     ],
     "source_ids": [
-      "S140"
+      "S140",
+      "S146"
     ],
     "links": {
       "code": "https://github.com/jackbjed/embodied-astra-robomme",
       "submission": "https://github.com/jackbjed/embodied-astra-robomme/blob/79dcc7f73f536948cb039103d3fc5e722d689207/submission/embodied-gpt-6-astra.md",
-      "results": "https://github.com/jackbjed/embodied-astra-robomme/tree/79dcc7f73f536948cb039103d3fc5e722d689207/results/e2e_v3_lrnote_test_800"
+      "results": "https://github.com/jackbjed/embodied-astra-robomme/tree/79dcc7f73f536948cb039103d3fc5e722d689207/results/e2e_v3_lrnote_test_800",
+      "paper": "https://arxiv.org/abs/2610.17350",
+      "project": "https://embodied-astra.github.io/"
     },
-    "last_checked": "2026-10-14",
+    "last_checked": "2026-10-16",
     "independently_reproduced": false
   },
   {
@@ -4224,6 +4229,66 @@
       "audit": "https://github.com/Siriuslala/g1-robot-burpee/tree/e1ed4164aa018b55b799c59b147d61eb59293437/assets/data/v3/revision_005"
     },
     "last_checked": "2026-10-15",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P78",
+    "title": "Astranomy · Astra 原生机器人策略系统评测",
+    "section": "core",
+    "category": "evaluation",
+    "environment": "simulation",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "NVIDIA Astranomy 在 RoboLab-120 上比较 GPT-6 Astra 的直接动作生成、Codex 持久会话代理与监督机器人基础模型三种角色；作者报告 Agentic Policy 成功率 74.8%，同时量化直接策略平均 18.56 秒调用延迟与不同方案的 token/API 成本。",
+    "authors": "Jenai Xuning Yang, Ashna Khetan, Shun Zhang / NVIDIA Seattle Robotics Lab",
+    "event_date": "2026-10-14",
+    "event_date_basis": "The NVIDIA Research technical report is dated 2026-10-14; the public page object reports Last-Modified 2026-10-14T21:50:59Z.",
+    "window_status": "in_window",
+    "url": "https://research.nvidia.com/labs/srl/projects/astranomy/",
+    "code_url": null,
+    "license_status": "技术报告、图表与视频版权归 NVIDIA/作者；页面标注代码与 arXiv 均为 coming soon，未确认可再分发许可。",
+    "control_interface": "RoboLab 相机观测、机器人状态、任务指令与可选几何/历史 → GPT-6 Astra 直接策略或 Codex 持久会话代理，或 Astra 审核 Cosmos3-Nano-Policy 动作 → 末端/关节/B-spline 动作块 → 仿真执行与新观测",
+    "metrics": [
+      {
+        "name": "Agentic Policy success rate",
+        "value": 74.8,
+        "unit": "%",
+        "denominator": "120 RoboLab tasks × 5 episodes",
+        "protocol": "Persistent Codex session with Astra, historical context and optional computation tools"
+      },
+      {
+        "name": "Direct Policy EEF success rate",
+        "value": 66.3,
+        "unit": "%",
+        "denominator": "120 RoboLab tasks × 5 episodes",
+        "protocol": "Direct Astra API policy generating variable-length end-effector action chunks"
+      },
+      {
+        "name": "Orchestrated Policy success rate",
+        "value": 66.5,
+        "unit": "%",
+        "denominator": "120 RoboLab tasks × 5 episodes",
+        "protocol": "Astra monitors and may intervene on Cosmos3-Nano-Policy action generation"
+      }
+    ],
+    "limitations": [
+      "全部结果来自 RoboLab-120 仿真；不覆盖接触丰富装配、超长时程移动操作或需要快速反应的动态任务，且推理期间仿真暂停。",
+      "Agentic、Direct 与 Orchestrated 方案的上下文、工具、动作接口和下层策略不同，三者差异不能归因于单一模型能力。",
+      "Agentic Policy 平均每个成功 episode 约 30.9M tokens / 36.40 美元；Direct Policy 平均调用延迟 18.56 秒，均限制实际部署。",
+      "截至核验时官方代码和 arXiv 均标注 coming soon；本站核对了完整技术报告、结果表与视频画廊，但未取得运行日志或独立复现实验。"
+    ],
+    "source_ids": [
+      "S147"
+    ],
+    "links": {
+      "technical_report": "https://research.nvidia.com/labs/srl/projects/astranomy/",
+      "gallery": "https://research.nvidia.com/labs/srl/projects/astranomy/gallery.html",
+      "benchmark": "https://research.nvidia.com/labs/srl/projects/robolab/"
+    },
+    "last_checked": "2026-10-16",
     "independently_reproduced": false
   },
   {

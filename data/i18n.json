@@ -457,6 +457,11 @@
       "summary": "In this continuous MuJoCo stage performance, GPT-6 Astra reads G1 first-person images and proprioceptive state at checkpoints, then approves an execution window and selects the SONIC or legacy backend; the latest release publishes 51 decisions, 159.672 simulation seconds, audits, and multi-view video.",
       "detail": "A stage program supplies task order, navigation targets, and contact-action references, and simulation pauses while the model decides. The full sequence was recorded, but strict_physics_pass is false and several motion-quality checks do not pass."
     },
+    "P78": {
+      "title": "Astranomy · A Systematic Study of Astra as a Native Robot Policy",
+      "summary": "NVIDIA Astranomy compares GPT-6 Astra as a direct action policy, a persistent Codex agent, and a monitor for a robot foundation model on RoboLab-120; Agentic Policy reaches 74.8% success while the report also measures latency, tokens, and API cost.",
+      "detail": "All results are simulation-only and inference pauses the environment. The three policy forms use different context, tools, action interfaces, and lower-level support; code and arXiv were still marked coming soon when checked."
+    },
     "X16": {
       "title": "Astra Simulation Scaling · 25 Scenes and Multi-Robot Tasks",
       "summary": "Marius Memmel reports that three generic prompts drove an approximately 23-hour Astra run that generated 25 environments, 25 multi-step tasks, and five robot embodiments.",

@@ -1285,5 +1285,32 @@
     "access": "page_text",
     "checked_at": "2026-10-15",
     "notes": "The repository's v3 revision_005 retains 51 Codex-sourced checkpoint decisions, matching first-person observations, a 159.672-second MuJoCo run, multiple audits, and fully decoded first-person and transition videos. GPT-6 Astra is author-identified as the checkpoint supervisor that approves execution windows and selects SONIC or legacy control; stage order, navigation targets, and contact-action references remain program-supplied. The retained result marks strict_physics_pass=false, while the motion audit also fails the right-leg return, push-up, and grip-geometry checks. The catalogue inspected the public records but did not rerun the simulator or model."
+  },
+  {
+    "id": "S145",
+    "title": "Embodied Skill Bench arXiv paper",
+    "url": "https://arxiv.org/abs/2610.16238",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-16",
+    "notes": "arXiv v1 was submitted 2026-10-12T06:11:29Z and formalizes the already catalogued EmbodiedSkillBench study. It reports four agents on 100 perturbed LIBERO-Pro tasks and confirms the GPT-6 Astra figures already exposed by the public repository: 92% native control, 61% skill-only, 85% Agent-Directed Reuse, and 81% with Jev. This is a paper link and authorship update to P73, not a separate result card."
+  },
+  {
+    "id": "S146",
+    "title": "Frontier VLM as a RoboMME policy paper and project page",
+    "url": "https://arxiv.org/abs/2610.17350",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-16",
+    "notes": "arXiv v1 was submitted 2026-10-12T20:00:10Z by Jack B. Jedlicki, Amish Sethi, and Heng Yang. The paper and linked project page describe the same frozen GPT-6 Astra waypoint-policy run already catalogued as P75: 737/800 successes across 16 RoboMME tasks, with no RoboMME-specific training. It is merged as a formal-paper and project-page update rather than a duplicate card."
+  },
+  {
+    "id": "S147",
+    "title": "NVIDIA Astranomy technical report and rollout gallery",
+    "url": "https://research.nvidia.com/labs/srl/projects/astranomy/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-10-16",
+    "notes": "NVIDIA Seattle Robotics Lab's technical report is dated 2026-10-14 and evaluates GPT-6 Astra as Direct, Agentic, and Orchestrated policies on RoboLab-120, five episodes per task. The full report gives 66.3%, 74.8%, and 66.5% success respectively, plus action-interface ablations, latency, token and API-cost measurements, failure analysis, and an official rollout gallery. Simulation pauses during inference; code and arXiv are both marked coming soon, and the catalogue did not independently rerun the 600-episode policy evaluations."
   }
 ]
